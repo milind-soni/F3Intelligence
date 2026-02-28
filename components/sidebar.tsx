@@ -7,19 +7,16 @@ import {
   LayoutDashboard,
   TrendingUp,
   Users,
-  Truck,
   AlertTriangle,
-  ShoppingCart,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
+import realData from "@/lib/real-data.json";
 
 const navItems = [
   { href: "/", label: "Dashboard", icon: LayoutDashboard },
   { href: "/demand", label: "Demand Forecast", icon: TrendingUp },
-  { href: "/retailers", label: "Retailers", icon: Users },
-  { href: "/vendors", label: "Vendors", icon: Truck },
+  { href: "/retailers", label: "Retailers & Routes", icon: Users },
   { href: "/risks", label: "Risk Alerts", icon: AlertTriangle },
-  { href: "/procurement", label: "Procurement", icon: ShoppingCart },
 ];
 
 export function Sidebar() {
@@ -38,7 +35,7 @@ export function Sidebar() {
         />
         <div>
           <h1 className="text-lg font-bold tracking-tight">F3 Intelligence</h1>
-          <p className="text-xs text-sidebar-foreground/60">Fresh from Farm</p>
+          <p className="text-xs text-sidebar-foreground/60">Delhi NCR</p>
         </div>
       </div>
 
@@ -66,17 +63,33 @@ export function Sidebar() {
         })}
       </nav>
 
-      {/* Footer */}
-      <div className="border-t border-sidebar-border px-6 py-4">
+      {/* Data stats footer */}
+      <div className="border-t border-sidebar-border px-4 py-4 space-y-3">
         <div className="flex items-center gap-2">
           <div className="h-2 w-2 rounded-full bg-green-400 animate-pulse" />
-          <span className="text-xs text-sidebar-foreground/60">
-            AI Engine Active
-          </span>
+          <span className="text-xs text-sidebar-foreground/60">AI Engine Active</span>
         </div>
-        <p className="mt-1 text-xs text-sidebar-foreground/40">
-          Last sync: 2 min ago
-        </p>
+        <div className="rounded-lg bg-sidebar-accent/40 p-3 space-y-1.5">
+          <p className="text-[10px] font-semibold uppercase tracking-wider text-sidebar-foreground/40">
+            Proprietary Data
+          </p>
+          <div className="flex justify-between">
+            <span className="text-xs text-sidebar-foreground/60">Orders</span>
+            <span className="text-xs font-semibold text-green-400">
+              {(realData.stats.totalOrders / 1000).toFixed(0)}K
+            </span>
+          </div>
+          <div className="flex justify-between">
+            <span className="text-xs text-sidebar-foreground/60">Retailers</span>
+            <span className="text-xs font-semibold text-green-400">
+              {realData.stats.uniqueRetailers}
+            </span>
+          </div>
+          <div className="flex justify-between">
+            <span className="text-xs text-sidebar-foreground/60">Since</span>
+            <span className="text-xs font-semibold text-green-400">Sep 2023</span>
+          </div>
+        </div>
       </div>
     </aside>
   );

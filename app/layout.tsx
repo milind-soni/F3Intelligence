@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import "maplibre-gl/dist/maplibre-gl.css";
 import { Sidebar } from "@/components/sidebar";
 
 export const metadata: Metadata = {
