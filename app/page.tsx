@@ -21,6 +21,10 @@ const TOP_SKUS = ["WATERMELON", "KASHMIR APPLE", "KINNAUR APPLE", "ANAR", "KINNO
 const SKU_COLORS = ["#22c55e", "#ef4444", "#f59e0b", "#f97316", "#8b5cf6"];
 
 export default function DashboardPage() {
+  const now = new Date();
+  const currentMonthLabel = now.toLocaleDateString("en-US", { month: "short", year: "numeric" });
+  const coverageMonths = Math.round((now.getTime() - new Date("2023-09-01").getTime()) / (1000 * 60 * 60 * 24 * 30.44));
+
   const monthly = realData.monthly.map((m) => ({
     ...m,
     label: m.month.slice(0, 7),
@@ -49,17 +53,16 @@ export default function DashboardPage() {
       <div className="mb-6 rounded-xl bg-gradient-to-r from-green-700 to-green-500 p-5 text-white">
         <div className="flex items-center justify-between flex-wrap gap-4">
           <div>
-            <p className="text-sm font-medium text-green-100 mb-1">Proprietary Dataset — Self-Learning AI Engine</p>
             <p className="text-2xl font-bold">
               {(realData.stats.totalOrders / 1000).toFixed(0)}K orders &middot; {(realData.stats.totalQty / 1000000).toFixed(1)}M kg delivered &middot; {realData.stats.uniqueRetailers} retailers
             </p>
-            <p className="text-sm text-green-100 mt-1">Sep 2023 → Jan 2026 &mdash; volume grew <span className="font-bold text-white">{realData.stats.monthlyGrowth}%</span></p>
+            <p className="text-sm text-green-100 mt-1">Sep 2023 → {currentMonthLabel} &mdash; volume grew <span className="font-bold text-white">{realData.stats.monthlyGrowth}%</span></p>
           </div>
           <div className="flex gap-4">
             {[
               { label: "Unique SKUs", value: realData.stats.uniqueSkus },
               { label: "Data Points", value: `${(realData.stats.totalOrders / 1000).toFixed(0)}K` },
-              { label: "Coverage", value: "29 mo." },
+              { label: "Coverage", value: `${coverageMonths} mo.` },
             ].map((s) => (
               <div key={s.label} className="text-center">
                 <p className="text-xl font-bold">{s.value}</p>
@@ -105,7 +108,7 @@ export default function DashboardPage() {
                   <p className="text-sm text-muted-foreground">Monthly kg delivered across all SKUs</p>
                 </div>
                 <span className="text-xs bg-green-100 text-green-700 px-2 py-1 rounded-full font-medium">
-                  Sep 2023 → Jan 2026
+                  Sep 2023 → {currentMonthLabel}
                 </span>
               </div>
               <ResponsiveContainer width="100%" height={280}>

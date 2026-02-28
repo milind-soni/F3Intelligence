@@ -14,9 +14,9 @@ import { PageHeader } from "@/components/page-header";
 import realData from "@/lib/real-data.json";
 import {
   ChevronLeft, ChevronRight, TrendingUp, TrendingDown, Minus,
-  CreditCard, Clock, Store, Truck, ChevronDown, ChevronUp,
+  CreditCard, Clock, Store, ChevronDown, ChevronUp,
 } from "lucide-react";
-import { retailerProfiles, vendorDetails } from "@/lib/retailer-profiles";
+import { retailerProfiles } from "@/lib/retailer-profiles";
 
 const TOP_SKUS = ["WATERMELON", "KASHMIR APPLE", "KINNAUR APPLE", "ANAR", "KINNOW", "ORANGE", "SAFEDA MANGO", "VNR GUAVA"];
 
@@ -53,11 +53,14 @@ export default function DemandPage() {
     total: w.total,
   }));
 
+  const skuQuality = realData.skuQuality as Record<string, { A: string | null; B: string | null; C: string | null }>;
+
   const skuBreakdown = TOP_SKUS.map((sku) => {
     const qty = ((selectedWeek as WeekRow)[sku] as number) ?? 0;
     const prev = prevWeek ? (((prevWeek as WeekRow)[sku] as number) ?? 0) : qty;
     const change = prev > 0 ? ((qty - prev) / prev) * 100 : 0;
-    return { sku, qty, upper: Math.round(qty * 1.18), lower: Math.round(qty * 0.82), price: SUGGESTED_PRICES[sku] ?? 80, change };
+    const quality = skuQuality[sku] ?? null;
+    return { sku, qty, upper: Math.round(qty * 1.18), lower: Math.round(qty * 0.82), price: SUGGESTED_PRICES[sku] ?? 80, change, quality };
   }).filter((s) => s.qty > 0).sort((a, b) => b.qty - a.qty);
 
   const tierStyle = (tier: string) =>
@@ -184,10 +187,23 @@ export default function DemandPage() {
                       <div className="absolute h-full rounded-full" style={{ left: "18%", width: "64%", backgroundColor: SKU_COLORS[s.sku] }} />
                       <div className="absolute top-1/2 -translate-y-1/2 h-3 w-0.5 rounded-full bg-white" style={{ left: "50%" }} />
                     </div>
-                    <div className="flex items-center justify-between">
+                    <div className="flex items-center justify-between mb-2">
                       <span className="text-[10px] text-muted-foreground">{s.lower.toLocaleString()} – {s.upper.toLocaleString()} kg</span>
                       <span className="text-xs font-bold" style={{ color: SKU_COLORS[s.sku] }}>₹{s.price}/kg</span>
                     </div>
+                    {s.quality && (
+                      <div className="flex items-center gap-1.5">
+                        {[
+                          { label: "A", value: s.quality.A, bg: "bg-green-100 text-green-700" },
+                          { label: "B", value: s.quality.B, bg: "bg-amber-100 text-amber-700" },
+                          { label: "C", value: s.quality.C, bg: "bg-muted text-muted-foreground" },
+                        ].filter(g => g.value).map((g) => (
+                          <span key={g.label} className={`text-[10px] font-semibold px-1.5 py-0.5 rounded ${g.bg}`}>
+                            {g.label}: {g.value}
+                          </span>
+                        ))}
+                      </div>
+                    )}
                   </CardContent>
                 </Card>
               );
@@ -233,13 +249,12 @@ export default function DemandPage() {
             {retailerProfiles.map((r, i) => {
               const isExpanded = expandedRetailer === r.name;
               const weeklyKg = Math.round(r.avgDailyKg * 7);
-              const vendor = vendorDetails[r.vendor];
               const sColor = scoreColor(r.score);
 
               return (
                 <Card key={r.name}
                   className={`overflow-hidden transition-all duration-200 ${isExpanded ? "shadow-lg ring-1 ring-green-300" : "hover:shadow-sm"}`}>
-                  <div className="h-1 w-full" style={{ backgroundColor: r.vendorColor }} />
+                  <div className="h-1 w-full" style={{ backgroundColor: r.color }} />
                   <CardContent className="p-0">
                     {/* Collapsed row */}
                     <button className="w-full text-left px-4 py-3"
@@ -262,11 +277,6 @@ export default function DemandPage() {
                         <div className="text-center shrink-0 w-16">
                           <p className="text-lg font-bold text-green-700">{weeklyKg.toLocaleString()}</p>
                           <p className="text-[10px] text-muted-foreground">kg/wk</p>
-                        </div>
-                        <div className="flex items-center gap-1.5 shrink-0 rounded-full px-2 py-1 border text-xs font-medium"
-                          style={{ borderColor: r.vendorColor + "60", backgroundColor: r.vendorColor + "15", color: r.vendorColor }}>
-                          <Truck className="h-3 w-3" />
-                          <span className="hidden sm:inline">{r.vendor.split(" ")[0]}</span>
                         </div>
                         {isExpanded
                           ? <ChevronUp className="h-4 w-4 text-muted-foreground shrink-0" />
@@ -297,18 +307,6 @@ export default function DemandPage() {
                                 </div>
                               ))}
                             </div>
-                            {vendor && (
-                              <div className="mt-3 rounded-lg border p-2.5 text-xs"
-                                style={{ borderColor: r.vendorColor + "40", backgroundColor: r.vendorColor + "08" }}>
-                                <p className="font-semibold mb-1" style={{ color: r.vendorColor }}>{vendor.name}</p>
-                                <p className="text-muted-foreground text-[10px]">{vendor.location}</p>
-                                <div className="mt-1.5 space-y-0.5">
-                                  <div className="flex justify-between"><span className="text-muted-foreground">Reliability</span><span className="font-bold text-green-600">{vendor.reliability}%</span></div>
-                                  <div className="flex justify-between"><span className="text-muted-foreground">Lead time</span><span className="font-semibold">{vendor.leadTimeDays}d</span></div>
-                                  <div className="flex justify-between"><span className="text-muted-foreground">Terms</span><span className="font-semibold">{vendor.paymentTerms}</span></div>
-                                </div>
-                              </div>
-                            )}
                           </div>
 
                           {/* Col 2: SKU Indent */}
@@ -317,12 +315,16 @@ export default function DemandPage() {
                             <div className="space-y-2">
                               {Object.entries(r.skuAllocation).map(([sku, pct]) => {
                                 const kg = Math.round(weeklyKg * pct / 100);
+                                const quality = (realData.skuQuality as Record<string, Record<string, string | null>>)[sku];
                                 return (
                                   <div key={sku}>
                                     <div className="flex items-center justify-between mb-0.5">
                                       <div className="flex items-center gap-1">
                                         <div className="h-2 w-2 rounded-full shrink-0" style={{ backgroundColor: SKU_COLORS[sku] ?? "#6b7280" }} />
                                         <span className="text-xs">{sku.split(" ")[0]}</span>
+                                        {quality?.A && (
+                                          <span className="text-[9px] bg-muted px-1 rounded text-muted-foreground">{quality.A}</span>
+                                        )}
                                       </div>
                                       <div className="flex items-center gap-2">
                                         <span className="text-[10px] text-muted-foreground">{pct}%</span>
@@ -346,7 +348,7 @@ export default function DemandPage() {
                               <RadarChart data={r.radarMetrics}>
                                 <PolarGrid stroke="#d1d5db" />
                                 <PolarAngleAxis dataKey="label" tick={{ fontSize: 9 }} />
-                                <Radar dataKey="value" stroke={r.vendorColor} fill={r.vendorColor} fillOpacity={0.25} strokeWidth={2} />
+                                <Radar dataKey="value" stroke={r.color} fill={r.color} fillOpacity={0.25} strokeWidth={2} />
                               </RadarChart>
                             </ResponsiveContainer>
                             <div className="grid grid-cols-2 gap-1 mt-1">

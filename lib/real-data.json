@@ -4,131 +4,1030 @@
     "totalQty": 10237332,
     "uniqueRetailers": 662,
     "uniqueSkus": 48,
-    "dataStart": "2023-09-01",
-    "dataEnd": "2026-01-31",
     "monthlyGrowth": 898.6
   },
   "monthly": [
     {
-      "month": "2023-09",
+      "month": "2023-09-01",
       "qty": 53030
     },
     {
-      "month": "2023-10",
+      "month": "2023-10-01",
       "qty": 136181
     },
     {
-      "month": "2023-11",
+      "month": "2023-11-01",
       "qty": 119795
     },
     {
-      "month": "2023-12",
+      "month": "2023-12-01",
       "qty": 134635
     },
     {
-      "month": "2024-01",
+      "month": "2024-01-01",
       "qty": 149009
     },
     {
-      "month": "2024-02",
+      "month": "2024-02-01",
       "qty": 199584
     },
     {
-      "month": "2024-03",
+      "month": "2024-03-01",
       "qty": 201282
     },
     {
-      "month": "2024-04",
+      "month": "2024-04-01",
       "qty": 220009
     },
     {
-      "month": "2024-05",
+      "month": "2024-05-01",
       "qty": 261372
     },
     {
-      "month": "2024-06",
+      "month": "2024-06-01",
       "qty": 329040
     },
     {
-      "month": "2024-07",
+      "month": "2024-07-01",
       "qty": 325871
     },
     {
-      "month": "2024-08",
+      "month": "2024-08-01",
       "qty": 327944
     },
     {
-      "month": "2024-09",
+      "month": "2024-09-01",
       "qty": 357632
     },
     {
-      "month": "2024-10",
+      "month": "2024-10-01",
       "qty": 391608
     },
     {
-      "month": "2024-11",
+      "month": "2024-11-01",
       "qty": 396458
     },
     {
-      "month": "2024-12",
+      "month": "2024-12-01",
       "qty": 412276
     },
     {
-      "month": "2025-01",
+      "month": "2025-01-01",
       "qty": 216000
     },
     {
-      "month": "2025-02",
+      "month": "2025-02-01",
       "qty": 345350
     },
     {
-      "month": "2025-03",
+      "month": "2025-03-01",
       "qty": 405300
     },
     {
-      "month": "2025-04",
+      "month": "2025-04-01",
       "qty": 519914
     },
     {
-      "month": "2025-05",
+      "month": "2025-05-01",
       "qty": 541250
     },
     {
-      "month": "2025-06",
+      "month": "2025-06-01",
       "qty": 589069
     },
     {
-      "month": "2025-07",
+      "month": "2025-07-01",
       "qty": 607120
     },
     {
-      "month": "2025-08",
+      "month": "2025-08-01",
       "qty": 593485
     },
     {
-      "month": "2025-09",
+      "month": "2025-09-01",
       "qty": 489493
     },
     {
-      "month": "2025-10",
+      "month": "2025-10-01",
       "qty": 387834
     },
     {
-      "month": "2025-11",
+      "month": "2025-11-01",
       "qty": 487676
     },
     {
-      "month": "2025-12",
+      "month": "2025-12-01",
       "qty": 509540
     },
     {
-      "month": "2026-01",
+      "month": "2026-01-01",
       "qty": 529575
     }
   ],
   "weekly": [
     {
+      "week": "2023-08-28/2023-09-03",
+      "total": 4650,
+      "WATERMELON": 650,
+      "KASHMIR APPLE": 0,
+      "KINNAUR APPLE": 1260,
+      "ANAR": 290,
+      "SHIMLA APPLE": 0,
+      "ORANGE": 0,
+      "SAFEDA MANGO": 0,
+      "KINNOW": 0
+    },
+    {
+      "week": "2023-09-04/2023-09-10",
+      "total": 9265,
+      "WATERMELON": 1550,
+      "KASHMIR APPLE": 0,
+      "KINNAUR APPLE": 1980,
+      "ANAR": 840,
+      "SHIMLA APPLE": 0,
+      "ORANGE": 0,
+      "SAFEDA MANGO": 0,
+      "KINNOW": 0
+    },
+    {
+      "week": "2023-09-11/2023-09-17",
+      "total": 13900,
+      "WATERMELON": 2330,
+      "KASHMIR APPLE": 0,
+      "KINNAUR APPLE": 3010,
+      "ANAR": 1250,
+      "SHIMLA APPLE": 0,
+      "ORANGE": 0,
+      "SAFEDA MANGO": 0,
+      "KINNOW": 0
+    },
+    {
+      "week": "2023-09-18/2023-09-24",
+      "total": 13855,
+      "WATERMELON": 2060,
+      "KASHMIR APPLE": 0,
+      "KINNAUR APPLE": 3010,
+      "ANAR": 1250,
+      "SHIMLA APPLE": 0,
+      "ORANGE": 0,
+      "SAFEDA MANGO": 0,
+      "KINNOW": 0
+    },
+    {
+      "week": "2023-09-25/2023-10-01",
+      "total": 11360,
+      "WATERMELON": 1900,
+      "KASHMIR APPLE": 0,
+      "KINNAUR APPLE": 2450,
+      "ANAR": 1040,
+      "SHIMLA APPLE": 0,
+      "ORANGE": 0,
+      "SAFEDA MANGO": 0,
+      "KINNOW": 0
+    },
+    {
+      "week": "2023-10-02/2023-10-08",
+      "total": 26960,
+      "WATERMELON": 2100,
+      "KASHMIR APPLE": 0,
+      "KINNAUR APPLE": 0,
+      "ANAR": 0,
+      "SHIMLA APPLE": 0,
+      "ORANGE": 0,
+      "SAFEDA MANGO": 0,
+      "KINNOW": 0
+    },
+    {
+      "week": "2023-10-09/2023-10-15",
+      "total": 34801,
+      "WATERMELON": 3500,
+      "KASHMIR APPLE": 0,
+      "KINNAUR APPLE": 0,
+      "ANAR": 0,
+      "SHIMLA APPLE": 0,
+      "ORANGE": 0,
+      "SAFEDA MANGO": 0,
+      "KINNOW": 0
+    },
+    {
+      "week": "2023-10-16/2023-10-22",
+      "total": 34545,
+      "WATERMELON": 3400,
+      "KASHMIR APPLE": 0,
+      "KINNAUR APPLE": 0,
+      "ANAR": 0,
+      "SHIMLA APPLE": 0,
+      "ORANGE": 0,
+      "SAFEDA MANGO": 0,
+      "KINNOW": 0
+    },
+    {
+      "week": "2023-10-23/2023-10-29",
+      "total": 28820,
+      "WATERMELON": 2900,
+      "KASHMIR APPLE": 0,
+      "KINNAUR APPLE": 0,
+      "ANAR": 0,
+      "SHIMLA APPLE": 0,
+      "ORANGE": 0,
+      "SAFEDA MANGO": 0,
+      "KINNOW": 0
+    },
+    {
+      "week": "2023-10-30/2023-11-05",
+      "total": 29260,
+      "WATERMELON": 2230,
+      "KASHMIR APPLE": 0,
+      "KINNAUR APPLE": 0,
+      "ANAR": 2000,
+      "SHIMLA APPLE": 0,
+      "ORANGE": 4900,
+      "SAFEDA MANGO": 0,
+      "KINNOW": 0
+    },
+    {
+      "week": "2023-11-06/2023-11-12",
+      "total": 28290,
+      "WATERMELON": 1980,
+      "KASHMIR APPLE": 0,
+      "KINNAUR APPLE": 0,
+      "ANAR": 3000,
+      "SHIMLA APPLE": 0,
+      "ORANGE": 7700,
+      "SAFEDA MANGO": 0,
+      "KINNOW": 0
+    },
+    {
+      "week": "2023-11-13/2023-11-19",
+      "total": 26340,
+      "WATERMELON": 1960,
+      "KASHMIR APPLE": 0,
+      "KINNAUR APPLE": 0,
+      "ANAR": 3200,
+      "SHIMLA APPLE": 0,
+      "ORANGE": 6890,
+      "SAFEDA MANGO": 0,
+      "KINNOW": 0
+    },
+    {
+      "week": "2023-11-20/2023-11-26",
+      "total": 28195,
+      "WATERMELON": 1800,
+      "KASHMIR APPLE": 0,
+      "KINNAUR APPLE": 0,
+      "ANAR": 3150,
+      "SHIMLA APPLE": 0,
+      "ORANGE": 8300,
+      "SAFEDA MANGO": 0,
+      "KINNOW": 0
+    },
+    {
+      "week": "2023-11-27/2023-12-03",
+      "total": 29105,
+      "WATERMELON": 1400,
+      "KASHMIR APPLE": 1730,
+      "KINNAUR APPLE": 0,
+      "ANAR": 3410,
+      "SHIMLA APPLE": 0,
+      "ORANGE": 6860,
+      "SAFEDA MANGO": 0,
+      "KINNOW": 1110
+    },
+    {
+      "week": "2023-12-04/2023-12-10",
+      "total": 29770,
+      "WATERMELON": 0,
+      "KASHMIR APPLE": 5140,
+      "KINNAUR APPLE": 0,
+      "ANAR": 3410,
+      "SHIMLA APPLE": 0,
+      "ORANGE": 4540,
+      "SAFEDA MANGO": 0,
+      "KINNOW": 3250
+    },
+    {
+      "week": "2023-12-11/2023-12-17",
+      "total": 30535,
+      "WATERMELON": 0,
+      "KASHMIR APPLE": 5180,
+      "KINNAUR APPLE": 0,
+      "ANAR": 3570,
+      "SHIMLA APPLE": 0,
+      "ORANGE": 4760,
+      "SAFEDA MANGO": 0,
+      "KINNOW": 3280
+    },
+    {
+      "week": "2023-12-18/2023-12-24",
+      "total": 29430,
+      "WATERMELON": 0,
+      "KASHMIR APPLE": 5080,
+      "KINNAUR APPLE": 0,
+      "ANAR": 3470,
+      "SHIMLA APPLE": 0,
+      "ORANGE": 4510,
+      "SAFEDA MANGO": 0,
+      "KINNOW": 3190
+    },
+    {
+      "week": "2023-12-25/2023-12-31",
+      "total": 34560,
+      "WATERMELON": 0,
+      "KASHMIR APPLE": 5940,
+      "KINNAUR APPLE": 0,
+      "ANAR": 4010,
+      "SHIMLA APPLE": 0,
+      "ORANGE": 5320,
+      "SAFEDA MANGO": 0,
+      "KINNOW": 3760
+    },
+    {
+      "week": "2024-01-01/2024-01-07",
+      "total": 34651,
+      "WATERMELON": 0,
+      "KASHMIR APPLE": 6100,
+      "KINNAUR APPLE": 0,
+      "ANAR": 3040,
+      "SHIMLA APPLE": 0,
+      "ORANGE": 6070,
+      "SAFEDA MANGO": 0,
+      "KINNOW": 4160
+    },
+    {
+      "week": "2024-01-08/2024-01-14",
+      "total": 34229,
+      "WATERMELON": 0,
+      "KASHMIR APPLE": 6020,
+      "KINNAUR APPLE": 0,
+      "ANAR": 3050,
+      "SHIMLA APPLE": 0,
+      "ORANGE": 6020,
+      "SAFEDA MANGO": 0,
+      "KINNOW": 4100
+    },
+    {
+      "week": "2024-01-15/2024-01-21",
+      "total": 34577,
+      "WATERMELON": 0,
+      "KASHMIR APPLE": 6120,
+      "KINNAUR APPLE": 0,
+      "ANAR": 3030,
+      "SHIMLA APPLE": 0,
+      "ORANGE": 6050,
+      "SAFEDA MANGO": 0,
+      "KINNOW": 4140
+    },
+    {
+      "week": "2024-01-22/2024-01-28",
+      "total": 28446,
+      "WATERMELON": 0,
+      "KASHMIR APPLE": 4980,
+      "KINNAUR APPLE": 0,
+      "ANAR": 2510,
+      "SHIMLA APPLE": 0,
+      "ORANGE": 5010,
+      "SAFEDA MANGO": 0,
+      "KINNOW": 3400
+    },
+    {
+      "week": "2024-01-29/2024-02-04",
+      "total": 47547,
+      "WATERMELON": 1210,
+      "KASHMIR APPLE": 7870,
+      "KINNAUR APPLE": 0,
+      "ANAR": 3090,
+      "SHIMLA APPLE": 0,
+      "ORANGE": 7800,
+      "SAFEDA MANGO": 0,
+      "KINNOW": 5240
+    },
+    {
+      "week": "2024-02-05/2024-02-11",
+      "total": 45796,
+      "WATERMELON": 1830,
+      "KASHMIR APPLE": 7240,
+      "KINNAUR APPLE": 0,
+      "ANAR": 2380,
+      "SHIMLA APPLE": 0,
+      "ORANGE": 7220,
+      "SAFEDA MANGO": 0,
+      "KINNOW": 4820
+    },
+    {
+      "week": "2024-02-12/2024-02-18",
+      "total": 45817,
+      "WATERMELON": 1790,
+      "KASHMIR APPLE": 7260,
+      "KINNAUR APPLE": 0,
+      "ANAR": 2420,
+      "SHIMLA APPLE": 0,
+      "ORANGE": 7200,
+      "SAFEDA MANGO": 0,
+      "KINNOW": 4830
+    },
+    {
+      "week": "2024-02-19/2024-02-25",
+      "total": 46301,
+      "WATERMELON": 1860,
+      "KASHMIR APPLE": 7290,
+      "KINNAUR APPLE": 0,
+      "ANAR": 2470,
+      "SHIMLA APPLE": 0,
+      "ORANGE": 7240,
+      "SAFEDA MANGO": 0,
+      "KINNOW": 4850
+    },
+    {
+      "week": "2024-02-26/2024-03-03",
+      "total": 46416,
+      "WATERMELON": 2090,
+      "KASHMIR APPLE": 4920,
+      "KINNAUR APPLE": 2510,
+      "ANAR": 2570,
+      "SHIMLA APPLE": 0,
+      "ORANGE": 7400,
+      "SAFEDA MANGO": 650,
+      "KINNOW": 3300
+    },
+    {
+      "week": "2024-03-04/2024-03-10",
+      "total": 46967,
+      "WATERMELON": 2680,
+      "KASHMIR APPLE": 0,
+      "KINNAUR APPLE": 7730,
+      "ANAR": 2780,
+      "SHIMLA APPLE": 0,
+      "ORANGE": 7820,
+      "SAFEDA MANGO": 2000,
+      "KINNOW": 0
+    },
+    {
+      "week": "2024-03-11/2024-03-17",
+      "total": 46680,
+      "WATERMELON": 2600,
+      "KASHMIR APPLE": 0,
+      "KINNAUR APPLE": 7770,
+      "ANAR": 2770,
+      "SHIMLA APPLE": 0,
+      "ORANGE": 7780,
+      "SAFEDA MANGO": 1980,
+      "KINNOW": 0
+    },
+    {
+      "week": "2024-03-18/2024-03-24",
+      "total": 45975,
+      "WATERMELON": 2590,
+      "KASHMIR APPLE": 0,
+      "KINNAUR APPLE": 7710,
+      "ANAR": 2660,
+      "SHIMLA APPLE": 0,
+      "ORANGE": 7690,
+      "SAFEDA MANGO": 1930,
+      "KINNOW": 0
+    },
+    {
+      "week": "2024-03-25/2024-03-31",
+      "total": 46473,
+      "WATERMELON": 2640,
+      "KASHMIR APPLE": 0,
+      "KINNAUR APPLE": 7740,
+      "ANAR": 2710,
+      "SHIMLA APPLE": 0,
+      "ORANGE": 7700,
+      "SAFEDA MANGO": 2030,
+      "KINNOW": 0
+    },
+    {
+      "week": "2024-04-01/2024-04-07",
+      "total": 55031,
+      "WATERMELON": 4240,
+      "KASHMIR APPLE": 6990,
+      "KINNAUR APPLE": 9810,
+      "ANAR": 3510,
+      "SHIMLA APPLE": 0,
+      "ORANGE": 0,
+      "SAFEDA MANGO": 4910,
+      "KINNOW": 0
+    },
+    {
+      "week": "2024-04-08/2024-04-14",
+      "total": 55152,
+      "WATERMELON": 4250,
+      "KASHMIR APPLE": 6990,
+      "KINNAUR APPLE": 9840,
+      "ANAR": 3495,
+      "SHIMLA APPLE": 0,
+      "ORANGE": 0,
+      "SAFEDA MANGO": 4920,
+      "KINNOW": 0
+    },
+    {
+      "week": "2024-04-15/2024-04-21",
+      "total": 47223,
+      "WATERMELON": 3580,
+      "KASHMIR APPLE": 6000,
+      "KINNAUR APPLE": 8430,
+      "ANAR": 3000,
+      "SHIMLA APPLE": 0,
+      "ORANGE": 0,
+      "SAFEDA MANGO": 4240,
+      "KINNOW": 0
+    },
+    {
+      "week": "2024-04-22/2024-04-28",
+      "total": 47062,
+      "WATERMELON": 3600,
+      "KASHMIR APPLE": 6050,
+      "KINNAUR APPLE": 8380,
+      "ANAR": 3000,
+      "SHIMLA APPLE": 0,
+      "ORANGE": 0,
+      "SAFEDA MANGO": 4180,
+      "KINNOW": 0
+    },
+    {
+      "week": "2024-04-29/2024-05-05",
+      "total": 55796,
+      "WATERMELON": 5960,
+      "KASHMIR APPLE": 5970,
+      "KINNAUR APPLE": 8870,
+      "ANAR": 980,
+      "SHIMLA APPLE": 0,
+      "ORANGE": 0,
+      "SAFEDA MANGO": 6250,
+      "KINNOW": 0
+    },
+    {
+      "week": "2024-05-06/2024-05-12",
+      "total": 60500,
+      "WATERMELON": 7140,
+      "KASHMIR APPLE": 6010,
+      "KINNAUR APPLE": 9100,
+      "ANAR": 0,
+      "SHIMLA APPLE": 0,
+      "ORANGE": 0,
+      "SAFEDA MANGO": 7280,
+      "KINNOW": 0
+    },
+    {
+      "week": "2024-05-13/2024-05-19",
+      "total": 60151,
+      "WATERMELON": 7170,
+      "KASHMIR APPLE": 5990,
+      "KINNAUR APPLE": 9080,
+      "ANAR": 0,
+      "SHIMLA APPLE": 0,
+      "ORANGE": 0,
+      "SAFEDA MANGO": 7250,
+      "KINNOW": 0
+    },
+    {
+      "week": "2024-05-20/2024-05-26",
+      "total": 60441,
+      "WATERMELON": 7190,
+      "KASHMIR APPLE": 5970,
+      "KINNAUR APPLE": 9100,
+      "ANAR": 0,
+      "SHIMLA APPLE": 0,
+      "ORANGE": 0,
+      "SAFEDA MANGO": 7310,
+      "KINNOW": 0
+    },
+    {
+      "week": "2024-05-27/2024-06-02",
+      "total": 64130,
+      "WATERMELON": 7610,
+      "KASHMIR APPLE": 6450,
+      "KINNAUR APPLE": 6040,
+      "ANAR": 0,
+      "SHIMLA APPLE": 0,
+      "ORANGE": 0,
+      "SAFEDA MANGO": 8860,
+      "KINNOW": 0
+    },
+    {
+      "week": "2024-06-03/2024-06-09",
+      "total": 85383,
+      "WATERMELON": 9990,
+      "KASHMIR APPLE": 8640,
+      "KINNAUR APPLE": 0,
+      "ANAR": 0,
+      "SHIMLA APPLE": 0,
+      "ORANGE": 0,
+      "SAFEDA MANGO": 14220,
+      "KINNOW": 0
+    },
+    {
+      "week": "2024-06-10/2024-06-16",
+      "total": 85539,
+      "WATERMELON": 9960,
+      "KASHMIR APPLE": 8630,
+      "KINNAUR APPLE": 0,
+      "ANAR": 0,
+      "SHIMLA APPLE": 0,
+      "ORANGE": 0,
+      "SAFEDA MANGO": 14220,
+      "KINNOW": 0
+    },
+    {
+      "week": "2024-06-17/2024-06-23",
+      "total": 60795,
+      "WATERMELON": 7090,
+      "KASHMIR APPLE": 6110,
+      "KINNAUR APPLE": 0,
+      "ANAR": 0,
+      "SHIMLA APPLE": 0,
+      "ORANGE": 0,
+      "SAFEDA MANGO": 10160,
+      "KINNOW": 0
+    },
+    {
+      "week": "2024-06-24/2024-06-30",
+      "total": 73218,
+      "WATERMELON": 8500,
+      "KASHMIR APPLE": 7420,
+      "KINNAUR APPLE": 0,
+      "ANAR": 0,
+      "SHIMLA APPLE": 0,
+      "ORANGE": 0,
+      "SAFEDA MANGO": 12160,
+      "KINNOW": 0
+    },
+    {
+      "week": "2024-07-01/2024-07-07",
+      "total": 70030,
+      "WATERMELON": 8550,
+      "KASHMIR APPLE": 7990,
+      "KINNAUR APPLE": 0,
+      "ANAR": 0,
+      "SHIMLA APPLE": 3800,
+      "ORANGE": 0,
+      "SAFEDA MANGO": 1980,
+      "KINNOW": 0
+    },
+    {
+      "week": "2024-07-08/2024-07-14",
+      "total": 72843,
+      "WATERMELON": 8690,
+      "KASHMIR APPLE": 8260,
+      "KINNAUR APPLE": 0,
+      "ANAR": 0,
+      "SHIMLA APPLE": 4100,
+      "ORANGE": 0,
+      "SAFEDA MANGO": 2260,
+      "KINNOW": 0
+    },
+    {
+      "week": "2024-07-15/2024-07-21",
+      "total": 73465,
+      "WATERMELON": 8770,
+      "KASHMIR APPLE": 8320,
+      "KINNAUR APPLE": 0,
+      "ANAR": 0,
+      "SHIMLA APPLE": 4150,
+      "ORANGE": 0,
+      "SAFEDA MANGO": 2250,
+      "KINNOW": 0
+    },
+    {
+      "week": "2024-07-22/2024-07-28",
+      "total": 72313,
+      "WATERMELON": 8610,
+      "KASHMIR APPLE": 8140,
+      "KINNAUR APPLE": 0,
+      "ANAR": 0,
+      "SHIMLA APPLE": 4090,
+      "ORANGE": 0,
+      "SAFEDA MANGO": 2270,
+      "KINNOW": 0
+    },
+    {
+      "week": "2024-07-29/2024-08-04",
+      "total": 73213,
+      "WATERMELON": 9780,
+      "KASHMIR APPLE": 8740,
+      "KINNAUR APPLE": 0,
+      "ANAR": 0,
+      "SHIMLA APPLE": 6970,
+      "ORANGE": 2420,
+      "SAFEDA MANGO": 1160,
+      "KINNOW": 0
+    },
+    {
+      "week": "2024-08-05/2024-08-11",
+      "total": 72397,
+      "WATERMELON": 10860,
+      "KASHMIR APPLE": 9150,
+      "KINNAUR APPLE": 0,
+      "ANAR": 0,
+      "SHIMLA APPLE": 9710,
+      "ORANGE": 4870,
+      "SAFEDA MANGO": 0,
+      "KINNOW": 0
+    },
+    {
+      "week": "2024-08-12/2024-08-18",
+      "total": 73152,
+      "WATERMELON": 10840,
+      "KASHMIR APPLE": 9190,
+      "KINNAUR APPLE": 0,
+      "ANAR": 0,
+      "SHIMLA APPLE": 9860,
+      "ORANGE": 4940,
+      "SAFEDA MANGO": 0,
+      "KINNOW": 0
+    },
+    {
+      "week": "2024-08-19/2024-08-25",
+      "total": 72443,
+      "WATERMELON": 10870,
+      "KASHMIR APPLE": 9090,
+      "KINNAUR APPLE": 0,
+      "ANAR": 0,
+      "SHIMLA APPLE": 9690,
+      "ORANGE": 4890,
+      "SAFEDA MANGO": 0,
+      "KINNOW": 0
+    },
+    {
+      "week": "2024-08-26/2024-09-01",
+      "total": 87286,
+      "WATERMELON": 13150,
+      "KASHMIR APPLE": 11040,
+      "KINNAUR APPLE": 0,
+      "ANAR": 760,
+      "SHIMLA APPLE": 11740,
+      "ORANGE": 5970,
+      "SAFEDA MANGO": 0,
+      "KINNOW": 0
+    },
+    {
+      "week": "2024-09-02/2024-09-08",
+      "total": 92548,
+      "WATERMELON": 15240,
+      "KASHMIR APPLE": 11840,
+      "KINNAUR APPLE": 0,
+      "ANAR": 5290,
+      "SHIMLA APPLE": 12650,
+      "ORANGE": 7100,
+      "SAFEDA MANGO": 0,
+      "KINNOW": 0
+    },
+    {
+      "week": "2024-09-09/2024-09-15",
+      "total": 80144,
+      "WATERMELON": 13280,
+      "KASHMIR APPLE": 10280,
+      "KINNAUR APPLE": 0,
+      "ANAR": 4530,
+      "SHIMLA APPLE": 11000,
+      "ORANGE": 6120,
+      "SAFEDA MANGO": 0,
+      "KINNOW": 0
+    },
+    {
+      "week": "2024-09-16/2024-09-22",
+      "total": 79905,
+      "WATERMELON": 13200,
+      "KASHMIR APPLE": 10370,
+      "KINNAUR APPLE": 0,
+      "ANAR": 4480,
+      "SHIMLA APPLE": 10900,
+      "ORANGE": 6190,
+      "SAFEDA MANGO": 0,
+      "KINNOW": 0
+    },
+    {
+      "week": "2024-09-23/2024-09-29",
+      "total": 79168,
+      "WATERMELON": 13280,
+      "KASHMIR APPLE": 10240,
+      "KINNAUR APPLE": 0,
+      "ANAR": 4490,
+      "SHIMLA APPLE": 10790,
+      "ORANGE": 6050,
+      "SAFEDA MANGO": 0,
+      "KINNOW": 0
+    },
+    {
+      "week": "2024-09-30/2024-10-06",
+      "total": 82648,
+      "WATERMELON": 13170,
+      "KASHMIR APPLE": 14370,
+      "KINNAUR APPLE": 0,
+      "ANAR": 690,
+      "SHIMLA APPLE": 9530,
+      "ORANGE": 6120,
+      "SAFEDA MANGO": 0,
+      "KINNOW": 0
+    },
+    {
+      "week": "2024-10-07/2024-10-13",
+      "total": 87926,
+      "WATERMELON": 13410,
+      "KASHMIR APPLE": 16040,
+      "KINNAUR APPLE": 0,
+      "ANAR": 0,
+      "SHIMLA APPLE": 10050,
+      "ORANGE": 6400,
+      "SAFEDA MANGO": 0,
+      "KINNOW": 0
+    },
+    {
+      "week": "2024-10-14/2024-10-20",
+      "total": 87089,
+      "WATERMELON": 13460,
+      "KASHMIR APPLE": 15720,
+      "KINNAUR APPLE": 0,
+      "ANAR": 0,
+      "SHIMLA APPLE": 9900,
+      "ORANGE": 6260,
+      "SAFEDA MANGO": 0,
+      "KINNOW": 0
+    },
+    {
+      "week": "2024-10-21/2024-10-27",
+      "total": 88204,
+      "WATERMELON": 13390,
+      "KASHMIR APPLE": 16010,
+      "KINNAUR APPLE": 0,
+      "ANAR": 0,
+      "SHIMLA APPLE": 10070,
+      "ORANGE": 6510,
+      "SAFEDA MANGO": 0,
+      "KINNOW": 0
+    },
+    {
+      "week": "2024-10-28/2024-11-03",
+      "total": 89487,
+      "WATERMELON": 11390,
+      "KASHMIR APPLE": 14290,
+      "KINNAUR APPLE": 6010,
+      "ANAR": 1610,
+      "SHIMLA APPLE": 6640,
+      "ORANGE": 7090,
+      "SAFEDA MANGO": 0,
+      "KINNOW": 2000
+    },
+    {
+      "week": "2024-11-04/2024-11-10",
+      "total": 90865,
+      "WATERMELON": 6940,
+      "KASHMIR APPLE": 10380,
+      "KINNAUR APPLE": 17670,
+      "ANAR": 4530,
+      "SHIMLA APPLE": 0,
+      "ORANGE": 8390,
+      "SAFEDA MANGO": 0,
+      "KINNOW": 5940
+    },
+    {
+      "week": "2024-11-11/2024-11-17",
+      "total": 91106,
+      "WATERMELON": 6870,
+      "KASHMIR APPLE": 10430,
+      "KINNAUR APPLE": 17670,
+      "ANAR": 4450,
+      "SHIMLA APPLE": 0,
+      "ORANGE": 8400,
+      "SAFEDA MANGO": 0,
+      "KINNOW": 5950
+    },
+    {
+      "week": "2024-11-18/2024-11-24",
+      "total": 91809,
+      "WATERMELON": 6910,
+      "KASHMIR APPLE": 10520,
+      "KINNAUR APPLE": 17770,
+      "ANAR": 4620,
+      "SHIMLA APPLE": 0,
+      "ORANGE": 8410,
+      "SAFEDA MANGO": 0,
+      "KINNOW": 5960
+    },
+    {
+      "week": "2024-11-25/2024-12-01",
+      "total": 106223,
+      "WATERMELON": 7940,
+      "KASHMIR APPLE": 12160,
+      "KINNAUR APPLE": 20610,
+      "ANAR": 5660,
+      "SHIMLA APPLE": 0,
+      "ORANGE": 9800,
+      "SAFEDA MANGO": 0,
+      "KINNOW": 6920
+    },
+    {
+      "week": "2024-12-02/2024-12-08",
+      "total": 91715,
+      "WATERMELON": 6870,
+      "KASHMIR APPLE": 10650,
+      "KINNAUR APPLE": 17730,
+      "ANAR": 6790,
+      "SHIMLA APPLE": 0,
+      "ORANGE": 8250,
+      "SAFEDA MANGO": 0,
+      "KINNOW": 5930
+    },
+    {
+      "week": "2024-12-09/2024-12-15",
+      "total": 91812,
+      "WATERMELON": 6980,
+      "KASHMIR APPLE": 10630,
+      "KINNAUR APPLE": 17950,
+      "ANAR": 6840,
+      "SHIMLA APPLE": 0,
+      "ORANGE": 8330,
+      "SAFEDA MANGO": 0,
+      "KINNOW": 5850
+    },
+    {
+      "week": "2024-12-16/2024-12-22",
+      "total": 93197,
+      "WATERMELON": 7150,
+      "KASHMIR APPLE": 10730,
+      "KINNAUR APPLE": 17950,
+      "ANAR": 7000,
+      "SHIMLA APPLE": 0,
+      "ORANGE": 8360,
+      "SAFEDA MANGO": 0,
+      "KINNOW": 5950
+    },
+    {
+      "week": "2024-12-23/2024-12-29",
+      "total": 91179,
+      "WATERMELON": 6980,
+      "KASHMIR APPLE": 10510,
+      "KINNAUR APPLE": 17780,
+      "ANAR": 6660,
+      "SHIMLA APPLE": 0,
+      "ORANGE": 8360,
+      "SAFEDA MANGO": 0,
+      "KINNOW": 5850
+    },
+    {
+      "week": "2024-12-30/2025-01-05",
+      "total": 63172,
+      "WATERMELON": 2190,
+      "KASHMIR APPLE": 8820,
+      "KINNAUR APPLE": 13650,
+      "ANAR": 4300,
+      "SHIMLA APPLE": 0,
+      "ORANGE": 7710,
+      "SAFEDA MANGO": 0,
+      "KINNOW": 5390
+    },
+    {
+      "week": "2025-01-06/2025-01-12",
+      "total": 49120,
+      "WATERMELON": 0,
+      "KASHMIR APPLE": 8050,
+      "KINNAUR APPLE": 11550,
+      "ANAR": 2990,
+      "SHIMLA APPLE": 0,
+      "ORANGE": 7210,
+      "SAFEDA MANGO": 0,
+      "KINNOW": 5170
+    },
+    {
+      "week": "2025-01-13/2025-01-19",
+      "total": 49810,
+      "WATERMELON": 0,
+      "KASHMIR APPLE": 8010,
+      "KINNAUR APPLE": 11730,
+      "ANAR": 3120,
+      "SHIMLA APPLE": 0,
+      "ORANGE": 7300,
+      "SAFEDA MANGO": 0,
+      "KINNOW": 5190
+    },
+    {
+      "week": "2025-01-20/2025-01-26",
+      "total": 50340,
+      "WATERMELON": 0,
+      "KASHMIR APPLE": 8130,
+      "KINNAUR APPLE": 11730,
+      "ANAR": 3120,
+      "SHIMLA APPLE": 0,
+      "ORANGE": 7360,
+      "SAFEDA MANGO": 0,
+      "KINNOW": 5320
+    },
+    {
+      "week": "2025-01-27/2025-02-02",
+      "total": 50780,
+      "WATERMELON": 0,
+      "KASHMIR APPLE": 8340,
+      "KINNAUR APPLE": 11960,
+      "ANAR": 3210,
+      "SHIMLA APPLE": 0,
+      "ORANGE": 7440,
+      "SAFEDA MANGO": 0,
+      "KINNOW": 5310
+    },
+    {
       "week": "2025-02-03/2025-02-09",
+      "total": 73060,
       "WATERMELON": 0,
       "KASHMIR APPLE": 12110,
       "KINNAUR APPLE": 17510,
@@ -136,13 +1035,11 @@
       "SHIMLA APPLE": 0,
       "ORANGE": 10320,
       "SAFEDA MANGO": 0,
-      "KINNOW": 8460,
-      "VNR GUAVA": 3280,
-      "PAPAYA": 0,
-      "total": 73060
+      "KINNOW": 8460
     },
     {
       "week": "2025-02-10/2025-02-16",
+      "total": 81530,
       "WATERMELON": 0,
       "KASHMIR APPLE": 13540,
       "KINNAUR APPLE": 20540,
@@ -150,13 +1047,11 @@
       "SHIMLA APPLE": 0,
       "ORANGE": 11380,
       "SAFEDA MANGO": 0,
-      "KINNOW": 10280,
-      "VNR GUAVA": 3130,
-      "PAPAYA": 0,
-      "total": 81530
+      "KINNOW": 10280
     },
     {
       "week": "2025-02-17/2025-02-23",
+      "total": 98630,
       "WATERMELON": 0,
       "KASHMIR APPLE": 17290,
       "KINNAUR APPLE": 21780,
@@ -164,13 +1059,11 @@
       "SHIMLA APPLE": 0,
       "ORANGE": 13480,
       "SAFEDA MANGO": 0,
-      "KINNOW": 13820,
-      "VNR GUAVA": 3690,
-      "PAPAYA": 0,
-      "total": 98630
+      "KINNOW": 13820
     },
     {
       "week": "2025-02-24/2025-03-02",
+      "total": 103432,
       "WATERMELON": 7450,
       "KASHMIR APPLE": 13260,
       "KINNAUR APPLE": 23500,
@@ -178,13 +1071,11 @@
       "SHIMLA APPLE": 0,
       "ORANGE": 12860,
       "SAFEDA MANGO": 1410,
-      "KINNOW": 10500,
-      "VNR GUAVA": 2760,
-      "PAPAYA": 630,
-      "total": 103432
+      "KINNOW": 10500
     },
     {
       "week": "2025-03-03/2025-03-09",
+      "total": 88246,
       "WATERMELON": 22330,
       "KASHMIR APPLE": 0,
       "KINNAUR APPLE": 23120,
@@ -192,13 +1083,11 @@
       "SHIMLA APPLE": 0,
       "ORANGE": 8570,
       "SAFEDA MANGO": 4440,
-      "KINNOW": 0,
-      "VNR GUAVA": 0,
-      "PAPAYA": 1910,
-      "total": 88246
+      "KINNOW": 0
     },
     {
       "week": "2025-03-10/2025-03-16",
+      "total": 88341,
       "WATERMELON": 22800,
       "KASHMIR APPLE": 0,
       "KINNAUR APPLE": 23060,
@@ -206,13 +1095,11 @@
       "SHIMLA APPLE": 0,
       "ORANGE": 8460,
       "SAFEDA MANGO": 4450,
-      "KINNOW": 0,
-      "VNR GUAVA": 0,
-      "PAPAYA": 1970,
-      "total": 88341
+      "KINNOW": 0
     },
     {
       "week": "2025-03-17/2025-03-23",
+      "total": 88445,
       "WATERMELON": 23130,
       "KASHMIR APPLE": 0,
       "KINNAUR APPLE": 22940,
@@ -220,13 +1107,11 @@
       "SHIMLA APPLE": 0,
       "ORANGE": 8660,
       "SAFEDA MANGO": 4290,
-      "KINNOW": 0,
-      "VNR GUAVA": 0,
-      "PAPAYA": 1980,
-      "total": 88445
+      "KINNOW": 0
     },
     {
       "week": "2025-03-24/2025-03-30",
+      "total": 93967,
       "WATERMELON": 23770,
       "KASHMIR APPLE": 0,
       "KINNAUR APPLE": 24400,
@@ -234,13 +1119,11 @@
       "SHIMLA APPLE": 0,
       "ORANGE": 9610,
       "SAFEDA MANGO": 4770,
-      "KINNOW": 0,
-      "VNR GUAVA": 0,
-      "PAPAYA": 2120,
-      "total": 93967
+      "KINNOW": 0
     },
     {
       "week": "2025-03-31/2025-04-06",
+      "total": 119434,
       "WATERMELON": 33370,
       "KASHMIR APPLE": 0,
       "KINNAUR APPLE": 31730,
@@ -248,13 +1131,11 @@
       "SHIMLA APPLE": 0,
       "ORANGE": 4660,
       "SAFEDA MANGO": 12450,
-      "KINNOW": 0,
-      "VNR GUAVA": 0,
-      "PAPAYA": 2500,
-      "total": 119434
+      "KINNOW": 0
     },
     {
       "week": "2025-04-07/2025-04-13",
+      "total": 118675,
       "WATERMELON": 32010,
       "KASHMIR APPLE": 0,
       "KINNAUR APPLE": 33270,
@@ -262,13 +1143,11 @@
       "SHIMLA APPLE": 0,
       "ORANGE": 3400,
       "SAFEDA MANGO": 13740,
-      "KINNOW": 0,
-      "VNR GUAVA": 0,
-      "PAPAYA": 2350,
-      "total": 118675
+      "KINNOW": 0
     },
     {
       "week": "2025-04-14/2025-04-20",
+      "total": 118974,
       "WATERMELON": 32160,
       "KASHMIR APPLE": 0,
       "KINNAUR APPLE": 33010,
@@ -276,13 +1155,11 @@
       "SHIMLA APPLE": 0,
       "ORANGE": 3190,
       "SAFEDA MANGO": 13920,
-      "KINNOW": 0,
-      "VNR GUAVA": 0,
-      "PAPAYA": 2250,
-      "total": 118974
+      "KINNOW": 0
     },
     {
       "week": "2025-04-21/2025-04-27",
+      "total": 119910,
       "WATERMELON": 33590,
       "KASHMIR APPLE": 0,
       "KINNAUR APPLE": 32730,
@@ -290,13 +1167,11 @@
       "SHIMLA APPLE": 0,
       "ORANGE": 3310,
       "SAFEDA MANGO": 13790,
-      "KINNOW": 0,
-      "VNR GUAVA": 0,
-      "PAPAYA": 2340,
-      "total": 119910
+      "KINNOW": 0
     },
     {
       "week": "2025-04-28/2025-05-04",
+      "total": 103230,
       "WATERMELON": 30280,
       "KASHMIR APPLE": 0,
       "KINNAUR APPLE": 26590,
@@ -304,13 +1179,11 @@
       "SHIMLA APPLE": 0,
       "ORANGE": 1610,
       "SAFEDA MANGO": 14400,
-      "KINNOW": 0,
-      "VNR GUAVA": 0,
-      "PAPAYA": 1900,
-      "total": 103230
+      "KINNOW": 0
     },
     {
       "week": "2025-05-05/2025-05-11",
+      "total": 125375,
       "WATERMELON": 39310,
       "KASHMIR APPLE": 0,
       "KINNAUR APPLE": 29570,
@@ -318,13 +1191,11 @@
       "SHIMLA APPLE": 0,
       "ORANGE": 0,
       "SAFEDA MANGO": 22490,
-      "KINNOW": 0,
-      "VNR GUAVA": 0,
-      "PAPAYA": 2380,
-      "total": 125375
+      "KINNOW": 0
     },
     {
       "week": "2025-05-12/2025-05-18",
+      "total": 124153,
       "WATERMELON": 38890,
       "KASHMIR APPLE": 0,
       "KINNAUR APPLE": 29750,
@@ -332,13 +1203,11 @@
       "SHIMLA APPLE": 0,
       "ORANGE": 0,
       "SAFEDA MANGO": 22460,
-      "KINNOW": 0,
-      "VNR GUAVA": 0,
-      "PAPAYA": 2340,
-      "total": 124153
+      "KINNOW": 0
     },
     {
       "week": "2025-05-19/2025-05-25",
+      "total": 124398,
       "WATERMELON": 38440,
       "KASHMIR APPLE": 0,
       "KINNAUR APPLE": 30260,
@@ -346,13 +1215,11 @@
       "SHIMLA APPLE": 0,
       "ORANGE": 0,
       "SAFEDA MANGO": 22760,
-      "KINNOW": 0,
-      "VNR GUAVA": 0,
-      "PAPAYA": 2360,
-      "total": 124398
+      "KINNOW": 0
     },
     {
       "week": "2025-05-26/2025-06-01",
+      "total": 146519,
       "WATERMELON": 44080,
       "KASHMIR APPLE": 0,
       "KINNAUR APPLE": 29820,
@@ -360,13 +1227,11 @@
       "SHIMLA APPLE": 3820,
       "ORANGE": 0,
       "SAFEDA MANGO": 26210,
-      "KINNOW": 0,
-      "VNR GUAVA": 0,
-      "PAPAYA": 2970,
-      "total": 146519
+      "KINNOW": 0
     },
     {
       "week": "2025-06-02/2025-06-08",
+      "total": 136706,
       "WATERMELON": 33310,
       "KASHMIR APPLE": 0,
       "KINNAUR APPLE": 0,
@@ -374,13 +1239,11 @@
       "SHIMLA APPLE": 22510,
       "ORANGE": 0,
       "SAFEDA MANGO": 22220,
-      "KINNOW": 0,
-      "VNR GUAVA": 0,
-      "PAPAYA": 3580,
-      "total": 136706
+      "KINNOW": 0
     },
     {
       "week": "2025-06-09/2025-06-15",
+      "total": 135695,
       "WATERMELON": 33120,
       "KASHMIR APPLE": 0,
       "KINNAUR APPLE": 0,
@@ -388,13 +1251,11 @@
       "SHIMLA APPLE": 22480,
       "ORANGE": 0,
       "SAFEDA MANGO": 22080,
-      "KINNOW": 0,
-      "VNR GUAVA": 0,
-      "PAPAYA": 3680,
-      "total": 135695
+      "KINNOW": 0
     },
     {
       "week": "2025-06-16/2025-06-22",
+      "total": 135227,
       "WATERMELON": 32820,
       "KASHMIR APPLE": 0,
       "KINNAUR APPLE": 0,
@@ -402,13 +1263,11 @@
       "SHIMLA APPLE": 22430,
       "ORANGE": 0,
       "SAFEDA MANGO": 22060,
-      "KINNOW": 0,
-      "VNR GUAVA": 0,
-      "PAPAYA": 3580,
-      "total": 135227
+      "KINNOW": 0
     },
     {
       "week": "2025-06-23/2025-06-29",
+      "total": 136243,
       "WATERMELON": 33800,
       "KASHMIR APPLE": 0,
       "KINNAUR APPLE": 0,
@@ -416,13 +1275,11 @@
       "SHIMLA APPLE": 22310,
       "ORANGE": 0,
       "SAFEDA MANGO": 21890,
-      "KINNOW": 0,
-      "VNR GUAVA": 0,
-      "PAPAYA": 3720,
-      "total": 136243
+      "KINNOW": 0
     },
     {
       "week": "2025-06-30/2025-07-06",
+      "total": 137880,
       "WATERMELON": 33650,
       "KASHMIR APPLE": 7820,
       "KINNAUR APPLE": 0,
@@ -430,13 +1287,11 @@
       "SHIMLA APPLE": 16720,
       "ORANGE": 0,
       "SAFEDA MANGO": 11430,
-      "KINNOW": 0,
-      "VNR GUAVA": 0,
-      "PAPAYA": 3590,
-      "total": 137880
+      "KINNOW": 0
     },
     {
       "week": "2025-07-07/2025-07-13",
+      "total": 135676,
       "WATERMELON": 33360,
       "KASHMIR APPLE": 9140,
       "KINNAUR APPLE": 0,
@@ -444,13 +1299,11 @@
       "SHIMLA APPLE": 14980,
       "ORANGE": 0,
       "SAFEDA MANGO": 8760,
-      "KINNOW": 0,
-      "VNR GUAVA": 0,
-      "PAPAYA": 3540,
-      "total": 135676
+      "KINNOW": 0
     },
     {
       "week": "2025-07-14/2025-07-20",
+      "total": 135535,
       "WATERMELON": 33550,
       "KASHMIR APPLE": 9530,
       "KINNAUR APPLE": 0,
@@ -458,13 +1311,11 @@
       "SHIMLA APPLE": 14530,
       "ORANGE": 0,
       "SAFEDA MANGO": 9650,
-      "KINNOW": 0,
-      "VNR GUAVA": 0,
-      "PAPAYA": 3540,
-      "total": 135535
+      "KINNOW": 0
     },
     {
       "week": "2025-07-21/2025-07-27",
+      "total": 133149,
       "WATERMELON": 33600,
       "KASHMIR APPLE": 9410,
       "KINNAUR APPLE": 0,
@@ -472,13 +1323,11 @@
       "SHIMLA APPLE": 12820,
       "ORANGE": 0,
       "SAFEDA MANGO": 9760,
-      "KINNOW": 0,
-      "VNR GUAVA": 0,
-      "PAPAYA": 3540,
-      "total": 133149
+      "KINNOW": 0
     },
     {
       "week": "2025-07-28/2025-08-03",
+      "total": 135293,
       "WATERMELON": 34090,
       "KASHMIR APPLE": 9900,
       "KINNAUR APPLE": 0,
@@ -486,13 +1335,11 @@
       "SHIMLA APPLE": 13320,
       "ORANGE": 3950,
       "SAFEDA MANGO": 6480,
-      "KINNOW": 0,
-      "VNR GUAVA": 0,
-      "PAPAYA": 3625,
-      "total": 135293
+      "KINNOW": 0
     },
     {
       "week": "2025-08-04/2025-08-10",
+      "total": 141935,
       "WATERMELON": 33440,
       "KASHMIR APPLE": 10320,
       "KINNAUR APPLE": 0,
@@ -500,13 +1347,11 @@
       "SHIMLA APPLE": 14270,
       "ORANGE": 12230,
       "SAFEDA MANGO": 0,
-      "KINNOW": 0,
-      "VNR GUAVA": 0,
-      "PAPAYA": 3790,
-      "total": 141935
+      "KINNOW": 0
     },
     {
       "week": "2025-08-11/2025-08-17",
+      "total": 117907,
       "WATERMELON": 27750,
       "KASHMIR APPLE": 8650,
       "KINNAUR APPLE": 0,
@@ -514,13 +1359,11 @@
       "SHIMLA APPLE": 12220,
       "ORANGE": 10140,
       "SAFEDA MANGO": 0,
-      "KINNOW": 0,
-      "VNR GUAVA": 0,
-      "PAPAYA": 3140,
-      "total": 117907
+      "KINNOW": 0
     },
     {
       "week": "2025-08-18/2025-08-24",
+      "total": 142920,
       "WATERMELON": 35550,
       "KASHMIR APPLE": 10750,
       "KINNAUR APPLE": 0,
@@ -528,13 +1371,11 @@
       "SHIMLA APPLE": 13980,
       "ORANGE": 12415,
       "SAFEDA MANGO": 0,
-      "KINNOW": 0,
-      "VNR GUAVA": 0,
-      "PAPAYA": 3750,
-      "total": 142920
+      "KINNOW": 0
     },
     {
       "week": "2025-08-25/2025-08-31",
+      "total": 143403,
       "WATERMELON": 35190,
       "KASHMIR APPLE": 11010,
       "KINNAUR APPLE": 0,
@@ -542,13 +1383,11 @@
       "SHIMLA APPLE": 14230,
       "ORANGE": 12280,
       "SAFEDA MANGO": 0,
-      "KINNOW": 0,
-      "VNR GUAVA": 0,
-      "PAPAYA": 3820,
-      "total": 143403
+      "KINNOW": 0
     },
     {
       "week": "2025-09-01/2025-09-07",
+      "total": 107960,
       "WATERMELON": 38120,
       "KASHMIR APPLE": 13600,
       "KINNAUR APPLE": 0,
@@ -556,13 +1395,11 @@
       "SHIMLA APPLE": 12730,
       "ORANGE": 0,
       "SAFEDA MANGO": 0,
-      "KINNOW": 0,
-      "VNR GUAVA": 5925,
-      "PAPAYA": 4030,
-      "total": 107960
+      "KINNOW": 0
     },
     {
       "week": "2025-09-08/2025-09-14",
+      "total": 111656,
       "WATERMELON": 38630,
       "KASHMIR APPLE": 14160,
       "KINNAUR APPLE": 0,
@@ -570,13 +1407,11 @@
       "SHIMLA APPLE": 13040,
       "ORANGE": 0,
       "SAFEDA MANGO": 0,
-      "KINNOW": 0,
-      "VNR GUAVA": 6445,
-      "PAPAYA": 4125,
-      "total": 111656
+      "KINNOW": 0
     },
     {
       "week": "2025-09-15/2025-09-21",
+      "total": 116091,
       "WATERMELON": 38650,
       "KASHMIR APPLE": 13710,
       "KINNAUR APPLE": 0,
@@ -584,13 +1419,11 @@
       "SHIMLA APPLE": 14790,
       "ORANGE": 0,
       "SAFEDA MANGO": 0,
-      "KINNOW": 0,
-      "VNR GUAVA": 6570,
-      "PAPAYA": 4060,
-      "total": 116091
+      "KINNOW": 0
     },
     {
       "week": "2025-09-22/2025-09-28",
+      "total": 115677,
       "WATERMELON": 38330,
       "KASHMIR APPLE": 13910,
       "KINNAUR APPLE": 0,
@@ -598,13 +1431,11 @@
       "SHIMLA APPLE": 14580,
       "ORANGE": 0,
       "SAFEDA MANGO": 0,
-      "KINNOW": 0,
-      "VNR GUAVA": 6235,
-      "PAPAYA": 3960,
-      "total": 115677
+      "KINNOW": 0
     },
     {
       "week": "2025-09-29/2025-10-05",
+      "total": 114227,
       "WATERMELON": 38680,
       "KASHMIR APPLE": 13890,
       "KINNAUR APPLE": 0,
@@ -612,13 +1443,11 @@
       "SHIMLA APPLE": 14930,
       "ORANGE": 0,
       "SAFEDA MANGO": 0,
-      "KINNOW": 0,
-      "VNR GUAVA": 6365,
-      "PAPAYA": 4085,
-      "total": 114227
+      "KINNOW": 0
     },
     {
       "week": "2025-10-06/2025-10-12",
+      "total": 115463,
       "WATERMELON": 38300,
       "KASHMIR APPLE": 14930,
       "KINNAUR APPLE": 0,
@@ -626,13 +1455,11 @@
       "SHIMLA APPLE": 14640,
       "ORANGE": 0,
       "SAFEDA MANGO": 0,
-      "KINNOW": 0,
-      "VNR GUAVA": 6305,
-      "PAPAYA": 4120,
-      "total": 115463
+      "KINNOW": 0
     },
     {
       "week": "2025-10-13/2025-10-19",
+      "total": 113382,
       "WATERMELON": 37970,
       "KASHMIR APPLE": 13880,
       "KINNAUR APPLE": 0,
@@ -640,13 +1467,11 @@
       "SHIMLA APPLE": 14920,
       "ORANGE": 0,
       "SAFEDA MANGO": 0,
-      "KINNOW": 0,
-      "VNR GUAVA": 6255,
-      "PAPAYA": 4140,
-      "total": 113382
+      "KINNOW": 0
     },
     {
       "week": "2025-10-20/2025-10-26",
+      "total": 56869,
       "WATERMELON": 18900,
       "KASHMIR APPLE": 7170,
       "KINNAUR APPLE": 0,
@@ -654,13 +1479,11 @@
       "SHIMLA APPLE": 7460,
       "ORANGE": 0,
       "SAFEDA MANGO": 0,
-      "KINNOW": 0,
-      "VNR GUAVA": 3070,
-      "PAPAYA": 2135,
-      "total": 56869
+      "KINNOW": 0
     },
     {
       "week": "2025-10-27/2025-11-02",
+      "total": 45470,
       "WATERMELON": 14360,
       "KASHMIR APPLE": 5520,
       "KINNAUR APPLE": 0,
@@ -668,13 +1491,11 @@
       "SHIMLA APPLE": 6770,
       "ORANGE": 0,
       "SAFEDA MANGO": 0,
-      "KINNOW": 0,
-      "VNR GUAVA": 3115,
-      "PAPAYA": 980,
-      "total": 45470
+      "KINNOW": 0
     },
     {
       "week": "2025-11-03/2025-11-09",
+      "total": 118329,
       "WATERMELON": 31720,
       "KASHMIR APPLE": 15040,
       "KINNAUR APPLE": 0,
@@ -682,13 +1503,11 @@
       "SHIMLA APPLE": 19830,
       "ORANGE": 0,
       "SAFEDA MANGO": 0,
-      "KINNOW": 0,
-      "VNR GUAVA": 12180,
-      "PAPAYA": 0,
-      "total": 118329
+      "KINNOW": 0
     },
     {
       "week": "2025-11-10/2025-11-16",
+      "total": 117064,
       "WATERMELON": 31520,
       "KASHMIR APPLE": 14900,
       "KINNAUR APPLE": 0,
@@ -696,13 +1515,11 @@
       "SHIMLA APPLE": 19750,
       "ORANGE": 0,
       "SAFEDA MANGO": 0,
-      "KINNOW": 0,
-      "VNR GUAVA": 11780,
-      "PAPAYA": 0,
-      "total": 117064
+      "KINNOW": 0
     },
     {
       "week": "2025-11-17/2025-11-23",
+      "total": 117168,
       "WATERMELON": 31360,
       "KASHMIR APPLE": 14920,
       "KINNAUR APPLE": 0,
@@ -710,13 +1527,11 @@
       "SHIMLA APPLE": 19700,
       "ORANGE": 0,
       "SAFEDA MANGO": 0,
-      "KINNOW": 0,
-      "VNR GUAVA": 11960,
-      "PAPAYA": 0,
-      "total": 117168
+      "KINNOW": 0
     },
     {
       "week": "2025-11-24/2025-11-30",
+      "total": 115647,
       "WATERMELON": 29700,
       "KASHMIR APPLE": 15160,
       "KINNAUR APPLE": 0,
@@ -724,13 +1539,11 @@
       "SHIMLA APPLE": 19920,
       "ORANGE": 0,
       "SAFEDA MANGO": 0,
-      "KINNOW": 0,
-      "VNR GUAVA": 12110,
-      "PAPAYA": 0,
-      "total": 115647
+      "KINNOW": 0
     },
     {
       "week": "2025-12-01/2025-12-07",
+      "total": 118525,
       "WATERMELON": 0,
       "KASHMIR APPLE": 14970,
       "KINNAUR APPLE": 16290,
@@ -738,13 +1551,11 @@
       "SHIMLA APPLE": 0,
       "ORANGE": 11600,
       "SAFEDA MANGO": 0,
-      "KINNOW": 16460,
-      "VNR GUAVA": 12030,
-      "PAPAYA": 0,
-      "total": 118525
+      "KINNOW": 16460
     },
     {
       "week": "2025-12-08/2025-12-14",
+      "total": 115560,
       "WATERMELON": 0,
       "KASHMIR APPLE": 14910,
       "KINNAUR APPLE": 16070,
@@ -752,13 +1563,11 @@
       "SHIMLA APPLE": 0,
       "ORANGE": 11350,
       "SAFEDA MANGO": 0,
-      "KINNOW": 15870,
-      "VNR GUAVA": 11740,
-      "PAPAYA": 0,
-      "total": 115560
+      "KINNOW": 15870
     },
     {
       "week": "2025-12-15/2025-12-21",
+      "total": 118595,
       "WATERMELON": 0,
       "KASHMIR APPLE": 15050,
       "KINNAUR APPLE": 16320,
@@ -766,13 +1575,11 @@
       "SHIMLA APPLE": 0,
       "ORANGE": 11530,
       "SAFEDA MANGO": 0,
-      "KINNOW": 16330,
-      "VNR GUAVA": 12140,
-      "PAPAYA": 0,
-      "total": 118595
+      "KINNOW": 16330
     },
     {
       "week": "2025-12-22/2025-12-28",
+      "total": 118250,
       "WATERMELON": 0,
       "KASHMIR APPLE": 14950,
       "KINNAUR APPLE": 16330,
@@ -780,13 +1587,11 @@
       "SHIMLA APPLE": 0,
       "ORANGE": 11620,
       "SAFEDA MANGO": 0,
-      "KINNOW": 16270,
-      "VNR GUAVA": 12020,
-      "PAPAYA": 0,
-      "total": 118250
+      "KINNOW": 16270
     },
     {
       "week": "2025-12-29/2026-01-04",
+      "total": 98538,
       "WATERMELON": 0,
       "KASHMIR APPLE": 13070,
       "KINNAUR APPLE": 13920,
@@ -794,13 +1599,11 @@
       "SHIMLA APPLE": 0,
       "ORANGE": 3770,
       "SAFEDA MANGO": 0,
-      "KINNOW": 14080,
-      "VNR GUAVA": 9780,
-      "PAPAYA": 0,
-      "total": 98538
+      "KINNOW": 14080
     },
     {
       "week": "2026-01-05/2026-01-11",
+      "total": 123300,
       "WATERMELON": 0,
       "KASHMIR APPLE": 16870,
       "KINNAUR APPLE": 17490,
@@ -808,13 +1611,11 @@
       "SHIMLA APPLE": 0,
       "ORANGE": 0,
       "SAFEDA MANGO": 0,
-      "KINNOW": 18020,
-      "VNR GUAVA": 12190,
-      "PAPAYA": 0,
-      "total": 123300
+      "KINNOW": 18020
     },
     {
       "week": "2026-01-12/2026-01-18",
+      "total": 121909,
       "WATERMELON": 0,
       "KASHMIR APPLE": 16650,
       "KINNAUR APPLE": 17340,
@@ -822,13 +1623,11 @@
       "SHIMLA APPLE": 0,
       "ORANGE": 0,
       "SAFEDA MANGO": 0,
-      "KINNOW": 17800,
-      "VNR GUAVA": 12060,
-      "PAPAYA": 0,
-      "total": 121909
+      "KINNOW": 17800
     },
     {
       "week": "2026-01-19/2026-01-25",
+      "total": 124141,
       "WATERMELON": 0,
       "KASHMIR APPLE": 16880,
       "KINNAUR APPLE": 17590,
@@ -836,13 +1635,11 @@
       "SHIMLA APPLE": 0,
       "ORANGE": 0,
       "SAFEDA MANGO": 0,
-      "KINNOW": 18240,
-      "VNR GUAVA": 12220,
-      "PAPAYA": 0,
-      "total": 124141
+      "KINNOW": 18240
     },
     {
       "week": "2026-01-26/2026-02-01",
+      "total": 100297,
       "WATERMELON": 0,
       "KASHMIR APPLE": 13640,
       "KINNAUR APPLE": 14330,
@@ -850,122 +1647,231 @@
       "SHIMLA APPLE": 0,
       "ORANGE": 0,
       "SAFEDA MANGO": 0,
-      "KINNOW": 14700,
-      "VNR GUAVA": 9900,
-      "PAPAYA": 0,
-      "total": 100297
+      "KINNOW": 14700
+    },
+    {
+      "week": "2026-02-02/2026-02-08",
+      "total": 120934,
+      "WATERMELON": 0,
+      "KASHMIR APPLE": 16490,
+      "KINNAUR APPLE": 17188,
+      "ANAR": 16143,
+      "SHIMLA APPLE": 0,
+      "ORANGE": 0,
+      "SAFEDA MANGO": 0,
+      "KINNOW": 17706
     }
   ],
   "retailers": [
     {
       "name": "RAJKUMAR FRUIT VASANT VIHAR",
       "totalQty": 50565,
-      "lng": 77.1561,
-      "lat": 28.5633,
+      "lng": 77.1573,
+      "lat": 28.5639,
       "topSkus": [
         {
           "sku": "WATERMELON",
-          "qty": 6100
+          "qty": 6100,
+          "quality": {
+            "A": "3D",
+            "B": "4D",
+            "C": "LOOSE"
+          }
         },
         {
           "sku": "ORANGE",
-          "qty": 3785
+          "qty": 3785,
+          "quality": {
+            "A": "96D",
+            "B": "141D",
+            "C": "141D"
+          }
         },
         {
           "sku": "KASHMIR APPLE",
-          "qty": 3320
+          "qty": 3320,
+          "quality": {
+            "A": "40D",
+            "B": "50D",
+            "C": "60D"
+          }
         },
         {
           "sku": "ANAR",
-          "qty": 2920
+          "qty": 2920,
+          "quality": {
+            "A": "10D",
+            "B": "12D",
+            "C": "14D"
+          }
         },
         {
           "sku": "MAUSAMI",
-          "qty": 2560
+          "qty": 2560,
+          "quality": {
+            "A": "1NO.",
+            "B": "2NO.",
+            "C": "GOLI"
+          }
         }
       ]
     },
     {
       "name": "RAHUL FRUIT 1 VASANT VIHAR",
       "totalQty": 49830,
-      "lng": 77.1572,
-      "lat": 28.5628,
+      "lng": 77.158,
+      "lat": 28.5645,
       "topSkus": [
         {
           "sku": "WATERMELON",
-          "qty": 6360
+          "qty": 6360,
+          "quality": {
+            "A": "3D",
+            "B": "4D",
+            "C": "LOOSE"
+          }
         },
         {
           "sku": "KASHMIR APPLE",
-          "qty": 3900
+          "qty": 3900,
+          "quality": {
+            "A": "40D",
+            "B": "50D",
+            "C": "60D"
+          }
         },
         {
           "sku": "TURKEY APPLE",
-          "qty": 3110
+          "qty": 3110,
+          "quality": {
+            "A": "40D",
+            "B": "45D",
+            "C": "50D"
+          }
         },
         {
           "sku": "ANAR",
-          "qty": 2860
+          "qty": 2860,
+          "quality": {
+            "A": "10D",
+            "B": "12D",
+            "C": "14D"
+          }
         },
         {
           "sku": "PAPAYA",
-          "qty": 2650
+          "qty": 2650,
+          "quality": {
+            "A": "LONG",
+            "B": "ROUND",
+            "C": "MIX"
+          }
         }
       ]
     },
     {
       "name": "DEEPAK FRUIT GURGAON SEC 69",
       "totalQty": 46118,
-      "lng": 77.0451,
-      "lat": 28.4089,
+      "lng": 77.0419,
+      "lat": 28.4108,
       "topSkus": [
         {
           "sku": "WATERMELON",
-          "qty": 5620
+          "qty": 5620,
+          "quality": {
+            "A": "3D",
+            "B": "4D",
+            "C": "LOOSE"
+          }
         },
         {
           "sku": "KASHMIR APPLE",
-          "qty": 4380
+          "qty": 4380,
+          "quality": {
+            "A": "40D",
+            "B": "50D",
+            "C": "60D"
+          }
         },
         {
           "sku": "ANAR",
-          "qty": 3630
+          "qty": 3630,
+          "quality": {
+            "A": "10D",
+            "B": "12D",
+            "C": "14D"
+          }
         },
         {
           "sku": "ORANGE",
-          "qty": 2895
+          "qty": 2895,
+          "quality": {
+            "A": "96D",
+            "B": "141D",
+            "C": "141D"
+          }
         },
         {
           "sku": "KINNAUR APPLE",
-          "qty": 2810
+          "qty": 2810,
+          "quality": {
+            "A": "40D",
+            "B": "50D",
+            "C": "60D"
+          }
         }
       ]
     },
     {
       "name": "KISHAN FRUIT GURGAON SEC-69",
       "totalQty": 43732,
-      "lng": 77.0461,
-      "lat": 28.4095,
+      "lng": 77.0425,
+      "lat": 28.4115,
       "topSkus": [
         {
           "sku": "WATERMELON",
-          "qty": 5870
+          "qty": 5870,
+          "quality": {
+            "A": "3D",
+            "B": "4D",
+            "C": "LOOSE"
+          }
         },
         {
           "sku": "KASHMIR APPLE",
-          "qty": 4270
+          "qty": 4270,
+          "quality": {
+            "A": "40D",
+            "B": "50D",
+            "C": "60D"
+          }
         },
         {
           "sku": "KINNAUR APPLE",
-          "qty": 3430
+          "qty": 3430,
+          "quality": {
+            "A": "40D",
+            "B": "50D",
+            "C": "60D"
+          }
         },
         {
           "sku": "ANAR",
-          "qty": 3140
+          "qty": 3140,
+          "quality": {
+            "A": "10D",
+            "B": "12D",
+            "C": "14D"
+          }
         },
         {
           "sku": "SHIMLA APPLE",
-          "qty": 2220
+          "qty": 2220,
+          "quality": {
+            "A": "40D",
+            "B": "50D",
+            "C": "60D"
+          }
         }
       ]
     },
@@ -973,523 +1879,1273 @@
       "name": "RANVEER FRUITS INA",
       "totalQty": 40771,
       "lng": 77.209,
-      "lat": 28.5675,
+      "lat": 28.5745,
       "topSkus": [
         {
           "sku": "WATERMELON",
-          "qty": 5330
+          "qty": 5330,
+          "quality": {
+            "A": "3D",
+            "B": "4D",
+            "C": "LOOSE"
+          }
         },
         {
           "sku": "ORANGE",
-          "qty": 3505
+          "qty": 3505,
+          "quality": {
+            "A": "96D",
+            "B": "141D",
+            "C": "141D"
+          }
         },
         {
           "sku": "ANAR",
-          "qty": 3250
+          "qty": 3250,
+          "quality": {
+            "A": "10D",
+            "B": "12D",
+            "C": "14D"
+          }
         },
         {
           "sku": "KASHMIR APPLE",
-          "qty": 3240
+          "qty": 3240,
+          "quality": {
+            "A": "40D",
+            "B": "50D",
+            "C": "60D"
+          }
         },
         {
           "sku": "KINNAUR APPLE",
-          "qty": 2990
+          "qty": 2990,
+          "quality": {
+            "A": "40D",
+            "B": "50D",
+            "C": "60D"
+          }
         }
       ]
     },
     {
       "name": "SANAWAR FRUIT GURGAON SEC-69",
       "totalQty": 40552,
-      "lng": 77.044,
-      "lat": 28.408,
+      "lng": 77.043,
+      "lat": 28.412,
       "topSkus": [
         {
           "sku": "WATERMELON",
-          "qty": 5090
+          "qty": 5090,
+          "quality": {
+            "A": "3D",
+            "B": "4D",
+            "C": "LOOSE"
+          }
         },
         {
           "sku": "ORANGE",
-          "qty": 3495
+          "qty": 3495,
+          "quality": {
+            "A": "96D",
+            "B": "141D",
+            "C": "141D"
+          }
         },
         {
           "sku": "ANAR",
-          "qty": 3200
+          "qty": 3200,
+          "quality": {
+            "A": "10D",
+            "B": "12D",
+            "C": "14D"
+          }
         },
         {
           "sku": "KASHMIR APPLE",
-          "qty": 3200
+          "qty": 3200,
+          "quality": {
+            "A": "40D",
+            "B": "50D",
+            "C": "60D"
+          }
         },
         {
           "sku": "KINNAUR APPLE",
-          "qty": 2800
+          "qty": 2800,
+          "quality": {
+            "A": "40D",
+            "B": "50D",
+            "C": "60D"
+          }
         }
       ]
     },
     {
       "name": "SONU FRUIT CHHATARPUR",
       "totalQty": 39511,
-      "lng": 77.1761,
-      "lat": 28.5008,
+      "lng": 77.1601,
+      "lat": 28.5009,
       "topSkus": [
         {
           "sku": "WATERMELON",
-          "qty": 4110
+          "qty": 4110,
+          "quality": {
+            "A": "3D",
+            "B": "4D",
+            "C": "LOOSE"
+          }
         },
         {
           "sku": "KASHMIR APPLE",
-          "qty": 3620
+          "qty": 3620,
+          "quality": {
+            "A": "40D",
+            "B": "50D",
+            "C": "60D"
+          }
         },
         {
           "sku": "ANAR",
-          "qty": 3130
+          "qty": 3130,
+          "quality": {
+            "A": "10D",
+            "B": "12D",
+            "C": "14D"
+          }
         },
         {
           "sku": "ORANGE",
-          "qty": 2695
+          "qty": 2695,
+          "quality": {
+            "A": "96D",
+            "B": "141D",
+            "C": "141D"
+          }
         },
         {
           "sku": "KINNAUR APPLE",
-          "qty": 2410
+          "qty": 2410,
+          "quality": {
+            "A": "40D",
+            "B": "50D",
+            "C": "60D"
+          }
         }
       ]
     },
     {
       "name": "KISHAN MANDI GURGAON",
       "totalQty": 39009,
-      "lng": 77.0262,
+      "lng": 77.0266,
       "lat": 28.4595,
       "topSkus": [
         {
           "sku": "WATERMELON",
-          "qty": 4440
+          "qty": 4440,
+          "quality": {
+            "A": "3D",
+            "B": "4D",
+            "C": "LOOSE"
+          }
         },
         {
           "sku": "KINNAUR APPLE",
-          "qty": 3350
+          "qty": 3350,
+          "quality": {
+            "A": "40D",
+            "B": "50D",
+            "C": "60D"
+          }
         },
         {
           "sku": "ANAR",
-          "qty": 3340
+          "qty": 3340,
+          "quality": {
+            "A": "10D",
+            "B": "12D",
+            "C": "14D"
+          }
         },
         {
           "sku": "KASHMIR APPLE",
-          "qty": 3110
+          "qty": 3110,
+          "quality": {
+            "A": "40D",
+            "B": "50D",
+            "C": "60D"
+          }
         },
         {
           "sku": "ORANGE",
-          "qty": 2080
+          "qty": 2080,
+          "quality": {
+            "A": "96D",
+            "B": "141D",
+            "C": "141D"
+          }
         }
       ]
     },
     {
       "name": "YADUVANSHI FRUITS VAISHALI",
       "totalQty": 37915,
-      "lng": 77.3385,
-      "lat": 28.6448,
+      "lng": 77.331,
+      "lat": 28.645,
       "topSkus": [
         {
           "sku": "WATERMELON",
-          "qty": 4550
+          "qty": 4550,
+          "quality": {
+            "A": "3D",
+            "B": "4D",
+            "C": "LOOSE"
+          }
         },
         {
           "sku": "ORANGE",
-          "qty": 3435
+          "qty": 3435,
+          "quality": {
+            "A": "96D",
+            "B": "141D",
+            "C": "141D"
+          }
         },
         {
           "sku": "KASHMIR APPLE",
-          "qty": 3380
+          "qty": 3380,
+          "quality": {
+            "A": "40D",
+            "B": "50D",
+            "C": "60D"
+          }
         },
         {
           "sku": "ANAR",
-          "qty": 2860
+          "qty": 2860,
+          "quality": {
+            "A": "10D",
+            "B": "12D",
+            "C": "14D"
+          }
         },
         {
           "sku": "KINNAUR APPLE",
-          "qty": 2840
+          "qty": 2840,
+          "quality": {
+            "A": "40D",
+            "B": "50D",
+            "C": "60D"
+          }
         }
       ]
     },
     {
       "name": "BALA JI SEC 25",
       "totalQty": 36270,
-      "lng": 77.0362,
-      "lat": 28.4621,
+      "lng": 77.0835,
+      "lat": 28.462,
       "topSkus": [
         {
           "sku": "WATERMELON",
-          "qty": 5090
+          "qty": 5090,
+          "quality": {
+            "A": "3D",
+            "B": "4D",
+            "C": "LOOSE"
+          }
         },
         {
           "sku": "KASHMIR APPLE",
-          "qty": 3270
+          "qty": 3270,
+          "quality": {
+            "A": "40D",
+            "B": "50D",
+            "C": "60D"
+          }
         },
         {
           "sku": "ORANGE",
-          "qty": 3265
+          "qty": 3265,
+          "quality": {
+            "A": "96D",
+            "B": "141D",
+            "C": "141D"
+          }
         },
         {
           "sku": "ANAR",
-          "qty": 3060
+          "qty": 3060,
+          "quality": {
+            "A": "10D",
+            "B": "12D",
+            "C": "14D"
+          }
         },
         {
           "sku": "KINNAUR APPLE",
-          "qty": 2220
+          "qty": 2220,
+          "quality": {
+            "A": "40D",
+            "B": "50D",
+            "C": "60D"
+          }
         }
       ]
     },
     {
       "name": "RAHUL FRUITS GOVINDPURI",
       "totalQty": 35639,
-      "lng": 77.2695,
-      "lat": 28.5356,
+      "lng": 77.254,
+      "lat": 28.5293,
       "topSkus": [
         {
           "sku": "WATERMELON",
-          "qty": 4460
+          "qty": 4460,
+          "quality": {
+            "A": "3D",
+            "B": "4D",
+            "C": "LOOSE"
+          }
         },
         {
           "sku": "KINNAUR APPLE",
-          "qty": 3490
+          "qty": 3490,
+          "quality": {
+            "A": "40D",
+            "B": "50D",
+            "C": "60D"
+          }
         },
         {
           "sku": "ANAR",
-          "qty": 2980
+          "qty": 2980,
+          "quality": {
+            "A": "10D",
+            "B": "12D",
+            "C": "14D"
+          }
         },
         {
           "sku": "KASHMIR APPLE",
-          "qty": 2690
+          "qty": 2690,
+          "quality": {
+            "A": "40D",
+            "B": "50D",
+            "C": "60D"
+          }
         },
         {
           "sku": "ORANGE",
-          "qty": 1850
+          "qty": 1850,
+          "quality": {
+            "A": "96D",
+            "B": "141D",
+            "C": "141D"
+          }
         }
       ]
     },
     {
       "name": "UMESH FRUIT SHREE RAM MARKET",
       "totalQty": 35384,
-      "lng": 77.218,
-      "lat": 28.6012,
+      "lng": 77.21,
+      "lat": 28.628,
       "topSkus": [
         {
           "sku": "WATERMELON",
-          "qty": 4260
+          "qty": 4260,
+          "quality": {
+            "A": "3D",
+            "B": "4D",
+            "C": "LOOSE"
+          }
         },
         {
           "sku": "ORANGE",
-          "qty": 2970
+          "qty": 2970,
+          "quality": {
+            "A": "96D",
+            "B": "141D",
+            "C": "141D"
+          }
         },
         {
           "sku": "ANAR",
-          "qty": 2760
+          "qty": 2760,
+          "quality": {
+            "A": "10D",
+            "B": "12D",
+            "C": "14D"
+          }
         },
         {
           "sku": "KASHMIR APPLE",
-          "qty": 2730
+          "qty": 2730,
+          "quality": {
+            "A": "40D",
+            "B": "50D",
+            "C": "60D"
+          }
         },
         {
           "sku": "KINNAUR APPLE",
-          "qty": 2110
+          "qty": 2110,
+          "quality": {
+            "A": "40D",
+            "B": "50D",
+            "C": "60D"
+          }
         }
       ]
     },
     {
       "name": "TIP TOP FRUIT SHOP NOIDA SEC 93",
       "totalQty": 35373,
-      "lng": 77.3635,
-      "lat": 28.5747,
+      "lng": 77.395,
+      "lat": 28.544,
       "topSkus": [
         {
           "sku": "WATERMELON",
-          "qty": 4770
+          "qty": 4770,
+          "quality": {
+            "A": "3D",
+            "B": "4D",
+            "C": "LOOSE"
+          }
         },
         {
           "sku": "KINNAUR APPLE",
-          "qty": 2910
+          "qty": 2910,
+          "quality": {
+            "A": "40D",
+            "B": "50D",
+            "C": "60D"
+          }
         },
         {
           "sku": "KASHMIR APPLE",
-          "qty": 2740
+          "qty": 2740,
+          "quality": {
+            "A": "40D",
+            "B": "50D",
+            "C": "60D"
+          }
         },
         {
           "sku": "ANAR",
-          "qty": 2170
+          "qty": 2170,
+          "quality": {
+            "A": "10D",
+            "B": "12D",
+            "C": "14D"
+          }
         },
         {
           "sku": "ORANGE",
-          "qty": 1790
+          "qty": 1790,
+          "quality": {
+            "A": "96D",
+            "B": "141D",
+            "C": "141D"
+          }
         }
       ]
     },
     {
       "name": "SURAJ FRUIT FATEHPUR BERI",
       "totalQty": 35175,
-      "lng": 77.196,
-      "lat": 28.472,
+      "lng": 77.164,
+      "lat": 28.48,
       "topSkus": [
         {
           "sku": "WATERMELON",
-          "qty": 5710
+          "qty": 5710,
+          "quality": {
+            "A": "3D",
+            "B": "4D",
+            "C": "LOOSE"
+          }
         },
         {
           "sku": "KINNAUR APPLE",
-          "qty": 3720
+          "qty": 3720,
+          "quality": {
+            "A": "40D",
+            "B": "50D",
+            "C": "60D"
+          }
         },
         {
           "sku": "KASHMIR APPLE",
-          "qty": 3700
+          "qty": 3700,
+          "quality": {
+            "A": "40D",
+            "B": "50D",
+            "C": "60D"
+          }
         },
         {
           "sku": "ORANGE",
-          "qty": 3125
+          "qty": 3125,
+          "quality": {
+            "A": "96D",
+            "B": "141D",
+            "C": "141D"
+          }
         },
         {
           "sku": "ANAR",
-          "qty": 1990
+          "qty": 1990,
+          "quality": {
+            "A": "10D",
+            "B": "12D",
+            "C": "14D"
+          }
         }
       ]
     },
     {
       "name": "ARIF FRUIT CHHATARPUR",
       "totalQty": 34982,
-      "lng": 77.177,
-      "lat": 28.5015,
+      "lng": 77.162,
+      "lat": 28.5005,
       "topSkus": [
         {
           "sku": "WATERMELON",
-          "qty": 4280
+          "qty": 4280,
+          "quality": {
+            "A": "3D",
+            "B": "4D",
+            "C": "LOOSE"
+          }
         },
         {
           "sku": "KINNAUR APPLE",
-          "qty": 3690
+          "qty": 3690,
+          "quality": {
+            "A": "40D",
+            "B": "50D",
+            "C": "60D"
+          }
         },
         {
           "sku": "KASHMIR APPLE",
-          "qty": 3170
+          "qty": 3170,
+          "quality": {
+            "A": "40D",
+            "B": "50D",
+            "C": "60D"
+          }
         },
         {
           "sku": "ANAR",
-          "qty": 2330
+          "qty": 2330,
+          "quality": {
+            "A": "10D",
+            "B": "12D",
+            "C": "14D"
+          }
         },
         {
           "sku": "ORANGE",
-          "qty": 1925
+          "qty": 1925,
+          "quality": {
+            "A": "96D",
+            "B": "141D",
+            "C": "141D"
+          }
         }
       ]
     },
     {
       "name": "MANGALAM FRUITS HUAZ KHAS",
       "totalQty": 34706,
-      "lng": 77.2001,
-      "lat": 28.5494,
+      "lng": 77.2069,
+      "lat": 28.5505,
       "topSkus": [
         {
           "sku": "WATERMELON",
-          "qty": 3710
+          "qty": 3710,
+          "quality": {
+            "A": "3D",
+            "B": "4D",
+            "C": "LOOSE"
+          }
         },
         {
           "sku": "KASHMIR APPLE",
-          "qty": 3480
+          "qty": 3480,
+          "quality": {
+            "A": "40D",
+            "B": "50D",
+            "C": "60D"
+          }
         },
         {
           "sku": "KINNAUR APPLE",
-          "qty": 3470
+          "qty": 3470,
+          "quality": {
+            "A": "40D",
+            "B": "50D",
+            "C": "60D"
+          }
         },
         {
           "sku": "ANAR",
-          "qty": 2740
+          "qty": 2740,
+          "quality": {
+            "A": "10D",
+            "B": "12D",
+            "C": "14D"
+          }
         },
         {
           "sku": "ORANGE",
-          "qty": 1885
+          "qty": 1885,
+          "quality": {
+            "A": "96D",
+            "B": "141D",
+            "C": "141D"
+          }
         }
       ]
     },
     {
       "name": "SUNIL FRUIT SEC 49",
       "totalQty": 34168,
-      "lng": 77.052,
-      "lat": 28.423,
+      "lng": 77.0665,
+      "lat": 28.4225,
       "topSkus": [
         {
           "sku": "WATERMELON",
-          "qty": 5390
+          "qty": 5390,
+          "quality": {
+            "A": "3D",
+            "B": "4D",
+            "C": "LOOSE"
+          }
         },
         {
           "sku": "KASHMIR APPLE",
-          "qty": 2980
+          "qty": 2980,
+          "quality": {
+            "A": "40D",
+            "B": "50D",
+            "C": "60D"
+          }
         },
         {
           "sku": "ORANGE",
-          "qty": 2905
+          "qty": 2905,
+          "quality": {
+            "A": "96D",
+            "B": "141D",
+            "C": "141D"
+          }
         },
         {
           "sku": "KINNAUR APPLE",
-          "qty": 2670
+          "qty": 2670,
+          "quality": {
+            "A": "40D",
+            "B": "50D",
+            "C": "60D"
+          }
         },
         {
           "sku": "ANAR",
-          "qty": 2570
+          "qty": 2570,
+          "quality": {
+            "A": "10D",
+            "B": "12D",
+            "C": "14D"
+          }
         }
       ]
     },
     {
       "name": "NETAJI FRUIT HAUZ KHAS",
       "totalQty": 33813,
-      "lng": 77.2015,
-      "lat": 28.548,
+      "lng": 77.2075,
+      "lat": 28.551,
       "topSkus": [
         {
           "sku": "WATERMELON",
-          "qty": 4700
+          "qty": 4700,
+          "quality": {
+            "A": "3D",
+            "B": "4D",
+            "C": "LOOSE"
+          }
         },
         {
           "sku": "KINNAUR APPLE",
-          "qty": 3000
+          "qty": 3000,
+          "quality": {
+            "A": "40D",
+            "B": "50D",
+            "C": "60D"
+          }
         },
         {
           "sku": "ANAR",
-          "qty": 2970
+          "qty": 2970,
+          "quality": {
+            "A": "10D",
+            "B": "12D",
+            "C": "14D"
+          }
         },
         {
           "sku": "KASHMIR APPLE",
-          "qty": 2110
+          "qty": 2110,
+          "quality": {
+            "A": "40D",
+            "B": "50D",
+            "C": "60D"
+          }
         },
         {
           "sku": "ORANGE",
-          "qty": 1870
+          "qty": 1870,
+          "quality": {
+            "A": "96D",
+            "B": "141D",
+            "C": "141D"
+          }
         }
       ]
     },
     {
       "name": "PAPPU FRUIT 4 SEC-50",
       "totalQty": 33635,
-      "lng": 77.054,
-      "lat": 28.425,
+      "lng": 77.0672,
+      "lat": 28.4218,
       "topSkus": [
         {
           "sku": "WATERMELON",
-          "qty": 4580
+          "qty": 4580,
+          "quality": {
+            "A": "3D",
+            "B": "4D",
+            "C": "LOOSE"
+          }
         },
         {
           "sku": "KASHMIR APPLE",
-          "qty": 3860
+          "qty": 3860,
+          "quality": {
+            "A": "40D",
+            "B": "50D",
+            "C": "60D"
+          }
         },
         {
           "sku": "KINNAUR APPLE",
-          "qty": 2820
+          "qty": 2820,
+          "quality": {
+            "A": "40D",
+            "B": "50D",
+            "C": "60D"
+          }
         },
         {
           "sku": "ANAR",
-          "qty": 2700
+          "qty": 2700,
+          "quality": {
+            "A": "10D",
+            "B": "12D",
+            "C": "14D"
+          }
         },
         {
           "sku": "SAFEDA MANGO",
-          "qty": 1885
+          "qty": 1885,
+          "quality": {
+            "A": "32D",
+            "B": "36D",
+            "C": "36D"
+          }
         }
       ]
     },
     {
       "name": "SANJEEV SAXENA FRUIT KALKA JI",
       "totalQty": 33612,
-      "lng": 77.2587,
-      "lat": 28.5349,
+      "lng": 77.255,
+      "lat": 28.5118,
       "topSkus": [
         {
           "sku": "WATERMELON",
-          "qty": 5660
+          "qty": 5660,
+          "quality": {
+            "A": "3D",
+            "B": "4D",
+            "C": "LOOSE"
+          }
         },
         {
           "sku": "KINNAUR APPLE",
-          "qty": 3210
+          "qty": 3210,
+          "quality": {
+            "A": "40D",
+            "B": "50D",
+            "C": "60D"
+          }
         },
         {
           "sku": "KASHMIR APPLE",
-          "qty": 2930
+          "qty": 2930,
+          "quality": {
+            "A": "40D",
+            "B": "50D",
+            "C": "60D"
+          }
         },
         {
           "sku": "ANAR",
-          "qty": 2590
+          "qty": 2590,
+          "quality": {
+            "A": "10D",
+            "B": "12D",
+            "C": "14D"
+          }
         },
         {
           "sku": "ORANGE",
-          "qty": 2000
+          "qty": 2000,
+          "quality": {
+            "A": "96D",
+            "B": "141D",
+            "C": "141D"
+          }
         }
       ]
     }
   ],
-  "forecast": {
+  "topSkus": [
+    {
+      "sku": "WATERMELON",
+      "qty": 1685180,
+      "quality": {
+        "A": "3D",
+        "B": "4D",
+        "C": "LOOSE"
+      }
+    },
+    {
+      "sku": "KASHMIR APPLE",
+      "qty": 945040,
+      "quality": {
+        "A": "40D",
+        "B": "50D",
+        "C": "60D"
+      }
+    },
+    {
+      "sku": "KINNAUR APPLE",
+      "qty": 934840,
+      "quality": {
+        "A": "40D",
+        "B": "50D",
+        "C": "60D"
+      }
+    },
+    {
+      "sku": "ANAR",
+      "qty": 928395,
+      "quality": {
+        "A": "10D",
+        "B": "12D",
+        "C": "14D"
+      }
+    },
+    {
+      "sku": "SHIMLA APPLE",
+      "qty": 569320,
+      "quality": {
+        "A": "40D",
+        "B": "50D",
+        "C": "60D"
+      }
+    },
+    {
+      "sku": "ORANGE",
+      "qty": 531425,
+      "quality": {
+        "A": "96D",
+        "B": "141D",
+        "C": "141D"
+      }
+    },
+    {
+      "sku": "SAFEDA MANGO",
+      "qty": 440380,
+      "quality": {
+        "A": "32D",
+        "B": "36D",
+        "C": "36D"
+      }
+    },
+    {
+      "sku": "KINNOW",
+      "qty": 320990,
+      "quality": {
+        "A": "SUPER FAIZAN",
+        "B": "786",
+        "C": "EAGLE"
+      }
+    },
+    {
+      "sku": "MAUSAMI",
+      "qty": 308709,
+      "quality": {
+        "A": "1NO.",
+        "B": "2NO.",
+        "C": "GOLI"
+      }
+    },
+    {
+      "sku": "VNR GUAVA",
+      "qty": 299440,
+      "quality": {
+        "A": "300GM+",
+        "B": "250GM+",
+        "C": "200GM+"
+      }
+    },
+    {
+      "sku": "GREEN GRAPES",
+      "qty": 270260,
+      "quality": {
+        "A": "SUPER SONAKA",
+        "B": "SONAKA",
+        "C": "SONAKA"
+      }
+    },
+    {
+      "sku": "MALTA",
+      "qty": 259465,
+      "quality": {
+        "A": "72D",
+        "B": "84D",
+        "C": "96D"
+      }
+    },
+    {
+      "sku": "DUSSERI MANGO",
+      "qty": 254420,
+      "quality": {
+        "A": "JUMBO",
+        "B": "LARGE",
+        "C": "MEDIUM"
+      }
+    },
+    {
+      "sku": "COCONUT",
+      "qty": 221291,
+      "quality": {
+        "A": "PARCHUN",
+        "B": "LOOSE",
+        "C": "LOOSE"
+      }
+    },
+    {
+      "sku": "PAPAYA",
+      "qty": 209695,
+      "quality": {
+        "A": "LONG",
+        "B": "ROUND",
+        "C": "MIX"
+      }
+    },
+    {
+      "sku": "CHIKOO",
+      "qty": 205215,
+      "quality": {
+        "A": "ASHOK",
+        "B": "LOCAL",
+        "C": "LOCAL"
+      }
+    },
+    {
+      "sku": "TURKEY APPLE",
+      "qty": 189200,
+      "quality": {
+        "A": "40D",
+        "B": "45D",
+        "C": "50D"
+      }
+    },
+    {
+      "sku": "LANGDA MANGO",
+      "qty": 179520,
+      "quality": {
+        "A": "JUMBO",
+        "B": "LARGE",
+        "C": "MEDIUM"
+      }
+    },
+    {
+      "sku": "MANDARIN",
+      "qty": 177081,
+      "quality": {
+        "A": "SWEETC",
+        "B": "CORE",
+        "C": "CORE"
+      }
+    },
+    {
+      "sku": "CHAUSA MANGO",
+      "qty": 171340,
+      "quality": {
+        "A": "5KG",
+        "B": "10KG",
+        "C": "10KG"
+      }
+    }
+  ],
+  "skuQuality": {
     "WATERMELON": {
-      "predicted": 0,
-      "upper": 0,
-      "lower": 0,
-      "suggestedPrice": 135
+      "A": "3D",
+      "B": "4D",
+      "C": "LOOSE"
     },
-    "KASHMIR APPLE": {
-      "predicted": 16010,
-      "upper": 18892,
-      "lower": 13128,
-      "suggestedPrice": 246
+    "WASHINGTON APPLE": {
+      "A": "44D",
+      "B": "100D",
+      "C": "125D"
     },
-    "KINNAUR APPLE": {
-      "predicted": 16688,
-      "upper": 19691,
-      "lower": 13684,
-      "suggestedPrice": 249
+    "COCONUT": {
+      "A": "PARCHUN",
+      "B": "LOOSE",
+      "C": "LOOSE"
     },
-    "ANAR": {
-      "predicted": 15672,
-      "upper": 18494,
-      "lower": 12851,
-      "suggestedPrice": 100
+    "BLUEBERRY": {
+      "A": "JUMBO",
+      "B": "LARGE",
+      "C": "MEDIUM"
     },
-    "SHIMLA APPLE": {
-      "predicted": 0,
-      "upper": 0,
-      "lower": 0,
-      "suggestedPrice": 155
+    "MAUSAMI": {
+      "A": "1NO.",
+      "B": "2NO.",
+      "C": "GOLI"
     },
-    "ORANGE": {
-      "predicted": 0,
-      "upper": 0,
-      "lower": 0,
-      "suggestedPrice": 175
+    "TURKEY APPLE": {
+      "A": "40D",
+      "B": "45D",
+      "C": "50D"
     },
-    "SAFEDA MANGO": {
-      "predicted": 0,
-      "upper": 0,
-      "lower": 0,
-      "suggestedPrice": 157
-    },
-    "KINNOW": {
-      "predicted": 17190,
-      "upper": 20284,
-      "lower": 14096,
-      "suggestedPrice": 243
-    },
-    "VNR GUAVA": {
-      "predicted": 11592,
-      "upper": 13679,
-      "lower": 9506,
-      "suggestedPrice": 182
+    "SHARDA": {
+      "A": "5PCS",
+      "B": "5PCS",
+      "C": "5PCS"
     },
     "PAPAYA": {
-      "predicted": 0,
-      "upper": 0,
-      "lower": 0,
-      "suggestedPrice": 198
+      "A": "LONG",
+      "B": "ROUND",
+      "C": "MIX"
+    },
+    "NAAK": {
+      "A": "LARGE",
+      "B": "SMALL",
+      "C": "SMALL"
+    },
+    "KINNAUR APPLE": {
+      "A": "40D",
+      "B": "50D",
+      "C": "60D"
+    },
+    "ANAR": {
+      "A": "10D",
+      "B": "12D",
+      "C": "14D"
+    },
+    "AVOCADO": {
+      "A": "NEW ZEALAND",
+      "B": "TANZANIA",
+      "C": "KENYA"
+    },
+    "LANGRA MANGO": {
+      "A": "5KG",
+      "B": "10KG",
+      "C": "10KG"
+    },
+    "CHAUSA MANGO": {
+      "A": "5KG",
+      "B": "10KG",
+      "C": "10KG"
+    },
+    "ZESPRI KIWI": {
+      "A": "GOLD",
+      "B": "GREEN",
+      "C": "GREEN"
+    },
+    "PLUM": {
+      "A": "LARGE",
+      "B": "MEDIUM",
+      "C": "MEDIUM"
+    },
+    "KHUMANI": {
+      "A": "LARGE",
+      "B": "MEDIUM",
+      "C": "MEDIUM"
+    },
+    "VNR GUAVA": {
+      "A": "300GM+",
+      "B": "250GM+",
+      "C": "200GM+"
+    },
+    "ORANGE": {
+      "A": "96D",
+      "B": "141D",
+      "C": "141D"
+    },
+    "SHAREEFA": {
+      "A": "4KG",
+      "B": "10KG",
+      "C": "10KG"
+    },
+    "RED GRAPES": {
+      "A": "RED GLOBE",
+      "B": "FLAME",
+      "C": "FLAME"
+    },
+    "MALTA": {
+      "A": "72D",
+      "B": "84D",
+      "C": "96D"
+    },
+    "KASHMIR APPLE": {
+      "A": "40D",
+      "B": "50D",
+      "C": "60D"
+    },
+    "KINNOW": {
+      "A": "SUPER FAIZAN",
+      "B": "786",
+      "C": "EAGLE"
+    },
+    "KIMIA DATES": {
+      "A": null,
+      "B": null,
+      "C": null
+    },
+    "BLACK GRAPES": {
+      "A": "SEEDLESS",
+      "B": "BANGLORE BLUE",
+      "C": "BANGLORE BLUE"
+    },
+    "GREEN GRAPES": {
+      "A": "SUPER SONAKA",
+      "B": "SONAKA",
+      "C": "SONAKA"
+    },
+    "PINK GUAVA": {
+      "A": "300GM+",
+      "B": "250GM+",
+      "C": "200GM+"
+    },
+    "RED PEAR": {
+      "A": "60D",
+      "B": "70D",
+      "C": "80D"
+    },
+    "DRAGON FRUIT": {
+      "A": "18PCS",
+      "B": "20PCS",
+      "C": "25PCS"
+    },
+    "CHIKOO": {
+      "A": "ASHOK",
+      "B": "LOCAL",
+      "C": "LOCAL"
+    },
+    "SAFEDA MANGO": {
+      "A": "32D",
+      "B": "36D",
+      "C": "36D"
+    },
+    "HAMAM MANGO": {
+      "A": "5KG",
+      "B": "10KG",
+      "C": "10KG"
+    },
+    "PERRY MANGO": {
+      "A": "5KG",
+      "B": "10KG",
+      "C": "10KG"
+    },
+    "ALPHONSO MANGO": {
+      "A": "5KG",
+      "B": "10KG",
+      "C": "10KG"
+    },
+    "DUSSERI MANGO": {
+      "A": "JUMBO",
+      "B": "LARGE",
+      "C": "MEDIUM"
+    },
+    "ENJOY APPLE": {
+      "A": "100D",
+      "B": "125D",
+      "C": "150D"
+    },
+    "IMLY": {
+      "A": null,
+      "B": null,
+      "C": null
+    },
+    "MANDARIN": {
+      "A": "SWEETC",
+      "B": "CORE",
+      "C": "CORE"
+    },
+    "KESAR MANGO": {
+      "A": "JUMBO",
+      "B": "LARGE",
+      "C": "MEDIUM"
+    },
+    "LANGDA MANGO": {
+      "A": "JUMBO",
+      "B": "LARGE",
+      "C": "MEDIUM"
+    },
+    "SHIMLA APPLE": {
+      "A": "40D",
+      "B": "50D",
+      "C": "60D"
+    },
+    "BANANA": {
+      "A": "12 DOZEN",
+      "B": "15 DOZEN",
+      "C": "18 DOZEN"
+    },
+    "GOLDEN APPLE": {
+      "A": "40D",
+      "B": "50D",
+      "C": "60D"
+    },
+    "DESI GUAVA": {
+      "A": "250GM+",
+      "B": "200GM+",
+      "C": "200GM+"
+    },
+    "RAMPHAL": {
+      "A": "28D",
+      "B": "30D",
+      "C": "32D"
+    },
+    "APPLE BER": {
+      "A": "LARGE",
+      "B": "MEDIUM",
+      "C": "MEDIUM"
+    },
+    "GALA APPLE": {
+      "A": "40D",
+      "B": "50D",
+      "C": "60D"
     }
-  },
-  "topSkus": [
-    "WATERMELON",
-    "KASHMIR APPLE",
-    "KINNAUR APPLE",
-    "ANAR",
-    "SHIMLA APPLE",
-    "ORANGE",
-    "SAFEDA MANGO",
-    "KINNOW",
-    "VNR GUAVA",
-    "PAPAYA"
-  ]
+  }
 }
