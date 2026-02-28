@@ -18,8 +18,10 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { PageHeader } from "@/components/page-header";
 import realData from "@/lib/real-data.json";
-import { ChevronLeft, ChevronRight, ArrowRight, TrendingUp, TrendingDown, Minus } from "lucide-react";
+import { ChevronLeft, ChevronRight, ArrowRight, TrendingUp, TrendingDown, Minus, Star, CreditCard, Clock, Store, Truck, ChevronDown, ChevronUp } from "lucide-react";
 import Link from "next/link";
+import { retailerProfiles, vendorDetails } from "@/lib/retailer-profiles";
+import { RadarChart, PolarGrid, PolarAngleAxis, Radar } from "recharts";
 
 const TOP_SKUS = ["WATERMELON", "KASHMIR APPLE", "KINNAUR APPLE", "ANAR", "KINNOW", "ORANGE", "SAFEDA MANGO", "VNR GUAVA"];
 const SKU_COLORS: Record<string, string> = {
@@ -91,7 +93,7 @@ export default function DemandPage() {
     };
   }).filter((s) => s.predicted > 0).sort((a, b) => b.predicted - a.predicted);
 
-  const topRetailers = realData.retailers.slice(0, 10);
+  const [expandedRetailer, setExpandedRetailer] = useState<string | null>(null);
   const weekTotal = selectedWeek.total;
 
   return (
@@ -307,13 +309,14 @@ export default function DemandPage() {
           </div>
         </>
       ) : (
-        /* Retailer view — indent allocation */
+        /* Full Retailer Profile View */
         <>
-          <div className="flex items-center justify-between mb-6">
+          {/* Header */}
+          <div className="flex items-center justify-between mb-4">
             <div>
-              <h2 className="text-xl font-bold">Top Retailers — Weekly Indent</h2>
+              <h2 className="text-xl font-bold">Retailer Allocation — Week of {selectedWeek.week.split("/")[0]}</h2>
               <p className="text-sm text-muted-foreground">
-                Week of {selectedWeek.week.split("/")[0]} &middot; {weekTotal.toLocaleString()} kg total
+                {retailerProfiles.length} retailers &middot; {weekTotal.toLocaleString()} kg total &middot; click a card to expand full profile
               </p>
             </div>
             <Button variant="outline" onClick={() => setView("forecast")} className="gap-2">
@@ -321,35 +324,200 @@ export default function DemandPage() {
             </Button>
           </div>
 
-          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-3 mb-6">
-            {topRetailers.map((r, i) => {
-              const shareOfWeek = ((r.totalQty / realData.stats.totalQty) * weekTotal);
+          {/* Summary strip */}
+          <div className="grid grid-cols-4 gap-3 mb-6">
+            {[
+              { label: "Priority Retailers", value: retailerProfiles.filter(r => r.tier === "Priority").length, color: "text-green-700" },
+              { label: "Secondary", value: retailerProfiles.filter(r => r.tier === "Secondary").length, color: "text-amber-700" },
+              { label: "Vendors Active", value: [...new Set(retailerProfiles.map(r => r.vendor))].length, color: "text-blue-700" },
+              { label: "Avg Score", value: Math.round(retailerProfiles.reduce((s, r) => s + r.score, 0) / retailerProfiles.length), color: "text-purple-700" },
+            ].map((s) => (
+              <Card key={s.label}>
+                <CardContent className="p-3 text-center">
+                  <p className={`text-2xl font-bold ${s.color}`}>{s.value}</p>
+                  <p className="text-xs text-muted-foreground">{s.label}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+
+          {/* Retailer cards */}
+          <div className="space-y-3 mb-6">
+            {retailerProfiles.map((r, i) => {
+              const isExpanded = expandedRetailer === r.name;
+              const weeklyKg = Math.round((r.avgDailyKg * 7));
+              const vendor = vendorDetails[r.vendor];
+              const tierStyle = r.tier === "Priority"
+                ? "bg-green-100 text-green-700 border-green-200"
+                : r.tier === "Secondary"
+                ? "bg-amber-100 text-amber-700 border-amber-200"
+                : "bg-red-100 text-red-700 border-red-200";
+              const scoreColor = r.score >= 85 ? "text-green-600" : r.score >= 70 ? "text-amber-600" : "text-red-500";
+
               return (
-                <Card key={r.name} className="hover:shadow-md transition-shadow">
-                  <CardContent className="p-4">
-                    <div className="flex items-start gap-3 mb-3">
-                      <span className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-full text-sm font-bold ${i < 3 ? "bg-green-600 text-white" : "bg-muted text-muted-foreground"}`}>
-                        {i + 1}
-                      </span>
-                      <div className="min-w-0">
-                        <p className="text-sm font-semibold leading-tight">{r.name}</p>
-                        <p className="text-xs text-muted-foreground mt-0.5">Est. weekly indent</p>
-                      </div>
-                    </div>
-                    <p className="text-2xl font-bold text-green-700 mb-1">
-                      {Math.round(shareOfWeek).toLocaleString()} kg
-                    </p>
-                    <div className="space-y-1 mt-3">
-                      {r.topSkus.slice(0, 3).map((s) => (
-                        <div key={s.sku} className="flex items-center justify-between">
-                          <div className="flex items-center gap-1.5">
-                            <div className="h-2 w-2 rounded-full" style={{ backgroundColor: SKU_COLORS[s.sku] ?? "#6b7280" }} />
-                            <span className="text-xs text-muted-foreground">{s.sku}</span>
+                <Card
+                  key={r.name}
+                  className={`overflow-hidden transition-all ${isExpanded ? "shadow-md ring-1 ring-green-300" : "hover:shadow-sm"}`}
+                >
+                  {/* Colored top bar */}
+                  <div className="h-1 w-full" style={{ backgroundColor: r.vendorColor }} />
+
+                  {/* Collapsed view — always visible */}
+                  <CardContent className="p-0">
+                    <button
+                      className="w-full text-left px-4 py-4"
+                      onClick={() => setExpandedRetailer(isExpanded ? null : r.name)}
+                    >
+                      <div className="flex items-center gap-3">
+                        {/* Rank */}
+                        <span className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-full text-sm font-bold ${i < 5 ? "bg-green-600 text-white" : "bg-muted text-muted-foreground"}`}>
+                          {i + 1}
+                        </span>
+
+                        {/* Name + area */}
+                        <div className="flex-1 min-w-0">
+                          <div className="flex items-center gap-2 flex-wrap">
+                            <p className="text-sm font-semibold">{r.name}</p>
+                            <Badge variant="outline" className={`text-[10px] px-1.5 py-0 ${tierStyle}`}>{r.tier}</Badge>
                           </div>
-                          <span className="text-xs font-medium">{Math.round(s.qty / 52 * (weekTotal / realData.stats.totalQty * 52)).toLocaleString()} kg</span>
+                          <p className="text-xs text-muted-foreground">{r.area} &middot; {r.shopType}</p>
                         </div>
-                      ))}
-                    </div>
+
+                        {/* Score */}
+                        <div className="text-center shrink-0">
+                          <p className={`text-xl font-bold ${scoreColor}`}>{r.score}</p>
+                          <p className="text-[10px] text-muted-foreground">score</p>
+                        </div>
+
+                        {/* Weekly kg */}
+                        <div className="text-center shrink-0">
+                          <p className="text-xl font-bold text-green-700">{weeklyKg.toLocaleString()}</p>
+                          <p className="text-[10px] text-muted-foreground">kg/week</p>
+                        </div>
+
+                        {/* Vendor pill */}
+                        <div className="flex items-center gap-1.5 shrink-0 rounded-full px-2.5 py-1 border" style={{ borderColor: r.vendorColor + "60", backgroundColor: r.vendorColor + "15" }}>
+                          <Truck className="h-3 w-3" style={{ color: r.vendorColor }} />
+                          <span className="text-xs font-medium" style={{ color: r.vendorColor }}>{r.vendor}</span>
+                        </div>
+
+                        {/* Expand toggle */}
+                        {isExpanded ? <ChevronUp className="h-4 w-4 text-muted-foreground shrink-0" /> : <ChevronDown className="h-4 w-4 text-muted-foreground shrink-0" />}
+                      </div>
+                    </button>
+
+                    {/* Expanded profile */}
+                    {isExpanded && (
+                      <div className="border-t px-4 py-4 bg-muted/20">
+                        <div className="grid grid-cols-1 gap-6 lg:grid-cols-3">
+
+                          {/* Col 1: Profile metrics */}
+                          <div>
+                            <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-3">Retailer Profile</p>
+                            <div className="space-y-2.5">
+                              {[
+                                { icon: Star, label: "AI Score", value: `${r.score}/100`, color: scoreColor },
+                                { icon: CreditCard, label: "Credit Score", value: `${r.creditScore}/100`, color: r.creditScore >= 80 ? "text-green-600" : "text-amber-600" },
+                                { icon: Clock, label: "Payment Terms", value: `Net ${r.paymentDays} days`, color: r.paymentDays <= 10 ? "text-green-600" : r.paymentDays <= 18 ? "text-amber-600" : "text-red-500" },
+                                { icon: Store, label: "Shop Type", value: r.shopType, color: "text-foreground" },
+                                { icon: Truck, label: "Vendor", value: r.vendor, color: "text-foreground" },
+                              ].map((m) => (
+                                <div key={m.label} className="flex items-center justify-between">
+                                  <div className="flex items-center gap-2">
+                                    <m.icon className="h-3.5 w-3.5 text-muted-foreground" />
+                                    <span className="text-xs text-muted-foreground">{m.label}</span>
+                                  </div>
+                                  <span className={`text-xs font-semibold ${m.color}`}>{m.value}</span>
+                                </div>
+                              ))}
+                            </div>
+
+                            {/* Vendor detail box */}
+                            {vendor && (
+                              <div className="mt-4 rounded-lg border p-3" style={{ borderColor: r.vendorColor + "40", backgroundColor: r.vendorColor + "08" }}>
+                                <p className="text-xs font-semibold mb-1" style={{ color: r.vendorColor }}>{vendor.name}</p>
+                                <p className="text-[10px] text-muted-foreground">{vendor.location}</p>
+                                <div className="flex items-center justify-between mt-2">
+                                  <span className="text-[10px] text-muted-foreground">Reliability</span>
+                                  <span className="text-[10px] font-bold text-green-600">{vendor.reliability}%</span>
+                                </div>
+                                <div className="flex items-center justify-between">
+                                  <span className="text-[10px] text-muted-foreground">Lead time</span>
+                                  <span className="text-[10px] font-semibold">{vendor.leadTimeDays}d</span>
+                                </div>
+                                <div className="flex items-center justify-between">
+                                  <span className="text-[10px] text-muted-foreground">Terms</span>
+                                  <span className="text-[10px] font-semibold">{vendor.paymentTerms}</span>
+                                </div>
+                              </div>
+                            )}
+                          </div>
+
+                          {/* Col 2: SKU allocation this week */}
+                          <div>
+                            <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-3">This Week&apos;s SKU Indent</p>
+                            <div className="space-y-2">
+                              {Object.entries(r.skuAllocation).map(([sku, pct]) => {
+                                const kgQty = Math.round(weeklyKg * pct / 100);
+                                return (
+                                  <div key={sku}>
+                                    <div className="flex items-center justify-between mb-0.5">
+                                      <div className="flex items-center gap-1.5">
+                                        <div className="h-2 w-2 rounded-full" style={{ backgroundColor: SKU_COLORS[sku] ?? "#6b7280" }} />
+                                        <span className="text-xs font-medium">{sku}</span>
+                                      </div>
+                                      <div className="flex items-center gap-2">
+                                        <span className="text-xs text-muted-foreground">{pct}%</span>
+                                        <span className="text-xs font-bold">{kgQty.toLocaleString()} kg</span>
+                                      </div>
+                                    </div>
+                                    <div className="h-1.5 rounded-full bg-muted overflow-hidden">
+                                      <div
+                                        className="h-full rounded-full"
+                                        style={{ width: `${pct}%`, backgroundColor: SKU_COLORS[sku] ?? "#6b7280" }}
+                                      />
+                                    </div>
+                                  </div>
+                                );
+                              })}
+                            </div>
+
+                            {/* Suggested prices for their top SKUs */}
+                            <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wider mt-4 mb-2">Suggested Sell Price</p>
+                            <div className="grid grid-cols-2 gap-1.5">
+                              {Object.keys(r.skuAllocation).slice(0, 4).map((sku) => (
+                                <div key={sku} className="rounded-md bg-muted/60 px-2 py-1.5 flex items-center justify-between">
+                                  <span className="text-[10px] text-muted-foreground truncate">{sku.split(" ")[0]}</span>
+                                  <span className="text-xs font-bold shrink-0 ml-1" style={{ color: SKU_COLORS[sku] ?? "#16a34a" }}>
+                                    ₹{SUGGESTED_PRICES[sku] ?? 80}
+                                  </span>
+                                </div>
+                              ))}
+                            </div>
+                          </div>
+
+                          {/* Col 3: Radar chart */}
+                          <div>
+                            <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-1">Performance Radar</p>
+                            <ResponsiveContainer width="100%" height={200}>
+                              <RadarChart data={r.radarMetrics}>
+                                <PolarGrid stroke="#d1d5db" />
+                                <PolarAngleAxis dataKey="label" tick={{ fontSize: 10 }} />
+                                <Radar name="Score" dataKey="value" stroke={r.vendorColor} fill={r.vendorColor} fillOpacity={0.25} strokeWidth={2} />
+                              </RadarChart>
+                            </ResponsiveContainer>
+                            <div className="grid grid-cols-2 gap-1.5 mt-1">
+                              {r.radarMetrics.map((m) => (
+                                <div key={m.label} className="flex items-center justify-between rounded-md bg-muted/40 px-2 py-1">
+                                  <span className="text-[10px] text-muted-foreground">{m.label}</span>
+                                  <span className="text-[10px] font-bold">{m.value}</span>
+                                </div>
+                              ))}
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    )}
                   </CardContent>
                 </Card>
               );
