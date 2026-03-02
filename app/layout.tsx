@@ -18,7 +18,10 @@ export default function RootLayout({
     <html lang="en">
       <body className="antialiased">
         <Sidebar />
-        <main className="ml-64 min-h-screen p-8">{children}</main>
+        {/* pt-14 = mobile top header (56px), pb-20 = mobile bottom tab bar (80px) */}
+        <main className="min-h-screen px-4 pt-[72px] pb-24 lg:ml-64 lg:px-8 lg:pt-8 lg:pb-8">
+          {children}
+        </main>
       </body>
     </html>
   );

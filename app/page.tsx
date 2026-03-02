@@ -53,8 +53,8 @@ export default function DashboardPage() {
       <div className="mb-6 rounded-xl bg-gradient-to-r from-green-700 to-green-500 p-5 text-white">
         <div className="flex items-center justify-between flex-wrap gap-4">
           <div>
-            <p className="text-2xl font-bold">
-              {(realData.stats.totalOrders / 1000).toFixed(0)}K orders &middot; {(realData.stats.totalQty / 1000000).toFixed(1)}M kg delivered &middot; {realData.stats.uniqueRetailers} retailers
+            <p className="text-lg sm:text-2xl font-bold leading-snug">
+              {(realData.stats.totalOrders / 1000).toFixed(0)}K orders &middot; {(realData.stats.totalQty / 1000000).toFixed(1)}M kg &middot; {realData.stats.uniqueRetailers} retailers
             </p>
             <p className="text-sm text-green-100 mt-1">Sep 2023 → {currentMonthLabel} &mdash; volume grew <span className="font-bold text-white">{realData.stats.monthlyGrowth}%</span></p>
           </div>

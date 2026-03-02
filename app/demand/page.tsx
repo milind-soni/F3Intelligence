@@ -233,7 +233,7 @@ export default function DemandPage() {
           <div className="flex items-center justify-between mb-3">
             <div>
               <h2 className="text-lg font-bold">Who Gets This Stock?</h2>
-              <p className="text-sm text-muted-foreground">Expand each retailer to see full profile + vendor + SKU indent</p>
+              <p className="text-sm text-muted-foreground hidden sm:block">Expand each retailer to see full profile + SKU indent</p>
             </div>
             <div className="flex gap-2">
               <Badge variant="outline" className="bg-green-50 text-green-700 border-green-200">
@@ -270,12 +270,12 @@ export default function DemandPage() {
                           </div>
                           <p className="text-xs text-muted-foreground">{r.area} · {r.shopType}</p>
                         </div>
-                        <div className="text-center shrink-0 w-12">
+                        <div className="text-center shrink-0 hidden sm:block w-12">
                           <p className={`text-lg font-bold ${sColor}`}>{r.score}</p>
                           <p className="text-[10px] text-muted-foreground">score</p>
                         </div>
-                        <div className="text-center shrink-0 w-16">
-                          <p className="text-lg font-bold text-green-700">{weeklyKg.toLocaleString()}</p>
+                        <div className="text-center shrink-0 w-14">
+                          <p className="text-base font-bold text-green-700">{(weeklyKg / 1000).toFixed(1)}K</p>
                           <p className="text-[10px] text-muted-foreground">kg/wk</p>
                         </div>
                         {isExpanded
@@ -287,7 +287,7 @@ export default function DemandPage() {
                     {/* Expanded profile */}
                     {isExpanded && (
                       <div className="border-t px-4 py-4 bg-muted/20">
-                        <div className="grid grid-cols-3 gap-5">
+                        <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
 
                           {/* Col 1: Profile */}
                           <div>

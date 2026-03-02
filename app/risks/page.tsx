@@ -23,7 +23,7 @@ export default function RisksPage() {
     <div>
       <PageHeader title="Risk Alerts" description="Supply disruption monitoring and early warning system" />
 
-      <div className="flex gap-3 mb-6">
+      <div className="flex flex-wrap gap-3 mb-6">
         {[
           { type: "Critical", count: riskAlerts.filter(a => a.type === "Critical").length, Icon: AlertTriangle, cls: "bg-red-50 border-red-200 text-red-700" },
           { type: "Warning", count: riskAlerts.filter(a => a.type === "Warning").length, Icon: AlertCircle, cls: "bg-amber-50 border-amber-200 text-amber-700" },
@@ -109,20 +109,22 @@ export default function RisksPage() {
       <Card>
         <CardContent className="p-5">
           <h3 className="font-semibold mb-4">Route Risk Assessment</h3>
-          <div className="space-y-3">
-            {riskRoutes.map((r) => (
-              <div key={r.route} className="flex items-center gap-4">
-                <span className="text-sm font-medium w-52 shrink-0">{r.route}</span>
-                <div className="flex-1 flex items-center gap-2">
-                  <div className="flex-1 h-2 rounded-full bg-muted overflow-hidden">
-                    <div className={`h-full rounded-full ${r.delayProb >= 60 ? "bg-red-500" : r.delayProb >= 30 ? "bg-amber-500" : "bg-green-500"}`} style={{ width: `${r.delayProb}%` }} />
+          <div className="overflow-x-auto">
+            <div className="min-w-[480px] space-y-3">
+              {riskRoutes.map((r) => (
+                <div key={r.route} className="flex items-center gap-4">
+                  <span className="text-sm font-medium w-48 shrink-0">{r.route}</span>
+                  <div className="flex-1 flex items-center gap-2">
+                    <div className="flex-1 h-2 rounded-full bg-muted overflow-hidden">
+                      <div className={`h-full rounded-full ${r.delayProb >= 60 ? "bg-red-500" : r.delayProb >= 30 ? "bg-amber-500" : "bg-green-500"}`} style={{ width: `${r.delayProb}%` }} />
+                    </div>
+                    <span className="text-sm font-medium w-8">{r.delayProb}%</span>
                   </div>
-                  <span className="text-sm font-medium w-8">{r.delayProb}%</span>
+                  <span className="text-sm font-medium text-amber-600 w-12">{r.priceImpact}</span>
+                  <Badge variant="outline" className={riskBadge(r.riskLevel)}>{r.riskLevel}</Badge>
                 </div>
-                <span className="text-sm font-medium text-amber-600 w-12">{r.priceImpact}</span>
-                <Badge variant="outline" className={riskBadge(r.riskLevel)}>{r.riskLevel}</Badge>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </CardContent>
       </Card>

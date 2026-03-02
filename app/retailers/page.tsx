@@ -49,10 +49,10 @@ export default function RetailersPage() {
         description={`${realData.stats.uniqueRetailers} retailers · Delhi NCR · click a pin to inspect`}
       />
 
-      <div className="grid grid-cols-1 gap-5 xl:grid-cols-3" style={{ height: "calc(100vh - 200px)", minHeight: "560px" }}>
+      <div className="grid grid-cols-1 gap-5 xl:grid-cols-3 xl:h-[calc(100vh-200px)] xl:min-h-[560px]">
 
-        {/* Map — 2/3 */}
-        <div className="xl:col-span-2 rounded-xl overflow-hidden border">
+        {/* Map — 2/3 width on desktop, fixed height on mobile */}
+        <div className="xl:col-span-2 rounded-xl overflow-hidden border h-[52vw] min-h-[280px] max-h-[480px] xl:h-auto xl:max-h-none">
           <RetailerMap
             retailers={retailers}
             selectedRetailer={selected}
@@ -61,7 +61,7 @@ export default function RetailersPage() {
         </div>
 
         {/* Right panel */}
-        <div className="flex flex-col gap-4 overflow-y-auto">
+        <div className="flex flex-col gap-4 xl:overflow-y-auto">
 
           {/* Header card */}
           <Card className="border-green-300 bg-green-50/40 shrink-0">
