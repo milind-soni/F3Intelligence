@@ -26,32 +26,38 @@ export function Sidebar() {
 
   return (
     <>
-      {/* Desktop sidebar — hidden on mobile */}
-      <aside className="fixed left-0 top-0 z-40 hidden lg:flex h-screen w-64 flex-col bg-sidebar text-sidebar-foreground">
-        <div className="flex items-center gap-3 border-b border-sidebar-border px-6 py-5">
-          <Image src="/logo.jpg" alt="F3 Logo" width={40} height={40} className="rounded-lg" />
-          <div>
-            <h1 className="text-lg font-bold tracking-tight">F3 Intelligence</h1>
-            <p className="text-xs text-sidebar-foreground/60">Delhi NCR</p>
+      {/* Desktop sidebar — dark green */}
+      <aside className="fixed left-0 top-0 bottom-0 z-40 hidden lg:flex w-64 flex-col bg-sidebar text-sidebar-foreground">
+        <div className="flex flex-col h-full">
+          <div className="flex items-center gap-3 border-b border-sidebar-border px-6 py-5">
+            <Image src="/logo.jpg" alt="F3 Logo" width={40} height={40} className="rounded-lg" />
+            <div>
+              <h1 className="text-lg font-bold tracking-tight">F3 Intelligence</h1>
+              <p className="text-xs text-sidebar-foreground/60">Delhi NCR</p>
+            </div>
           </div>
+
+          <nav className="flex-1 space-y-1 px-3 py-4">
+            {navItems.map((item) => {
+              const active = isActive(item.href);
+              return (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className={cn(
+                    "flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium transition-colors",
+                    active
+                      ? "bg-sidebar-primary text-sidebar-primary-foreground"
+                      : "text-sidebar-foreground/70 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground"
+                  )}
+                >
+                  <item.icon className="h-5 w-5" />
+                  {item.label}
+                </Link>
+              );
+            })}
+          </nav>
         </div>
-        <nav className="flex-1 space-y-1 px-3 py-4">
-          {navItems.map((item) => (
-            <Link
-              key={item.href}
-              href={item.href}
-              className={cn(
-                "flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium transition-colors",
-                isActive(item.href)
-                  ? "bg-sidebar-primary text-sidebar-primary-foreground"
-                  : "text-sidebar-foreground/70 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground"
-              )}
-            >
-              <item.icon className="h-5 w-5" />
-              {item.label}
-            </Link>
-          ))}
-        </nav>
       </aside>
 
       {/* Mobile top header */}
@@ -59,7 +65,7 @@ export function Sidebar() {
         <Image src="/logo.jpg" alt="F3 Logo" width={28} height={28} className="rounded-md shrink-0" />
         <div>
           <p className="text-sm font-bold leading-none">F3 Intelligence</p>
-          <p className="text-[10px] text-sidebar-foreground/55 mt-0.5">Delhi NCR · Fresh Produce AI</p>
+          <p className="text-[10px] text-sidebar-foreground/55 mt-0.5">Delhi NCR</p>
         </div>
       </header>
 
