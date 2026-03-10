@@ -580,7 +580,11 @@ export default function DemandPage() {
         <TabsContent value="allocation" className="space-y-5">
           <div>
             <h2 className="text-lg font-extrabold tracking-tight">Who Gets This Stock?</h2>
-            <p className="text-xs text-muted-foreground font-medium mt-1">Expand each retailer to see full profile + SKU indent</p>
+            <p className="text-xs text-muted-foreground font-medium mt-1">
+              {isRange
+                ? `Estimated allocation for ${rangeWeekCount} weeks · ${weekDate(timeline[rangeStart].week)} → ${weekDate(timeline[rangeEnd].week)}`
+                : `Estimated allocation for week of ${weekDate(tw.week)}`}
+            </p>
           </div>
           <div className="flex items-center justify-between gap-3 flex-wrap">
             <div className="relative max-w-sm flex-1 min-w-[200px]">
@@ -624,6 +628,7 @@ export default function DemandPage() {
               // Profiled retailer — full card
               if (r) {
                 const weeklyKg = Math.round(r.avgDailyKg * 7);
+                const periodKg = Math.round(weeklyKg * rangeWeekCount);
                 const sColor = r.score >= 85 ? "text-green-600" : r.score >= 70 ? "text-amber-600" : "text-red-500";
                 const sBg = r.score >= 85 ? "bg-green-50" : r.score >= 70 ? "bg-amber-50" : "bg-red-50";
                 const tierCls = r.tier === "Priority" ? "bg-green-50 text-green-700 border-green-200"
@@ -655,8 +660,8 @@ export default function DemandPage() {
                           </div>
                           <Separator orientation="vertical" className="h-8 hidden sm:block" />
                           <div className="text-right shrink-0">
-                            <p className="text-base font-black num text-primary">{(weeklyKg / 1000).toFixed(1)}K</p>
-                            <p className="text-[10px] font-bold text-muted-foreground uppercase tracking-wider">kg/wk</p>
+                            <p className="text-base font-black num text-primary">{(periodKg / 1000).toFixed(1)}K</p>
+                            <p className="text-[10px] font-bold text-muted-foreground uppercase tracking-wider">{isRange ? `kg · ${rangeWeekCount}wk` : "kg/wk"}</p>
                           </div>
                           <div className={`h-6 w-6 rounded-lg flex items-center justify-center shrink-0 transition-colors ${isExpanded ? "bg-primary/10" : "bg-muted"}`}>
                             {isExpanded ? <ChevronUp className="h-3.5 w-3.5 text-primary" /> : <ChevronDown className="h-3.5 w-3.5 text-muted-foreground" />}
@@ -690,11 +695,11 @@ export default function DemandPage() {
                                 </div>
                               </div>
                               <div>
-                                <p className="text-[10px] font-bold text-muted-foreground uppercase tracking-wider mb-3">SKU Indent This Week</p>
+                                <p className="text-[10px] font-bold text-muted-foreground uppercase tracking-wider mb-3">{isRange ? `SKU Indent · ${rangeWeekCount} Weeks` : "SKU Indent This Week"}</p>
                                 <div className="space-y-2.5">
                                   {Object.entries(r.skuAllocation).map(([sku, pct]) => {
                                     const pctNum = pct as number;
-                                    const kg = Math.round(weeklyKg * pctNum / 100);
+                                    const kg = Math.round(periodKg * pctNum / 100);
                                     const detail = getSkuDetail(sku);
                                     const price = SUGGESTED_PRICES[sku];
                                     return (
