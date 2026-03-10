@@ -128,6 +128,8 @@ export default function DemandPage() {
   const [searchVendor, setSearchVendor] = useState("");
   const [expandedRetailer, setExpandedRetailer] = useState<string | null>(null);
   const [vendorPage, setVendorPage] = useState(1);
+  const [stockInput, setStockInput] = useState<Record<string, number>>({});
+  const [showPlanner, setShowPlanner] = useState(false);
   const VENDORS_PER_PAGE = 30;
   const weekScrollRef = useRef<HTMLDivElement>(null);
 
@@ -174,6 +176,49 @@ export default function DemandPage() {
   const rangeWeekCount = rangeEnd - rangeStart + 1;
   const activeNames = useMemo(() => new Set(activeSkus.map(s => s.sku)), [activeSkus]);
   const excludedSkus = useMemo(() => getExcludedSkus(activeNames), [activeNames]);
+
+  // Stock distribution planner — compute allocation per retailer from user input
+  const distributionPlan = useMemo(() => {
+    const hasInput = Object.values(stockInput).some(v => v > 0);
+    if (!hasInput) return [];
+
+    // Get all profiled retailers sorted by tier priority then score
+    const tierOrder = { Priority: 0, Secondary: 1, "Low Value": 2 };
+    const sorted = [...retailerProfiles].sort((a, b) => {
+      const td = tierOrder[a.tier] - tierOrder[b.tier];
+      return td !== 0 ? td : b.score - a.score;
+    });
+
+    // For each SKU, compute total demand across retailers
+    const skuDemandTotals = new Map<string, number>();
+    for (const r of sorted) {
+      for (const [sku, pct] of Object.entries(r.skuAllocation)) {
+        if (stockInput[sku] && stockInput[sku] > 0) {
+          const demand = (r.avgDailyKg * 7 * pct) / 100;
+          skuDemandTotals.set(sku, (skuDemandTotals.get(sku) ?? 0) + demand);
+        }
+      }
+    }
+
+    // Distribute proportionally, capped by available stock
+    return sorted.map(r => {
+      const items: { sku: string; qty: number }[] = [];
+      let totalKg = 0;
+      for (const [sku, pct] of Object.entries(r.skuAllocation)) {
+        const available = stockInput[sku] ?? 0;
+        if (available <= 0) continue;
+        const demand = (r.avgDailyKg * 7 * pct) / 100;
+        const totalDemand = skuDemandTotals.get(sku) ?? 1;
+        // Allocate proportionally: retailer's share of total demand × available stock
+        const allocated = Math.round((demand / totalDemand) * available);
+        if (allocated > 0) {
+          items.push({ sku, qty: allocated });
+          totalKg += allocated;
+        }
+      }
+      return { retailer: r, items, totalKg };
+    }).filter(d => d.totalKg > 0);
+  }, [stockInput]);
   const comparisonData = useMemo(buildComparisonChart, []);
   const stats = realData.stats;
 
@@ -578,12 +623,159 @@ export default function DemandPage() {
 
         {/* ════ TAB: Allocation ═════════════════════════════════ */}
         <TabsContent value="allocation" className="space-y-5">
+
+          {/* ── Stock Distribution Planner ─────────────────────────── */}
+          <Card className="border-primary/20 shadow-sm overflow-hidden">
+            <CardContent className="p-0">
+              <button
+                className="w-full text-left px-5 py-4 flex items-center justify-between hover:bg-accent/30 transition-colors"
+                onClick={() => setShowPlanner(!showPlanner)}
+              >
+                <div className="flex items-center gap-3">
+                  <div className="bg-primary/10 p-2 rounded-xl">
+                    <Package className="h-4 w-4 text-primary" />
+                  </div>
+                  <div>
+                    <h2 className="text-sm font-extrabold tracking-tight">Stock Distribution Planner</h2>
+                    <p className="text-[11px] text-muted-foreground font-medium mt-0.5">Enter available stock → get retailer-wise allocation</p>
+                  </div>
+                </div>
+                <div className={`h-6 w-6 rounded-lg flex items-center justify-center shrink-0 transition-colors ${showPlanner ? "bg-primary/10" : "bg-muted"}`}>
+                  {showPlanner ? <ChevronUp className="h-3.5 w-3.5 text-primary" /> : <ChevronDown className="h-3.5 w-3.5 text-muted-foreground" />}
+                </div>
+              </button>
+
+              {showPlanner && (
+                <>
+                  <Separator />
+                  <div className="px-5 py-5 space-y-5">
+                    {/* SKU input grid */}
+                    <div>
+                      <p className="text-[10px] font-bold text-muted-foreground uppercase tracking-wider mb-3">Enter Available Stock (kg)</p>
+                      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2.5">
+                        {activeSkus.slice(0, 12).map(s => (
+                          <div key={s.sku} className="flex items-center gap-2 rounded-xl border border-black/[0.06] bg-white px-3 py-2">
+                            <div className="h-2.5 w-2.5 rounded shrink-0" style={{ backgroundColor: SKU_COLORS[s.sku] ?? "#6b7280" }} />
+                            <span className="text-[11px] font-semibold truncate flex-1">{s.sku.split(" ")[0]}</span>
+                            <input
+                              type="number"
+                              min={0}
+                              placeholder="0"
+                              value={stockInput[s.sku] || ""}
+                              onChange={e => setStockInput(prev => ({ ...prev, [s.sku]: parseInt(e.target.value) || 0 }))}
+                              className="w-16 text-right text-xs font-bold bg-transparent outline-none border-b border-dashed border-border focus:border-primary transition-colors [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
+                            />
+                          </div>
+                        ))}
+                      </div>
+                      <div className="flex items-center gap-3 mt-3">
+                        <div className="flex-1 h-px bg-border" />
+                        <span className="text-[10px] font-bold text-muted-foreground uppercase tracking-wider">
+                          Total: {Object.values(stockInput).reduce((a, b) => a + b, 0).toLocaleString()} kg
+                        </span>
+                        <div className="flex-1 h-px bg-border" />
+                      </div>
+                    </div>
+
+                    {/* Distribution results */}
+                    {distributionPlan.length > 0 && (
+                      <div>
+                        <p className="text-[10px] font-bold text-muted-foreground uppercase tracking-wider mb-3">
+                          Distribution Plan → {distributionPlan.length} retailers
+                        </p>
+                        <div className="space-y-2">
+                          {distributionPlan.map((d, i) => {
+                            const tierCls = d.retailer.tier === "Priority" ? "bg-green-50 text-green-700 border-green-200"
+                              : d.retailer.tier === "Secondary" ? "bg-amber-50 text-amber-700 border-amber-200"
+                              : "bg-red-50 text-red-700 border-red-200";
+                            const accentColor = d.retailer.tier === "Priority" ? "#16a34a" : d.retailer.tier === "Secondary" ? "#f59e0b" : "#ef4444";
+                            return (
+                              <div key={d.retailer.name} className="rounded-xl border border-black/[0.06] bg-white overflow-hidden">
+                                <div className="h-1 w-full" style={{ backgroundColor: accentColor }} />
+                                <div className="px-4 py-3">
+                                  <div className="flex items-center gap-3 mb-2.5">
+                                    <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-lg text-[11px] font-black shadow-sm bg-primary text-primary-foreground">
+                                      {i + 1}
+                                    </span>
+                                    <div className="flex-1 min-w-0">
+                                      <div className="flex items-center gap-2">
+                                        <p className="text-sm font-bold truncate">{d.retailer.name}</p>
+                                        <Badge variant="outline" className={`text-[9px] px-1.5 py-0 font-bold ${tierCls}`}>{d.retailer.tier}</Badge>
+                                      </div>
+                                      <p className="text-[11px] text-muted-foreground font-medium">{d.retailer.area}</p>
+                                    </div>
+                                    <div className="text-right shrink-0">
+                                      <p className="text-base font-black num text-primary">{d.totalKg.toLocaleString()}</p>
+                                      <p className="text-[9px] font-bold text-muted-foreground uppercase tracking-wider">kg total</p>
+                                    </div>
+                                  </div>
+                                  <div className="flex flex-wrap gap-1.5">
+                                    {d.items.map(item => (
+                                      <div key={item.sku} className="flex items-center gap-1.5 rounded-lg bg-accent/50 border border-border/50 px-2 py-1">
+                                        <div className="h-2 w-2 rounded shrink-0" style={{ backgroundColor: SKU_COLORS[item.sku] ?? "#6b7280" }} />
+                                        <span className="text-[10px] font-semibold">{item.sku.split(" ")[0]}</span>
+                                        <span className="text-[10px] font-black num text-primary">{item.qty.toLocaleString()} kg</span>
+                                      </div>
+                                    ))}
+                                  </div>
+                                </div>
+                              </div>
+                            );
+                          })}
+                        </div>
+
+                        {/* Summary */}
+                        <div className="mt-4 rounded-xl bg-accent/30 border border-border/50 p-4">
+                          <div className="flex items-center justify-between flex-wrap gap-3">
+                            <div>
+                              <p className="text-[10px] font-bold text-muted-foreground uppercase tracking-wider">Allocated</p>
+                              <p className="text-lg font-black num text-primary">{distributionPlan.reduce((a, d) => a + d.totalKg, 0).toLocaleString()} kg</p>
+                            </div>
+                            <Separator orientation="vertical" className="h-8" />
+                            <div>
+                              <p className="text-[10px] font-bold text-muted-foreground uppercase tracking-wider">Available</p>
+                              <p className="text-lg font-black num">{Object.values(stockInput).reduce((a, b) => a + b, 0).toLocaleString()} kg</p>
+                            </div>
+                            <Separator orientation="vertical" className="h-8" />
+                            <div>
+                              <p className="text-[10px] font-bold text-muted-foreground uppercase tracking-wider">Retailers</p>
+                              <p className="text-lg font-black num">{distributionPlan.length}</p>
+                            </div>
+                            <Separator orientation="vertical" className="h-8" />
+                            <div>
+                              <p className="text-[10px] font-bold text-muted-foreground uppercase tracking-wider">SKUs</p>
+                              <p className="text-lg font-black num">{Object.keys(stockInput).filter(k => stockInput[k] > 0).length}</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    )}
+
+                    {Object.values(stockInput).some(v => v > 0) && distributionPlan.length === 0 && (
+                      <div className="text-center py-6">
+                        <AlertCircle className="h-8 w-8 text-muted-foreground mx-auto mb-2" />
+                        <p className="text-sm font-semibold text-muted-foreground">No matching retailers for these SKUs</p>
+                      </div>
+                    )}
+
+                    {!Object.values(stockInput).some(v => v > 0) && (
+                      <div className="text-center py-6">
+                        <p className="text-sm text-muted-foreground font-medium">Enter stock quantities above to generate a distribution plan</p>
+                      </div>
+                    )}
+                  </div>
+                </>
+              )}
+            </CardContent>
+          </Card>
+
           <div>
-            <h2 className="text-lg font-extrabold tracking-tight">Who Gets This Stock?</h2>
+            <h2 className="text-lg font-extrabold tracking-tight">Retailer Directory</h2>
             <p className="text-xs text-muted-foreground font-medium mt-1">
               {isRange
-                ? `Estimated allocation for ${rangeWeekCount} weeks · ${weekDate(timeline[rangeStart].week)} → ${weekDate(timeline[rangeEnd].week)}`
-                : `Estimated allocation for week of ${weekDate(tw.week)}`}
+                ? `${rangeWeekCount} weeks · ${weekDate(timeline[rangeStart].week)} → ${weekDate(timeline[rangeEnd].week)}`
+                : `Week of ${weekDate(tw.week)}`}
+              {" · "}expand to see profile + SKU indent
             </p>
           </div>
           <div className="flex items-center justify-between gap-3 flex-wrap">
