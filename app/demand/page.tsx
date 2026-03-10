@@ -16,6 +16,7 @@ import { Separator } from "@/components/ui/separator";
 import { Calendar } from "@/components/ui/calendar";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 import { format, parseISO, startOfWeek, endOfWeek, closestTo } from "date-fns";
+import type { DateRange } from "react-day-picker";
 import realData from "@/lib/real-data.json";
 import {
   TrendingUp, TrendingDown, Minus,
@@ -121,7 +122,8 @@ function buildComparisonChart() {
 // ═══════════════════════════════════════════════════════════════════════
 export default function DemandPage() {
   const defaultIdx = timeline.findIndex(tw => tw.predictedData && tw.dispatchedData) || (timeline.length - 2);
-  const [selectedIdx, setSelectedIdx] = useState(Math.max(0, defaultIdx));
+  const [fromIdx, setFromIdx] = useState(Math.max(0, defaultIdx));
+  const [toIdx, setToIdx] = useState(Math.max(0, defaultIdx));
   const [searchItem, setSearchItem] = useState("");
   const [searchVendor, setSearchVendor] = useState("");
   const [expandedRetailer, setExpandedRetailer] = useState<string | null>(null);
@@ -129,20 +131,47 @@ export default function DemandPage() {
   const VENDORS_PER_PAGE = 30;
   const weekScrollRef = useRef<HTMLDivElement>(null);
 
+  // Range is fromIdx..toIdx
+  const isRange = fromIdx !== toIdx;
+  const rangeStart = Math.min(fromIdx, toIdx);
+  const rangeEnd = Math.max(fromIdx, toIdx);
+
   useEffect(() => {
     const el = weekScrollRef.current;
     if (!el) return;
-    const selected = el.querySelector("[data-selected]") as HTMLElement | null;
+    const selected = el.querySelector("[data-range-from]") as HTMLElement | null;
     if (selected) {
       selected.scrollIntoView({ behavior: "smooth", block: "nearest", inline: "center" });
     }
-  }, [selectedIdx]);
+  }, [fromIdx, toIdx]);
 
-  const tw = timeline[selectedIdx];
-  const prevTw = selectedIdx > 0 ? timeline[selectedIdx - 1] : null;
-  const nextTw = selectedIdx < timeline.length - 1 ? timeline[selectedIdx + 1] : null;
+  const tw = timeline[fromIdx];
+  const prevTw = rangeStart > 0 ? timeline[rangeStart - 1] : null;
+  const nextTw = rangeEnd < timeline.length - 1 ? timeline[rangeEnd + 1] : null;
 
-  const activeSkus = useMemo(() => getActiveSkus(tw), [tw]);
+  // Aggregate SKUs across selected range
+  const activeSkus = useMemo(() => {
+    const skuTotals = new Map<string, number>();
+    for (let i = rangeStart; i <= rangeEnd; i++) {
+      const src = timeline[i].predictedData ?? timeline[i].dispatchedData;
+      if (!src) continue;
+      for (const [k, v] of Object.entries(src)) {
+        if (k === "week" || k === "total" || typeof v !== "number" || v <= 0) continue;
+        skuTotals.set(k, (skuTotals.get(k) ?? 0) + v);
+      }
+    }
+    return Array.from(skuTotals.entries())
+      .map(([sku, qty]) => ({ sku, qty }))
+      .sort((a, b) => b.qty - a.qty);
+  }, [rangeStart, rangeEnd]);
+
+  const rangeTotal = useMemo(() => {
+    let total = 0;
+    for (let i = rangeStart; i <= rangeEnd; i++) total += timeline[i].total;
+    return total;
+  }, [rangeStart, rangeEnd]);
+
+  const rangeWeekCount = rangeEnd - rangeStart + 1;
   const activeNames = useMemo(() => new Set(activeSkus.map(s => s.sku)), [activeSkus]);
   const excludedSkus = useMemo(() => getExcludedSkus(activeNames), [activeNames]);
   const comparisonData = useMemo(buildComparisonChart, []);
@@ -179,18 +208,40 @@ export default function DemandPage() {
   const paginatedVendors = filteredVendors.slice((vendorPage - 1) * VENDORS_PER_PAGE, vendorPage * VENDORS_PER_PAGE);
 
   const nextDelta = nextTw ? (((nextTw.total - tw.total) / tw.total) * 100) : 0;
-  const twDate = parseISO(tw.week.split("/")[0]);
-  const startOfTw = startOfWeek(twDate, { weekStartsOn: 1 });
-  const endOfTw = endOfWeek(twDate, { weekStartsOn: 1 });
+  const fromDate = parseISO(timeline[rangeStart].week.split("/")[0]);
+  const toDate = parseISO(timeline[rangeEnd].week.split("/")[0]);
+  const startOfFrom = startOfWeek(fromDate, { weekStartsOn: 1 });
+  const endOfTo = endOfWeek(toDate, { weekStartsOn: 1 });
 
   const timelineDates = timeline.map(t => parseISO(t.week.split("/")[0]));
 
-  const handleDateSelect = (date: Date | undefined) => {
-    if (!date) return;
-    const closest = closestTo(date, timelineDates);
-    if (closest) {
-      const idx = timeline.findIndex(t => t.week.split("/")[0] === format(closest, "yyyy-MM-dd"));
-      if (idx !== -1) setSelectedIdx(idx);
+  const dateRange: DateRange = {
+    from: startOfFrom,
+    to: endOfTo,
+  };
+
+  const handleRangeSelect = (range: DateRange | undefined) => {
+    if (!range) return;
+    if (range.from) {
+      const closestFrom = closestTo(range.from, timelineDates);
+      if (closestFrom) {
+        const idx = timeline.findIndex(t => t.week.split("/")[0] === format(closestFrom, "yyyy-MM-dd"));
+        if (idx !== -1) setFromIdx(idx);
+      }
+    }
+    if (range.to) {
+      const closestTo2 = closestTo(range.to, timelineDates);
+      if (closestTo2) {
+        const idx = timeline.findIndex(t => t.week.split("/")[0] === format(closestTo2, "yyyy-MM-dd"));
+        if (idx !== -1) setToIdx(idx);
+      }
+    } else if (range.from) {
+      // Single click — set both to same
+      const closestFrom = closestTo(range.from, timelineDates);
+      if (closestFrom) {
+        const idx = timeline.findIndex(t => t.week.split("/")[0] === format(closestFrom, "yyyy-MM-dd"));
+        if (idx !== -1) { setFromIdx(idx); setToIdx(idx); }
+      }
     }
   };
 
@@ -210,8 +261,8 @@ export default function DemandPage() {
           </div>
           <div className="flex gap-6 sm:gap-8">
             <div className="text-right">
-              <p className="text-2xl font-black tracking-tight num text-primary">{tw.total.toLocaleString()}</p>
-              <p className="text-[11px] font-bold uppercase tracking-wider text-muted-foreground mt-0.5">kg this week</p>
+              <p className="text-2xl font-black tracking-tight num text-primary">{rangeTotal.toLocaleString()}</p>
+              <p className="text-[11px] font-bold uppercase tracking-wider text-muted-foreground mt-0.5">{isRange ? `kg · ${rangeWeekCount} weeks` : "kg this week"}</p>
             </div>
             <Separator orientation="vertical" className="h-10" />
             <div className="text-right">
@@ -232,23 +283,16 @@ export default function DemandPage() {
           </PopoverTrigger>
           <PopoverContent className="w-auto p-0" align="start">
             <Calendar
-              mode="single"
-              selected={twDate}
-              onSelect={handleDateSelect}
-              defaultMonth={twDate}
+              mode="range"
+              selected={dateRange}
+              onSelect={handleRangeSelect}
+              defaultMonth={fromDate}
               autoFocus
-              modifiers={{
-                weekRange: (date) => {
-                  return date >= startOfTw && date <= endOfTw;
-                },
-              }}
-              modifiersClassNames={{
-                weekRange: "bg-primary/10 text-primary font-bold",
-              }}
+              numberOfMonths={2}
               disabled={(date) => {
                 const start = parseISO(timeline[0].week.split("/")[0]);
-                const end = parseISO(timeline[timeline.length - 1].week.split("/")[0]);
-                return date < start || date > endOfWeek(end, { weekStartsOn: 1 });
+                const end = endOfWeek(parseISO(timeline[timeline.length - 1].week.split("/")[0]), { weekStartsOn: 1 });
+                return date < start || date > end;
               }}
             />
           </PopoverContent>
@@ -258,23 +302,24 @@ export default function DemandPage() {
           <div ref={weekScrollRef} className="flex gap-1.5 overflow-x-auto scrollbar-hide pb-1 snap-x snap-mandatory">
             {timeline.slice(-20).map((t, i) => {
               const realIdx = timeline.length - 20 + i;
-              const isSelected = realIdx === selectedIdx;
+              const inRange = realIdx >= rangeStart && realIdx <= rangeEnd;
+              const isFrom = realIdx === rangeStart;
               const tTotal = t.total;
               const dateStr = weekLabel(t.week);
               return (
                 <button
                   key={t.week}
-                  data-selected={isSelected || undefined}
-                  onClick={() => setSelectedIdx(realIdx)}
+                  data-range-from={isFrom || undefined}
+                  onClick={() => { setFromIdx(realIdx); setToIdx(realIdx); }}
                   className={cn(
                     "shrink-0 snap-center flex flex-col items-center px-3 py-2 rounded-xl border text-center transition-all min-w-[72px]",
-                    isSelected
+                    inRange
                       ? "bg-primary text-primary-foreground border-primary shadow-md"
                       : "bg-card border-black/[0.04] hover:bg-accent hover:border-primary/20"
                   )}
                 >
                   <span className="text-[11px] font-bold">{dateStr}</span>
-                  <span className={cn("text-[10px] font-semibold num mt-0.5", isSelected ? "text-primary-foreground/80" : "text-muted-foreground")}>
+                  <span className={cn("text-[10px] font-semibold num mt-0.5", inRange ? "text-primary-foreground/80" : "text-muted-foreground")}>
                     {(tTotal / 1000).toFixed(0)}K kg
                   </span>
                 </button>
@@ -285,18 +330,20 @@ export default function DemandPage() {
 
         <Badge variant="outline" className={cn(
           "px-3 py-1.5 font-bold tracking-wider uppercase text-[10px] rounded-lg shrink-0",
-          tw.dispatchedData
-            ? "bg-muted text-muted-foreground border-border"
-            : "bg-primary/10 text-primary border-primary/20"
+          isRange
+            ? "bg-blue-50 text-blue-700 border-blue-200"
+            : tw.dispatchedData
+              ? "bg-muted text-muted-foreground border-border"
+              : "bg-primary/10 text-primary border-primary/20"
         )}>
-          {tw.dispatchedData ? "Historical" : "Predicted"}
+          {isRange ? `${rangeWeekCount} weeks` : tw.dispatchedData ? "Historical" : "Predicted"}
         </Badge>
       </div>
 
       {/* ── Summary KPIs ──────────────────────────────────────── */}
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
         {[
-          { label: "Week of", value: weekDate(tw.week), sub: `${tw.total.toLocaleString()} kg`, icon: CalendarIcon, color: "text-primary", bg: "bg-primary/10" },
+          { label: isRange ? "Date Range" : "Week of", value: isRange ? `${weekDate(timeline[rangeStart].week)} → ${weekDate(timeline[rangeEnd].week)}` : weekDate(tw.week), sub: `${rangeTotal.toLocaleString()} kg${isRange ? ` · ${rangeWeekCount} weeks` : ""}`, icon: CalendarIcon, color: "text-primary", bg: "bg-primary/10" },
           { label: "Active SKUs", value: activeSkus.length.toString(), sub: `of ${stats.uniqueSkus} total`, icon: Layers, color: "text-purple-600", bg: "bg-purple-50" },
           { label: "Confidence", value: "±18%", sub: "prediction band", icon: Target, color: "text-emerald-600", bg: "bg-emerald-50" },
           { label: "vs Next Week", value: `${nextDelta > 0 ? "+" : ""}${nextDelta.toFixed(1)}%`, sub: nextDelta > 0 ? "volume increase" : nextDelta < 0 ? "volume decrease" : "no change", icon: TrendingUp, color: nextDelta > 0 ? "text-green-600" : nextDelta < 0 ? "text-red-500" : "text-muted-foreground", bg: nextDelta > 0 ? "bg-green-50" : nextDelta < 0 ? "bg-red-50" : "bg-muted" },
@@ -308,7 +355,7 @@ export default function DemandPage() {
                   <kpi.icon className={`h-4 w-4 ${kpi.color}`} strokeWidth={2.5} />
                 </div>
               </div>
-              <p className={`text-2xl font-black tracking-tight num ${kpi.color}`}>{kpi.value}</p>
+              <p className={`${kpi.value.length > 12 ? "text-base" : "text-2xl"} font-black tracking-tight num ${kpi.color}`}>{kpi.value}</p>
               <p className="text-[11px] font-bold uppercase tracking-wider text-muted-foreground mt-1">{kpi.label}</p>
               <p className="text-xs text-muted-foreground mt-0.5">{kpi.sub}</p>
             </CardContent>
@@ -376,7 +423,7 @@ export default function DemandPage() {
                 const TrendIcon = change > 2 ? TrendingUp : change < -2 ? TrendingDown : Minus;
                 const tColor = change > 2 ? "text-green-600" : change < -2 ? "text-red-500" : "text-muted-foreground";
                 const tBg = change > 2 ? "bg-green-50" : change < -2 ? "bg-red-50" : "bg-muted";
-                const sharePercent = ((s.qty / tw.total) * 100);
+                const sharePercent = ((s.qty / rangeTotal) * 100);
 
                 return (
                   <Card key={s.sku} className="group transition-all duration-200 hover:shadow-[0_8px_24px_-8px_rgba(0,0,0,0.1)] hover:-translate-y-px">
