@@ -55,7 +55,7 @@ export default function DashboardPage() {
         <div className="relative flex items-center justify-between flex-wrap gap-6">
           <div className="max-w-xl">
             <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-foreground mb-2">
-              {(realData.stats.totalOrders / 1000).toFixed(0)}K orders &middot; {(realData.stats.totalQty / 1000000).toFixed(1)}M kg
+              {realData.stats.totalOrders.toLocaleString()} orders &middot; {realData.stats.totalQty.toLocaleString()} kg
             </h2>
             <p className="text-sm text-muted-foreground font-medium flex items-center gap-2">
               Sep 2023 → {currentMonthLabel} <span className="text-muted-foreground/30">•</span> volume grew 
@@ -82,7 +82,7 @@ export default function DashboardPage() {
       {/* KPI Row */}
       <div className="grid grid-cols-2 gap-4 sm:grid-cols-4 mb-8">
         {[
-          { label: "Weekly Volume", value: `${(latestWeek.total / 1000).toFixed(1)}K kg`, change: `${weekGrowth}%`, icon: Package, color: "text-green-600", bg: "bg-green-50" },
+          { label: "Weekly Volume", value: `${latestWeek.total.toLocaleString()} kg`, change: `${weekGrowth}%`, icon: Package, color: "text-green-600", bg: "bg-green-50" },
           { label: "Active Retailers", value: realData.stats.uniqueRetailers, change: "+12 this month", icon: Users, color: "text-blue-600", bg: "bg-blue-50" },
           { label: "SKUs Tracked", value: realData.stats.uniqueSkus, change: "48 varieties", icon: Database, color: "text-purple-600", bg: "bg-purple-50" },
           { label: "Monthly Growth", value: `${realData.stats.monthlyGrowth}%`, change: "since Sep 2023", icon: TrendingUp, color: "text-emerald-600", bg: "bg-emerald-50" },
