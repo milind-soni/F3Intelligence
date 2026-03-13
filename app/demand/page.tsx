@@ -96,8 +96,7 @@ const LONG_MONTHS = ["January", "February", "March", "April", "May", "June", "Ju
 
 function weekOrdinalLabel(w: string): string {
   const date = parseISO(w.split("/")[0]);
-  const weekNum = Math.min(Math.ceil(date.getDate() / 7), 5) - 1;
-  return `${ORDINALS[weekNum]} ${SHORT_MONTHS[date.getMonth()]}`;
+  return `${SHORT_MONTHS[date.getMonth()]} ${date.getDate()}`;
 }
 
 function getWeekConfidence(week: string): string {
@@ -141,7 +140,15 @@ function buildComparisonChart() {
 
 // ═══════════════════════════════════════════════════════════════════════
 export default function DemandPage() {
-  const defaultIdx = timeline.findIndex(tw => tw.predictedData && tw.dispatchedData) || (timeline.length - 2);
+  const defaultIdx = (() => {
+    const idx = timeline.findIndex(tw => tw.predictedData && tw.dispatchedData);
+    if (idx > 0) return idx;
+    // Fallback: last dispatched week
+    for (let i = timeline.length - 1; i >= 0; i--) {
+      if (timeline[i].dispatchedData) return i;
+    }
+    return timeline.length - 2;
+  })();
   const [fromIdx, setFromIdx] = useState(Math.max(0, defaultIdx));
   const [toIdx, setToIdx] = useState(Math.max(0, defaultIdx));
   const [searchItem, setSearchItem] = useState("");
@@ -164,10 +171,18 @@ export default function DemandPage() {
   useEffect(() => {
     const el = weekScrollRef.current;
     if (!el) return;
-    const selected = el.querySelector("[data-range-from]") as HTMLElement | null;
-    if (selected) {
-      selected.scrollIntoView({ behavior: "smooth", block: "nearest", inline: "center" });
-    }
+    const fromEl = el.querySelector("[data-range-from]") as HTMLElement | null;
+    const toEl = el.querySelector("[data-range-to]") as HTMLElement | null;
+    if (!fromEl) return;
+    // Center the midpoint of the selected range
+    const containerLeft = el.getBoundingClientRect().left;
+    const fromLeft = fromEl.getBoundingClientRect().left - containerLeft + el.scrollLeft;
+    const toRight = toEl
+      ? toEl.getBoundingClientRect().right - containerLeft + el.scrollLeft
+      : fromLeft + fromEl.offsetWidth;
+    const midpoint = (fromLeft + toRight) / 2;
+    const targetScrollLeft = midpoint - el.clientWidth / 2;
+    el.scrollTo({ left: targetScrollLeft, behavior: "smooth" });
   }, [fromIdx, toIdx]);
 
   const tw = timeline[fromIdx];
@@ -340,7 +355,7 @@ export default function DemandPage() {
   };
 
   const calendarSelected: DateRange = {
-    from: rawCalRange.from ?? fromDate,
+    from: rawCalRange.from ?? undefined,
     to: rawCalRange.to ?? undefined,
   };
 
@@ -399,17 +414,19 @@ export default function DemandPage() {
 
         <div className="flex-1 overflow-hidden relative">
           <div ref={weekScrollRef} className="flex gap-1.5 overflow-x-auto scrollbar-hide pb-1 snap-x snap-mandatory">
-            {timeline.slice(-20).map((t, i) => {
-              const realIdx = timeline.length - 20 + i;
+            {timeline.map((t, i) => {
+              const realIdx = i;
               const inRange = realIdx >= rangeStart && realIdx <= rangeEnd;
               const isFrom = realIdx === rangeStart;
+              const isTo = realIdx === rangeEnd;
               const tTotal = t.total;
               const ordLabel = weekOrdinalLabel(t.week);
               return (
                 <button
                   key={t.week}
                   data-range-from={isFrom || undefined}
-                  onClick={() => { setFromIdx(realIdx); setToIdx(realIdx); }}
+                  data-range-to={isTo || undefined}
+                  onClick={() => { setFromIdx(realIdx); setToIdx(realIdx); setRawCalRange({ from: null, to: null }); }}
                   className={cn(
                     "shrink-0 snap-center flex flex-col items-center px-3 py-2 rounded-xl border text-center transition-all min-w-[72px]",
                     inRange
