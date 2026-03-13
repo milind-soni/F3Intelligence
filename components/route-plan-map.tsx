@@ -1,7 +1,6 @@
 "use client";
 
-import { useMemo, useContext, createContext } from "react";
-import { MapRenderer, type MarkerComponentProps } from "json-maps";
+import { useEffect, useRef } from "react";
 
 interface RouteStop {
   name: string;
@@ -19,166 +18,145 @@ interface RoutePlanMapProps {
   polyline?: [number, number][]; // [lng, lat] pairs from OSRM
 }
 
-const RouteCtx = createContext<{ stops: RouteStop[]; routeColor: string }>({
-  stops: [],
-  routeColor: "#22c55e",
-});
+export function RoutePlanMap({ hub, stops, routeColor, routeId, polyline }: RoutePlanMapProps) {
+  const mapRef = useRef<HTMLDivElement>(null);
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const leafletMapRef = useRef<any>(null);
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const polylineLayerRef = useRef<any>(null);
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const markersRef = useRef<any[]>([]);
 
-function RouteMarker({ id }: MarkerComponentProps) {
-  const { stops, routeColor } = useContext(RouteCtx);
+  // Initialize map once
+  useEffect(() => {
+    if (!mapRef.current || leafletMapRef.current) return;
 
-  if (id === "hub") {
-    return (
-      <div
-        style={{
-          width: 24,
-          height: 24,
-          borderRadius: "50%",
-          background: "#16a34a",
-          border: "3px solid #fff",
-          boxShadow: "0 0 0 2px rgba(22,163,74,0.3), 0 2px 8px rgba(0,0,0,0.2)",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-        }}
-      >
-        <div style={{ width: 8, height: 8, borderRadius: "50%", background: "#fff" }} />
-      </div>
-    );
-  }
+    // Dynamic import to avoid SSR
+    import("leaflet").then((L) => {
+      // Fix default icon paths
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      delete (L.Icon.Default.prototype as any)._getIconUrl;
+      L.Icon.Default.mergeOptions({
+        iconRetinaUrl: "https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon-2x.png",
+        iconUrl: "https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon.png",
+        shadowUrl: "https://unpkg.com/leaflet@1.9.4/dist/images/marker-shadow.png",
+      });
 
-  const idx = parseInt(id.replace("stop-", ""), 10);
+      if (!mapRef.current) return;
 
-  return (
-    <div
-      style={{
-        width: 28,
-        height: 28,
-        borderRadius: "50%",
-        background: routeColor,
-        border: "2.5px solid #fff",
-        boxShadow: `0 0 0 1px ${routeColor}50, 0 2px 8px rgba(0,0,0,0.2)`,
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        fontSize: 10,
-        fontWeight: 800,
-        color: "white",
-        fontFamily: "system-ui, sans-serif",
-        cursor: "default",
-      }}
-    >
-      {idx + 1}
-    </div>
-  );
-}
+      const allLats = [hub.lat, ...stops.map((s) => s.lat)];
+      const allLngs = [hub.lng, ...stops.map((s) => s.lng)];
+      const bounds: [[number, number], [number, number]] = [
+        [Math.min(...allLats) - 0.01, Math.min(...allLngs) - 0.01],
+        [Math.max(...allLats) + 0.01, Math.max(...allLngs) + 0.01],
+      ];
 
-export function RoutePlanMap({ hub, stops, routeColor, polyline }: RoutePlanMapProps) {
-  const allLngs = [hub.lng, ...stops.map((s) => s.lng)];
-  const allLats = [hub.lat, ...stops.map((s) => s.lat)];
+      const map = L.map(mapRef.current, { zoomControl: true }).fitBounds(bounds);
+      leafletMapRef.current = map;
 
-  const bounds = useMemo<[number, number, number, number]>(() => {
-    const minLng = Math.min(...allLngs) - 0.02;
-    const maxLng = Math.max(...allLngs) + 0.02;
-    const minLat = Math.min(...allLats) - 0.02;
-    const maxLat = Math.max(...allLats) + 0.02;
-    return [minLng, minLat, maxLng, maxLat];
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [hub.lat, hub.lng, stops]);
+      L.tileLayer("https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png", {
+        attribution: "© OpenStreetMap © CARTO",
+        maxZoom: 19,
+      }).addTo(map);
 
-  const markers = useMemo(() => {
-    const m: Record<string, { coordinates: [number, number]; color: string; tooltip: string }> = {
-      hub: { coordinates: [hub.lng, hub.lat], color: "#16a34a", tooltip: hub.name },
-    };
-    stops.forEach((stop, i) => {
-      m[`stop-${i}`] = {
-        coordinates: [stop.lng, stop.lat],
-        color: routeColor,
-        tooltip: stop.name,
-      };
+      // Hub marker
+      const hubIcon = L.divIcon({
+        html: `<div style="width:20px;height:20px;border-radius:50%;background:#16a34a;border:3px solid #fff;box-shadow:0 0 0 2px rgba(22,163,74,0.3),0 2px 8px rgba(0,0,0,0.2);"></div>`,
+        className: "",
+        iconSize: [20, 20],
+        iconAnchor: [10, 10],
+      });
+      L.marker([hub.lat, hub.lng], { icon: hubIcon })
+        .addTo(map)
+        .bindTooltip(hub.name, { direction: "top", offset: [0, -10] });
+
+      // Stop markers
+      stops.forEach((stop, i) => {
+        const stopIcon = L.divIcon({
+          html: `<div style="width:26px;height:26px;border-radius:50%;background:${routeColor};border:2.5px solid #fff;box-shadow:0 2px 8px rgba(0,0,0,0.2);display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:800;color:white;font-family:system-ui,sans-serif;">${i + 1}</div>`,
+          className: "",
+          iconSize: [26, 26],
+          iconAnchor: [13, 13],
+        });
+        const m = L.marker([stop.lat, stop.lng], { icon: stopIcon })
+          .addTo(map)
+          .bindTooltip(`<b>${stop.name}</b><br/>${stop.area}`, { direction: "top", offset: [0, -13] });
+        markersRef.current.push(m);
+      });
     });
-    return m;
-  }, [hub, stops, routeColor]);
 
-  const layers = useMemo(() => {
-    if (!polyline || polyline.length < 2) return undefined;
-    return {
-      "route-line": {
-        type: "geojson" as const,
-        data: {
-          type: "FeatureCollection" as const,
-          features: [
-            {
-              type: "Feature" as const,
-              geometry: {
-                type: "LineString" as const,
-                coordinates: polyline,
-              },
-              properties: {},
-            },
-          ],
-        },
-        style: {
-          lineColor: routeColor,
-          lineWidth: 4,
-          lineOpacity: 0.85,
-        },
-      },
+    return () => {
+      if (leafletMapRef.current) {
+        leafletMapRef.current.remove();
+        leafletMapRef.current = null;
+        polylineLayerRef.current = null;
+        markersRef.current = [];
+      }
     };
+  // Only run once on mount
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  // Draw/update polyline whenever it changes
+  useEffect(() => {
+    if (!leafletMapRef.current) return;
+    import("leaflet").then((L) => {
+      const map = leafletMapRef.current;
+      if (!map) return;
+
+      // Remove old polyline
+      if (polylineLayerRef.current) {
+        map.removeLayer(polylineLayerRef.current);
+        polylineLayerRef.current = null;
+      }
+
+      if (polyline && polyline.length >= 2) {
+        // OSRM gives [lng, lat]; Leaflet needs [lat, lng]
+        const latlngs: [number, number][] = polyline.map(([lng, lat]) => [lat, lng]);
+        const pl = L.polyline(latlngs, {
+          color: routeColor,
+          weight: 4,
+          opacity: 0.85,
+        }).addTo(map);
+        polylineLayerRef.current = pl;
+        map.fitBounds(pl.getBounds(), { padding: [20, 20] });
+      }
+    });
   }, [polyline, routeColor]);
 
-  const spec = useMemo(
-    () => ({
-      basemap: "light" as const,
-      bounds,
-      controls: {
-        zoom: true,
-        compass: true,
-        position: "top-right" as const,
-      },
-      markers,
-      ...(layers ? { layers } : {}),
-    }),
-    [bounds, markers, layers]
-  );
-
   return (
-    <RouteCtx.Provider value={{ stops, routeColor }}>
-      <div style={{ position: "relative", width: "100%", height: "100%" }}>
-        <MapRenderer
-          spec={spec}
-          style={{ width: "100%", height: "100%" }}
-          components={{ Marker: RouteMarker }}
-        />
-        {/* Legend */}
-        <div
-          style={{
-            position: "absolute",
-            bottom: 36,
-            left: 12,
-            background: "rgba(255,255,255,0.92)",
-            padding: "8px 12px",
-            borderRadius: 10,
-            fontSize: 11,
-            pointerEvents: "none",
-            backdropFilter: "blur(8px)",
-            border: "1px solid #e5e7eb",
-            fontFamily: "system-ui, sans-serif",
-            boxShadow: "0 2px 8px rgba(0,0,0,0.06)",
-            color: "#374151",
-            lineHeight: 1.75,
-          }}
-        >
-          <div style={{ display: "flex", alignItems: "center", gap: 7, marginBottom: 3 }}>
-            <div style={{ width: 20, height: 3, background: routeColor, borderRadius: 2, flexShrink: 0 }} />
-            <span>{polyline ? "Computed route" : "Route not yet computed"}</span>
-          </div>
-          <div style={{ display: "flex", alignItems: "center", gap: 7 }}>
-            <div style={{ width: 14, height: 14, borderRadius: "50%", background: "#16a34a", border: "2px solid #fff", flexShrink: 0 }} />
-            <span>Chattarpur Facility (hub)</span>
-          </div>
+    <div style={{ position: "relative", width: "100%", height: "100%" }}>
+      <div ref={mapRef} style={{ width: "100%", height: "100%" }} />
+
+      {/* Legend */}
+      <div
+        style={{
+          position: "absolute",
+          bottom: 36,
+          left: 12,
+          background: "rgba(255,255,255,0.92)",
+          padding: "8px 12px",
+          borderRadius: 10,
+          fontSize: 11,
+          pointerEvents: "none",
+          backdropFilter: "blur(8px)",
+          border: "1px solid #e5e7eb",
+          fontFamily: "system-ui, sans-serif",
+          boxShadow: "0 2px 8px rgba(0,0,0,0.06)",
+          color: "#374151",
+          lineHeight: 1.75,
+          zIndex: 1000,
+        }}
+      >
+        <div style={{ display: "flex", alignItems: "center", gap: 7, marginBottom: 3 }}>
+          <div style={{ width: 20, height: 3, background: polyline ? routeColor : "#d1d5db", borderRadius: 2, flexShrink: 0 }} />
+          <span>{polyline ? "Computed route" : "Click Compute Route to draw route"}</span>
+        </div>
+        <div style={{ display: "flex", alignItems: "center", gap: 7 }}>
+          <div style={{ width: 14, height: 14, borderRadius: "50%", background: "#16a34a", border: "2px solid #fff", flexShrink: 0 }} />
+          <span>Chattarpur Facility</span>
         </div>
       </div>
-    </RouteCtx.Provider>
+    </div>
   );
 }

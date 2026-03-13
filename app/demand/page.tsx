@@ -15,7 +15,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Separator } from "@/components/ui/separator";
 import { Calendar } from "@/components/ui/calendar";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
-import { format, parseISO, startOfWeek, endOfWeek, closestTo } from "date-fns";
+import { format, parseISO, closestTo, differenceInDays } from "date-fns";
 import type { DateRange } from "react-day-picker";
 import realData from "@/lib/real-data.json";
 import {
@@ -152,6 +152,7 @@ export default function DemandPage() {
   const [showPlanner, setShowPlanner] = useState(false);
   const [expandedProcSku, setExpandedProcSku] = useState<string | null>(null);
   const [additionalInventory, setAdditionalInventory] = useState<Record<string, number>>({});
+  const [rawCalRange, setRawCalRange] = useState<{ from: Date | null; to: Date | null }>({ from: null, to: null });
   const VENDORS_PER_PAGE = 30;
   const weekScrollRef = useRef<HTMLDivElement>(null);
 
@@ -173,27 +174,45 @@ export default function DemandPage() {
   const prevTw = rangeStart > 0 ? timeline[rangeStart - 1] : null;
   const nextTw = rangeEnd < timeline.length - 1 ? timeline[rangeEnd + 1] : null;
 
-  // Aggregate SKUs across selected range
+  // Compute fraction of a week covered by the raw date selection
+  function weekFraction(weekStr: string, rawF: Date | null, rawT: Date | null): number {
+    if (!rawF && !rawT) return 1;
+    const [startStr, endStr] = weekStr.split("/");
+    const wStart = parseISO(startStr);
+    const wEnd = parseISO(endStr);
+    const covStart = rawF && rawF > wStart ? rawF : wStart;
+    const covEnd = rawT && rawT < wEnd ? rawT : wEnd;
+    const covDays = Math.max(0, differenceInDays(covEnd, covStart) + 1);
+    return Math.min(1, covDays / 7);
+  }
+
+  // Aggregate SKUs across selected range (with partial-week interpolation)
   const activeSkus = useMemo(() => {
     const skuTotals = new Map<string, number>();
     for (let i = rangeStart; i <= rangeEnd; i++) {
       const src = timeline[i].predictedData ?? timeline[i].dispatchedData;
       if (!src) continue;
+      const frac = weekFraction(timeline[i].week, rawCalRange.from, rawCalRange.to);
       for (const [k, v] of Object.entries(src)) {
         if (k === "week" || k === "total" || typeof v !== "number" || v <= 0) continue;
-        skuTotals.set(k, (skuTotals.get(k) ?? 0) + v);
+        skuTotals.set(k, (skuTotals.get(k) ?? 0) + v * frac);
       }
     }
     return Array.from(skuTotals.entries())
-      .map(([sku, qty]) => ({ sku, qty }))
+      .map(([sku, qty]) => ({ sku, qty: Math.round(qty) }))
       .sort((a, b) => b.qty - a.qty);
-  }, [rangeStart, rangeEnd]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [rangeStart, rangeEnd, rawCalRange]);
 
   const rangeTotal = useMemo(() => {
     let total = 0;
-    for (let i = rangeStart; i <= rangeEnd; i++) total += timeline[i].total;
+    for (let i = rangeStart; i <= rangeEnd; i++) {
+      const frac = weekFraction(timeline[i].week, rawCalRange.from, rawCalRange.to);
+      total += Math.round(timeline[i].total * frac);
+    }
     return total;
-  }, [rangeStart, rangeEnd]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [rangeStart, rangeEnd, rawCalRange]);
 
   const rangeWeekCount = rangeEnd - rangeStart + 1;
   const activeNames = useMemo(() => new Set(activeSkus.map(s => s.sku)), [activeSkus]);
@@ -276,7 +295,7 @@ export default function DemandPage() {
 
   const nextDelta = nextTw ? (((nextTw.total - tw.total) / tw.total) * 100) : 0;
   const fromDate = parseISO(timeline[rangeStart].week.split("/")[0]);
-  const selectedMonth = fromDate.getMonth() + 1; // 1-12
+  const selectedMonth = (rawCalRange.from ?? fromDate).getMonth() + 1; // 1-12
 
   const estimatedSkuAllocation = useMemo(() => {
     const top5 = activeSkus.slice(0, 5);
@@ -284,16 +303,8 @@ export default function DemandPage() {
     if (top5Total === 0) return {} as Record<string, number>;
     return Object.fromEntries(top5.map(s => [s.sku, Math.round((s.qty / top5Total) * 100)])) as Record<string, number>;
   }, [activeSkus]);
-  const toDate = parseISO(timeline[rangeEnd].week.split("/")[0]);
-  const startOfFrom = startOfWeek(fromDate, { weekStartsOn: 1 });
-  const endOfTo = endOfWeek(toDate, { weekStartsOn: 1 });
 
-  const timelineDates = timeline.map(t => parseISO(t.week.split("/")[0]));
-
-  const dateRange: DateRange = {
-    from: startOfFrom,
-    to: endOfTo,
-  };
+  const timelineDates = useMemo(() => timeline.map(t => parseISO(t.week.split("/")[0])), []);
 
   const getWeekIdxForDate = (date: Date): number => {
     const dateStr = format(date, "yyyy-MM-dd");
@@ -307,21 +318,30 @@ export default function DemandPage() {
       const idx = timeline.findIndex(t => t.week.split("/")[0] === format(closest, "yyyy-MM-dd"));
       if (idx !== -1) return idx;
     }
-    return fromIdx;
+    return 0;
   };
 
   const handleRangeSelect = (range: DateRange | undefined) => {
     if (!range) return;
     if (range.from && range.to) {
+      setRawCalRange({ from: range.from, to: range.to });
       const fi = getWeekIdxForDate(range.from);
       const ti = getWeekIdxForDate(range.to);
       setFromIdx(Math.min(fi, ti));
       setToIdx(Math.max(fi, ti));
     } else if (range.from) {
+      setRawCalRange({ from: range.from, to: null });
       const idx = getWeekIdxForDate(range.from);
       setFromIdx(idx);
       setToIdx(idx);
+    } else {
+      setRawCalRange({ from: null, to: null });
     }
+  };
+
+  const calendarSelected: DateRange = {
+    from: rawCalRange.from ?? fromDate,
+    to: rawCalRange.to ?? undefined,
   };
 
   return (
@@ -363,14 +383,14 @@ export default function DemandPage() {
           <PopoverContent className="w-auto p-0" align="start">
             <Calendar
               mode="range"
-              selected={dateRange}
+              selected={calendarSelected}
               onSelect={handleRangeSelect}
-              defaultMonth={fromDate}
+              defaultMonth={rawCalRange.from ?? fromDate}
               autoFocus
               numberOfMonths={2}
               disabled={(date) => {
                 const start = parseISO(timeline[0].week.split("/")[0]);
-                const end = endOfWeek(parseISO(timeline[timeline.length - 1].week.split("/")[0]), { weekStartsOn: 1 });
+                const end = parseISO(timeline[timeline.length - 1].week.split("/")[1]);
                 return date < start || date > end;
               }}
             />
