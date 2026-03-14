@@ -369,6 +369,7 @@ export default function RetailersPage() {
               <div className="rounded-xl overflow-hidden border h-[320px] xl:h-[380px]">
                 {selectedRoute ? (
                   <RoutePlanMap
+                    key={selectedRoute.routeId}
                     hub={HUB}
                     stops={selectedRoute.retailers}
                     routeColor={ROUTE_COLORS[(selectedRoute.routeId - 1) % ROUTE_COLORS.length]}

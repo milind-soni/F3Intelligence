@@ -29,10 +29,13 @@ export function RoutePlanMap({ hub, stops, routeColor, routeId, polyline }: Rout
 
   // Initialize map once
   useEffect(() => {
-    if (!mapRef.current || leafletMapRef.current) return;
+    if (!mapRef.current) return;
+    let cancelled = false;
 
     // Dynamic import to avoid SSR
     import("leaflet").then((L) => {
+      if (cancelled || !mapRef.current || leafletMapRef.current) return;
+
       // Fix default icon paths
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
       delete (L.Icon.Default.prototype as any)._getIconUrl;
@@ -41,8 +44,6 @@ export function RoutePlanMap({ hub, stops, routeColor, routeId, polyline }: Rout
         iconUrl: "https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon.png",
         shadowUrl: "https://unpkg.com/leaflet@1.9.4/dist/images/marker-shadow.png",
       });
-
-      if (!mapRef.current) return;
 
       const allLats = [hub.lat, ...stops.map((s) => s.lat)];
       const allLngs = [hub.lng, ...stops.map((s) => s.lng)];
@@ -86,6 +87,7 @@ export function RoutePlanMap({ hub, stops, routeColor, routeId, polyline }: Rout
     });
 
     return () => {
+      cancelled = true;
       if (leafletMapRef.current) {
         leafletMapRef.current.remove();
         leafletMapRef.current = null;

@@ -43,8 +43,7 @@ const HUB_LABEL = "F3 Hub — Azadpur Mandi";
 const RetailerCtx = createContext<{
   retailers: Retailer[];
   maxQty: number;
-  selectedName: string | null;
-}>({ retailers: [], maxQty: 1, selectedName: null });
+}>({ retailers: [], maxQty: 1 });
 
 // ─── Custom Tooltip ────────────────────────────────────────────────────────────
 
@@ -267,7 +266,9 @@ function RetailerTooltip({ id }: TooltipComponentProps) {
 // ─── Custom Marker ─────────────────────────────────────────────────────────────
 
 function RetailerMarker({ id, color }: MarkerComponentProps) {
-  const { retailers, maxQty, selectedName } = useContext(RetailerCtx);
+  const { retailers, maxQty } = useContext(RetailerCtx);
+  const isSelected = color.startsWith("sel:");
+  const actualColor = isSelected ? color.slice(4) : color;
 
   if (id === "hub") {
     return (
@@ -288,7 +289,6 @@ function RetailerMarker({ id, color }: MarkerComponentProps) {
   const idx = parseInt(id.replace("ret-", ""), 10);
   const retailer = retailers[idx];
   const hasData = retailer && retailer.totalQty > 0;
-  const isSelected = retailer?.name === selectedName;
 
   // Small dot for retailers without volume data
   if (!hasData) {
@@ -320,11 +320,11 @@ function RetailerMarker({ id, color }: MarkerComponentProps) {
         width: isSelected ? size + 6 : size,
         height: isSelected ? size + 6 : size,
         borderRadius: "50%",
-        background: color,
+        background: actualColor,
         border: isSelected ? "3px solid #fff" : "2.5px solid #fff",
         cursor: "pointer",
         boxShadow: isSelected
-          ? `0 0 0 3px ${color}50, 0 2px 12px rgba(0,0,0,0.2)`
+          ? `0 0 0 3px ${actualColor}50, 0 2px 12px rgba(0,0,0,0.2)`
           : "0 1px 6px rgba(0,0,0,0.15), 0 0 0 1px rgba(0,0,0,0.04)",
         display: "flex",
         alignItems: "center",
@@ -379,14 +379,17 @@ export function RetailerMap({
     };
     retailers.forEach((r, i) => {
       const topSku = r.topSkus[0]?.sku ?? "WATERMELON";
+      const baseColor = SKU_COLORS[topSku] ?? "#22c55e";
+      const isSelected = r.name === selectedRetailer?.name;
       m[`ret-${i}`] = {
         coordinates: [r.lng, r.lat],
-        color: SKU_COLORS[topSku] ?? "#22c55e",
+        color: isSelected ? `sel:${baseColor}` : baseColor,
         tooltip: r.name,
       };
     });
     return m;
-  }, [retailers]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [retailers, selectedRetailer?.name]);
 
   const spec = useMemo(
     () => ({
@@ -413,7 +416,7 @@ export function RetailerMap({
 
   return (
     <RetailerCtx.Provider
-      value={{ retailers, maxQty, selectedName: selectedRetailer?.name ?? null }}
+      value={{ retailers, maxQty }}
     >
       <div style={{ position: "relative", width: "100%", height: "100%" }}>
         <MapRenderer
