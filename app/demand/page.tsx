@@ -142,13 +142,13 @@ function buildComparisonChart() {
 // ═══════════════════════════════════════════════════════════════════════
 export default function DemandPage() {
   const defaultIdx = (() => {
-    const idx = timeline.findIndex(tw => tw.predictedData && tw.dispatchedData);
-    if (idx > 0) return idx;
-    // Fallback: last dispatched week
-    for (let i = timeline.length - 1; i >= 0; i--) {
-      if (timeline[i].dispatchedData) return i;
-    }
-    return timeline.length - 2;
+    // Find the week containing today
+    const todayIdx = timeline.findIndex(tw => {
+      const [start, end] = tw.week.split("/");
+      return TODAY >= start && TODAY <= end;
+    });
+    if (todayIdx !== -1) return todayIdx;
+    return 0;
   })();
   const [fromIdx, setFromIdx] = useState(Math.max(0, defaultIdx));
   const [toIdx, setToIdx] = useState(Math.max(0, defaultIdx));
@@ -160,7 +160,7 @@ export default function DemandPage() {
   const [showPlanner, setShowPlanner] = useState(false);
   const [expandedProcSku, setExpandedProcSku] = useState<string | null>(null);
   const [additionalInventory, setAdditionalInventory] = useState<Record<string, number>>({});
-  const [rawCalRange, setRawCalRange] = useState<{ from: Date | null; to: Date | null }>({ from: null, to: null });
+  const [rawCalRange, setRawCalRange] = useState<{ from: Date | null; to: Date | null }>({ from: parseISO(TODAY), to: parseISO(TODAY) });
   const VENDORS_PER_PAGE = 30;
   const weekScrollRef = useRef<HTMLDivElement>(null);
 

@@ -16,8 +16,8 @@ const navItems = [
   { href: "/", label: "Dashboard", shortLabel: "Home", icon: LayoutDashboard, badge: null },
   { href: "/demand", label: "Demand Forecast", shortLabel: "Demand", icon: TrendingUp, badge: null },
   { href: "/retailers", label: "Retailers & Routes", shortLabel: "Map", icon: Users, badge: null },
-  { href: "/risks", label: "Risk Alerts", shortLabel: "Risks", icon: AlertTriangle, badge: "P2" },
-  { href: "/city-expansion", label: "City Expansion", shortLabel: "Expand", icon: Building2, badge: "P3" },
+  { href: "/risks", label: "Risk Alerts", shortLabel: "Risks", icon: AlertTriangle, badge: "Phase 2" },
+  { href: "/city-expansion", label: "City Expansion", shortLabel: "Expand", icon: Building2, badge: "Phase 3" },
 ];
 
 export function Sidebar() {
