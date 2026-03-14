@@ -32,7 +32,7 @@ export function Sidebar() {
           <div className="flex items-center gap-3 border-b border-sidebar-border px-6 py-5">
             <Image src="/logo.jpg" alt="F3 Logo" width={40} height={40} className="rounded-lg" />
             <div>
-              <h1 className="text-lg font-bold tracking-tight">F3 Intelligence</h1>
+              <h1 className="text-lg font-bold tracking-tight">PhalNetra</h1>
               <p className="text-xs text-sidebar-foreground/60">Delhi NCR</p>
             </div>
           </div>
@@ -64,7 +64,7 @@ export function Sidebar() {
       <header className="lg:hidden fixed top-0 left-0 right-0 z-40 flex items-center gap-3 bg-sidebar text-sidebar-foreground px-4 h-14 border-b border-sidebar-border">
         <Image src="/logo.jpg" alt="F3 Logo" width={28} height={28} className="rounded-md shrink-0" />
         <div>
-          <p className="text-sm font-bold leading-none">F3 Intelligence</p>
+          <p className="text-sm font-bold leading-none">PhalNetra</p>
           <p className="text-[10px] text-sidebar-foreground/55 mt-0.5">Delhi NCR</p>
         </div>
       </header>

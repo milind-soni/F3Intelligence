@@ -85,7 +85,8 @@ function buildTimeline(): TimelineWeek[] {
   }
   return Array.from(map.values()).sort((a, b) => a.week.localeCompare(b.week));
 }
-const timeline = buildTimeline();
+const TODAY = "2026-03-14";
+const timeline = buildTimeline().filter(tw => tw.week.split("/")[1] >= TODAY);
 
 function weekLabel(w: string) { return w.split("/")[0].slice(5); }
 function weekDate(w: string) { return w.split("/")[0]; }
@@ -480,10 +481,10 @@ export default function DemandPage() {
       </div>
 
       {/* ── Tabs: Sales Allocation / Procurement Forecast ────────── */}
-      <Tabs defaultValue="allocation" className="space-y-5">
+      <Tabs defaultValue="procurement" className="space-y-5">
         <TabsList variant="line">
-          <TabsTrigger value="allocation" className="gap-1.5"><Users className="h-3.5 w-3.5" /> Sales Allocation</TabsTrigger>
           <TabsTrigger value="procurement" className="gap-1.5"><Wheat className="h-3.5 w-3.5" /> Procurement Forecast</TabsTrigger>
+          <TabsTrigger value="allocation" className="gap-1.5"><Users className="h-3.5 w-3.5" /> Sales Allocation</TabsTrigger>
         </TabsList>
 
         {/* ════ TAB: Procurement Forecast ═══════════════════════ */}
