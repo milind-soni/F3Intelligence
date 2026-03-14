@@ -39,7 +39,7 @@ export function PasswordGate({ children }: { children: React.ReactNode }) {
         onSubmit={handleSubmit}
         className="flex flex-col items-center gap-4 rounded-2xl border border-border bg-card p-8 shadow-lg w-full max-w-sm mx-4"
       >
-        <div className="text-2xl font-display">F3 Intelligence</div>
+        <div className="text-2xl font-display">PhalNetra</div>
         <p className="text-sm text-muted-foreground">Enter password to continue</p>
         <input
           type="password"
