@@ -8,14 +8,16 @@ import {
   TrendingUp,
   Users,
   AlertTriangle,
+  Building2,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const navItems = [
-  { href: "/", label: "Dashboard", shortLabel: "Home", icon: LayoutDashboard },
-  { href: "/demand", label: "Demand Forecast", shortLabel: "Demand", icon: TrendingUp },
-  { href: "/retailers", label: "Retailers & Routes", shortLabel: "Map", icon: Users },
-  { href: "/risks", label: "Risk Alerts", shortLabel: "Risks", icon: AlertTriangle },
+  { href: "/", label: "Dashboard", shortLabel: "Home", icon: LayoutDashboard, badge: null },
+  { href: "/demand", label: "Demand Forecast", shortLabel: "Demand", icon: TrendingUp, badge: null },
+  { href: "/retailers", label: "Retailers & Routes", shortLabel: "Map", icon: Users, badge: null },
+  { href: "/risks", label: "Risk Alerts", shortLabel: "Risks", icon: AlertTriangle, badge: "P2" },
+  { href: "/city-expansion", label: "City Expansion", shortLabel: "Expand", icon: Building2, badge: "P3" },
 ];
 
 export function Sidebar() {
@@ -51,8 +53,13 @@ export function Sidebar() {
                       : "text-sidebar-foreground/70 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground"
                   )}
                 >
-                  <item.icon className="h-5 w-5" />
-                  {item.label}
+                  <item.icon className="h-5 w-5 shrink-0" />
+                  <span className="flex-1">{item.label}</span>
+                  {item.badge && (
+                    <span className="text-[9px] font-bold px-1.5 py-0.5 rounded bg-sidebar-foreground/15 text-sidebar-foreground/70">
+                      {item.badge}
+                    </span>
+                  )}
                 </Link>
               );
             })}
@@ -70,7 +77,7 @@ export function Sidebar() {
       </header>
 
       {/* Mobile bottom tab bar */}
-      <nav className="lg:hidden fixed bottom-0 left-0 right-0 z-40 bg-sidebar border-t border-sidebar-border grid grid-cols-4 h-16">
+      <nav className="lg:hidden fixed bottom-0 left-0 right-0 z-40 bg-sidebar border-t border-sidebar-border grid grid-cols-5 h-16">
         {navItems.map((item) => {
           const active = isActive(item.href);
           return (

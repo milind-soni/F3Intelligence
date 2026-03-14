@@ -21,7 +21,15 @@ export default function RisksPage() {
 
   return (
     <div>
-      <PageHeader title="Risk Alerts" description="Supply disruption monitoring and early warning system" />
+      <div className="flex items-start gap-3 mb-8">
+        <div className="flex-1">
+          <div className="flex items-center gap-3 mb-1">
+            <h1 className="text-2xl font-bold tracking-tight text-foreground">Risk Alerts</h1>
+            <span className="inline-flex items-center rounded-full bg-violet-100 border border-violet-200 px-3 py-0.5 text-xs font-bold text-violet-700 uppercase tracking-wider">Phase 2</span>
+          </div>
+          <p className="text-sm text-muted-foreground">Supply disruption monitoring and early warning system</p>
+        </div>
+      </div>
 
       <div className="flex flex-wrap gap-4 mb-8">
         {[
