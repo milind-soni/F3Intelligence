@@ -4,6 +4,7 @@ import "./globals.css";
 import "maplibre-gl/dist/maplibre-gl.css";
 import "json-maps/styles.css";
 import { Sidebar } from "@/components/sidebar";
+import { PasswordGate } from "@/components/password-gate";
 
 const jakarta = Plus_Jakarta_Sans({
   subsets: ["latin"],
@@ -37,10 +38,12 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${jakarta.variable} ${dmSerif.variable} ${jetbrains.variable}`}>
       <body className="antialiased font-body bg-background text-foreground min-h-screen selection:bg-primary/20">
-        <Sidebar />
-        <main className="min-h-screen px-4 pt-[72px] pb-24 lg:ml-64 lg:px-8 lg:pt-8 lg:pb-8">
-          {children}
-        </main>
+        <PasswordGate>
+          <Sidebar />
+          <main className="min-h-screen px-4 pt-[72px] pb-24 lg:ml-64 lg:px-8 lg:pt-8 lg:pb-8">
+            {children}
+          </main>
+        </PasswordGate>
       </body>
     </html>
   );
