@@ -509,46 +509,70 @@ export default function RisksPage() {
   const [refreshing, setRefreshing] = useState(false);
   const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
+  const TTL_MS = 24 * 60 * 60 * 1000; // 24 hours
+
+  function readCache<T>(key: string): T | null {
+    try {
+      const raw = localStorage.getItem(key);
+      if (!raw) return null;
+      const { data, ts } = JSON.parse(raw);
+      if (Date.now() - ts > TTL_MS) { localStorage.removeItem(key); return null; }
+      return data as T;
+    } catch { return null; }
+  }
+
+  function writeCache(key: string, data: unknown) {
+    try { localStorage.setItem(key, JSON.stringify({ data, ts: Date.now() })); } catch {}
+  }
+
   const fetchAll = useCallback(async (isRefresh = false) => {
     if (isRefresh) setRefreshing(true);
 
-    await Promise.allSettled([
-      fetch("/api/news")
-        .then((r) => r.json())
-        .then((d) => {
-          setNews(d.articles ?? []);
-          setNewsLoading(false);
-        })
-        .catch(() => setNewsLoading(false)),
+    // News: 24h client cache — skip Exa entirely if fresh
+    const cachedNews = isRefresh ? null : readCache<NewsItem[]>("f3_news");
+    const newsPromise = cachedNews
+      ? Promise.resolve().then(() => { setNews(cachedNews); setNewsLoading(false); })
+      : fetch("/api/news")
+          .then((r) => r.json())
+          .then((d) => {
+            const articles = d.articles ?? [];
+            setNews(articles);
+            writeCache("f3_news", articles);
+            setNewsLoading(false);
+          })
+          .catch(() => setNewsLoading(false));
 
-      fetch("/api/weather")
-        .then((r) => r.json())
-        .then((d) => {
-          setWeather(d.cities ?? []);
-          setWeatherLoading(false);
-        })
-        .catch(() => setWeatherLoading(false)),
+    // Weather: 1h client cache
+    const cachedWeather = isRefresh ? null : readCache<WeatherCity[]>("f3_weather");
+    const weatherTtl = 60 * 60 * 1000;
+    const weatherCacheRaw = typeof window !== "undefined" ? localStorage.getItem("f3_weather") : null;
+    const weatherFresh = weatherCacheRaw ? Date.now() - JSON.parse(weatherCacheRaw).ts < weatherTtl : false;
+    const weatherPromise = (cachedWeather && weatherFresh)
+      ? Promise.resolve().then(() => { setWeather(cachedWeather); setWeatherLoading(false); })
+      : fetch("/api/weather")
+          .then((r) => r.json())
+          .then((d) => {
+            const cities = d.cities ?? [];
+            setWeather(cities);
+            writeCache("f3_weather", cities);
+            setWeatherLoading(false);
+          })
+          .catch(() => setWeatherLoading(false));
 
-      fetch("/api/mandi")
-        .then((r) => r.json())
-        .then((d) => {
-          setMandi(d.data ?? []);
-          setMandiLoading(false);
-        })
-        .catch(() => setMandiLoading(false)),
-    ]);
+    const mandiPromise = fetch("/api/mandi")
+      .then((r) => r.json())
+      .then((d) => { setMandi(d.data ?? []); setMandiLoading(false); })
+      .catch(() => setMandiLoading(false));
+
+    await Promise.allSettled([newsPromise, weatherPromise, mandiPromise]);
 
     setLastUpdated(new Date().toLocaleTimeString("en-IN", { hour: "2-digit", minute: "2-digit" }));
     if (isRefresh) setRefreshing(false);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   useEffect(() => {
     fetchAll();
-    // Auto-refresh news every 10 minutes
-    intervalRef.current = setInterval(() => fetchAll(), 10 * 60 * 1000);
-    return () => {
-      if (intervalRef.current) clearInterval(intervalRef.current);
-    };
   }, [fetchAll]);
 
   const criticalCount = SKU_HEALTH.filter((s) => s.score >= 70).length;

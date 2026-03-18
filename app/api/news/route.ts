@@ -1,5 +1,8 @@
 import { NextResponse } from "next/server";
 
+// Cache the entire route response for 24 hours at the Next.js edge layer
+export const revalidate = 86400;
+
 const EXA_API_KEY = process.env.EXA_API_KEY!;
 
 const QUERIES = [
