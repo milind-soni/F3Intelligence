@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState, useCallback } from "react";
+import React, { useEffect, useRef, useState, useCallback } from "react";
 import { IndiaFruitMap, type NewsItem } from "@/components/india-fruit-map";
 import {
   TrendingUp,
@@ -113,30 +113,128 @@ function fmt(n: number): string {
 
 // ─── Ticker ───────────────────────────────────────────────────────────────────
 
-function NewsTicker({ items }: { items: NewsItem[] }) {
-  const ticker = items.map((n) => n.title).join("  ·  ");
+interface TickerItem {
+  type: "price" | "news" | "weather";
+  content: React.ReactNode;
+}
+
+// Static fallback prices shown immediately while API loads
+const STATIC_PRICES = [
+  { emoji: "🍉", commodity: "WATERMELON", modalPrice: 950, change: 15.2, arrivals: "2,840 q" },
+  { emoji: "🍎", commodity: "KASHMIR APPLE", modalPrice: 6200, change: 8.4, arrivals: "420 q" },
+  { emoji: "🔴", commodity: "ANAR", modalPrice: 4800, change: -2.1, arrivals: "680 q" },
+  { emoji: "🍊", commodity: "KINNOW", modalPrice: 2100, change: -7.8, arrivals: "1,240 q" },
+  { emoji: "🟠", commodity: "ORANGE", modalPrice: 3100, change: 3.2, arrivals: "960 q" },
+  { emoji: "🥭", commodity: "SAFEDA MANGO", modalPrice: 4500, change: 22.5, arrivals: "180 q" },
+  { emoji: "🍋", commodity: "MAUSAMI", modalPrice: 1700, change: -4.5, arrivals: "1,580 q" },
+  { emoji: "🍇", commodity: "GRAPES", modalPrice: 5800, change: -12.3, arrivals: "820 q" },
+];
+
+function buildTickerItems(mandi: MandiItem[], news: NewsItem[]): TickerItem[] {
+  const items: TickerItem[] = [];
+
+  // Use live mandi data if available, otherwise show static seed prices
+  const priceData = mandi.length > 0 ? mandi : STATIC_PRICES;
+
+  // Price chips
+  priceData.forEach((m) => {
+    const up = m.change > 0;
+    const color = up ? "#f87171" : "#4ade80";
+    const arrow = up ? "▲" : "▼";
+    items.push({
+      type: "price",
+      content: (
+        <span className="inline-flex items-center gap-2 px-3">
+          <span className="text-slate-400 font-bold tracking-wide text-[11px]">{m.emoji} {m.commodity}</span>
+          <span className="font-black text-white text-[12px]">₹{m.modalPrice.toLocaleString("en-IN")}</span>
+          <span className="font-black text-[11px]" style={{ color }}>
+            {arrow} {Math.abs(m.change).toFixed(1)}%
+          </span>
+          <span className="text-slate-600 text-[10px]">{m.arrivals}</span>
+        </span>
+      ),
+    });
+  });
+
+  // News headlines
+  news.slice(0, 8).forEach((n) => {
+    const catColors: Record<string, string> = {
+      Weather: "#60a5fa",
+      Price: "#fbbf24",
+      Supply: "#34d399",
+      Transport: "#f87171",
+      Market: "#a78bfa",
+    };
+    const catColor = catColors[n.category] ?? "#94a3b8";
+    items.push({
+      type: "news",
+      content: (
+        <span className="inline-flex items-center gap-2 px-3">
+          <span className="font-black text-[9px] uppercase tracking-widest" style={{ color: catColor }}>
+            {n.category}
+          </span>
+          <span className="text-slate-300 text-[11px] font-medium">{n.title}</span>
+        </span>
+      ),
+    });
+  });
+
+  return items;
+}
+
+function Divider() {
+  return <span className="text-slate-700 text-[13px] font-thin select-none px-1">│</span>;
+}
+
+function LiveTicker({ mandi, news }: { mandi: MandiItem[]; news: NewsItem[] }) {
+  const items = buildTickerItems(mandi, news);
+  const hasContent = items.length > 0;
+
+  // Build the scrolling row — duplicated for seamless loop
+  const row = (
+    <span className="inline-flex items-center">
+      {items.map((item, i) => (
+        <span key={i} className="inline-flex items-center">
+          {item.content}
+          <Divider />
+        </span>
+      ))}
+    </span>
+  );
+
   return (
-    <div className="flex items-center overflow-hidden bg-slate-900 text-white rounded-xl border border-slate-800 h-9 mb-4 flex-shrink-0">
-      <div className="flex items-center gap-2 px-3 border-r border-slate-700 h-full bg-red-600 shrink-0">
+    <div className="flex items-center overflow-hidden rounded-xl border border-slate-800 mb-4 flex-shrink-0" style={{ background: "#0d1117", height: "38px" }}>
+      {/* Label */}
+      <div className="flex items-center gap-2 px-3 h-full border-r border-slate-700 shrink-0" style={{ background: "#dc2626" }}>
         <div className="w-1.5 h-1.5 rounded-full bg-white animate-pulse" />
-        <span className="text-[10px] font-black uppercase tracking-widest whitespace-nowrap">Live Intel</span>
+        <span className="text-[10px] font-black uppercase tracking-widest text-white whitespace-nowrap">Mandi Live</span>
       </div>
-      <div className="flex-1 overflow-hidden relative">
-        {ticker ? (
-          <div
-            className="whitespace-nowrap text-[11px] font-medium text-slate-200 absolute"
-            style={{ animation: "marquee 60s linear infinite", paddingLeft: "100%" }}
-          >
-            {ticker}
-          </div>
+
+      {/* Scrolling content */}
+      <div className="flex-1 overflow-hidden relative h-full flex items-center">
+        {!hasContent ? (
+          <span className="text-[11px] text-slate-600 px-4 font-medium">Loading market data…</span>
         ) : (
-          <div className="text-[11px] text-slate-500 px-4">Fetching live intelligence…</div>
+          <div
+            className="inline-flex items-center whitespace-nowrap"
+            style={{ animation: "tickerScroll 80s linear infinite" }}
+          >
+            {row}{row}
+          </div>
         )}
       </div>
+
+      {/* Right time stamp */}
+      <div className="px-3 shrink-0 border-l border-slate-800">
+        <span className="text-[10px] font-mono text-slate-500">
+          {new Date().toLocaleTimeString("en-IN", { hour: "2-digit", minute: "2-digit" })}
+        </span>
+      </div>
+
       <style>{`
-        @keyframes marquee {
-          0% { transform: translateX(0); }
-          100% { transform: translateX(-100%); }
+        @keyframes tickerScroll {
+          0%   { transform: translateX(0); }
+          100% { transform: translateX(-50%); }
         }
       `}</style>
     </div>
@@ -505,8 +603,8 @@ export default function RisksPage() {
         ))}
       </div>
 
-      {/* Breaking ticker */}
-      <NewsTicker items={news} />
+      {/* Live market ticker */}
+      <LiveTicker mandi={mandi} news={news} />
 
       {/* Main 3-column layout */}
       <div className="flex-1 grid gap-4 min-h-0" style={{ gridTemplateColumns: "280px 1fr 320px" }}>
