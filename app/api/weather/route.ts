@@ -61,10 +61,7 @@ export async function GET() {
   );
 
   const cities = results
-    .filter(
-      (r): r is PromiseFulfilledResult<ReturnType<typeof weatherAlert> extends infer R ? R & object : never> =>
-        r.status === "fulfilled"
-    )
+    .filter((r) => r.status === "fulfilled")
     .map((r) => (r as PromiseFulfilledResult<unknown>).value);
 
   return NextResponse.json({ cities });
