@@ -111,7 +111,7 @@ export default function DashboardPage() {
               <div className="flex items-center justify-between mb-6">
                 <div>
                   <h3 className="text-base font-bold text-foreground">Volume Growth</h3>
-                  <p className="text-xs font-medium text-muted-foreground mt-1 uppercase tracking-wider">Real Data (Monthly Kg)</p>
+                  <p className="text-xs font-medium text-muted-foreground mt-1 uppercase tracking-wider">Monthly Kg</p>
                 </div>
                 <span className="text-[11px] bg-primary/10 text-primary px-3 py-1.5 rounded-full font-bold uppercase tracking-wider">
                   Sep '23 → {now.toLocaleDateString("en-US", { month: "short", year: "2-digit" })}

@@ -16,7 +16,7 @@ export interface RetailerProfile {
   shopType: string;
   color: string; // accent color per retailer
   radarMetrics: { label: string; value: number }[];
-  skuAllocation: Record<string, number>; // SKU → % of their order (real data)
+  skuAllocation: Record<string, number>; // SKU → % of their order
 }
 
 export const retailerProfiles = profileData as RetailerProfile[];
