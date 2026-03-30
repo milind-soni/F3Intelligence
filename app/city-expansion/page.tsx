@@ -4,11 +4,11 @@ import { MapPin, Building2, TrendingUp, Users, Clock, ArrowRight } from "lucide-
 import { Card, CardContent } from "@/components/ui/card";
 
 const targetCities = [
-  { city: "Jaipur", state: "Rajasthan", population: "3.1M", potential: "High", status: "Research", quarter: "Q3 2026" },
-  { city: "Lucknow", state: "Uttar Pradesh", population: "3.4M", potential: "High", status: "Research", quarter: "Q3 2026" },
-  { city: "Chandigarh", state: "Punjab/Haryana", population: "1.1M", potential: "Medium", status: "Planned", quarter: "Q4 2026" },
-  { city: "Agra", state: "Uttar Pradesh", population: "1.7M", potential: "Medium", status: "Planned", quarter: "Q4 2026" },
-  { city: "Meerut", state: "Uttar Pradesh", population: "1.5M", potential: "Medium", status: "Planned", quarter: "Q1 2027" },
+  { city: "Mumbai", state: "Maharashtra", population: "20.7M", potential: "High", status: "Research", quarter: "Q3 2026" },
+  { city: "Bangalore", state: "Karnataka", population: "12.3M", potential: "High", status: "Research", quarter: "Q3 2026" },
+  { city: "Chandigarh", state: "Punjab/Haryana", population: "1.1M", potential: "High", status: "Planned", quarter: "Q4 2026" },
+  { city: "Jaipur", state: "Rajasthan", population: "3.1M", potential: "Medium", status: "Planned", quarter: "Q4 2026" },
+  { city: "Lucknow", state: "Uttar Pradesh", population: "3.4M", potential: "Medium", status: "Planned", quarter: "Q1 2027" },
 ];
 
 const expansionPhases = [
@@ -48,9 +48,9 @@ const expansionPhases = [
 
 const metrics = [
   { label: "Target Cities", value: "5", icon: MapPin, color: "text-violet-600 bg-violet-100" },
-  { label: "Est. New Retailers", value: "340+", icon: Building2, color: "text-blue-600 bg-blue-100" },
-  { label: "Revenue Potential", value: "₹2.4Cr/mo", icon: TrendingUp, color: "text-green-600 bg-green-100" },
-  { label: "Population Reach", value: "10.8M", icon: Users, color: "text-amber-600 bg-amber-100" },
+  { label: "Est. New Retailers", value: "2,500+", icon: Building2, color: "text-blue-600 bg-blue-100" },
+  { label: "Revenue Potential", value: "₹8.5Cr/mo", icon: TrendingUp, color: "text-green-600 bg-green-100" },
+  { label: "Population Reach", value: "40.6M", icon: Users, color: "text-amber-600 bg-amber-100" },
 ];
 
 export default function CityExpansionPage() {

@@ -47,6 +47,9 @@ const SKU_COLORS: Record<string, string> = {
   COCONUT: "#92400e", MALTA: "#0369a1", BANANA: "#eab308",
   "APPLE BER": "#be185d", AVOCADO: "#166534", BLUEBERRY: "#1d4ed8",
   "SHIMLA APPLE": "#b91c1c", "DESI GUAVA": "#4ade80", "RED PEAR": "#f43f5e",
+  "TURKEY APPLE": "#f43f5e", "WASHINGTON APPLE": "#64748b", SHARDA: "#a3e635",
+  "GALA APPLE": "#c084fc", "CHAUSA MANGO": "#fbbf24", "DUSSERI MANGO": "#34d399",
+  "LANGDA MANGO": "#2dd4bf",
 };
 const SUGGESTED_PRICES: Record<string, number> = {
   WATERMELON: 28, "KASHMIR APPLE": 145, "KINNAUR APPLE": 135,
@@ -159,6 +162,7 @@ export default function DemandPage() {
   const [stockInput, setStockInput] = useState<Record<string, number>>({});
   const [showPlanner, setShowPlanner] = useState(false);
   const [expandedProcSku, setExpandedProcSku] = useState<string | null>(null);
+  const [showAllDistribution, setShowAllDistribution] = useState(false);
   const [additionalInventory, setAdditionalInventory] = useState<Record<string, number>>({});
   const [rawCalRange, setRawCalRange] = useState<{ from: Date | null; to: Date | null }>({ from: parseISO(TODAY), to: parseISO(TODAY) });
   const VENDORS_PER_PAGE = 30;
@@ -753,7 +757,7 @@ export default function DemandPage() {
                           Distribution Plan → {distributionPlan.length} retailers
                         </p>
                         <div className="space-y-2">
-                          {distributionPlan.map((d, i) => {
+                          {(showAllDistribution ? distributionPlan : distributionPlan.slice(0, 30)).map((d, i) => {
                             const tierCls = d.retailer.tier === "Priority" ? "bg-green-50 text-green-700 border-green-200"
                               : d.retailer.tier === "Secondary" ? "bg-amber-50 text-amber-700 border-amber-200"
                               : "bg-red-50 text-red-700 border-red-200";
@@ -792,6 +796,17 @@ export default function DemandPage() {
                             );
                           })}
                         </div>
+
+                        {distributionPlan.length > 30 && !showAllDistribution && (
+                          <Button variant="outline" size="sm" className="w-full mt-3" onClick={() => setShowAllDistribution(true)}>
+                            Show all {distributionPlan.length} retailers
+                          </Button>
+                        )}
+                        {showAllDistribution && distributionPlan.length > 30 && (
+                          <Button variant="outline" size="sm" className="w-full mt-3" onClick={() => setShowAllDistribution(false)}>
+                            Show top 30 only
+                          </Button>
+                        )}
 
                         {/* Summary */}
                         <div className="mt-4 rounded-xl bg-accent/30 border border-border/50 p-4">

@@ -41,8 +41,16 @@ const RetailerMap = dynamic(
 
 const SKU_COLORS: Record<string, string> = {
   WATERMELON: "#22c55e", "KASHMIR APPLE": "#ef4444", "KINNAUR APPLE": "#f97316",
-  ANAR: "#ec4899", KINNOW: "#f59e0b", ORANGE: "#fb923c", "SAFEDA MANGO": "#84cc16", "VNR GUAVA": "#8b5cf6",
-  MAUSAMI: "#a78bfa", "TURKEY APPLE": "#f43f5e", PAPAYA: "#fb7185", "SHIMLA APPLE": "#f97316",
+  ANAR: "#ec4899", KINNOW: "#f59e0b", ORANGE: "#fb923c", "SAFEDA MANGO": "#84cc16",
+  "VNR GUAVA": "#8b5cf6", CHIKOO: "#a16207", "GREEN GRAPES": "#059669",
+  "INDIAN GUAVA": "#6366f1", MANDARIN: "#0ea5e9", MAUSAMI: "#14b8a6",
+  SHAREEFA: "#d946ef", RAMPHAL: "#78716c", PEAR: "#84cc16",
+  "RED GRAPES": "#dc2626", "BLACK GRAPES": "#4c1d95", PAPAYA: "#ea580c",
+  COCONUT: "#92400e", MALTA: "#0369a1", BANANA: "#eab308",
+  "APPLE BER": "#be185d", AVOCADO: "#166534", BLUEBERRY: "#1d4ed8",
+  "SHIMLA APPLE": "#b91c1c", "TURKEY APPLE": "#f43f5e", "WASHINGTON APPLE": "#64748b",
+  SHARDA: "#a3e635", "GALA APPLE": "#c084fc", "CHAUSA MANGO": "#fbbf24",
+  "DUSSERI MANGO": "#34d399", "LANGDA MANGO": "#2dd4bf",
 };
 
 // Route colors for the 42 vehicles

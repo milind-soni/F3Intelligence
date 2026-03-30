@@ -1,9 +1,9 @@
 {
   "stats": {
     "totalOrders": 999641,
-    "totalQty": 12733536,
-    "uniqueRetailers": 662,
-    "uniqueSkus": 48,
+    "totalQty": 22977680,
+    "uniqueRetailers": 531,
+    "uniqueSkus": 33,
     "monthlyGrowth": 911.7
   },
   "monthly": [
@@ -122,6 +122,50 @@
     {
       "month": "2026-01-01",
       "qty": 529575
+    },
+    {
+      "month": "2026-02-01",
+      "qty": 630340
+    },
+    {
+      "month": "2026-03-01",
+      "qty": 680950
+    },
+    {
+      "month": "2026-04-01",
+      "qty": 705810
+    },
+    {
+      "month": "2026-05-01",
+      "qty": 758870
+    },
+    {
+      "month": "2026-06-01",
+      "qty": 858390
+    },
+    {
+      "month": "2026-07-01",
+      "qty": 989040
+    },
+    {
+      "month": "2026-08-01",
+      "qty": 1020400
+    },
+    {
+      "month": "2026-09-01",
+      "qty": 977460
+    },
+    {
+      "month": "2026-10-01",
+      "qty": 1003610
+    },
+    {
+      "month": "2026-11-01",
+      "qty": 978950
+    },
+    {
+      "month": "2026-12-01",
+      "qty": 1043290
     }
   ],
   "weekly": [
@@ -6734,1447 +6778,3118 @@
     {
       "week": "2026-01-05/2026-01-11",
       "total": 148580,
+      "ALPHONSO MANGO": 0,
       "ANAR": 19130,
+      "APPLE BER": 0,
+      "AVOCADO": 0,
+      "BANANA": 0,
+      "BLACK GRAPES": 0,
+      "BLUEBERRY": 0,
+      "CHAUSA MANGO": 0,
       "CHIKOO": 10270,
+      "COCONUT": 0,
+      "DESI GUAVA": 0,
+      "DRAGON FRUIT": 0,
+      "DUSSERI MANGO": 0,
+      "ENJOY APPLE": 0,
+      "GALA APPLE": 0,
+      "GOLDEN APPLE": 0,
       "GREEN GRAPES": 15790,
-      "INDIAN GUAVA": 9630,
+      "HAMAM MANGO": 0,
+      "IMLY": 0,
       "KASHMIR APPLE": 18550,
+      "KESAR MANGO": 0,
+      "KHUMANI": 0,
+      "KIMIA DATES": 0,
       "KINNAUR APPLE": 19820,
       "KINNOW": 15730,
+      "LANGDA MANGO": 0,
+      "LANGRA MANGO": 0,
+      "MALTA": 0,
       "MANDARIN": 2620,
+      "MAUSAMI": 0,
+      "NAAK": 0,
       "ORANGE": 22140,
+      "PAPAYA": 0,
+      "PERRY MANGO": 0,
+      "PINK GUAVA": 0,
+      "PLUM": 0,
       "RAMPHAL": 3430,
+      "RED GRAPES": 0,
+      "RED PEAR": 0,
+      "SAFEDA MANGO": 0,
+      "SHARDA": 0,
       "SHAREEFA": 3630,
-      "VNR GUAVA": 7840
+      "SHIMLA APPLE": 0,
+      "TURKEY APPLE": 0,
+      "VNR GUAVA": 7840,
+      "WASHINGTON APPLE": 0,
+      "WATERMELON": 0,
+      "ZESPRI KIWI": 0,
+      "INDIAN GUAVA": 9630
     },
     {
       "week": "2026-01-12/2026-01-18",
       "total": 149040,
+      "ALPHONSO MANGO": 0,
       "ANAR": 19150,
+      "APPLE BER": 0,
+      "AVOCADO": 0,
+      "BANANA": 0,
+      "BLACK GRAPES": 0,
+      "BLUEBERRY": 0,
+      "CHAUSA MANGO": 0,
       "CHIKOO": 10360,
+      "COCONUT": 0,
+      "DESI GUAVA": 0,
+      "DRAGON FRUIT": 0,
+      "DUSSERI MANGO": 0,
+      "ENJOY APPLE": 0,
+      "GALA APPLE": 0,
+      "GOLDEN APPLE": 0,
       "GREEN GRAPES": 15900,
-      "INDIAN GUAVA": 9450,
+      "HAMAM MANGO": 0,
+      "IMLY": 0,
       "KASHMIR APPLE": 18470,
+      "KESAR MANGO": 0,
+      "KHUMANI": 0,
+      "KIMIA DATES": 0,
       "KINNAUR APPLE": 19900,
       "KINNOW": 15720,
+      "LANGDA MANGO": 0,
+      "LANGRA MANGO": 0,
+      "MALTA": 0,
       "MANDARIN": 2520,
+      "MAUSAMI": 0,
+      "NAAK": 0,
       "ORANGE": 22260,
+      "PAPAYA": 0,
+      "PERRY MANGO": 0,
+      "PINK GUAVA": 0,
+      "PLUM": 0,
       "RAMPHAL": 3600,
+      "RED GRAPES": 0,
+      "RED PEAR": 0,
+      "SAFEDA MANGO": 0,
+      "SHARDA": 0,
       "SHAREEFA": 3760,
-      "VNR GUAVA": 7950
+      "SHIMLA APPLE": 0,
+      "TURKEY APPLE": 0,
+      "VNR GUAVA": 7950,
+      "WASHINGTON APPLE": 0,
+      "WATERMELON": 0,
+      "ZESPRI KIWI": 0,
+      "INDIAN GUAVA": 9450
     },
     {
       "week": "2026-01-19/2026-01-25",
       "total": 148910,
+      "ALPHONSO MANGO": 0,
       "ANAR": 19090,
+      "APPLE BER": 0,
+      "AVOCADO": 0,
+      "BANANA": 0,
+      "BLACK GRAPES": 0,
+      "BLUEBERRY": 0,
+      "CHAUSA MANGO": 0,
       "CHIKOO": 10260,
+      "COCONUT": 0,
+      "DESI GUAVA": 0,
+      "DRAGON FRUIT": 0,
+      "DUSSERI MANGO": 0,
+      "ENJOY APPLE": 0,
+      "GALA APPLE": 0,
+      "GOLDEN APPLE": 0,
       "GREEN GRAPES": 15810,
-      "INDIAN GUAVA": 9510,
+      "HAMAM MANGO": 0,
+      "IMLY": 0,
       "KASHMIR APPLE": 18420,
+      "KESAR MANGO": 0,
+      "KHUMANI": 0,
+      "KIMIA DATES": 0,
       "KINNAUR APPLE": 19860,
       "KINNOW": 15790,
+      "LANGDA MANGO": 0,
+      "LANGRA MANGO": 0,
+      "MALTA": 0,
       "MANDARIN": 2700,
+      "MAUSAMI": 0,
+      "NAAK": 0,
       "ORANGE": 22330,
+      "PAPAYA": 0,
+      "PERRY MANGO": 0,
+      "PINK GUAVA": 0,
+      "PLUM": 0,
       "RAMPHAL": 3610,
+      "RED GRAPES": 0,
+      "RED PEAR": 0,
+      "SAFEDA MANGO": 0,
+      "SHARDA": 0,
       "SHAREEFA": 3640,
-      "VNR GUAVA": 7890
+      "SHIMLA APPLE": 0,
+      "TURKEY APPLE": 0,
+      "VNR GUAVA": 7890,
+      "WASHINGTON APPLE": 0,
+      "WATERMELON": 0,
+      "ZESPRI KIWI": 0,
+      "INDIAN GUAVA": 9510
     },
     {
       "week": "2026-01-26/2026-02-01",
       "total": 148850,
+      "ALPHONSO MANGO": 0,
       "ANAR": 19160,
+      "APPLE BER": 0,
+      "AVOCADO": 0,
+      "BANANA": 0,
+      "BLACK GRAPES": 0,
+      "BLUEBERRY": 0,
+      "CHAUSA MANGO": 0,
       "CHIKOO": 10270,
+      "COCONUT": 0,
+      "DESI GUAVA": 0,
+      "DRAGON FRUIT": 0,
+      "DUSSERI MANGO": 0,
+      "ENJOY APPLE": 0,
+      "GALA APPLE": 0,
+      "GOLDEN APPLE": 0,
       "GREEN GRAPES": 15890,
-      "INDIAN GUAVA": 9600,
+      "HAMAM MANGO": 0,
+      "IMLY": 0,
       "KASHMIR APPLE": 18580,
+      "KESAR MANGO": 0,
+      "KHUMANI": 0,
+      "KIMIA DATES": 0,
       "KINNAUR APPLE": 19780,
       "KINNOW": 15640,
+      "LANGDA MANGO": 0,
+      "LANGRA MANGO": 0,
+      "MALTA": 0,
       "MANDARIN": 2590,
+      "MAUSAMI": 0,
+      "NAAK": 0,
       "ORANGE": 22270,
+      "PAPAYA": 0,
+      "PERRY MANGO": 0,
+      "PINK GUAVA": 0,
+      "PLUM": 0,
       "RAMPHAL": 3510,
+      "RED GRAPES": 0,
+      "RED PEAR": 0,
+      "SAFEDA MANGO": 0,
+      "SHARDA": 0,
       "SHAREEFA": 3730,
-      "VNR GUAVA": 7830
+      "SHIMLA APPLE": 0,
+      "TURKEY APPLE": 0,
+      "VNR GUAVA": 7830,
+      "WASHINGTON APPLE": 0,
+      "WATERMELON": 0,
+      "ZESPRI KIWI": 0,
+      "INDIAN GUAVA": 9600
     },
     {
       "week": "2026-02-02/2026-02-08",
       "total": 157760,
+      "ALPHONSO MANGO": 0,
       "ANAR": 20650,
+      "APPLE BER": 0,
+      "AVOCADO": 0,
+      "BANANA": 0,
       "BLACK GRAPES": 10940,
+      "BLUEBERRY": 0,
+      "CHAUSA MANGO": 0,
       "CHIKOO": 8680,
+      "COCONUT": 0,
+      "DESI GUAVA": 0,
+      "DRAGON FRUIT": 0,
+      "DUSSERI MANGO": 0,
+      "ENJOY APPLE": 0,
+      "GALA APPLE": 0,
+      "GOLDEN APPLE": 0,
       "GREEN GRAPES": 13130,
-      "INDIAN GUAVA": 8110,
+      "HAMAM MANGO": 0,
+      "IMLY": 0,
       "KASHMIR APPLE": 18860,
+      "KESAR MANGO": 0,
+      "KHUMANI": 0,
+      "KIMIA DATES": 0,
       "KINNAUR APPLE": 21390,
       "KINNOW": 20250,
+      "LANGDA MANGO": 0,
+      "LANGRA MANGO": 0,
+      "MALTA": 0,
       "MANDARIN": 1970,
+      "MAUSAMI": 0,
+      "NAAK": 0,
       "ORANGE": 21730,
+      "PAPAYA": 0,
+      "PERRY MANGO": 0,
+      "PINK GUAVA": 0,
+      "PLUM": 0,
+      "RAMPHAL": 0,
+      "RED GRAPES": 0,
+      "RED PEAR": 0,
+      "SAFEDA MANGO": 0,
+      "SHARDA": 0,
+      "SHAREEFA": 0,
+      "SHIMLA APPLE": 0,
+      "TURKEY APPLE": 0,
       "VNR GUAVA": 6240,
-      "WASHINGTON": 5810
+      "WASHINGTON APPLE": 5810,
+      "WATERMELON": 0,
+      "ZESPRI KIWI": 0,
+      "INDIAN GUAVA": 8110
     },
     {
       "week": "2026-02-09/2026-02-15",
       "total": 157790,
+      "ALPHONSO MANGO": 0,
       "ANAR": 20770,
+      "APPLE BER": 0,
+      "AVOCADO": 0,
+      "BANANA": 0,
       "BLACK GRAPES": 10750,
+      "BLUEBERRY": 0,
+      "CHAUSA MANGO": 0,
       "CHIKOO": 8860,
+      "COCONUT": 0,
+      "DESI GUAVA": 0,
+      "DRAGON FRUIT": 0,
+      "DUSSERI MANGO": 0,
+      "ENJOY APPLE": 0,
+      "GALA APPLE": 0,
+      "GOLDEN APPLE": 0,
       "GREEN GRAPES": 13170,
-      "INDIAN GUAVA": 8210,
+      "HAMAM MANGO": 0,
+      "IMLY": 0,
       "KASHMIR APPLE": 18710,
+      "KESAR MANGO": 0,
+      "KHUMANI": 0,
+      "KIMIA DATES": 0,
       "KINNAUR APPLE": 21470,
       "KINNOW": 20230,
+      "LANGDA MANGO": 0,
+      "LANGRA MANGO": 0,
+      "MALTA": 0,
       "MANDARIN": 1800,
+      "MAUSAMI": 0,
+      "NAAK": 0,
       "ORANGE": 21860,
+      "PAPAYA": 0,
+      "PERRY MANGO": 0,
+      "PINK GUAVA": 0,
+      "PLUM": 0,
+      "RAMPHAL": 0,
+      "RED GRAPES": 0,
+      "RED PEAR": 0,
+      "SAFEDA MANGO": 0,
+      "SHARDA": 0,
+      "SHAREEFA": 0,
+      "SHIMLA APPLE": 0,
+      "TURKEY APPLE": 0,
       "VNR GUAVA": 6210,
-      "WASHINGTON": 5750
+      "WASHINGTON APPLE": 5750,
+      "WATERMELON": 0,
+      "ZESPRI KIWI": 0,
+      "INDIAN GUAVA": 8210
     },
     {
       "week": "2026-02-16/2026-02-22",
       "total": 157430,
+      "ALPHONSO MANGO": 0,
       "ANAR": 20650,
+      "APPLE BER": 0,
+      "AVOCADO": 0,
+      "BANANA": 0,
       "BLACK GRAPES": 10770,
+      "BLUEBERRY": 0,
+      "CHAUSA MANGO": 0,
       "CHIKOO": 8690,
+      "COCONUT": 0,
+      "DESI GUAVA": 0,
+      "DRAGON FRUIT": 0,
+      "DUSSERI MANGO": 0,
+      "ENJOY APPLE": 0,
+      "GALA APPLE": 0,
+      "GOLDEN APPLE": 0,
       "GREEN GRAPES": 13070,
-      "INDIAN GUAVA": 8080,
+      "HAMAM MANGO": 0,
+      "IMLY": 0,
       "KASHMIR APPLE": 18810,
+      "KESAR MANGO": 0,
+      "KHUMANI": 0,
+      "KIMIA DATES": 0,
       "KINNAUR APPLE": 21330,
       "KINNOW": 20330,
+      "LANGDA MANGO": 0,
+      "LANGRA MANGO": 0,
+      "MALTA": 0,
       "MANDARIN": 1910,
+      "MAUSAMI": 0,
+      "NAAK": 0,
       "ORANGE": 21700,
+      "PAPAYA": 0,
+      "PERRY MANGO": 0,
+      "PINK GUAVA": 0,
+      "PLUM": 0,
+      "RAMPHAL": 0,
+      "RED GRAPES": 0,
+      "RED PEAR": 0,
+      "SAFEDA MANGO": 0,
+      "SHARDA": 0,
+      "SHAREEFA": 0,
+      "SHIMLA APPLE": 0,
+      "TURKEY APPLE": 0,
       "VNR GUAVA": 6230,
-      "WASHINGTON": 5860
+      "WASHINGTON APPLE": 5860,
+      "WATERMELON": 0,
+      "ZESPRI KIWI": 0,
+      "INDIAN GUAVA": 8080
     },
     {
       "week": "2026-02-23/2026-03-01",
       "total": 157360,
+      "ALPHONSO MANGO": 0,
       "ANAR": 20740,
+      "APPLE BER": 0,
+      "AVOCADO": 0,
+      "BANANA": 0,
       "BLACK GRAPES": 10770,
+      "BLUEBERRY": 0,
+      "CHAUSA MANGO": 0,
       "CHIKOO": 8740,
+      "COCONUT": 0,
+      "DESI GUAVA": 0,
+      "DRAGON FRUIT": 0,
+      "DUSSERI MANGO": 0,
+      "ENJOY APPLE": 0,
+      "GALA APPLE": 0,
+      "GOLDEN APPLE": 0,
       "GREEN GRAPES": 13100,
-      "INDIAN GUAVA": 8020,
+      "HAMAM MANGO": 0,
+      "IMLY": 0,
       "KASHMIR APPLE": 18860,
+      "KESAR MANGO": 0,
+      "KHUMANI": 0,
+      "KIMIA DATES": 0,
       "KINNAUR APPLE": 21430,
       "KINNOW": 20200,
+      "LANGDA MANGO": 0,
+      "LANGRA MANGO": 0,
+      "MALTA": 0,
       "MANDARIN": 1850,
+      "MAUSAMI": 0,
+      "NAAK": 0,
       "ORANGE": 21710,
+      "PAPAYA": 0,
+      "PERRY MANGO": 0,
+      "PINK GUAVA": 0,
+      "PLUM": 0,
+      "RAMPHAL": 0,
+      "RED GRAPES": 0,
+      "RED PEAR": 0,
+      "SAFEDA MANGO": 0,
+      "SHARDA": 0,
+      "SHAREEFA": 0,
+      "SHIMLA APPLE": 0,
+      "TURKEY APPLE": 0,
       "VNR GUAVA": 6170,
-      "WASHINGTON": 5770
+      "WASHINGTON APPLE": 5770,
+      "WATERMELON": 0,
+      "ZESPRI KIWI": 0,
+      "INDIAN GUAVA": 8020
     },
     {
       "week": "2026-03-02/2026-03-08",
       "total": 170120,
+      "ALPHONSO MANGO": 0,
       "ANAR": 19540,
+      "APPLE BER": 0,
       "AVOCADO": 690,
+      "BANANA": 0,
       "BLACK GRAPES": 7920,
       "BLUEBERRY": 670,
+      "CHAUSA MANGO": 0,
       "CHIKOO": 6430,
       "COCONUT": 2450,
+      "DESI GUAVA": 0,
+      "DRAGON FRUIT": 0,
+      "DUSSERI MANGO": 0,
+      "ENJOY APPLE": 0,
+      "GALA APPLE": 0,
+      "GOLDEN APPLE": 0,
       "GREEN GRAPES": 6290,
+      "HAMAM MANGO": 0,
+      "IMLY": 0,
+      "KASHMIR APPLE": 0,
+      "KESAR MANGO": 0,
+      "KHUMANI": 0,
+      "KIMIA DATES": 0,
       "KINNAUR APPLE": 44050,
+      "KINNOW": 0,
+      "LANGDA MANGO": 0,
+      "LANGRA MANGO": 0,
+      "MALTA": 0,
+      "MANDARIN": 0,
+      "MAUSAMI": 0,
+      "NAAK": 0,
       "ORANGE": 16960,
       "PAPAYA": 3760,
+      "PERRY MANGO": 0,
+      "PINK GUAVA": 0,
+      "PLUM": 0,
+      "RAMPHAL": 0,
       "RED GRAPES": 2320,
-      "SAFEDA": 8730,
-      "TURKEY": 3200,
-      "WASHINGTON": 3490,
-      "WATERMELON": 43620
+      "RED PEAR": 0,
+      "SAFEDA MANGO": 8730,
+      "SHARDA": 0,
+      "SHAREEFA": 0,
+      "SHIMLA APPLE": 0,
+      "TURKEY APPLE": 3200,
+      "VNR GUAVA": 0,
+      "WASHINGTON APPLE": 3490,
+      "WATERMELON": 43620,
+      "ZESPRI KIWI": 0
     },
     {
       "week": "2026-03-09/2026-03-15",
       "total": 170380,
+      "ALPHONSO MANGO": 0,
       "ANAR": 19660,
+      "APPLE BER": 0,
       "AVOCADO": 620,
+      "BANANA": 0,
       "BLACK GRAPES": 7990,
       "BLUEBERRY": 640,
+      "CHAUSA MANGO": 0,
       "CHIKOO": 6600,
       "COCONUT": 2570,
+      "DESI GUAVA": 0,
+      "DRAGON FRUIT": 0,
+      "DUSSERI MANGO": 0,
+      "ENJOY APPLE": 0,
+      "GALA APPLE": 0,
+      "GOLDEN APPLE": 0,
       "GREEN GRAPES": 6280,
+      "HAMAM MANGO": 0,
+      "IMLY": 0,
+      "KASHMIR APPLE": 0,
+      "KESAR MANGO": 0,
+      "KHUMANI": 0,
+      "KIMIA DATES": 0,
       "KINNAUR APPLE": 44080,
+      "KINNOW": 0,
+      "LANGDA MANGO": 0,
+      "LANGRA MANGO": 0,
+      "MALTA": 0,
+      "MANDARIN": 0,
+      "MAUSAMI": 0,
+      "NAAK": 0,
       "ORANGE": 16990,
       "PAPAYA": 3800,
+      "PERRY MANGO": 0,
+      "PINK GUAVA": 0,
+      "PLUM": 0,
+      "RAMPHAL": 0,
       "RED GRAPES": 2330,
-      "SAFEDA": 8580,
-      "TURKEY": 3280,
-      "WASHINGTON": 3450,
-      "WATERMELON": 43510
+      "RED PEAR": 0,
+      "SAFEDA MANGO": 8580,
+      "SHARDA": 0,
+      "SHAREEFA": 0,
+      "SHIMLA APPLE": 0,
+      "TURKEY APPLE": 3280,
+      "VNR GUAVA": 0,
+      "WASHINGTON APPLE": 3450,
+      "WATERMELON": 43510,
+      "ZESPRI KIWI": 0
     },
     {
       "week": "2026-03-16/2026-03-22",
       "total": 170350,
+      "ALPHONSO MANGO": 0,
       "ANAR": 19600,
+      "APPLE BER": 0,
       "AVOCADO": 580,
+      "BANANA": 0,
       "BLACK GRAPES": 7950,
       "BLUEBERRY": 580,
+      "CHAUSA MANGO": 0,
       "CHIKOO": 6430,
       "COCONUT": 2530,
+      "DESI GUAVA": 0,
+      "DRAGON FRUIT": 0,
+      "DUSSERI MANGO": 0,
+      "ENJOY APPLE": 0,
+      "GALA APPLE": 0,
+      "GOLDEN APPLE": 0,
       "GREEN GRAPES": 6280,
+      "HAMAM MANGO": 0,
+      "IMLY": 0,
+      "KASHMIR APPLE": 0,
+      "KESAR MANGO": 0,
+      "KHUMANI": 0,
+      "KIMIA DATES": 0,
       "KINNAUR APPLE": 44160,
+      "KINNOW": 0,
+      "LANGDA MANGO": 0,
+      "LANGRA MANGO": 0,
+      "MALTA": 0,
+      "MANDARIN": 0,
+      "MAUSAMI": 0,
+      "NAAK": 0,
       "ORANGE": 16900,
       "PAPAYA": 3830,
+      "PERRY MANGO": 0,
+      "PINK GUAVA": 0,
+      "PLUM": 0,
+      "RAMPHAL": 0,
       "RED GRAPES": 2460,
-      "SAFEDA": 8670,
-      "TURKEY": 3350,
-      "WASHINGTON": 3460,
-      "WATERMELON": 43570
+      "RED PEAR": 0,
+      "SAFEDA MANGO": 8670,
+      "SHARDA": 0,
+      "SHAREEFA": 0,
+      "SHIMLA APPLE": 0,
+      "TURKEY APPLE": 3350,
+      "VNR GUAVA": 0,
+      "WASHINGTON APPLE": 3460,
+      "WATERMELON": 43570,
+      "ZESPRI KIWI": 0
     },
     {
       "week": "2026-03-23/2026-03-29",
       "total": 170100,
+      "ALPHONSO MANGO": 0,
       "ANAR": 19530,
+      "APPLE BER": 0,
       "AVOCADO": 530,
+      "BANANA": 0,
       "BLACK GRAPES": 7930,
       "BLUEBERRY": 730,
+      "CHAUSA MANGO": 0,
       "CHIKOO": 6560,
       "COCONUT": 2450,
+      "DESI GUAVA": 0,
+      "DRAGON FRUIT": 0,
+      "DUSSERI MANGO": 0,
+      "ENJOY APPLE": 0,
+      "GALA APPLE": 0,
+      "GOLDEN APPLE": 0,
       "GREEN GRAPES": 6180,
+      "HAMAM MANGO": 0,
+      "IMLY": 0,
+      "KASHMIR APPLE": 0,
+      "KESAR MANGO": 0,
+      "KHUMANI": 0,
+      "KIMIA DATES": 0,
       "KINNAUR APPLE": 44180,
+      "KINNOW": 0,
+      "LANGDA MANGO": 0,
+      "LANGRA MANGO": 0,
+      "MALTA": 0,
+      "MANDARIN": 0,
+      "MAUSAMI": 0,
+      "NAAK": 0,
       "ORANGE": 16820,
       "PAPAYA": 3750,
+      "PERRY MANGO": 0,
+      "PINK GUAVA": 0,
+      "PLUM": 0,
+      "RAMPHAL": 0,
       "RED GRAPES": 2300,
-      "SAFEDA": 8720,
-      "TURKEY": 3350,
-      "WASHINGTON": 3500,
-      "WATERMELON": 43570
+      "RED PEAR": 0,
+      "SAFEDA MANGO": 8720,
+      "SHARDA": 0,
+      "SHAREEFA": 0,
+      "SHIMLA APPLE": 0,
+      "TURKEY APPLE": 3350,
+      "VNR GUAVA": 0,
+      "WASHINGTON APPLE": 3500,
+      "WATERMELON": 43570,
+      "ZESPRI KIWI": 0
     },
     {
       "week": "2026-04-06/2026-04-12",
       "total": 176400,
+      "ALPHONSO MANGO": 0,
       "ANAR": 24710,
+      "APPLE BER": 0,
       "AVOCADO": 680,
       "BANANA": 2920,
       "BLACK GRAPES": 5800,
       "BLUEBERRY": 1260,
+      "CHAUSA MANGO": 0,
       "CHIKOO": 3300,
       "COCONUT": 3500,
+      "DESI GUAVA": 0,
+      "DRAGON FRUIT": 0,
+      "DUSSERI MANGO": 0,
+      "ENJOY APPLE": 0,
+      "GALA APPLE": 0,
+      "GOLDEN APPLE": 0,
       "GREEN GRAPES": 3590,
+      "HAMAM MANGO": 0,
+      "IMLY": 0,
+      "KASHMIR APPLE": 0,
+      "KESAR MANGO": 0,
+      "KHUMANI": 0,
+      "KIMIA DATES": 0,
       "KINNAUR APPLE": 48310,
+      "KINNOW": 0,
+      "LANGDA MANGO": 0,
+      "LANGRA MANGO": 0,
+      "MALTA": 0,
+      "MANDARIN": 0,
+      "MAUSAMI": 0,
+      "NAAK": 0,
       "ORANGE": 4990,
       "PAPAYA": 3490,
+      "PERRY MANGO": 0,
+      "PINK GUAVA": 0,
+      "PLUM": 0,
+      "RAMPHAL": 0,
       "RED GRAPES": 1890,
-      "SAFEDA": 20600,
-      "TURKEY": 2710,
-      "WATERMELON": 48650
+      "RED PEAR": 0,
+      "SAFEDA MANGO": 20600,
+      "SHARDA": 0,
+      "SHAREEFA": 0,
+      "SHIMLA APPLE": 0,
+      "TURKEY APPLE": 2710,
+      "VNR GUAVA": 0,
+      "WASHINGTON APPLE": 0,
+      "WATERMELON": 48650,
+      "ZESPRI KIWI": 0
     },
     {
       "week": "2026-04-13/2026-04-19",
       "total": 176340,
+      "ALPHONSO MANGO": 0,
       "ANAR": 24820,
+      "APPLE BER": 0,
       "AVOCADO": 660,
       "BANANA": 2920,
       "BLACK GRAPES": 5780,
       "BLUEBERRY": 1090,
+      "CHAUSA MANGO": 0,
       "CHIKOO": 3240,
       "COCONUT": 3440,
+      "DESI GUAVA": 0,
+      "DRAGON FRUIT": 0,
+      "DUSSERI MANGO": 0,
+      "ENJOY APPLE": 0,
+      "GALA APPLE": 0,
+      "GOLDEN APPLE": 0,
       "GREEN GRAPES": 3610,
+      "HAMAM MANGO": 0,
+      "IMLY": 0,
+      "KASHMIR APPLE": 0,
+      "KESAR MANGO": 0,
+      "KHUMANI": 0,
+      "KIMIA DATES": 0,
       "KINNAUR APPLE": 48400,
+      "KINNOW": 0,
+      "LANGDA MANGO": 0,
+      "LANGRA MANGO": 0,
+      "MALTA": 0,
+      "MANDARIN": 0,
+      "MAUSAMI": 0,
+      "NAAK": 0,
       "ORANGE": 4890,
       "PAPAYA": 3490,
+      "PERRY MANGO": 0,
+      "PINK GUAVA": 0,
+      "PLUM": 0,
+      "RAMPHAL": 0,
       "RED GRAPES": 2050,
-      "SAFEDA": 20670,
-      "TURKEY": 2630,
-      "WATERMELON": 48650
+      "RED PEAR": 0,
+      "SAFEDA MANGO": 20670,
+      "SHARDA": 0,
+      "SHAREEFA": 0,
+      "SHIMLA APPLE": 0,
+      "TURKEY APPLE": 2630,
+      "VNR GUAVA": 0,
+      "WASHINGTON APPLE": 0,
+      "WATERMELON": 48650,
+      "ZESPRI KIWI": 0
     },
     {
       "week": "2026-04-20/2026-04-26",
       "total": 176770,
+      "ALPHONSO MANGO": 0,
       "ANAR": 24850,
+      "APPLE BER": 0,
       "AVOCADO": 780,
       "BANANA": 2930,
       "BLACK GRAPES": 5830,
       "BLUEBERRY": 1170,
+      "CHAUSA MANGO": 0,
       "CHIKOO": 3150,
       "COCONUT": 3620,
+      "DESI GUAVA": 0,
+      "DRAGON FRUIT": 0,
+      "DUSSERI MANGO": 0,
+      "ENJOY APPLE": 0,
+      "GALA APPLE": 0,
+      "GOLDEN APPLE": 0,
       "GREEN GRAPES": 3630,
+      "HAMAM MANGO": 0,
+      "IMLY": 0,
+      "KASHMIR APPLE": 0,
+      "KESAR MANGO": 0,
+      "KHUMANI": 0,
+      "KIMIA DATES": 0,
       "KINNAUR APPLE": 48350,
+      "KINNOW": 0,
+      "LANGDA MANGO": 0,
+      "LANGRA MANGO": 0,
+      "MALTA": 0,
+      "MANDARIN": 0,
+      "MAUSAMI": 0,
+      "NAAK": 0,
       "ORANGE": 5020,
       "PAPAYA": 3450,
+      "PERRY MANGO": 0,
+      "PINK GUAVA": 0,
+      "PLUM": 0,
+      "RAMPHAL": 0,
       "RED GRAPES": 1920,
-      "SAFEDA": 20770,
-      "TURKEY": 2700,
-      "WATERMELON": 48600
+      "RED PEAR": 0,
+      "SAFEDA MANGO": 20770,
+      "SHARDA": 0,
+      "SHAREEFA": 0,
+      "SHIMLA APPLE": 0,
+      "TURKEY APPLE": 2700,
+      "VNR GUAVA": 0,
+      "WASHINGTON APPLE": 0,
+      "WATERMELON": 48600,
+      "ZESPRI KIWI": 0
     },
     {
       "week": "2026-04-27/2026-05-03",
       "total": 176300,
+      "ALPHONSO MANGO": 0,
       "ANAR": 24890,
+      "APPLE BER": 0,
       "AVOCADO": 690,
       "BANANA": 2860,
       "BLACK GRAPES": 5880,
       "BLUEBERRY": 1090,
+      "CHAUSA MANGO": 0,
       "CHIKOO": 3260,
       "COCONUT": 3470,
+      "DESI GUAVA": 0,
+      "DRAGON FRUIT": 0,
+      "DUSSERI MANGO": 0,
+      "ENJOY APPLE": 0,
+      "GALA APPLE": 0,
+      "GOLDEN APPLE": 0,
       "GREEN GRAPES": 3550,
+      "HAMAM MANGO": 0,
+      "IMLY": 0,
+      "KASHMIR APPLE": 0,
+      "KESAR MANGO": 0,
+      "KHUMANI": 0,
+      "KIMIA DATES": 0,
       "KINNAUR APPLE": 48320,
+      "KINNOW": 0,
+      "LANGDA MANGO": 0,
+      "LANGRA MANGO": 0,
+      "MALTA": 0,
+      "MANDARIN": 0,
+      "MAUSAMI": 0,
+      "NAAK": 0,
       "ORANGE": 4820,
       "PAPAYA": 3580,
+      "PERRY MANGO": 0,
+      "PINK GUAVA": 0,
+      "PLUM": 0,
+      "RAMPHAL": 0,
       "RED GRAPES": 1980,
-      "SAFEDA": 20680,
-      "TURKEY": 2610,
-      "WATERMELON": 48620
+      "RED PEAR": 0,
+      "SAFEDA MANGO": 20680,
+      "SHARDA": 0,
+      "SHAREEFA": 0,
+      "SHIMLA APPLE": 0,
+      "TURKEY APPLE": 2610,
+      "VNR GUAVA": 0,
+      "WASHINGTON APPLE": 0,
+      "WATERMELON": 48620,
+      "ZESPRI KIWI": 0
     },
     {
       "week": "2026-05-04/2026-05-10",
-      "total": 189790,
-      "ANAR": 27410,
-      "AVOCADO": 590,
-      "BANANA": 3110,
-      "BLUEBERRY": 1150,
-      "CHIKOO": 2480,
-      "COCONUT": 5130,
-      "GALA": 2780,
-      "KINNAUR APPLE": 45080,
-      "MALTA": 2850,
-      "PAPAYA": 3640,
-      "RED GRAPES": 1480,
-      "SAFEDA": 34650,
-      "WATERMELON": 59440
+      "total": 198110,
+      "ALPHONSO MANGO": 0,
+      "ANAR": 28690,
+      "APPLE BER": 0,
+      "AVOCADO": 610,
+      "BANANA": 3270,
+      "BLACK GRAPES": 0,
+      "BLUEBERRY": 1200,
+      "CHAUSA MANGO": 0,
+      "CHIKOO": 2560,
+      "COCONUT": 5440,
+      "DESI GUAVA": 0,
+      "DRAGON FRUIT": 0,
+      "DUSSERI MANGO": 0,
+      "ENJOY APPLE": 0,
+      "GALA APPLE": 2960,
+      "GOLDEN APPLE": 0,
+      "GREEN GRAPES": 0,
+      "HAMAM MANGO": 0,
+      "IMLY": 0,
+      "KASHMIR APPLE": 0,
+      "KESAR MANGO": 0,
+      "KHUMANI": 0,
+      "KIMIA DATES": 0,
+      "KINNAUR APPLE": 46880,
+      "KINNOW": 0,
+      "LANGDA MANGO": 0,
+      "LANGRA MANGO": 0,
+      "MALTA": 2940,
+      "MANDARIN": 0,
+      "MAUSAMI": 0,
+      "NAAK": 0,
+      "ORANGE": 0,
+      "PAPAYA": 3880,
+      "PERRY MANGO": 0,
+      "PINK GUAVA": 0,
+      "PLUM": 0,
+      "RAMPHAL": 0,
+      "RED GRAPES": 1560,
+      "RED PEAR": 0,
+      "SAFEDA MANGO": 36500,
+      "SHARDA": 0,
+      "SHAREEFA": 0,
+      "SHIMLA APPLE": 0,
+      "TURKEY APPLE": 0,
+      "VNR GUAVA": 0,
+      "WASHINGTON APPLE": 0,
+      "WATERMELON": 61620,
+      "ZESPRI KIWI": 0
     },
     {
       "week": "2026-05-11/2026-05-17",
-      "total": 189610,
-      "ANAR": 27300,
-      "AVOCADO": 700,
-      "BANANA": 3090,
-      "BLUEBERRY": 1150,
-      "CHIKOO": 2470,
-      "COCONUT": 5250,
-      "GALA": 2750,
-      "KINNAUR APPLE": 45000,
-      "MALTA": 2880,
-      "PAPAYA": 3650,
-      "RED GRAPES": 1450,
-      "SAFEDA": 34580,
-      "WATERMELON": 59340
+      "total": 197930,
+      "ALPHONSO MANGO": 0,
+      "ANAR": 28580,
+      "APPLE BER": 0,
+      "AVOCADO": 720,
+      "BANANA": 3250,
+      "BLACK GRAPES": 0,
+      "BLUEBERRY": 1200,
+      "CHAUSA MANGO": 0,
+      "CHIKOO": 2550,
+      "COCONUT": 5560,
+      "DESI GUAVA": 0,
+      "DRAGON FRUIT": 0,
+      "DUSSERI MANGO": 0,
+      "ENJOY APPLE": 0,
+      "GALA APPLE": 2930,
+      "GOLDEN APPLE": 0,
+      "GREEN GRAPES": 0,
+      "HAMAM MANGO": 0,
+      "IMLY": 0,
+      "KASHMIR APPLE": 0,
+      "KESAR MANGO": 0,
+      "KHUMANI": 0,
+      "KIMIA DATES": 0,
+      "KINNAUR APPLE": 46800,
+      "KINNOW": 0,
+      "LANGDA MANGO": 0,
+      "LANGRA MANGO": 0,
+      "MALTA": 2970,
+      "MANDARIN": 0,
+      "MAUSAMI": 0,
+      "NAAK": 0,
+      "ORANGE": 0,
+      "PAPAYA": 3890,
+      "PERRY MANGO": 0,
+      "PINK GUAVA": 0,
+      "PLUM": 0,
+      "RAMPHAL": 0,
+      "RED GRAPES": 1530,
+      "RED PEAR": 0,
+      "SAFEDA MANGO": 36430,
+      "SHARDA": 0,
+      "SHAREEFA": 0,
+      "SHIMLA APPLE": 0,
+      "TURKEY APPLE": 0,
+      "VNR GUAVA": 0,
+      "WASHINGTON APPLE": 0,
+      "WATERMELON": 61520,
+      "ZESPRI KIWI": 0
     },
     {
       "week": "2026-05-18/2026-05-24",
-      "total": 189730,
-      "ANAR": 27390,
-      "AVOCADO": 510,
-      "BANANA": 3070,
-      "BLUEBERRY": 1190,
-      "CHIKOO": 2570,
-      "COCONUT": 5170,
-      "GALA": 2850,
-      "KINNAUR APPLE": 44990,
-      "MALTA": 2800,
-      "PAPAYA": 3700,
-      "RED GRAPES": 1530,
-      "SAFEDA": 34640,
-      "WATERMELON": 59320
+      "total": 198050,
+      "ALPHONSO MANGO": 0,
+      "ANAR": 28670,
+      "APPLE BER": 0,
+      "AVOCADO": 530,
+      "BANANA": 3230,
+      "BLACK GRAPES": 0,
+      "BLUEBERRY": 1240,
+      "CHAUSA MANGO": 0,
+      "CHIKOO": 2650,
+      "COCONUT": 5480,
+      "DESI GUAVA": 0,
+      "DRAGON FRUIT": 0,
+      "DUSSERI MANGO": 0,
+      "ENJOY APPLE": 0,
+      "GALA APPLE": 3030,
+      "GOLDEN APPLE": 0,
+      "GREEN GRAPES": 0,
+      "HAMAM MANGO": 0,
+      "IMLY": 0,
+      "KASHMIR APPLE": 0,
+      "KESAR MANGO": 0,
+      "KHUMANI": 0,
+      "KIMIA DATES": 0,
+      "KINNAUR APPLE": 46790,
+      "KINNOW": 0,
+      "LANGDA MANGO": 0,
+      "LANGRA MANGO": 0,
+      "MALTA": 2890,
+      "MANDARIN": 0,
+      "MAUSAMI": 0,
+      "NAAK": 0,
+      "ORANGE": 0,
+      "PAPAYA": 3940,
+      "PERRY MANGO": 0,
+      "PINK GUAVA": 0,
+      "PLUM": 0,
+      "RAMPHAL": 0,
+      "RED GRAPES": 1610,
+      "RED PEAR": 0,
+      "SAFEDA MANGO": 36490,
+      "SHARDA": 0,
+      "SHAREEFA": 0,
+      "SHIMLA APPLE": 0,
+      "TURKEY APPLE": 0,
+      "VNR GUAVA": 0,
+      "WASHINGTON APPLE": 0,
+      "WATERMELON": 61500,
+      "ZESPRI KIWI": 0
     },
     {
       "week": "2026-05-25/2026-05-31",
-      "total": 189830,
-      "ANAR": 27400,
-      "AVOCADO": 670,
-      "BANANA": 3140,
-      "BLUEBERRY": 1160,
-      "CHIKOO": 2440,
-      "COCONUT": 5120,
-      "GALA": 2850,
-      "KINNAUR APPLE": 44980,
-      "MALTA": 2780,
-      "PAPAYA": 3620,
-      "RED GRAPES": 1580,
-      "SAFEDA": 34650,
-      "WATERMELON": 59440
+      "total": 164780,
+      "ALPHONSO MANGO": 0,
+      "ANAR": 23560,
+      "APPLE BER": 0,
+      "AVOCADO": 590,
+      "BANANA": 2660,
+      "BLACK GRAPES": 0,
+      "BLUEBERRY": 1000,
+      "CHAUSA MANGO": 0,
+      "CHIKOO": 2190,
+      "COCONUT": 4190,
+      "DESI GUAVA": 0,
+      "DRAGON FRUIT": 0,
+      "DUSSERI MANGO": 0,
+      "ENJOY APPLE": 0,
+      "GALA APPLE": 2300,
+      "GOLDEN APPLE": 0,
+      "GREEN GRAPES": 0,
+      "HAMAM MANGO": 0,
+      "IMLY": 0,
+      "KASHMIR APPLE": 0,
+      "KESAR MANGO": 0,
+      "KHUMANI": 0,
+      "KIMIA DATES": 0,
+      "KINNAUR APPLE": 39580,
+      "KINNOW": 0,
+      "LANGDA MANGO": 0,
+      "LANGRA MANGO": 0,
+      "MALTA": 2500,
+      "MANDARIN": 0,
+      "MAUSAMI": 0,
+      "NAAK": 0,
+      "ORANGE": 0,
+      "PAPAYA": 2890,
+      "PERRY MANGO": 0,
+      "PINK GUAVA": 0,
+      "PLUM": 0,
+      "RAMPHAL": 0,
+      "RED GRAPES": 1320,
+      "RED PEAR": 0,
+      "SAFEDA MANGO": 29100,
+      "SHARDA": 0,
+      "SHAREEFA": 0,
+      "SHIMLA APPLE": 0,
+      "TURKEY APPLE": 0,
+      "VNR GUAVA": 0,
+      "WASHINGTON APPLE": 0,
+      "WATERMELON": 52900,
+      "ZESPRI KIWI": 0
     },
     {
       "week": "2026-06-01/2026-06-07",
       "total": 214520,
+      "ALPHONSO MANGO": 0,
       "ANAR": 27920,
+      "APPLE BER": 0,
       "AVOCADO": 860,
       "BANANA": 2770,
+      "BLACK GRAPES": 0,
       "BLUEBERRY": 1160,
+      "CHAUSA MANGO": 0,
+      "CHIKOO": 0,
       "COCONUT": 5260,
-      "DUSSERI": 33890,
-      "GALA": 7610,
+      "DESI GUAVA": 0,
+      "DRAGON FRUIT": 0,
+      "DUSSERI MANGO": 33890,
+      "ENJOY APPLE": 0,
+      "GALA APPLE": 7610,
+      "GOLDEN APPLE": 0,
+      "GREEN GRAPES": 0,
+      "HAMAM MANGO": 0,
+      "IMLY": 0,
+      "KASHMIR APPLE": 0,
+      "KESAR MANGO": 0,
+      "KHUMANI": 0,
+      "KIMIA DATES": 0,
+      "KINNAUR APPLE": 0,
+      "KINNOW": 0,
+      "LANGDA MANGO": 0,
+      "LANGRA MANGO": 0,
       "MALTA": 3780,
       "MANDARIN": 2580,
+      "MAUSAMI": 0,
+      "NAAK": 0,
+      "ORANGE": 0,
       "PAPAYA": 5910,
-      "SAFEDA": 35320,
+      "PERRY MANGO": 0,
+      "PINK GUAVA": 0,
+      "PLUM": 0,
+      "RAMPHAL": 0,
+      "RED GRAPES": 0,
+      "RED PEAR": 0,
+      "SAFEDA MANGO": 35320,
+      "SHARDA": 0,
+      "SHAREEFA": 0,
       "SHIMLA APPLE": 35060,
-      "WATERMELON": 52400
+      "TURKEY APPLE": 0,
+      "VNR GUAVA": 0,
+      "WASHINGTON APPLE": 0,
+      "WATERMELON": 52400,
+      "ZESPRI KIWI": 0
     },
     {
       "week": "2026-06-08/2026-06-14",
       "total": 214770,
+      "ALPHONSO MANGO": 0,
       "ANAR": 27930,
+      "APPLE BER": 0,
       "AVOCADO": 960,
       "BANANA": 2790,
+      "BLACK GRAPES": 0,
       "BLUEBERRY": 1230,
+      "CHAUSA MANGO": 0,
+      "CHIKOO": 0,
       "COCONUT": 5400,
-      "DUSSERI": 33810,
-      "GALA": 7610,
+      "DESI GUAVA": 0,
+      "DRAGON FRUIT": 0,
+      "DUSSERI MANGO": 33810,
+      "ENJOY APPLE": 0,
+      "GALA APPLE": 7610,
+      "GOLDEN APPLE": 0,
+      "GREEN GRAPES": 0,
+      "HAMAM MANGO": 0,
+      "IMLY": 0,
+      "KASHMIR APPLE": 0,
+      "KESAR MANGO": 0,
+      "KHUMANI": 0,
+      "KIMIA DATES": 0,
+      "KINNAUR APPLE": 0,
+      "KINNOW": 0,
+      "LANGDA MANGO": 0,
+      "LANGRA MANGO": 0,
       "MALTA": 3840,
       "MANDARIN": 2620,
+      "MAUSAMI": 0,
+      "NAAK": 0,
+      "ORANGE": 0,
       "PAPAYA": 5820,
-      "SAFEDA": 35330,
+      "PERRY MANGO": 0,
+      "PINK GUAVA": 0,
+      "PLUM": 0,
+      "RAMPHAL": 0,
+      "RED GRAPES": 0,
+      "RED PEAR": 0,
+      "SAFEDA MANGO": 35330,
+      "SHARDA": 0,
+      "SHAREEFA": 0,
       "SHIMLA APPLE": 35060,
-      "WATERMELON": 52370
+      "TURKEY APPLE": 0,
+      "VNR GUAVA": 0,
+      "WASHINGTON APPLE": 0,
+      "WATERMELON": 52370,
+      "ZESPRI KIWI": 0
     },
     {
       "week": "2026-06-15/2026-06-21",
       "total": 214420,
+      "ALPHONSO MANGO": 0,
       "ANAR": 27910,
+      "APPLE BER": 0,
       "AVOCADO": 880,
       "BANANA": 2850,
+      "BLACK GRAPES": 0,
       "BLUEBERRY": 1100,
+      "CHAUSA MANGO": 0,
+      "CHIKOO": 0,
       "COCONUT": 5290,
-      "DUSSERI": 33860,
-      "GALA": 7580,
+      "DESI GUAVA": 0,
+      "DRAGON FRUIT": 0,
+      "DUSSERI MANGO": 33860,
+      "ENJOY APPLE": 0,
+      "GALA APPLE": 7580,
+      "GOLDEN APPLE": 0,
+      "GREEN GRAPES": 0,
+      "HAMAM MANGO": 0,
+      "IMLY": 0,
+      "KASHMIR APPLE": 0,
+      "KESAR MANGO": 0,
+      "KHUMANI": 0,
+      "KIMIA DATES": 0,
+      "KINNAUR APPLE": 0,
+      "KINNOW": 0,
+      "LANGDA MANGO": 0,
+      "LANGRA MANGO": 0,
       "MALTA": 3700,
       "MANDARIN": 2610,
+      "MAUSAMI": 0,
+      "NAAK": 0,
+      "ORANGE": 0,
       "PAPAYA": 5860,
-      "SAFEDA": 35380,
+      "PERRY MANGO": 0,
+      "PINK GUAVA": 0,
+      "PLUM": 0,
+      "RAMPHAL": 0,
+      "RED GRAPES": 0,
+      "RED PEAR": 0,
+      "SAFEDA MANGO": 35380,
+      "SHARDA": 0,
+      "SHAREEFA": 0,
       "SHIMLA APPLE": 35020,
-      "WATERMELON": 52380
+      "TURKEY APPLE": 0,
+      "VNR GUAVA": 0,
+      "WASHINGTON APPLE": 0,
+      "WATERMELON": 52380,
+      "ZESPRI KIWI": 0
     },
     {
       "week": "2026-06-22/2026-06-28",
       "total": 214680,
+      "ALPHONSO MANGO": 0,
       "ANAR": 28030,
+      "APPLE BER": 0,
       "AVOCADO": 940,
       "BANANA": 2850,
+      "BLACK GRAPES": 0,
       "BLUEBERRY": 1200,
+      "CHAUSA MANGO": 0,
+      "CHIKOO": 0,
       "COCONUT": 5400,
-      "DUSSERI": 33930,
-      "GALA": 7420,
+      "DESI GUAVA": 0,
+      "DRAGON FRUIT": 0,
+      "DUSSERI MANGO": 33930,
+      "ENJOY APPLE": 0,
+      "GALA APPLE": 7420,
+      "GOLDEN APPLE": 0,
+      "GREEN GRAPES": 0,
+      "HAMAM MANGO": 0,
+      "IMLY": 0,
+      "KASHMIR APPLE": 0,
+      "KESAR MANGO": 0,
+      "KHUMANI": 0,
+      "KIMIA DATES": 0,
+      "KINNAUR APPLE": 0,
+      "KINNOW": 0,
+      "LANGDA MANGO": 0,
+      "LANGRA MANGO": 0,
       "MALTA": 3720,
       "MANDARIN": 2660,
+      "MAUSAMI": 0,
+      "NAAK": 0,
+      "ORANGE": 0,
       "PAPAYA": 5920,
-      "SAFEDA": 35290,
+      "PERRY MANGO": 0,
+      "PINK GUAVA": 0,
+      "PLUM": 0,
+      "RAMPHAL": 0,
+      "RED GRAPES": 0,
+      "RED PEAR": 0,
+      "SAFEDA MANGO": 35290,
+      "SHARDA": 0,
+      "SHAREEFA": 0,
       "SHIMLA APPLE": 35020,
-      "WATERMELON": 52300
+      "TURKEY APPLE": 0,
+      "VNR GUAVA": 0,
+      "WASHINGTON APPLE": 0,
+      "WATERMELON": 52300,
+      "ZESPRI KIWI": 0
     },
     {
       "week": "2026-07-06/2026-07-12",
-      "total": 247450,
-      "ANAR": 27040,
-      "AVOCADO": 980,
-      "BANANA": 3090,
-      "CHAUSA": 20550,
-      "COCONUT": 7260,
-      "DUSSERI": 27220,
-      "KASHMIR APPLE": 17000,
-      "LANGDA": 26070,
-      "MALTA": 3700,
-      "MANDARIN": 3480,
-      "PAPAYA": 6600,
-      "SAFEDA": 17430,
-      "SHIMLA APPLE": 25700,
-      "WATERMELON": 61330
+      "total": 258780,
+      "ALPHONSO MANGO": 0,
+      "ANAR": 28080,
+      "APPLE BER": 0,
+      "AVOCADO": 1060,
+      "BANANA": 3270,
+      "BLACK GRAPES": 0,
+      "BLUEBERRY": 0,
+      "CHAUSA MANGO": 21500,
+      "CHIKOO": 0,
+      "COCONUT": 7730,
+      "DESI GUAVA": 0,
+      "DRAGON FRUIT": 0,
+      "DUSSERI MANGO": 28650,
+      "ENJOY APPLE": 0,
+      "GALA APPLE": 0,
+      "GOLDEN APPLE": 0,
+      "GREEN GRAPES": 0,
+      "HAMAM MANGO": 0,
+      "IMLY": 0,
+      "KASHMIR APPLE": 18010,
+      "KESAR MANGO": 0,
+      "KHUMANI": 0,
+      "KIMIA DATES": 0,
+      "KINNAUR APPLE": 0,
+      "KINNOW": 0,
+      "LANGDA MANGO": 27220,
+      "LANGRA MANGO": 0,
+      "MALTA": 3840,
+      "MANDARIN": 3690,
+      "MAUSAMI": 0,
+      "NAAK": 0,
+      "ORANGE": 0,
+      "PAPAYA": 7070,
+      "PERRY MANGO": 0,
+      "PINK GUAVA": 0,
+      "PLUM": 0,
+      "RAMPHAL": 0,
+      "RED GRAPES": 0,
+      "RED PEAR": 0,
+      "SAFEDA MANGO": 18170,
+      "SHARDA": 0,
+      "SHAREEFA": 0,
+      "SHIMLA APPLE": 27200,
+      "TURKEY APPLE": 0,
+      "VNR GUAVA": 0,
+      "WASHINGTON APPLE": 0,
+      "WATERMELON": 63290,
+      "ZESPRI KIWI": 0
     },
     {
       "week": "2026-07-13/2026-07-19",
-      "total": 247160,
-      "ANAR": 27010,
-      "AVOCADO": 930,
-      "BANANA": 3100,
-      "CHAUSA": 20640,
-      "COCONUT": 7230,
-      "DUSSERI": 27170,
-      "KASHMIR APPLE": 17010,
-      "LANGDA": 25980,
-      "MALTA": 3730,
-      "MANDARIN": 3430,
-      "PAPAYA": 6590,
-      "SAFEDA": 17290,
-      "SHIMLA APPLE": 25710,
-      "WATERMELON": 61340
+      "total": 213270,
+      "ALPHONSO MANGO": 0,
+      "ANAR": 23760,
+      "APPLE BER": 0,
+      "AVOCADO": 810,
+      "BANANA": 2510,
+      "BLACK GRAPES": 0,
+      "BLUEBERRY": 0,
+      "CHAUSA MANGO": 17750,
+      "CHIKOO": 0,
+      "COCONUT": 5780,
+      "DESI GUAVA": 0,
+      "DRAGON FRUIT": 0,
+      "DUSSERI MANGO": 22820,
+      "ENJOY APPLE": 0,
+      "GALA APPLE": 0,
+      "GOLDEN APPLE": 0,
+      "GREEN GRAPES": 0,
+      "HAMAM MANGO": 0,
+      "IMLY": 0,
+      "KASHMIR APPLE": 14110,
+      "KESAR MANGO": 0,
+      "KHUMANI": 0,
+      "KIMIA DATES": 0,
+      "KINNAUR APPLE": 0,
+      "KINNOW": 0,
+      "LANGDA MANGO": 22600,
+      "LANGRA MANGO": 0,
+      "MALTA": 3280,
+      "MANDARIN": 2840,
+      "MAUSAMI": 0,
+      "NAAK": 0,
+      "ORANGE": 0,
+      "PAPAYA": 5270,
+      "PERRY MANGO": 0,
+      "PINK GUAVA": 0,
+      "PLUM": 0,
+      "RAMPHAL": 0,
+      "RED GRAPES": 0,
+      "RED PEAR": 0,
+      "SAFEDA MANGO": 15210,
+      "SHARDA": 0,
+      "SHAREEFA": 0,
+      "SHIMLA APPLE": 21080,
+      "TURKEY APPLE": 0,
+      "VNR GUAVA": 0,
+      "WASHINGTON APPLE": 0,
+      "WATERMELON": 55450,
+      "ZESPRI KIWI": 0
     },
     {
       "week": "2026-07-20/2026-07-26",
-      "total": 247040,
-      "ANAR": 26920,
-      "AVOCADO": 950,
-      "BANANA": 3130,
-      "CHAUSA": 20600,
-      "COCONUT": 7300,
-      "DUSSERI": 27220,
-      "KASHMIR APPLE": 17090,
-      "LANGDA": 25990,
-      "MALTA": 3590,
-      "MANDARIN": 3470,
-      "PAPAYA": 6620,
-      "SAFEDA": 17290,
-      "SHIMLA APPLE": 25650,
-      "WATERMELON": 61220
+      "total": 258370,
+      "ALPHONSO MANGO": 0,
+      "ANAR": 27960,
+      "APPLE BER": 0,
+      "AVOCADO": 1030,
+      "BANANA": 3310,
+      "BLACK GRAPES": 0,
+      "BLUEBERRY": 0,
+      "CHAUSA MANGO": 21550,
+      "CHIKOO": 0,
+      "COCONUT": 7770,
+      "DESI GUAVA": 0,
+      "DRAGON FRUIT": 0,
+      "DUSSERI MANGO": 28650,
+      "ENJOY APPLE": 0,
+      "GALA APPLE": 0,
+      "GOLDEN APPLE": 0,
+      "GREEN GRAPES": 0,
+      "HAMAM MANGO": 0,
+      "IMLY": 0,
+      "KASHMIR APPLE": 18100,
+      "KESAR MANGO": 0,
+      "KHUMANI": 0,
+      "KIMIA DATES": 0,
+      "KINNAUR APPLE": 0,
+      "KINNOW": 0,
+      "LANGDA MANGO": 27140,
+      "LANGRA MANGO": 0,
+      "MALTA": 3730,
+      "MANDARIN": 3680,
+      "MAUSAMI": 0,
+      "NAAK": 0,
+      "ORANGE": 0,
+      "PAPAYA": 7090,
+      "PERRY MANGO": 0,
+      "PINK GUAVA": 0,
+      "PLUM": 0,
+      "RAMPHAL": 0,
+      "RED GRAPES": 0,
+      "RED PEAR": 0,
+      "SAFEDA MANGO": 18030,
+      "SHARDA": 0,
+      "SHAREEFA": 0,
+      "SHIMLA APPLE": 27150,
+      "TURKEY APPLE": 0,
+      "VNR GUAVA": 0,
+      "WASHINGTON APPLE": 0,
+      "WATERMELON": 63180,
+      "ZESPRI KIWI": 0
     },
     {
       "week": "2026-07-27/2026-08-02",
-      "total": 247290,
-      "ANAR": 26890,
-      "AVOCADO": 1060,
-      "BANANA": 3050,
-      "CHAUSA": 20600,
-      "COCONUT": 7190,
-      "DUSSERI": 27130,
-      "KASHMIR APPLE": 17140,
-      "LANGDA": 26050,
-      "MALTA": 3700,
-      "MANDARIN": 3490,
-      "PAPAYA": 6700,
-      "SAFEDA": 17440,
-      "SHIMLA APPLE": 25590,
-      "WATERMELON": 61260
+      "total": 258620,
+      "ALPHONSO MANGO": 0,
+      "ANAR": 27930,
+      "APPLE BER": 0,
+      "AVOCADO": 1140,
+      "BANANA": 3230,
+      "BLACK GRAPES": 0,
+      "BLUEBERRY": 0,
+      "CHAUSA MANGO": 21550,
+      "CHIKOO": 0,
+      "COCONUT": 7660,
+      "DESI GUAVA": 0,
+      "DRAGON FRUIT": 0,
+      "DUSSERI MANGO": 28560,
+      "ENJOY APPLE": 0,
+      "GALA APPLE": 0,
+      "GOLDEN APPLE": 0,
+      "GREEN GRAPES": 0,
+      "HAMAM MANGO": 0,
+      "IMLY": 0,
+      "KASHMIR APPLE": 18150,
+      "KESAR MANGO": 0,
+      "KHUMANI": 0,
+      "KIMIA DATES": 0,
+      "KINNAUR APPLE": 0,
+      "KINNOW": 0,
+      "LANGDA MANGO": 27200,
+      "LANGRA MANGO": 0,
+      "MALTA": 3840,
+      "MANDARIN": 3700,
+      "MAUSAMI": 0,
+      "NAAK": 0,
+      "ORANGE": 0,
+      "PAPAYA": 7170,
+      "PERRY MANGO": 0,
+      "PINK GUAVA": 0,
+      "PLUM": 0,
+      "RAMPHAL": 0,
+      "RED GRAPES": 0,
+      "RED PEAR": 0,
+      "SAFEDA MANGO": 18180,
+      "SHARDA": 0,
+      "SHAREEFA": 0,
+      "SHIMLA APPLE": 27090,
+      "TURKEY APPLE": 0,
+      "VNR GUAVA": 0,
+      "WASHINGTON APPLE": 0,
+      "WATERMELON": 63220,
+      "ZESPRI KIWI": 0
     },
     {
       "week": "2026-08-03/2026-08-09",
       "total": 255590,
+      "ALPHONSO MANGO": 0,
       "ANAR": 25090,
+      "APPLE BER": 0,
       "AVOCADO": 1050,
       "BANANA": 3210,
-      "CHAUSA": 21940,
+      "BLACK GRAPES": 0,
+      "BLUEBERRY": 0,
+      "CHAUSA MANGO": 21940,
+      "CHIKOO": 0,
       "COCONUT": 6170,
-      "DUSSERI": 25390,
+      "DESI GUAVA": 0,
+      "DRAGON FRUIT": 0,
+      "DUSSERI MANGO": 25390,
+      "ENJOY APPLE": 0,
+      "GALA APPLE": 0,
+      "GOLDEN APPLE": 0,
+      "GREEN GRAPES": 0,
+      "HAMAM MANGO": 0,
+      "IMLY": 0,
       "KASHMIR APPLE": 18930,
-      "LANGDA": 26130,
+      "KESAR MANGO": 0,
+      "KHUMANI": 0,
+      "KIMIA DATES": 0,
+      "KINNAUR APPLE": 0,
+      "KINNOW": 0,
+      "LANGDA MANGO": 26130,
+      "LANGRA MANGO": 0,
       "MALTA": 3910,
       "MANDARIN": 3340,
+      "MAUSAMI": 0,
+      "NAAK": 0,
       "ORANGE": 22170,
       "PAPAYA": 6870,
+      "PERRY MANGO": 0,
+      "PINK GUAVA": 0,
+      "PLUM": 0,
+      "RAMPHAL": 0,
       "RED GRAPES": 4400,
+      "RED PEAR": 0,
+      "SAFEDA MANGO": 0,
+      "SHARDA": 0,
+      "SHAREEFA": 0,
       "SHIMLA APPLE": 25310,
-      "WATERMELON": 61680
+      "TURKEY APPLE": 0,
+      "VNR GUAVA": 0,
+      "WASHINGTON APPLE": 0,
+      "WATERMELON": 61680,
+      "ZESPRI KIWI": 0
     },
     {
       "week": "2026-08-10/2026-08-16",
       "total": 254970,
+      "ALPHONSO MANGO": 0,
       "ANAR": 25040,
+      "APPLE BER": 0,
       "AVOCADO": 1070,
       "BANANA": 3100,
-      "CHAUSA": 21840,
+      "BLACK GRAPES": 0,
+      "BLUEBERRY": 0,
+      "CHAUSA MANGO": 21840,
+      "CHIKOO": 0,
       "COCONUT": 6120,
-      "DUSSERI": 25370,
+      "DESI GUAVA": 0,
+      "DRAGON FRUIT": 0,
+      "DUSSERI MANGO": 25370,
+      "ENJOY APPLE": 0,
+      "GALA APPLE": 0,
+      "GOLDEN APPLE": 0,
+      "GREEN GRAPES": 0,
+      "HAMAM MANGO": 0,
+      "IMLY": 0,
       "KASHMIR APPLE": 18780,
-      "LANGDA": 26040,
+      "KESAR MANGO": 0,
+      "KHUMANI": 0,
+      "KIMIA DATES": 0,
+      "KINNAUR APPLE": 0,
+      "KINNOW": 0,
+      "LANGDA MANGO": 26040,
+      "LANGRA MANGO": 0,
       "MALTA": 3960,
       "MANDARIN": 3420,
+      "MAUSAMI": 0,
+      "NAAK": 0,
       "ORANGE": 22110,
       "PAPAYA": 6940,
+      "PERRY MANGO": 0,
+      "PINK GUAVA": 0,
+      "PLUM": 0,
+      "RAMPHAL": 0,
       "RED GRAPES": 4240,
+      "RED PEAR": 0,
+      "SAFEDA MANGO": 0,
+      "SHARDA": 0,
+      "SHAREEFA": 0,
       "SHIMLA APPLE": 25260,
-      "WATERMELON": 61680
+      "TURKEY APPLE": 0,
+      "VNR GUAVA": 0,
+      "WASHINGTON APPLE": 0,
+      "WATERMELON": 61680,
+      "ZESPRI KIWI": 0
     },
     {
       "week": "2026-08-17/2026-08-23",
       "total": 255150,
+      "ALPHONSO MANGO": 0,
       "ANAR": 25050,
+      "APPLE BER": 0,
       "AVOCADO": 1060,
       "BANANA": 3130,
-      "CHAUSA": 21930,
+      "BLACK GRAPES": 0,
+      "BLUEBERRY": 0,
+      "CHAUSA MANGO": 21930,
+      "CHIKOO": 0,
       "COCONUT": 6220,
-      "DUSSERI": 25420,
+      "DESI GUAVA": 0,
+      "DRAGON FRUIT": 0,
+      "DUSSERI MANGO": 25420,
+      "ENJOY APPLE": 0,
+      "GALA APPLE": 0,
+      "GOLDEN APPLE": 0,
+      "GREEN GRAPES": 0,
+      "HAMAM MANGO": 0,
+      "IMLY": 0,
       "KASHMIR APPLE": 18920,
-      "LANGDA": 26150,
+      "KESAR MANGO": 0,
+      "KHUMANI": 0,
+      "KIMIA DATES": 0,
+      "KINNAUR APPLE": 0,
+      "KINNOW": 0,
+      "LANGDA MANGO": 26150,
+      "LANGRA MANGO": 0,
       "MALTA": 3900,
       "MANDARIN": 3350,
+      "MAUSAMI": 0,
+      "NAAK": 0,
       "ORANGE": 22130,
       "PAPAYA": 6820,
+      "PERRY MANGO": 0,
+      "PINK GUAVA": 0,
+      "PLUM": 0,
+      "RAMPHAL": 0,
       "RED GRAPES": 4290,
+      "RED PEAR": 0,
+      "SAFEDA MANGO": 0,
+      "SHARDA": 0,
+      "SHAREEFA": 0,
       "SHIMLA APPLE": 25170,
-      "WATERMELON": 61610
+      "TURKEY APPLE": 0,
+      "VNR GUAVA": 0,
+      "WASHINGTON APPLE": 0,
+      "WATERMELON": 61610,
+      "ZESPRI KIWI": 0
     },
     {
       "week": "2026-08-24/2026-08-30",
       "total": 254690,
+      "ALPHONSO MANGO": 0,
       "ANAR": 25080,
+      "APPLE BER": 0,
       "AVOCADO": 940,
       "BANANA": 3230,
-      "CHAUSA": 21860,
+      "BLACK GRAPES": 0,
+      "BLUEBERRY": 0,
+      "CHAUSA MANGO": 21860,
+      "CHIKOO": 0,
       "COCONUT": 6140,
-      "DUSSERI": 25370,
+      "DESI GUAVA": 0,
+      "DRAGON FRUIT": 0,
+      "DUSSERI MANGO": 25370,
+      "ENJOY APPLE": 0,
+      "GALA APPLE": 0,
+      "GOLDEN APPLE": 0,
+      "GREEN GRAPES": 0,
+      "HAMAM MANGO": 0,
+      "IMLY": 0,
       "KASHMIR APPLE": 18770,
-      "LANGDA": 26060,
+      "KESAR MANGO": 0,
+      "KHUMANI": 0,
+      "KIMIA DATES": 0,
+      "KINNAUR APPLE": 0,
+      "KINNOW": 0,
+      "LANGDA MANGO": 26060,
+      "LANGRA MANGO": 0,
       "MALTA": 3800,
       "MANDARIN": 3430,
+      "MAUSAMI": 0,
+      "NAAK": 0,
       "ORANGE": 22080,
       "PAPAYA": 6810,
+      "PERRY MANGO": 0,
+      "PINK GUAVA": 0,
+      "PLUM": 0,
+      "RAMPHAL": 0,
       "RED GRAPES": 4270,
+      "RED PEAR": 0,
+      "SAFEDA MANGO": 0,
+      "SHARDA": 0,
+      "SHAREEFA": 0,
       "SHIMLA APPLE": 25250,
-      "WATERMELON": 61600
+      "TURKEY APPLE": 0,
+      "VNR GUAVA": 0,
+      "WASHINGTON APPLE": 0,
+      "WATERMELON": 61600,
+      "ZESPRI KIWI": 0
     },
     {
       "week": "2026-09-07/2026-09-13",
       "total": 244550,
+      "ALPHONSO MANGO": 0,
       "ANAR": 32630,
+      "APPLE BER": 0,
+      "AVOCADO": 0,
       "BANANA": 4270,
+      "BLACK GRAPES": 0,
       "BLUEBERRY": 1610,
+      "CHAUSA MANGO": 0,
+      "CHIKOO": 0,
       "COCONUT": 7360,
+      "DESI GUAVA": 0,
+      "DRAGON FRUIT": 0,
+      "DUSSERI MANGO": 0,
+      "ENJOY APPLE": 0,
+      "GALA APPLE": 0,
+      "GOLDEN APPLE": 0,
+      "GREEN GRAPES": 0,
+      "HAMAM MANGO": 0,
+      "IMLY": 0,
       "KASHMIR APPLE": 29850,
+      "KESAR MANGO": 0,
+      "KHUMANI": 0,
+      "KIMIA DATES": 0,
+      "KINNAUR APPLE": 0,
+      "KINNOW": 0,
+      "LANGDA MANGO": 0,
+      "LANGRA MANGO": 0,
       "MALTA": 3530,
       "MANDARIN": 8060,
       "MAUSAMI": 15840,
+      "NAAK": 0,
+      "ORANGE": 0,
       "PAPAYA": 8900,
-      "SHARDA (5PCS)": 5590,
+      "PERRY MANGO": 0,
+      "PINK GUAVA": 0,
+      "PLUM": 0,
+      "RAMPHAL": 0,
+      "RED GRAPES": 0,
+      "RED PEAR": 0,
+      "SAFEDA MANGO": 0,
+      "SHARDA": 5590,
+      "SHAREEFA": 0,
       "SHIMLA APPLE": 29740,
+      "TURKEY APPLE": 0,
       "VNR GUAVA": 13790,
-      "WATERMELON": 83380
+      "WASHINGTON APPLE": 0,
+      "WATERMELON": 83380,
+      "ZESPRI KIWI": 0
     },
     {
       "week": "2026-09-14/2026-09-20",
       "total": 244500,
+      "ALPHONSO MANGO": 0,
       "ANAR": 32570,
+      "APPLE BER": 0,
+      "AVOCADO": 0,
       "BANANA": 4310,
+      "BLACK GRAPES": 0,
       "BLUEBERRY": 1620,
+      "CHAUSA MANGO": 0,
+      "CHIKOO": 0,
       "COCONUT": 7230,
+      "DESI GUAVA": 0,
+      "DRAGON FRUIT": 0,
+      "DUSSERI MANGO": 0,
+      "ENJOY APPLE": 0,
+      "GALA APPLE": 0,
+      "GOLDEN APPLE": 0,
+      "GREEN GRAPES": 0,
+      "HAMAM MANGO": 0,
+      "IMLY": 0,
       "KASHMIR APPLE": 30030,
+      "KESAR MANGO": 0,
+      "KHUMANI": 0,
+      "KIMIA DATES": 0,
+      "KINNAUR APPLE": 0,
+      "KINNOW": 0,
+      "LANGDA MANGO": 0,
+      "LANGRA MANGO": 0,
       "MALTA": 3460,
       "MANDARIN": 8020,
       "MAUSAMI": 15860,
+      "NAAK": 0,
+      "ORANGE": 0,
       "PAPAYA": 8950,
-      "SHARDA (5PCS)": 5420,
+      "PERRY MANGO": 0,
+      "PINK GUAVA": 0,
+      "PLUM": 0,
+      "RAMPHAL": 0,
+      "RED GRAPES": 0,
+      "RED PEAR": 0,
+      "SAFEDA MANGO": 0,
+      "SHARDA": 5420,
+      "SHAREEFA": 0,
       "SHIMLA APPLE": 29760,
+      "TURKEY APPLE": 0,
       "VNR GUAVA": 13780,
-      "WATERMELON": 83490
+      "WASHINGTON APPLE": 0,
+      "WATERMELON": 83490,
+      "ZESPRI KIWI": 0
     },
     {
       "week": "2026-09-21/2026-09-27",
       "total": 244220,
+      "ALPHONSO MANGO": 0,
       "ANAR": 32540,
+      "APPLE BER": 0,
+      "AVOCADO": 0,
       "BANANA": 4290,
+      "BLACK GRAPES": 0,
       "BLUEBERRY": 1590,
+      "CHAUSA MANGO": 0,
+      "CHIKOO": 0,
       "COCONUT": 7280,
+      "DESI GUAVA": 0,
+      "DRAGON FRUIT": 0,
+      "DUSSERI MANGO": 0,
+      "ENJOY APPLE": 0,
+      "GALA APPLE": 0,
+      "GOLDEN APPLE": 0,
+      "GREEN GRAPES": 0,
+      "HAMAM MANGO": 0,
+      "IMLY": 0,
       "KASHMIR APPLE": 30030,
+      "KESAR MANGO": 0,
+      "KHUMANI": 0,
+      "KIMIA DATES": 0,
+      "KINNAUR APPLE": 0,
+      "KINNOW": 0,
+      "LANGDA MANGO": 0,
+      "LANGRA MANGO": 0,
       "MALTA": 3420,
       "MANDARIN": 8080,
       "MAUSAMI": 15840,
+      "NAAK": 0,
+      "ORANGE": 0,
       "PAPAYA": 8870,
-      "SHARDA (5PCS)": 5490,
+      "PERRY MANGO": 0,
+      "PINK GUAVA": 0,
+      "PLUM": 0,
+      "RAMPHAL": 0,
+      "RED GRAPES": 0,
+      "RED PEAR": 0,
+      "SAFEDA MANGO": 0,
+      "SHARDA": 5490,
+      "SHAREEFA": 0,
       "SHIMLA APPLE": 29650,
+      "TURKEY APPLE": 0,
       "VNR GUAVA": 13770,
-      "WATERMELON": 83370
+      "WASHINGTON APPLE": 0,
+      "WATERMELON": 83370,
+      "ZESPRI KIWI": 0
     },
     {
       "week": "2026-09-28/2026-10-04",
       "total": 244190,
+      "ALPHONSO MANGO": 0,
       "ANAR": 32710,
+      "APPLE BER": 0,
+      "AVOCADO": 0,
       "BANANA": 4310,
+      "BLACK GRAPES": 0,
       "BLUEBERRY": 1640,
+      "CHAUSA MANGO": 0,
+      "CHIKOO": 0,
       "COCONUT": 7240,
+      "DESI GUAVA": 0,
+      "DRAGON FRUIT": 0,
+      "DUSSERI MANGO": 0,
+      "ENJOY APPLE": 0,
+      "GALA APPLE": 0,
+      "GOLDEN APPLE": 0,
+      "GREEN GRAPES": 0,
+      "HAMAM MANGO": 0,
+      "IMLY": 0,
       "KASHMIR APPLE": 29850,
+      "KESAR MANGO": 0,
+      "KHUMANI": 0,
+      "KIMIA DATES": 0,
+      "KINNAUR APPLE": 0,
+      "KINNOW": 0,
+      "LANGDA MANGO": 0,
+      "LANGRA MANGO": 0,
       "MALTA": 3570,
       "MANDARIN": 8040,
       "MAUSAMI": 15760,
+      "NAAK": 0,
+      "ORANGE": 0,
       "PAPAYA": 8890,
-      "SHARDA (5PCS)": 5410,
+      "PERRY MANGO": 0,
+      "PINK GUAVA": 0,
+      "PLUM": 0,
+      "RAMPHAL": 0,
+      "RED GRAPES": 0,
+      "RED PEAR": 0,
+      "SAFEDA MANGO": 0,
+      "SHARDA": 5410,
+      "SHAREEFA": 0,
       "SHIMLA APPLE": 29680,
+      "TURKEY APPLE": 0,
       "VNR GUAVA": 13620,
-      "WATERMELON": 83470
+      "WASHINGTON APPLE": 0,
+      "WATERMELON": 83470,
+      "ZESPRI KIWI": 0
     },
     {
       "week": "2026-10-05/2026-10-11",
-      "total": 251220,
-      "ANAR": 34300,
-      "BANANA": 4270,
-      "BLUEBERRY": 1830,
-      "COCONUT": 6360,
-      "KASHMIR APPLE": 31160,
-      "MALTA": 3480,
-      "MANDARIN": 7930,
-      "MAUSAMI": 16030,
-      "PAPAYA": 9430,
-      "SHARDA (5PCS)": 5770,
-      "SHIMLA APPLE": 32560,
-      "VNR GUAVA": 13750,
-      "WATERMELON": 84350
+      "total": 240800,
+      "ALPHONSO MANGO": 0,
+      "ANAR": 32600,
+      "APPLE BER": 0,
+      "AVOCADO": 0,
+      "BANANA": 4030,
+      "BLACK GRAPES": 0,
+      "BLUEBERRY": 1720,
+      "CHAUSA MANGO": 0,
+      "CHIKOO": 0,
+      "COCONUT": 6090,
+      "DESI GUAVA": 0,
+      "DRAGON FRUIT": 0,
+      "DUSSERI MANGO": 0,
+      "ENJOY APPLE": 0,
+      "GALA APPLE": 0,
+      "GOLDEN APPLE": 0,
+      "GREEN GRAPES": 0,
+      "HAMAM MANGO": 0,
+      "IMLY": 0,
+      "KASHMIR APPLE": 29640,
+      "KESAR MANGO": 0,
+      "KHUMANI": 0,
+      "KIMIA DATES": 0,
+      "KINNAUR APPLE": 0,
+      "KINNOW": 0,
+      "LANGDA MANGO": 0,
+      "LANGRA MANGO": 0,
+      "MALTA": 3250,
+      "MANDARIN": 7470,
+      "MAUSAMI": 15350,
+      "NAAK": 0,
+      "ORANGE": 0,
+      "PAPAYA": 8970,
+      "PERRY MANGO": 0,
+      "PINK GUAVA": 0,
+      "PLUM": 0,
+      "RAMPHAL": 0,
+      "RED GRAPES": 0,
+      "RED PEAR": 0,
+      "SAFEDA MANGO": 0,
+      "SHARDA": 5540,
+      "SHAREEFA": 0,
+      "SHIMLA APPLE": 31440,
+      "TURKEY APPLE": 0,
+      "VNR GUAVA": 13180,
+      "WASHINGTON APPLE": 0,
+      "WATERMELON": 81520,
+      "ZESPRI KIWI": 0
     },
     {
       "week": "2026-10-12/2026-10-18",
-      "total": 251010,
-      "ANAR": 34320,
-      "BANANA": 4290,
-      "BLUEBERRY": 1980,
-      "COCONUT": 6430,
-      "KASHMIR APPLE": 31030,
-      "MALTA": 3450,
-      "MANDARIN": 8030,
-      "MAUSAMI": 16050,
-      "PAPAYA": 9320,
-      "SHARDA (5PCS)": 5590,
-      "SHIMLA APPLE": 32550,
-      "VNR GUAVA": 13730,
-      "WATERMELON": 84240
+      "total": 281890,
+      "ALPHONSO MANGO": 0,
+      "ANAR": 39460,
+      "APPLE BER": 0,
+      "AVOCADO": 0,
+      "BANANA": 4930,
+      "BLACK GRAPES": 0,
+      "BLUEBERRY": 2250,
+      "CHAUSA MANGO": 0,
+      "CHIKOO": 0,
+      "COCONUT": 7260,
+      "DESI GUAVA": 0,
+      "DRAGON FRUIT": 0,
+      "DUSSERI MANGO": 0,
+      "ENJOY APPLE": 0,
+      "GALA APPLE": 0,
+      "GOLDEN APPLE": 0,
+      "GREEN GRAPES": 0,
+      "HAMAM MANGO": 0,
+      "IMLY": 0,
+      "KASHMIR APPLE": 35680,
+      "KESAR MANGO": 0,
+      "KHUMANI": 0,
+      "KIMIA DATES": 0,
+      "KINNAUR APPLE": 0,
+      "KINNOW": 0,
+      "LANGDA MANGO": 0,
+      "LANGRA MANGO": 0,
+      "MALTA": 4000,
+      "MANDARIN": 9310,
+      "MAUSAMI": 18130,
+      "NAAK": 0,
+      "ORANGE": 0,
+      "PAPAYA": 10620,
+      "PERRY MANGO": 0,
+      "PINK GUAVA": 0,
+      "PLUM": 0,
+      "RAMPHAL": 0,
+      "RED GRAPES": 0,
+      "RED PEAR": 0,
+      "SAFEDA MANGO": 0,
+      "SHARDA": 6420,
+      "SHAREEFA": 0,
+      "SHIMLA APPLE": 35800,
+      "TURKEY APPLE": 0,
+      "VNR GUAVA": 15370,
+      "WASHINGTON APPLE": 0,
+      "WATERMELON": 92660,
+      "ZESPRI KIWI": 0
     },
     {
       "week": "2026-10-19/2026-10-25",
-      "total": 250990,
-      "ANAR": 34280,
-      "BANANA": 4340,
-      "BLUEBERRY": 2000,
-      "COCONUT": 6380,
-      "KASHMIR APPLE": 31160,
-      "MALTA": 3350,
-      "MANDARIN": 7870,
-      "MAUSAMI": 15970,
-      "PAPAYA": 9260,
-      "SHARDA (5PCS)": 5700,
-      "SHIMLA APPLE": 32610,
-      "VNR GUAVA": 13840,
-      "WATERMELON": 84230
+      "total": 240570,
+      "ALPHONSO MANGO": 0,
+      "ANAR": 32580,
+      "APPLE BER": 0,
+      "AVOCADO": 0,
+      "BANANA": 4100,
+      "BLACK GRAPES": 0,
+      "BLUEBERRY": 1890,
+      "CHAUSA MANGO": 0,
+      "CHIKOO": 0,
+      "COCONUT": 6110,
+      "DESI GUAVA": 0,
+      "DRAGON FRUIT": 0,
+      "DUSSERI MANGO": 0,
+      "ENJOY APPLE": 0,
+      "GALA APPLE": 0,
+      "GOLDEN APPLE": 0,
+      "GREEN GRAPES": 0,
+      "HAMAM MANGO": 0,
+      "IMLY": 0,
+      "KASHMIR APPLE": 29640,
+      "KESAR MANGO": 0,
+      "KHUMANI": 0,
+      "KIMIA DATES": 0,
+      "KINNAUR APPLE": 0,
+      "KINNOW": 0,
+      "LANGDA MANGO": 0,
+      "LANGRA MANGO": 0,
+      "MALTA": 3120,
+      "MANDARIN": 7410,
+      "MAUSAMI": 15290,
+      "NAAK": 0,
+      "ORANGE": 0,
+      "PAPAYA": 8800,
+      "PERRY MANGO": 0,
+      "PINK GUAVA": 0,
+      "PLUM": 0,
+      "RAMPHAL": 0,
+      "RED GRAPES": 0,
+      "RED PEAR": 0,
+      "SAFEDA MANGO": 0,
+      "SHARDA": 5470,
+      "SHAREEFA": 0,
+      "SHIMLA APPLE": 31490,
+      "TURKEY APPLE": 0,
+      "VNR GUAVA": 13270,
+      "WASHINGTON APPLE": 0,
+      "WATERMELON": 81400,
+      "ZESPRI KIWI": 0
     },
     {
       "week": "2026-10-26/2026-11-01",
-      "total": 250770,
-      "ANAR": 34380,
-      "BANANA": 4230,
-      "BLUEBERRY": 1940,
-      "COCONUT": 6450,
-      "KASHMIR APPLE": 31140,
-      "MALTA": 3310,
-      "MANDARIN": 7930,
-      "MAUSAMI": 16100,
-      "PAPAYA": 9250,
-      "SHARDA (5PCS)": 5730,
-      "SHIMLA APPLE": 32460,
-      "VNR GUAVA": 13670,
-      "WATERMELON": 84180
+      "total": 240350,
+      "ALPHONSO MANGO": 0,
+      "ANAR": 32680,
+      "APPLE BER": 0,
+      "AVOCADO": 0,
+      "BANANA": 3990,
+      "BLACK GRAPES": 0,
+      "BLUEBERRY": 1830,
+      "CHAUSA MANGO": 0,
+      "CHIKOO": 0,
+      "COCONUT": 6180,
+      "DESI GUAVA": 0,
+      "DRAGON FRUIT": 0,
+      "DUSSERI MANGO": 0,
+      "ENJOY APPLE": 0,
+      "GALA APPLE": 0,
+      "GOLDEN APPLE": 0,
+      "GREEN GRAPES": 0,
+      "HAMAM MANGO": 0,
+      "IMLY": 0,
+      "KASHMIR APPLE": 29620,
+      "KESAR MANGO": 0,
+      "KHUMANI": 0,
+      "KIMIA DATES": 0,
+      "KINNAUR APPLE": 0,
+      "KINNOW": 0,
+      "LANGDA MANGO": 0,
+      "LANGRA MANGO": 0,
+      "MALTA": 3080,
+      "MANDARIN": 7470,
+      "MAUSAMI": 15420,
+      "NAAK": 0,
+      "ORANGE": 0,
+      "PAPAYA": 8790,
+      "PERRY MANGO": 0,
+      "PINK GUAVA": 0,
+      "PLUM": 0,
+      "RAMPHAL": 0,
+      "RED GRAPES": 0,
+      "RED PEAR": 0,
+      "SAFEDA MANGO": 0,
+      "SHARDA": 5500,
+      "SHAREEFA": 0,
+      "SHIMLA APPLE": 31340,
+      "TURKEY APPLE": 0,
+      "VNR GUAVA": 13100,
+      "WASHINGTON APPLE": 0,
+      "WATERMELON": 81350,
+      "ZESPRI KIWI": 0
     },
     {
       "week": "2026-11-02/2026-11-08",
-      "total": 245180,
-      "ANAR": 33790,
-      "BANANA": 3860,
-      "BLUEBERRY": 4180,
-      "COCONUT": 6360,
-      "KASHMIR APPLE": 31360,
-      "MALTA": 5900,
-      "MANDARIN": 7850,
-      "MAUSAMI": 15210,
-      "SHARDA (5PCS)": 5070,
-      "SHIMLA APPLE": 41030,
-      "VNR GUAVA": 25320,
-      "WATERMELON": 65250
+      "total": 283050,
+      "ALPHONSO MANGO": 0,
+      "ANAR": 39870,
+      "APPLE BER": 0,
+      "AVOCADO": 0,
+      "BANANA": 4430,
+      "BLACK GRAPES": 0,
+      "BLUEBERRY": 4970,
+      "CHAUSA MANGO": 0,
+      "CHIKOO": 0,
+      "COCONUT": 7310,
+      "DESI GUAVA": 0,
+      "DRAGON FRUIT": 0,
+      "DUSSERI MANGO": 0,
+      "ENJOY APPLE": 0,
+      "GALA APPLE": 0,
+      "GOLDEN APPLE": 0,
+      "GREEN GRAPES": 0,
+      "HAMAM MANGO": 0,
+      "IMLY": 0,
+      "KASHMIR APPLE": 37310,
+      "KESAR MANGO": 0,
+      "KHUMANI": 0,
+      "KIMIA DATES": 0,
+      "KINNAUR APPLE": 0,
+      "KINNOW": 0,
+      "LANGDA MANGO": 0,
+      "LANGRA MANGO": 0,
+      "MALTA": 6960,
+      "MANDARIN": 9100,
+      "MAUSAMI": 16880,
+      "NAAK": 0,
+      "ORANGE": 0,
+      "PAPAYA": 0,
+      "PERRY MANGO": 0,
+      "PINK GUAVA": 0,
+      "PLUM": 0,
+      "RAMPHAL": 0,
+      "RED GRAPES": 0,
+      "RED PEAR": 0,
+      "SAFEDA MANGO": 0,
+      "SHARDA": 6030,
+      "SHAREEFA": 0,
+      "SHIMLA APPLE": 45540,
+      "TURKEY APPLE": 0,
+      "VNR GUAVA": 29620,
+      "WASHINGTON APPLE": 0,
+      "WATERMELON": 75030,
+      "ZESPRI KIWI": 0
     },
     {
       "week": "2026-11-09/2026-11-15",
-      "total": 244660,
-      "ANAR": 33770,
-      "BANANA": 3870,
-      "BLUEBERRY": 4120,
-      "COCONUT": 6360,
-      "KASHMIR APPLE": 31270,
-      "MALTA": 5940,
-      "MANDARIN": 7710,
-      "MAUSAMI": 15200,
-      "SHARDA (5PCS)": 5040,
-      "SHIMLA APPLE": 41050,
-      "VNR GUAVA": 25150,
-      "WATERMELON": 65180
+      "total": 231870,
+      "ALPHONSO MANGO": 0,
+      "ANAR": 31740,
+      "APPLE BER": 0,
+      "AVOCADO": 0,
+      "BANANA": 3680,
+      "BLACK GRAPES": 0,
+      "BLUEBERRY": 3840,
+      "CHAUSA MANGO": 0,
+      "CHIKOO": 0,
+      "COCONUT": 6030,
+      "DESI GUAVA": 0,
+      "DRAGON FRUIT": 0,
+      "DUSSERI MANGO": 0,
+      "ENJOY APPLE": 0,
+      "GALA APPLE": 0,
+      "GOLDEN APPLE": 0,
+      "GREEN GRAPES": 0,
+      "HAMAM MANGO": 0,
+      "IMLY": 0,
+      "KASHMIR APPLE": 29290,
+      "KESAR MANGO": 0,
+      "KHUMANI": 0,
+      "KIMIA DATES": 0,
+      "KINNAUR APPLE": 0,
+      "KINNOW": 0,
+      "LANGDA MANGO": 0,
+      "LANGRA MANGO": 0,
+      "MALTA": 5580,
+      "MANDARIN": 7290,
+      "MAUSAMI": 14610,
+      "NAAK": 0,
+      "ORANGE": 0,
+      "PAPAYA": 0,
+      "PERRY MANGO": 0,
+      "PINK GUAVA": 0,
+      "PLUM": 0,
+      "RAMPHAL": 0,
+      "RED GRAPES": 0,
+      "RED PEAR": 0,
+      "SAFEDA MANGO": 0,
+      "SHARDA": 4720,
+      "SHAREEFA": 0,
+      "SHIMLA APPLE": 39530,
+      "TURKEY APPLE": 0,
+      "VNR GUAVA": 23670,
+      "WASHINGTON APPLE": 0,
+      "WATERMELON": 61890,
+      "ZESPRI KIWI": 0
     },
     {
       "week": "2026-11-16/2026-11-22",
-      "total": 244840,
-      "ANAR": 33810,
-      "BANANA": 3830,
-      "BLUEBERRY": 4090,
-      "COCONUT": 6340,
-      "KASHMIR APPLE": 31200,
-      "MALTA": 6010,
-      "MANDARIN": 7840,
-      "MAUSAMI": 15240,
-      "SHARDA (5PCS)": 5080,
-      "SHIMLA APPLE": 41100,
-      "VNR GUAVA": 25190,
-      "WATERMELON": 65110
+      "total": 232050,
+      "ALPHONSO MANGO": 0,
+      "ANAR": 31780,
+      "APPLE BER": 0,
+      "AVOCADO": 0,
+      "BANANA": 3640,
+      "BLACK GRAPES": 0,
+      "BLUEBERRY": 3810,
+      "CHAUSA MANGO": 0,
+      "CHIKOO": 0,
+      "COCONUT": 6010,
+      "DESI GUAVA": 0,
+      "DRAGON FRUIT": 0,
+      "DUSSERI MANGO": 0,
+      "ENJOY APPLE": 0,
+      "GALA APPLE": 0,
+      "GOLDEN APPLE": 0,
+      "GREEN GRAPES": 0,
+      "HAMAM MANGO": 0,
+      "IMLY": 0,
+      "KASHMIR APPLE": 29220,
+      "KESAR MANGO": 0,
+      "KHUMANI": 0,
+      "KIMIA DATES": 0,
+      "KINNAUR APPLE": 0,
+      "KINNOW": 0,
+      "LANGDA MANGO": 0,
+      "LANGRA MANGO": 0,
+      "MALTA": 5650,
+      "MANDARIN": 7420,
+      "MAUSAMI": 14650,
+      "NAAK": 0,
+      "ORANGE": 0,
+      "PAPAYA": 0,
+      "PERRY MANGO": 0,
+      "PINK GUAVA": 0,
+      "PLUM": 0,
+      "RAMPHAL": 0,
+      "RED GRAPES": 0,
+      "RED PEAR": 0,
+      "SAFEDA MANGO": 0,
+      "SHARDA": 4760,
+      "SHAREEFA": 0,
+      "SHIMLA APPLE": 39580,
+      "TURKEY APPLE": 0,
+      "VNR GUAVA": 23710,
+      "WASHINGTON APPLE": 0,
+      "WATERMELON": 61820,
+      "ZESPRI KIWI": 0
     },
     {
       "week": "2026-11-23/2026-11-29",
-      "total": 244770,
-      "ANAR": 33800,
-      "BANANA": 3860,
-      "BLUEBERRY": 4130,
-      "COCONUT": 6340,
-      "KASHMIR APPLE": 31370,
-      "MALTA": 5880,
-      "MANDARIN": 7840,
-      "MAUSAMI": 15130,
-      "SHARDA (5PCS)": 5070,
-      "SHIMLA APPLE": 40990,
-      "VNR GUAVA": 25190,
-      "WATERMELON": 65170
+      "total": 231980,
+      "ALPHONSO MANGO": 0,
+      "ANAR": 31770,
+      "APPLE BER": 0,
+      "AVOCADO": 0,
+      "BANANA": 3670,
+      "BLACK GRAPES": 0,
+      "BLUEBERRY": 3850,
+      "CHAUSA MANGO": 0,
+      "CHIKOO": 0,
+      "COCONUT": 6010,
+      "DESI GUAVA": 0,
+      "DRAGON FRUIT": 0,
+      "DUSSERI MANGO": 0,
+      "ENJOY APPLE": 0,
+      "GALA APPLE": 0,
+      "GOLDEN APPLE": 0,
+      "GREEN GRAPES": 0,
+      "HAMAM MANGO": 0,
+      "IMLY": 0,
+      "KASHMIR APPLE": 29390,
+      "KESAR MANGO": 0,
+      "KHUMANI": 0,
+      "KIMIA DATES": 0,
+      "KINNAUR APPLE": 0,
+      "KINNOW": 0,
+      "LANGDA MANGO": 0,
+      "LANGRA MANGO": 0,
+      "MALTA": 5520,
+      "MANDARIN": 7420,
+      "MAUSAMI": 14540,
+      "NAAK": 0,
+      "ORANGE": 0,
+      "PAPAYA": 0,
+      "PERRY MANGO": 0,
+      "PINK GUAVA": 0,
+      "PLUM": 0,
+      "RAMPHAL": 0,
+      "RED GRAPES": 0,
+      "RED PEAR": 0,
+      "SAFEDA MANGO": 0,
+      "SHARDA": 4750,
+      "SHAREEFA": 0,
+      "SHIMLA APPLE": 39470,
+      "TURKEY APPLE": 0,
+      "VNR GUAVA": 23710,
+      "WASHINGTON APPLE": 0,
+      "WATERMELON": 61880,
+      "ZESPRI KIWI": 0
     },
     {
       "week": "2026-12-07/2026-12-13",
-      "total": 260620,
-      "ANAR": 34960,
-      "APPLE BER": 11230,
-      "GREEN GRAPES": 25800,
-      "KASHMIR APPLE": 32960,
-      "KINNAUR APPLE": 35810,
-      "KINNOW": 36000,
-      "MANDARIN": 10110,
-      "ORANGE": 25830,
-      "PEAR": 7720,
-      "RAMPHAL": 6790,
-      "SHAREEFA": 6650,
-      "VNR GUAVA": 26760
+      "total": 273710,
+      "ALPHONSO MANGO": 0,
+      "ANAR": 36350,
+      "APPLE BER": 11980,
+      "AVOCADO": 0,
+      "BANANA": 0,
+      "BLACK GRAPES": 0,
+      "BLUEBERRY": 0,
+      "CHAUSA MANGO": 0,
+      "CHIKOO": 0,
+      "COCONUT": 0,
+      "DESI GUAVA": 0,
+      "DRAGON FRUIT": 0,
+      "DUSSERI MANGO": 0,
+      "ENJOY APPLE": 0,
+      "GALA APPLE": 0,
+      "GOLDEN APPLE": 0,
+      "GREEN GRAPES": 26910,
+      "HAMAM MANGO": 0,
+      "IMLY": 0,
+      "KASHMIR APPLE": 34610,
+      "KESAR MANGO": 0,
+      "KHUMANI": 0,
+      "KIMIA DATES": 0,
+      "KINNAUR APPLE": 38080,
+      "KINNOW": 37920,
+      "LANGDA MANGO": 0,
+      "LANGRA MANGO": 0,
+      "MALTA": 0,
+      "MANDARIN": 10550,
+      "MAUSAMI": 0,
+      "NAAK": 0,
+      "ORANGE": 26950,
+      "PAPAYA": 0,
+      "PERRY MANGO": 0,
+      "PINK GUAVA": 0,
+      "PLUM": 0,
+      "RAMPHAL": 7150,
+      "RED GRAPES": 0,
+      "RED PEAR": 0,
+      "SAFEDA MANGO": 0,
+      "SHARDA": 0,
+      "SHAREEFA": 6940,
+      "SHIMLA APPLE": 0,
+      "TURKEY APPLE": 0,
+      "VNR GUAVA": 28190,
+      "WASHINGTON APPLE": 0,
+      "WATERMELON": 0,
+      "ZESPRI KIWI": 0,
+      "PEAR": 8080
     },
     {
       "week": "2026-12-14/2026-12-20",
-      "total": 260810,
-      "ANAR": 34840,
-      "APPLE BER": 11380,
-      "GREEN GRAPES": 25900,
-      "KASHMIR APPLE": 32950,
-      "KINNAUR APPLE": 35940,
-      "KINNOW": 35890,
-      "MANDARIN": 10210,
-      "ORANGE": 25840,
-      "PEAR": 7710,
-      "RAMPHAL": 6790,
-      "SHAREEFA": 6660,
-      "VNR GUAVA": 26700
+      "total": 273900,
+      "ALPHONSO MANGO": 0,
+      "ANAR": 36230,
+      "APPLE BER": 12130,
+      "AVOCADO": 0,
+      "BANANA": 0,
+      "BLACK GRAPES": 0,
+      "BLUEBERRY": 0,
+      "CHAUSA MANGO": 0,
+      "CHIKOO": 0,
+      "COCONUT": 0,
+      "DESI GUAVA": 0,
+      "DRAGON FRUIT": 0,
+      "DUSSERI MANGO": 0,
+      "ENJOY APPLE": 0,
+      "GALA APPLE": 0,
+      "GOLDEN APPLE": 0,
+      "GREEN GRAPES": 27010,
+      "HAMAM MANGO": 0,
+      "IMLY": 0,
+      "KASHMIR APPLE": 34600,
+      "KESAR MANGO": 0,
+      "KHUMANI": 0,
+      "KIMIA DATES": 0,
+      "KINNAUR APPLE": 38210,
+      "KINNOW": 37810,
+      "LANGDA MANGO": 0,
+      "LANGRA MANGO": 0,
+      "MALTA": 0,
+      "MANDARIN": 10650,
+      "MAUSAMI": 0,
+      "NAAK": 0,
+      "ORANGE": 26960,
+      "PAPAYA": 0,
+      "PERRY MANGO": 0,
+      "PINK GUAVA": 0,
+      "PLUM": 0,
+      "RAMPHAL": 7150,
+      "RED GRAPES": 0,
+      "RED PEAR": 0,
+      "SAFEDA MANGO": 0,
+      "SHARDA": 0,
+      "SHAREEFA": 6950,
+      "SHIMLA APPLE": 0,
+      "TURKEY APPLE": 0,
+      "VNR GUAVA": 28130,
+      "WASHINGTON APPLE": 0,
+      "WATERMELON": 0,
+      "ZESPRI KIWI": 0,
+      "PEAR": 8070
     },
     {
       "week": "2026-12-21/2026-12-27",
-      "total": 261180,
-      "ANAR": 35030,
-      "APPLE BER": 11370,
-      "GREEN GRAPES": 25900,
-      "KASHMIR APPLE": 33020,
-      "KINNAUR APPLE": 35790,
-      "KINNOW": 36080,
-      "MANDARIN": 10210,
-      "ORANGE": 25730,
-      "PEAR": 7680,
-      "RAMPHAL": 6830,
-      "SHAREEFA": 6760,
-      "VNR GUAVA": 26780
+      "total": 274270,
+      "ALPHONSO MANGO": 0,
+      "ANAR": 36420,
+      "APPLE BER": 12120,
+      "AVOCADO": 0,
+      "BANANA": 0,
+      "BLACK GRAPES": 0,
+      "BLUEBERRY": 0,
+      "CHAUSA MANGO": 0,
+      "CHIKOO": 0,
+      "COCONUT": 0,
+      "DESI GUAVA": 0,
+      "DRAGON FRUIT": 0,
+      "DUSSERI MANGO": 0,
+      "ENJOY APPLE": 0,
+      "GALA APPLE": 0,
+      "GOLDEN APPLE": 0,
+      "GREEN GRAPES": 27010,
+      "HAMAM MANGO": 0,
+      "IMLY": 0,
+      "KASHMIR APPLE": 34670,
+      "KESAR MANGO": 0,
+      "KHUMANI": 0,
+      "KIMIA DATES": 0,
+      "KINNAUR APPLE": 38060,
+      "KINNOW": 38000,
+      "LANGDA MANGO": 0,
+      "LANGRA MANGO": 0,
+      "MALTA": 0,
+      "MANDARIN": 10650,
+      "MAUSAMI": 0,
+      "NAAK": 0,
+      "ORANGE": 26850,
+      "PAPAYA": 0,
+      "PERRY MANGO": 0,
+      "PINK GUAVA": 0,
+      "PLUM": 0,
+      "RAMPHAL": 7190,
+      "RED GRAPES": 0,
+      "RED PEAR": 0,
+      "SAFEDA MANGO": 0,
+      "SHARDA": 0,
+      "SHAREEFA": 7050,
+      "SHIMLA APPLE": 0,
+      "TURKEY APPLE": 0,
+      "VNR GUAVA": 28210,
+      "WASHINGTON APPLE": 0,
+      "WATERMELON": 0,
+      "ZESPRI KIWI": 0,
+      "PEAR": 8040
     },
     {
       "week": "2026-12-28/2027-01-03",
-      "total": 260790,
-      "ANAR": 34840,
-      "APPLE BER": 11250,
-      "GREEN GRAPES": 25750,
-      "KASHMIR APPLE": 32980,
-      "KINNAUR APPLE": 35810,
-      "KINNOW": 36040,
-      "MANDARIN": 10250,
-      "ORANGE": 25790,
-      "PEAR": 7670,
-      "RAMPHAL": 6820,
-      "SHAREEFA": 6800,
-      "VNR GUAVA": 26790
+      "total": 221410,
+      "ALPHONSO MANGO": 0,
+      "ANAR": 30650,
+      "APPLE BER": 9000,
+      "AVOCADO": 0,
+      "BANANA": 0,
+      "BLACK GRAPES": 0,
+      "BLUEBERRY": 0,
+      "CHAUSA MANGO": 0,
+      "CHIKOO": 0,
+      "COCONUT": 0,
+      "DESI GUAVA": 0,
+      "DRAGON FRUIT": 0,
+      "DUSSERI MANGO": 0,
+      "ENJOY APPLE": 0,
+      "GALA APPLE": 0,
+      "GOLDEN APPLE": 0,
+      "GREEN GRAPES": 22400,
+      "HAMAM MANGO": 0,
+      "IMLY": 0,
+      "KASHMIR APPLE": 28030,
+      "KESAR MANGO": 0,
+      "KHUMANI": 0,
+      "KIMIA DATES": 0,
+      "KINNAUR APPLE": 29000,
+      "KINNOW": 30270,
+      "LANGDA MANGO": 0,
+      "LANGRA MANGO": 0,
+      "MALTA": 0,
+      "MANDARIN": 8910,
+      "MAUSAMI": 0,
+      "NAAK": 0,
+      "ORANGE": 22430,
+      "PAPAYA": 0,
+      "PERRY MANGO": 0,
+      "PINK GUAVA": 0,
+      "PLUM": 0,
+      "RAMPHAL": 5720,
+      "RED GRAPES": 0,
+      "RED PEAR": 0,
+      "SAFEDA MANGO": 0,
+      "SHARDA": 0,
+      "SHAREEFA": 5910,
+      "SHIMLA APPLE": 0,
+      "TURKEY APPLE": 0,
+      "VNR GUAVA": 22500,
+      "WASHINGTON APPLE": 0,
+      "WATERMELON": 0,
+      "ZESPRI KIWI": 0,
+      "PEAR": 6590
     }
   ],
   "retailers": [
     {
-      "name": "RAJKUMAR FRUIT VASANT VIHAR",
-      "totalQty": 60301,
+      "name": "VITA DAIRY VATIKA CITY",
+      "totalQty": 24522,
       "topSkus": [
         {
-          "sku": "BANANA",
-          "qty": 9660
-        },
-        {
           "sku": "WATERMELON",
-          "qty": 6100
-        },
-        {
-          "sku": "ORANGE",
-          "qty": 3785
-        },
-        {
-          "sku": "KASHMIR APPLE",
-          "qty": 3320
+          "qty": 5361
         },
         {
           "sku": "ANAR",
-          "qty": 2920
-        }
-      ],
-      "area": "VASANT VIHAR",
-      "zone": "SOUTH DELHI",
-      "lat": 28.558737,
-      "lng": 77.15685
-    },
-    {
-      "name": "DEEPAK FRUIT GURGAON SEC 69",
-      "totalQty": 58445,
-      "topSkus": [
-        {
-          "sku": "BANANA",
-          "qty": 11004
-        },
-        {
-          "sku": "WATERMELON",
-          "qty": 5620
-        },
-        {
-          "sku": "KASHMIR APPLE",
-          "qty": 4380
-        },
-        {
-          "sku": "ANAR",
-          "qty": 3630
-        },
-        {
-          "sku": "ORANGE",
-          "qty": 2895
-        }
-      ],
-      "area": "Sec 69",
-      "zone": "GURUGRAM",
-      "lat": 28.40815,
-      "lng": 77.063139
-    },
-    {
-      "name": "RAHUL FRUIT 1 VASANT VIHAR",
-      "totalQty": 57429,
-      "topSkus": [
-        {
-          "sku": "BANANA",
-          "qty": 6804
-        },
-        {
-          "sku": "WATERMELON",
-          "qty": 6360
-        },
-        {
-          "sku": "KASHMIR APPLE",
-          "qty": 3900
-        },
-        {
-          "sku": "TURKEY APPLE",
-          "qty": 3110
-        },
-        {
-          "sku": "ANAR",
-          "qty": 2860
-        }
-      ],
-      "area": "VASANT VIHAR",
-      "zone": "SOUTH DELHI",
-      "lat": 28.559319,
-      "lng": 77.16076
-    },
-    {
-      "name": "KISHAN FRUIT GURGAON SEC-69",
-      "totalQty": 53294,
-      "topSkus": [
-        {
-          "sku": "BANANA",
-          "qty": 9660
-        },
-        {
-          "sku": "WATERMELON",
-          "qty": 5870
-        },
-        {
-          "sku": "KASHMIR APPLE",
-          "qty": 4270
+          "qty": 3134
         },
         {
           "sku": "KINNAUR APPLE",
-          "qty": 3430
+          "qty": 2056
         },
         {
-          "sku": "ANAR",
-          "qty": 3140
+          "sku": "KASHMIR APPLE",
+          "qty": 1902
+        },
+        {
+          "sku": "SHIMLA APPLE",
+          "qty": 1813
         }
       ],
-      "area": "SEC-69",
+      "area": "Vatika city",
       "zone": "GURUGRAM",
-      "lat": 28.411553,
-      "lng": 77.061822
+      "lat": 28.403402,
+      "lng": 77.049532
     },
     {
-      "name": "SONU FRUIT CHHATARPUR",
-      "totalQty": 50389,
+      "name": "BANKE BIHARI VEGETABLE AND FRUITS",
+      "totalQty": 24223,
       "topSkus": [
         {
-          "sku": "BANANA",
-          "qty": 10584
-        },
-        {
           "sku": "WATERMELON",
-          "qty": 4110
-        },
-        {
-          "sku": "KASHMIR APPLE",
-          "qty": 3620
+          "qty": 5295
         },
         {
           "sku": "ANAR",
-          "qty": 3130
+          "qty": 3102
         },
         {
-          "sku": "ORANGE",
-          "qty": 2695
+          "sku": "KINNAUR APPLE",
+          "qty": 2030
+        },
+        {
+          "sku": "KASHMIR APPLE",
+          "qty": 1879
+        },
+        {
+          "sku": "SHIMLA APPLE",
+          "qty": 1789
         }
       ],
-      "area": "Chhatarpur",
-      "zone": "SOUTH DELHI",
-      "lat": 28.508032,
-      "lng": 77.172179
+      "area": "Tikri sector 48 gurgaon",
+      "zone": "GURUGRAM",
+      "lat": 28.463801,
+      "lng": 77.037009
     },
     {
-      "name": "YADUVANSHI FRUITS VAISHALI",
-      "totalQty": 49998,
+      "name": "KRISHNA FRUIT VAISHALI",
+      "totalQty": 24069,
       "topSkus": [
         {
-          "sku": "BANANA",
-          "qty": 11844
-        },
-        {
           "sku": "WATERMELON",
-          "qty": 4550
-        },
-        {
-          "sku": "ORANGE",
-          "qty": 3435
-        },
-        {
-          "sku": "KASHMIR APPLE",
-          "qty": 3380
+          "qty": 5262
         },
         {
           "sku": "ANAR",
-          "qty": 2860
+          "qty": 3072
+        },
+        {
+          "sku": "KINNAUR APPLE",
+          "qty": 2016
+        },
+        {
+          "sku": "KASHMIR APPLE",
+          "qty": 1868
+        },
+        {
+          "sku": "SHIMLA APPLE",
+          "qty": 1778
         }
       ],
       "area": "Vaishali",
-      "zone": "GREATER NOIDA",
-      "lat": 28.641412,
-      "lng": 77.339832
+      "zone": "GHAZIABAD",
+      "lat": 28.6823,
+      "lng": 77.407616
     },
     {
-      "name": "RANVEER FRUITS INA",
-      "totalQty": 49125,
+      "name": "SAURYA SUPER MART SECTOR 107 M3M",
+      "totalQty": 24018,
       "topSkus": [
         {
-          "sku": "BANANA",
-          "qty": 7917
-        },
-        {
           "sku": "WATERMELON",
-          "qty": 5330
-        },
-        {
-          "sku": "ORANGE",
-          "qty": 3505
+          "qty": 5252
         },
         {
           "sku": "ANAR",
-          "qty": 3250
-        },
-        {
-          "sku": "KASHMIR APPLE",
-          "qty": 3240
-        }
-      ],
-      "area": "INA",
-      "zone": "SOUTH DELHI",
-      "lat": 28.571859,
-      "lng": 77.208693
-    },
-    {
-      "name": "TIP TOP FRUIT SHOP NOIDA SEC 93",
-      "totalQty": 49045,
-      "topSkus": [
-        {
-          "sku": "BANANA",
-          "qty": 13755
-        },
-        {
-          "sku": "WATERMELON",
-          "qty": 4770
+          "qty": 3066
         },
         {
           "sku": "KINNAUR APPLE",
-          "qty": 2910
+          "qty": 2014
         },
         {
           "sku": "KASHMIR APPLE",
-          "qty": 2740
+          "qty": 1865
+        },
+        {
+          "sku": "SHIMLA APPLE",
+          "qty": 1774
+        }
+      ],
+      "area": "Sector 107 M3M",
+      "zone": "GURUGRAM",
+      "lat": 28.513429,
+      "lng": 76.973187
+    },
+    {
+      "name": "GUPTA FRUIT SHOP SEC 12. Q BLOCK MARKET",
+      "totalQty": 23797,
+      "topSkus": [
+        {
+          "sku": "WATERMELON",
+          "qty": 5205
         },
         {
           "sku": "ANAR",
-          "qty": 2170
+          "qty": 3041
+        },
+        {
+          "sku": "KINNAUR APPLE",
+          "qty": 1994
+        },
+        {
+          "sku": "KASHMIR APPLE",
+          "qty": 1844
+        },
+        {
+          "sku": "SHIMLA APPLE",
+          "qty": 1760
         }
       ],
-      "area": "SEC 93",
+      "area": "noida sec 12 Q Block market",
       "zone": "NOIDA",
-      "lat": 28.521327,
-      "lng": 77.383006
+      "lat": 28.558046,
+      "lng": 77.342469
     },
     {
-      "name": "SANAWAR FRUIT GURGAON SEC-69",
-      "totalQty": 48410,
+      "name": "FAST N FRESH 86 MANESAR",
+      "totalQty": 23703,
       "topSkus": [
         {
-          "sku": "BANANA",
-          "qty": 7455
-        },
-        {
           "sku": "WATERMELON",
-          "qty": 5090
-        },
-        {
-          "sku": "ORANGE",
-          "qty": 3495
-        },
-        {
-          "sku": "KASHMIR APPLE",
-          "qty": 3200
+          "qty": 5184
         },
         {
           "sku": "ANAR",
-          "qty": 3200
-        }
-      ],
-      "area": "Sec 69",
-      "zone": "GURUGRAM",
-      "lat": 28.410399,
-      "lng": 77.06507
-    },
-    {
-      "name": "KISHAN MANDI GURGAON",
-      "totalQty": 47379,
-      "topSkus": [
-        {
-          "sku": "BANANA",
-          "qty": 8274
-        },
-        {
-          "sku": "WATERMELON",
-          "qty": 4440
+          "qty": 3032
         },
         {
           "sku": "KINNAUR APPLE",
-          "qty": 3350
+          "qty": 1987
+        },
+        {
+          "sku": "KASHMIR APPLE",
+          "qty": 1839
+        },
+        {
+          "sku": "SHIMLA APPLE",
+          "qty": 1750
+        }
+      ],
+      "area": "Manesar",
+      "zone": "IMT",
+      "lat": 28.398566,
+      "lng": 76.934946
+    },
+    {
+      "name": "PATNA MANDI 7TH AVENUE GAUR CITY1",
+      "totalQty": 23703,
+      "topSkus": [
+        {
+          "sku": "WATERMELON",
+          "qty": 5184
         },
         {
           "sku": "ANAR",
-          "qty": 3340
-        },
-        {
-          "sku": "KASHMIR APPLE",
-          "qty": 3110
-        }
-      ],
-      "area": "Sec 25",
-      "zone": "GURUGRAM",
-      "lat": 28.454423,
-      "lng": 77.025536
-    },
-    {
-      "name": "DHEERAJ FRUIT SHOP ALAKHNANDA MARKET",
-      "totalQty": 45817,
-      "topSkus": [
-        {
-          "sku": "BANANA",
-          "qty": 11718
-        },
-        {
-          "sku": "WATERMELON",
-          "qty": 5460
-        },
-        {
-          "sku": "KASHMIR APPLE",
-          "qty": 3520
+          "qty": 3032
         },
         {
           "sku": "KINNAUR APPLE",
-          "qty": 3030
-        },
-        {
-          "sku": "ANAR",
-          "qty": 2660
-        }
-      ],
-      "area": "Alakhnanda Market",
-      "zone": "SOUTH DELHI",
-      "lat": 28.542557,
-      "lng": 77.249039
-    },
-    {
-      "name": "SURAJ FRUIT FATEHPUR BERI",
-      "totalQty": 45517,
-      "topSkus": [
-        {
-          "sku": "BANANA",
-          "qty": 9660
-        },
-        {
-          "sku": "WATERMELON",
-          "qty": 5710
-        },
-        {
-          "sku": "KINNAUR APPLE",
-          "qty": 3720
+          "qty": 1987
         },
         {
           "sku": "KASHMIR APPLE",
-          "qty": 3700
+          "qty": 1839
         },
         {
-          "sku": "ORANGE",
-          "qty": 3125
+          "sku": "SHIMLA APPLE",
+          "qty": 1750
         }
       ],
-      "area": "FATEHPUR BERI",
-      "zone": "SOUTH DELHI",
-      "lat": 28.436935,
-      "lng": 77.172389
-    },
-    {
-      "name": "SUNIL FRUIT SEC 49",
-      "totalQty": 45448,
-      "topSkus": [
-        {
-          "sku": "BANANA",
-          "qty": 11277
-        },
-        {
-          "sku": "WATERMELON",
-          "qty": 5390
-        },
-        {
-          "sku": "KASHMIR APPLE",
-          "qty": 2980
-        },
-        {
-          "sku": "ORANGE",
-          "qty": 2905
-        },
-        {
-          "sku": "KINNAUR APPLE",
-          "qty": 2670
-        }
-      ],
-      "area": "Sec 47",
-      "zone": "GURUGRAM",
-      "lat": 28.429042,
-      "lng": 77.036633
-    },
-    {
-      "name": "BALA JI SEC 25",
-      "totalQty": 44947,
-      "topSkus": [
-        {
-          "sku": "BANANA",
-          "qty": 8232
-        },
-        {
-          "sku": "WATERMELON",
-          "qty": 5090
-        },
-        {
-          "sku": "KASHMIR APPLE",
-          "qty": 3270
-        },
-        {
-          "sku": "ORANGE",
-          "qty": 3265
-        },
-        {
-          "sku": "ANAR",
-          "qty": 3060
-        }
-      ],
-      "area": "Sec. 25",
-      "zone": "GURUGRAM",
-      "lat": 28.458843,
-      "lng": 77.02402
-    },
-    {
-      "name": "PUJA VEGETABLES- SEC-121",
-      "totalQty": 43489,
-      "topSkus": [
-        {
-          "sku": "BANANA",
-          "qty": 10857
-        },
-        {
-          "sku": "WATERMELON",
-          "qty": 6060
-        },
-        {
-          "sku": "KASHMIR APPLE",
-          "qty": 4000
-        },
-        {
-          "sku": "KINNAUR APPLE",
-          "qty": 2750
-        },
-        {
-          "sku": "ANAR",
-          "qty": 2000
-        }
-      ],
-      "area": "Sec-121",
-      "zone": "NOIDA",
-      "lat": 28.569356,
-      "lng": 77.39118
-    },
-    {
-      "name": "SANJEEV SAXENA FRUIT KALKA JI",
-      "totalQty": 43038,
-      "topSkus": [
-        {
-          "sku": "BANANA",
-          "qty": 9303
-        },
-        {
-          "sku": "WATERMELON",
-          "qty": 5660
-        },
-        {
-          "sku": "KINNAUR APPLE",
-          "qty": 3210
-        },
-        {
-          "sku": "KASHMIR APPLE",
-          "qty": 2930
-        },
-        {
-          "sku": "ANAR",
-          "qty": 2590
-        }
-      ],
-      "area": "Kalka ji",
-      "zone": "SOUTH DELHI",
-      "lat": 28.542285,
-      "lng": 77.260122
-    },
-    {
-      "name": "GUDU FRUIT GURGAON SEC- 69",
-      "totalQty": 42855,
-      "topSkus": [
-        {
-          "sku": "BANANA",
-          "qty": 12243
-        },
-        {
-          "sku": "KASHMIR APPLE",
-          "qty": 2920
-        },
-        {
-          "sku": "KINNAUR APPLE",
-          "qty": 2620
-        },
-        {
-          "sku": "WATERMELON",
-          "qty": 2490
-        },
-        {
-          "sku": "ANAR",
-          "qty": 2080
-        }
-      ],
-      "area": "Sec 49",
-      "zone": "GURUGRAM",
-      "lat": 28.420243,
-      "lng": 77.047178
-    },
-    {
-      "name": "UMESH FRUIT SHREE RAM MARKET",
-      "totalQty": 42743,
-      "topSkus": [
-        {
-          "sku": "BANANA",
-          "qty": 6678
-        },
-        {
-          "sku": "WATERMELON",
-          "qty": 4260
-        },
-        {
-          "sku": "ORANGE",
-          "qty": 2970
-        },
-        {
-          "sku": "ANAR",
-          "qty": 2760
-        },
-        {
-          "sku": "KASHMIR APPLE",
-          "qty": 2730
-        }
-      ],
-      "area": "Shree ram market",
-      "zone": "SOUTH DELHI",
-      "lat": 28.545717,
-      "lng": 77.258339
-    },
-    {
-      "name": "RATAN FRUIT SHOP NEW ASHOK NAGAR",
-      "totalQty": 42430,
-      "topSkus": [
-        {
-          "sku": "BANANA",
-          "qty": 10332
-        },
-        {
-          "sku": "WATERMELON",
-          "qty": 5050
-        },
-        {
-          "sku": "KINNAUR APPLE",
-          "qty": 2740
-        },
-        {
-          "sku": "ANAR",
-          "qty": 2620
-        },
-        {
-          "sku": "KASHMIR APPLE",
-          "qty": 2380
-        }
-      ],
-      "area": "Sector 15",
+      "area": "7th Avenue gaur city1",
       "zone": "GREATER NOIDA",
-      "lat": 28.591971,
-      "lng": 77.311612
+      "lat": 28.489971,
+      "lng": 77.513441
     },
     {
-      "name": "MONU GUPTA FROOT MADHUVAN CHOK",
-      "totalQty": 42424,
+      "name": "DECENT NEED SEC-70A PARAS IRENE",
+      "totalQty": 23649,
       "topSkus": [
         {
-          "sku": "BANANA",
-          "qty": 8988
-        },
-        {
           "sku": "WATERMELON",
-          "qty": 4610
+          "qty": 5172
         },
         {
           "sku": "ANAR",
-          "qty": 3570
+          "qty": 3025
         },
         {
           "sku": "KINNAUR APPLE",
-          "qty": 2190
+          "qty": 1981
         },
         {
           "sku": "KASHMIR APPLE",
+          "qty": 1832
+        },
+        {
+          "sku": "SHIMLA APPLE",
+          "qty": 1746
+        }
+      ],
+      "area": "Sec-70A paras Irene",
+      "zone": "GURUGRAM",
+      "lat": 28.459426,
+      "lng": 77.01855
+    },
+    {
+      "name": "VIJAY FRUIT SHOP MAYUR VIHAR 3",
+      "totalQty": 23608,
+      "topSkus": [
+        {
+          "sku": "WATERMELON",
+          "qty": 5160
+        },
+        {
+          "sku": "ANAR",
+          "qty": 3020
+        },
+        {
+          "sku": "KINNAUR APPLE",
+          "qty": 1977
+        },
+        {
+          "sku": "KASHMIR APPLE",
+          "qty": 1830
+        },
+        {
+          "sku": "SHIMLA APPLE",
+          "qty": 1744
+        }
+      ],
+      "area": "Mayur Vihar 3",
+      "zone": "EAST DELHI",
+      "lat": 28.613587,
+      "lng": 77.336046
+    },
+    {
+      "name": "MADANGIRI FRUIT 7TH AVENUE",
+      "totalQty": 23608,
+      "topSkus": [
+        {
+          "sku": "WATERMELON",
+          "qty": 5160
+        },
+        {
+          "sku": "ANAR",
+          "qty": 3020
+        },
+        {
+          "sku": "KINNAUR APPLE",
+          "qty": 1977
+        },
+        {
+          "sku": "KASHMIR APPLE",
+          "qty": 1830
+        },
+        {
+          "sku": "SHIMLA APPLE",
+          "qty": 1744
+        }
+      ],
+      "area": "7th avenue",
+      "zone": "GREATER NOIDA",
+      "lat": 28.470114,
+      "lng": 77.514109
+    },
+    {
+      "name": "RAJKUMAR MANDAL CHAKARPUR",
+      "totalQty": 23556,
+      "topSkus": [
+        {
+          "sku": "WATERMELON",
+          "qty": 5149
+        },
+        {
+          "sku": "ANAR",
+          "qty": 3010
+        },
+        {
+          "sku": "KINNAUR APPLE",
+          "qty": 1975
+        },
+        {
+          "sku": "KASHMIR APPLE",
+          "qty": 1830
+        },
+        {
+          "sku": "SHIMLA APPLE",
+          "qty": 1742
+        }
+      ],
+      "area": "Chakarpur",
+      "zone": "GURUGRAM",
+      "lat": 28.475667,
+      "lng": 77.083793
+    },
+    {
+      "name": "SHYAM SAFAL MANDI VASANT KUNJ",
+      "totalQty": 23509,
+      "topSkus": [
+        {
+          "sku": "WATERMELON",
+          "qty": 5140
+        },
+        {
+          "sku": "ANAR",
+          "qty": 3002
+        },
+        {
+          "sku": "KINNAUR APPLE",
+          "qty": 1970
+        },
+        {
+          "sku": "KASHMIR APPLE",
+          "qty": 1825
+        },
+        {
+          "sku": "SHIMLA APPLE",
+          "qty": 1738
+        }
+      ],
+      "area": "Vasant kunj",
+      "zone": "SOUTH DELHI",
+      "lat": 28.508964,
+      "lng": 77.165516
+    },
+    {
+      "name": "NAUSHAD FRUITS SEC 25",
+      "totalQty": 23509,
+      "topSkus": [
+        {
+          "sku": "WATERMELON",
+          "qty": 5140
+        },
+        {
+          "sku": "ANAR",
+          "qty": 3002
+        },
+        {
+          "sku": "KINNAUR APPLE",
+          "qty": 1970
+        },
+        {
+          "sku": "KASHMIR APPLE",
+          "qty": 1825
+        },
+        {
+          "sku": "SHIMLA APPLE",
+          "qty": 1738
+        }
+      ],
+      "area": "Sec-50 noida",
+      "zone": "NOIDA",
+      "lat": 28.571275,
+      "lng": 77.361474
+    },
+    {
+      "name": "SHIVMAAN STORE SECTOR 107",
+      "totalQty": 23448,
+      "topSkus": [
+        {
+          "sku": "WATERMELON",
+          "qty": 5124
+        },
+        {
+          "sku": "ANAR",
+          "qty": 2992
+        },
+        {
+          "sku": "KINNAUR APPLE",
+          "qty": 1966
+        },
+        {
+          "sku": "KASHMIR APPLE",
+          "qty": 1821
+        },
+        {
+          "sku": "SHIMLA APPLE",
+          "qty": 1733
+        }
+      ],
+      "area": "Sector 107",
+      "zone": "GURUGRAM",
+      "lat": 28.44952,
+      "lng": 77.036759
+    },
+    {
+      "name": "KULDEEP YADAV FRUIT RAJ NAGAR",
+      "totalQty": 23448,
+      "topSkus": [
+        {
+          "sku": "WATERMELON",
+          "qty": 5124
+        },
+        {
+          "sku": "ANAR",
+          "qty": 2992
+        },
+        {
+          "sku": "KINNAUR APPLE",
+          "qty": 1966
+        },
+        {
+          "sku": "KASHMIR APPLE",
+          "qty": 1821
+        },
+        {
+          "sku": "SHIMLA APPLE",
+          "qty": 1733
+        }
+      ],
+      "area": "Raj nagar",
+      "zone": "Ghaziabad",
+      "lat": 28.682782,
+      "lng": 77.447535
+    },
+    {
+      "name": "DHRUV SEC 46",
+      "totalQty": 23448,
+      "topSkus": [
+        {
+          "sku": "WATERMELON",
+          "qty": 5124
+        },
+        {
+          "sku": "ANAR",
+          "qty": 2992
+        },
+        {
+          "sku": "KINNAUR APPLE",
+          "qty": 1966
+        },
+        {
+          "sku": "KASHMIR APPLE",
+          "qty": 1821
+        },
+        {
+          "sku": "SHIMLA APPLE",
+          "qty": 1733
+        }
+      ],
+      "area": "Sec 46",
+      "zone": "NOIDA",
+      "lat": 28.551456,
+      "lng": 77.361221
+    },
+    {
+      "name": "KADIR FRUIT MALAVIYA NAGAR",
+      "totalQty": 23448,
+      "topSkus": [
+        {
+          "sku": "WATERMELON",
+          "qty": 5124
+        },
+        {
+          "sku": "ANAR",
+          "qty": 2992
+        },
+        {
+          "sku": "KINNAUR APPLE",
+          "qty": 1966
+        },
+        {
+          "sku": "KASHMIR APPLE",
+          "qty": 1821
+        },
+        {
+          "sku": "SHIMLA APPLE",
+          "qty": 1733
+        }
+      ],
+      "area": "Malaviya nagar",
+      "zone": "SOUTH DELHI",
+      "lat": 28.5282,
+      "lng": 77.20692
+    },
+    {
+      "name": "SACHIN FRUIT AND VEGETABLE SEC 14 SEC14 MARKET",
+      "totalQty": 23408,
+      "topSkus": [
+        {
+          "sku": "WATERMELON",
+          "qty": 5113
+        },
+        {
+          "sku": "ANAR",
+          "qty": 2990
+        },
+        {
+          "sku": "KINNAUR APPLE",
+          "qty": 1960
+        },
+        {
+          "sku": "KASHMIR APPLE",
+          "qty": 1818
+        },
+        {
+          "sku": "SHIMLA APPLE",
           "qty": 1730
         }
       ],
-      "area": "Sector 19",
-      "zone": "GREATER NOIDA",
-      "lat": 28.471576,
-      "lng": 77.503511
+      "area": "Sec14 market",
+      "zone": "GURUGRAM",
+      "lat": 28.473389,
+      "lng": 77.048535
+    },
+    {
+      "name": "VELLY FRESH DEPARTMENT STORE",
+      "totalQty": 23408,
+      "topSkus": [
+        {
+          "sku": "WATERMELON",
+          "qty": 5113
+        },
+        {
+          "sku": "ANAR",
+          "qty": 2990
+        },
+        {
+          "sku": "KINNAUR APPLE",
+          "qty": 1960
+        },
+        {
+          "sku": "KASHMIR APPLE",
+          "qty": 1818
+        },
+        {
+          "sku": "SHIMLA APPLE",
+          "qty": 1730
+        }
+      ],
+      "area": "Velly view state gwal pahadi",
+      "zone": "GURUGRAM",
+      "lat": 28.449992,
+      "lng": 77.046931
+    },
+    {
+      "name": "LAXMI FRUIT SEC.69",
+      "totalQty": 23408,
+      "topSkus": [
+        {
+          "sku": "WATERMELON",
+          "qty": 5113
+        },
+        {
+          "sku": "ANAR",
+          "qty": 2990
+        },
+        {
+          "sku": "KINNAUR APPLE",
+          "qty": 1960
+        },
+        {
+          "sku": "KASHMIR APPLE",
+          "qty": 1818
+        },
+        {
+          "sku": "SHIMLA APPLE",
+          "qty": 1730
+        }
+      ],
+      "area": "Sec.69",
+      "zone": "GURUGRAM",
+      "lat": 28.391194,
+      "lng": 77.031389
     }
   ],
   "topSkus": [
     {
-      "sku": "BANANA",
-      "qty": 2309328,
-      "quality": {
-        "A": "12 DOZEN",
-        "B": "15 DOZEN",
-        "C": "18 DOZEN"
-      }
-    },
-    {
       "sku": "WATERMELON",
-      "qty": 1685180,
+      "qty": 3924096,
       "quality": {
         "A": "3D",
         "B": "4D",
@@ -8182,26 +9897,17 @@
       }
     },
     {
-      "sku": "KASHMIR APPLE",
-      "qty": 945040,
+      "sku": "BANANA",
+      "qty": 2419345,
       "quality": {
-        "A": "40D",
-        "B": "50D",
-        "C": "60D"
-      }
-    },
-    {
-      "sku": "KINNAUR APPLE",
-      "qty": 934840,
-      "quality": {
-        "A": "40D",
-        "B": "50D",
-        "C": "60D"
+        "A": "12 DOZEN",
+        "B": "15 DOZEN",
+        "C": "18 DOZEN"
       }
     },
     {
       "sku": "ANAR",
-      "qty": 928395,
+      "qty": 2237210,
       "quality": {
         "A": "10D",
         "B": "12D",
@@ -8209,8 +9915,26 @@
       }
     },
     {
+      "sku": "KINNAUR APPLE",
+      "qty": 1793179,
+      "quality": {
+        "A": "40D",
+        "B": "50D",
+        "C": "60D"
+      }
+    },
+    {
+      "sku": "KASHMIR APPLE",
+      "qty": 1739553,
+      "quality": {
+        "A": "40D",
+        "B": "50D",
+        "C": "60D"
+      }
+    },
+    {
       "sku": "SHIMLA APPLE",
-      "qty": 569320,
+      "qty": 1326082,
       "quality": {
         "A": "40D",
         "B": "50D",
@@ -8219,7 +9943,7 @@
     },
     {
       "sku": "ORANGE",
-      "qty": 531425,
+      "qty": 986596,
       "quality": {
         "A": "96D",
         "B": "141D",
@@ -8228,7 +9952,7 @@
     },
     {
       "sku": "SAFEDA MANGO",
-      "qty": 440380,
+      "qty": 907240,
       "quality": {
         "A": "32D",
         "B": "36D",
@@ -8236,35 +9960,8 @@
       }
     },
     {
-      "sku": "SHARDA",
-      "qty": 329930,
-      "quality": {
-        "A": "5PCS",
-        "B": "5PCS",
-        "C": "5PCS"
-      }
-    },
-    {
-      "sku": "KINNOW",
-      "qty": 320990,
-      "quality": {
-        "A": "SUPER FAIZAN",
-        "B": "786",
-        "C": "EAGLE"
-      }
-    },
-    {
-      "sku": "MAUSAMI",
-      "qty": 308709,
-      "quality": {
-        "A": "1NO.",
-        "B": "2NO.",
-        "C": "GOLI"
-      }
-    },
-    {
       "sku": "VNR GUAVA",
-      "qty": 299440,
+      "qty": 624816,
       "quality": {
         "A": "300GM+",
         "B": "250GM+",
@@ -8272,26 +9969,17 @@
       }
     },
     {
-      "sku": "GREEN GRAPES",
-      "qty": 270260,
+      "sku": "KINNOW",
+      "qty": 608912,
       "quality": {
-        "A": "SUPER SONAKA",
-        "B": "SONAKA",
-        "C": "SONAKA"
-      }
-    },
-    {
-      "sku": "MALTA",
-      "qty": 259465,
-      "quality": {
-        "A": "72D",
-        "B": "84D",
-        "C": "96D"
+        "A": "SUPER FAIZAN",
+        "B": "786",
+        "C": "EAGLE"
       }
     },
     {
       "sku": "DUSSERI MANGO",
-      "qty": 254420,
+      "qty": 521631,
       "quality": {
         "A": "JUMBO",
         "B": "LARGE",
@@ -8299,8 +9987,35 @@
       }
     },
     {
+      "sku": "GREEN GRAPES",
+      "qty": 494996,
+      "quality": {
+        "A": "SUPER SONAKA",
+        "B": "SONAKA",
+        "C": "SONAKA"
+      }
+    },
+    {
+      "sku": "MAUSAMI",
+      "qty": 452333,
+      "quality": {
+        "A": "1NO.",
+        "B": "2NO.",
+        "C": "GOLI"
+      }
+    },
+    {
+      "sku": "SHARDA",
+      "qty": 395070,
+      "quality": {
+        "A": "5PCS",
+        "B": "5PCS",
+        "C": "5PCS"
+      }
+    },
+    {
       "sku": "COCONUT",
-      "qty": 221291,
+      "qty": 368566,
       "quality": {
         "A": "PARCHUN",
         "B": "LOOSE",
@@ -8309,7 +10024,7 @@
     },
     {
       "sku": "PAPAYA",
-      "qty": 209695,
+      "qty": 355226,
       "quality": {
         "A": "LONG",
         "B": "ROUND",
@@ -8317,26 +10032,8 @@
       }
     },
     {
-      "sku": "CHIKOO",
-      "qty": 205215,
-      "quality": {
-        "A": "ASHOK",
-        "B": "LOCAL",
-        "C": "LOCAL"
-      }
-    },
-    {
-      "sku": "TURKEY APPLE",
-      "qty": 189200,
-      "quality": {
-        "A": "40D",
-        "B": "45D",
-        "C": "50D"
-      }
-    },
-    {
       "sku": "LANGDA MANGO",
-      "qty": 179520,
+      "qty": 339023,
       "quality": {
         "A": "JUMBO",
         "B": "LARGE",
@@ -8345,7 +10042,7 @@
     },
     {
       "sku": "MANDARIN",
-      "qty": 177081,
+      "qty": 318699,
       "quality": {
         "A": "SWEETC",
         "B": "CORE",
@@ -8353,8 +10050,17 @@
       }
     },
     {
+      "sku": "MALTA",
+      "qty": 292634,
+      "quality": {
+        "A": "72D",
+        "B": "84D",
+        "C": "96D"
+      }
+    },
+    {
       "sku": "CHAUSA MANGO",
-      "qty": 171340,
+      "qty": 276748,
       "quality": {
         "A": "5KG",
         "B": "10KG",
@@ -8362,17 +10068,17 @@
       }
     },
     {
-      "sku": "RED GRAPES",
-      "qty": 157775,
+      "sku": "CHIKOO",
+      "qty": 272772,
       "quality": {
-        "A": "RED GLOBE",
-        "B": "FLAME",
-        "C": "FLAME"
+        "A": "ASHOK",
+        "B": "LOCAL",
+        "C": "LOCAL"
       }
     },
     {
       "sku": "BLACK GRAPES",
-      "qty": 126920,
+      "qty": 186585,
       "quality": {
         "A": "SEEDLESS",
         "B": "BANGLORE BLUE",
@@ -8380,8 +10086,26 @@
       }
     },
     {
+      "sku": "TURKEY APPLE",
+      "qty": 160237,
+      "quality": {
+        "A": "40D",
+        "B": "45D",
+        "C": "50D"
+      }
+    },
+    {
+      "sku": "RED GRAPES",
+      "qty": 143654,
+      "quality": {
+        "A": "RED GLOBE",
+        "B": "FLAME",
+        "C": "FLAME"
+      }
+    },
+    {
       "sku": "APPLE BER",
-      "qty": 102850,
+      "qty": 120372,
       "quality": {
         "A": "LARGE",
         "B": "MEDIUM",
@@ -8390,7 +10114,7 @@
     },
     {
       "sku": "WASHINGTON APPLE",
-      "qty": 88565,
+      "qty": 109563,
       "quality": {
         "A": "44D",
         "B": "100D",
@@ -8399,7 +10123,7 @@
     },
     {
       "sku": "SHAREEFA",
-      "qty": 80840,
+      "qty": 96656,
       "quality": {
         "A": "4KG",
         "B": "10KG",
@@ -8407,71 +10131,12 @@
       }
     },
     {
-      "sku": "DESI GUAVA",
-      "qty": 73210,
-      "quality": {
-        "A": "250GM+",
-        "B": "200GM+",
-        "C": "200GM+"
-      }
-    },
-    {
-      "sku": "RED PEAR",
-      "qty": 51430,
-      "quality": {
-        "A": "60D",
-        "B": "70D",
-        "C": "80D"
-      }
-    },
-    {
-      "sku": "AVOCADO",
-      "qty": 48407,
-      "quality": {
-        "A": "NEW ZEALAND",
-        "B": "TANZANIA",
-        "C": "KENYA"
-      }
-    },
-    {
-      "sku": "LANGRA MANGO",
-      "qty": 37900,
-      "quality": {
-        "A": "5KG",
-        "B": "10KG",
-        "C": "10KG"
-      }
-    },
-    {
-      "sku": "ENJOY APPLE",
-      "qty": 35940,
-      "quality": {
-        "A": "100D",
-        "B": "125D",
-        "C": "150D"
-      }
-    },
-    {
-      "sku": "GALA APPLE",
-      "qty": 29120,
-      "quality": {
-        "A": "40D",
-        "B": "50D",
-        "C": "60D"
-      }
-    },
-    {
-      "sku": "GOLDEN APPLE",
-      "qty": 26720,
-      "quality": {
-        "A": "40D",
-        "B": "50D",
-        "C": "60D"
-      }
+      "sku": "INDIAN GUAVA",
+      "qty": 70579
     },
     {
       "sku": "BLUEBERRY",
-      "qty": 25726,
+      "qty": 61703,
       "quality": {
         "A": "JUMBO",
         "B": "LARGE",
@@ -8479,8 +10144,17 @@
       }
     },
     {
+      "sku": "GALA APPLE",
+      "qty": 56606,
+      "quality": {
+        "A": "40D",
+        "B": "50D",
+        "C": "60D"
+      }
+    },
+    {
       "sku": "RAMPHAL",
-      "qty": 22310,
+      "qty": 53692,
       "quality": {
         "A": "28D",
         "B": "30D",
@@ -8488,112 +10162,17 @@
       }
     },
     {
-      "sku": "ALPHONSO MANGO",
-      "qty": 20450,
+      "sku": "AVOCADO",
+      "qty": 47227,
       "quality": {
-        "A": "5KG",
-        "B": "10KG",
-        "C": "10KG"
+        "A": "NEW ZEALAND",
+        "B": "TANZANIA",
+        "C": "KENYA"
       }
     },
     {
-      "sku": "KIMIA DATES",
-      "qty": 17847,
-      "quality": {
-        "A": "-",
-        "B": "-",
-        "C": "-"
-      }
-    },
-    {
-      "sku": "PERRY MANGO",
-      "qty": 11210,
-      "quality": {
-        "A": "5KG",
-        "B": "10KG",
-        "C": "10KG"
-      }
-    },
-    {
-      "sku": "HAMAM MANGO",
-      "qty": 8530,
-      "quality": {
-        "A": "5KG",
-        "B": "10KG",
-        "C": "10KG"
-      }
-    },
-    {
-      "sku": "KESAR MANGO",
-      "qty": 7360,
-      "quality": {
-        "A": "JUMBO",
-        "B": "LARGE",
-        "C": "MEDIUM"
-      }
-    },
-    {
-      "sku": "PINK GUAVA",
-      "qty": 6430,
-      "quality": {
-        "A": "300GM+",
-        "B": "250GM+",
-        "C": "200GM+"
-      }
-    },
-    {
-      "sku": "NAAK",
-      "qty": 4640,
-      "quality": {
-        "A": "LARGE",
-        "B": "SMALL",
-        "C": "SMALL"
-      }
-    },
-    {
-      "sku": "PLUM",
-      "qty": 3320,
-      "quality": {
-        "A": "LARGE",
-        "B": "MEDIUM",
-        "C": "MEDIUM"
-      }
-    },
-    {
-      "sku": "ZESPRI KIWI",
-      "qty": 1860,
-      "quality": {
-        "A": "GOLD",
-        "B": "GREEN",
-        "C": "GREEN"
-      }
-    },
-    {
-      "sku": "IMLY",
-      "qty": 1500,
-      "quality": {
-        "A": "-",
-        "B": "-",
-        "C": "-"
-      }
-    },
-    {
-      "sku": "DRAGON FRUIT",
-      "qty": 1292,
-      "quality": {
-        "A": "18PCS",
-        "B": "20PCS",
-        "C": "25PCS"
-      }
-    },
-    {
-      "sku": "KHUMANI",
-      "qty": 921,
-      "quality": {
-        "A": "LARGE",
-        "B": "MEDIUM",
-        "C": "MEDIUM"
-      }
+      "sku": "PEAR",
+      "qty": 30771
     }
   ],
   "skuQuality": {
@@ -8840,20 +10419,68 @@
   },
   "skuDetails": [
     {
-      "name": "WATERMELON",
-      "A": "3D",
-      "B": "4D",
-      "C": "LOOSE",
-      "area": "ANDHRA PRADESH",
-      "exclusionReason": "ONLY WEST BENGAL WATERMELON AVAILABLE"
+      "name": "ANAR",
+      "A": "10D",
+      "B": "12D",
+      "C": "14D",
+      "area": "NASHIK",
+      "exclusionReason": null
     },
     {
-      "name": "WASHINGTON APPLE",
-      "A": "44D",
-      "B": "100D",
-      "C": "125D",
+      "name": "APPLE BER",
+      "A": "LARGE",
+      "B": "MEDIUM",
+      "C": "MEDIUM",
+      "area": "MAHARSHTRA",
+      "exclusionReason": "DESIRED QUALTIY N/A"
+    },
+    {
+      "name": "AVOCADO",
+      "A": "NEW ZEALAND",
+      "B": "TANZANIA",
+      "C": "KENYA",
       "area": "IMPORTED",
-      "exclusionReason": "INDIAN APPLE DEMAND SUPERSEEDS"
+      "exclusionReason": "DESIRED SIZES CURRENTLY N/A"
+    },
+    {
+      "name": "BANANA",
+      "A": "12 DOZEN",
+      "B": "15 DOZEN",
+      "C": "18 DOZEN",
+      "area": "MAHARSHTRA",
+      "exclusionReason": "HIGH SPOILAGE RATES"
+    },
+    {
+      "name": "BLACK GRAPES",
+      "A": "SEEDLESS",
+      "B": "BANGLORE BLUE",
+      "C": "BANGLORE BLUE",
+      "area": "NASHIK",
+      "exclusionReason": "DESIRED QUALTIY N/A"
+    },
+    {
+      "name": "BLUEBERRY",
+      "A": "JUMBO",
+      "B": "LARGE",
+      "C": "MEDIUM",
+      "area": "IMPORTED",
+      "exclusionReason": "DESIRED SIZES CURRENTLY N/A"
+    },
+    {
+      "name": "CHAUSA MANGO",
+      "A": "5KG",
+      "B": "10KG",
+      "C": "10KG",
+      "area": "UP",
+      "exclusionReason": "HIGH SPOILAGE RATES"
+    },
+    {
+      "name": "CHIKOO",
+      "A": "ASHOK",
+      "B": "LOCAL",
+      "C": "LOCAL",
+      "area": "MAHARSHTRA",
+      "exclusionReason": "HIGH SPOILAGE RATES"
     },
     {
       "name": "COCONUT",
@@ -8864,10 +10491,82 @@
       "exclusionReason": "DESIRED QUALTIY N/A"
     },
     {
-      "name": "BLUEBERRY",
+      "name": "DUSSERI MANGO",
       "A": "JUMBO",
       "B": "LARGE",
       "C": "MEDIUM",
+      "area": "UP",
+      "exclusionReason": "HIGH SPOILAGE RATES"
+    },
+    {
+      "name": "GALA APPLE",
+      "A": "40D",
+      "B": "50D",
+      "C": "60D",
+      "area": "IMPORTED",
+      "exclusionReason": "INDIAN APPLE DEMAND SUPERSEEDS"
+    },
+    {
+      "name": "GREEN GRAPES",
+      "A": "SUPER SONAKA",
+      "B": "SONAKA",
+      "C": "SONAKA",
+      "area": "NASHIK",
+      "exclusionReason": "DESIRED QUALTIY N/A"
+    },
+    {
+      "name": "INDIAN GUAVA",
+      "A": "GRADE A",
+      "B": "GRADE B",
+      "C": "GRADE C",
+      "area": "",
+      "exclusionReason": ""
+    },
+    {
+      "name": "KASHMIR APPLE",
+      "A": "40D",
+      "B": "50D",
+      "C": "60D",
+      "area": "KASHMIR",
+      "exclusionReason": null
+    },
+    {
+      "name": "KINNAUR APPLE",
+      "A": "40D",
+      "B": "50D",
+      "C": "60D",
+      "area": "KINNAUR",
+      "exclusionReason": null
+    },
+    {
+      "name": "KINNOW",
+      "A": "SUPER FAIZAN",
+      "B": "786",
+      "C": "EAGLE",
+      "area": "RAJASTHAN",
+      "exclusionReason": "DESIRED QUALTIY N/A"
+    },
+    {
+      "name": "LANGDA MANGO",
+      "A": "JUMBO",
+      "B": "LARGE",
+      "C": "MEDIUM",
+      "area": "UP",
+      "exclusionReason": "HIGH SPOILAGE RATES"
+    },
+    {
+      "name": "MALTA",
+      "A": "72D",
+      "B": "84D",
+      "C": "96D",
+      "area": "IMPORTED",
+      "exclusionReason": "DESIRED SIZES CURRENTLY N/A"
+    },
+    {
+      "name": "MANDARIN",
+      "A": "SWEETC",
+      "B": "CORE",
+      "C": "CORE",
       "area": "IMPORTED",
       "exclusionReason": "DESIRED SIZES CURRENTLY N/A"
     },
@@ -8880,20 +10579,12 @@
       "exclusionReason": "DESIRED QUALTIY N/A"
     },
     {
-      "name": "TURKEY APPLE",
-      "A": "40D",
-      "B": "45D",
-      "C": "50D",
-      "area": "IMPORTED",
-      "exclusionReason": "INDIAN APPLE DEMAND SUPERSEEDS"
-    },
-    {
-      "name": "SHARDA",
-      "A": "5PCS",
-      "B": "5PCS",
-      "C": "5PCS",
-      "area": "MAHARASHTRA",
-      "exclusionReason": "DESIRED SIZES CURRENTLY N/A"
+      "name": "ORANGE",
+      "A": "96D",
+      "B": "141D",
+      "C": "141D",
+      "area": "MP",
+      "exclusionReason": "DESIRED QUALTIY N/A"
     },
     {
       "name": "PAPAYA",
@@ -8904,100 +10595,20 @@
       "exclusionReason": "DESIRED SIZES CURRENTLY N/A"
     },
     {
-      "name": "NAAK",
-      "A": "LARGE",
-      "B": "SMALL",
-      "C": "SMALL",
-      "area": "HIMACHAL PRADESH",
-      "exclusionReason": "MARKET DEMAND LOW"
+      "name": "PEAR",
+      "A": "GRADE A",
+      "B": "GRADE B",
+      "C": "GRADE C",
+      "area": "",
+      "exclusionReason": ""
     },
     {
-      "name": "KINNAUR APPLE",
-      "A": "40D",
-      "B": "50D",
-      "C": "60D",
-      "area": "KINNAUR",
-      "exclusionReason": null
-    },
-    {
-      "name": "ANAR",
-      "A": "10D",
-      "B": "12D",
-      "C": "14D",
-      "area": "NASHIK",
-      "exclusionReason": null
-    },
-    {
-      "name": "AVOCADO",
-      "A": "NEW ZEALAND",
-      "B": "TANZANIA",
-      "C": "KENYA",
-      "area": "IMPORTED",
-      "exclusionReason": "DESIRED SIZES CURRENTLY N/A"
-    },
-    {
-      "name": "LANGRA MANGO",
-      "A": "5KG",
-      "B": "10KG",
-      "C": "10KG",
-      "area": "UP",
+      "name": "RAMPHAL",
+      "A": "28D",
+      "B": "30D",
+      "C": "32D",
+      "area": "MAHARSHTRA",
       "exclusionReason": "DESIRED QUALTIY N/A"
-    },
-    {
-      "name": "CHAUSA MANGO",
-      "A": "5KG",
-      "B": "10KG",
-      "C": "10KG",
-      "area": "UP",
-      "exclusionReason": "HIGH SPOILAGE RATES"
-    },
-    {
-      "name": "ZESPRI KIWI",
-      "A": "GOLD",
-      "B": "GREEN",
-      "C": "GREEN",
-      "area": "IMPORTED",
-      "exclusionReason": "MARKET DEMAND LOW"
-    },
-    {
-      "name": "PLUM",
-      "A": "LARGE",
-      "B": "MEDIUM",
-      "C": "MEDIUM",
-      "area": "HIMACHAL PRADESH",
-      "exclusionReason": "HIGH SPOILAGE RATES"
-    },
-    {
-      "name": "KHUMANI",
-      "A": "LARGE",
-      "B": "MEDIUM",
-      "C": "MEDIUM",
-      "area": "IMPORTED",
-      "exclusionReason": "MARKET DEMAND LOW"
-    },
-    {
-      "name": "VNR GUAVA",
-      "A": "300GM+",
-      "B": "250GM+",
-      "C": "200GM+",
-      "area": "MP",
-      "exclusionReason": null
-    },
-    {
-      "name": "ORANGE",
-      "A": "96D",
-      "B": "141D",
-      "C": "141D",
-      "area": "MP",
-      "exclusionReason": "DESIRED QUALTIY N/A"
-    },
-    {
-      "name": "SHAREEFA",
-      "A": "4KG",
-      "B": "10KG",
-      "C": "10KG",
-      "area": "MAHARASHTRA",
-      "exclusionReason": "HIGH SPOILAGE RATES"
     },
     {
       "name": "RED GRAPES",
@@ -9008,86 +10619,6 @@
       "exclusionReason": "ONLY CRIMSON AVAILABLE IN MONTH"
     },
     {
-      "name": "MALTA",
-      "A": "72D",
-      "B": "84D",
-      "C": "96D",
-      "area": "IMPORTED",
-      "exclusionReason": "DESIRED SIZES CURRENTLY N/A"
-    },
-    {
-      "name": "KASHMIR APPLE",
-      "A": "40D",
-      "B": "50D",
-      "C": "60D",
-      "area": "KASHMIR",
-      "exclusionReason": null
-    },
-    {
-      "name": "KINNOW",
-      "A": "SUPER FAIZAN",
-      "B": "786",
-      "C": "EAGLE",
-      "area": "RAJASTHAN",
-      "exclusionReason": "DESIRED QUALTIY N/A"
-    },
-    {
-      "name": "KIMIA DATES",
-      "A": "-",
-      "B": "-",
-      "C": "-",
-      "area": "IMPORTED",
-      "exclusionReason": "MARKET DEMAND LOW"
-    },
-    {
-      "name": "BLACK GRAPES",
-      "A": "SEEDLESS",
-      "B": "BANGLORE BLUE",
-      "C": "BANGLORE BLUE",
-      "area": "NASHIK",
-      "exclusionReason": "DESIRED QUALTIY N/A"
-    },
-    {
-      "name": "GREEN GRAPES",
-      "A": "SUPER SONAKA",
-      "B": "SONAKA",
-      "C": "SONAKA",
-      "area": "NASHIK",
-      "exclusionReason": "DESIRED QUALTIY N/A"
-    },
-    {
-      "name": "PINK GUAVA",
-      "A": "300GM+",
-      "B": "250GM+",
-      "C": "200GM+",
-      "area": "MP",
-      "exclusionReason": "DESIRED QUALTIY N/A"
-    },
-    {
-      "name": "RED PEAR",
-      "A": "60D",
-      "B": "70D",
-      "C": "80D",
-      "area": "IMPORTED",
-      "exclusionReason": "DESIRED SIZES CURRENTLY N/A"
-    },
-    {
-      "name": "DRAGON FRUIT",
-      "A": "18PCS",
-      "B": "20PCS",
-      "C": "25PCS",
-      "area": "IMPORTED",
-      "exclusionReason": "MARKET DEMAND LOW"
-    },
-    {
-      "name": "CHIKOO",
-      "A": "ASHOK",
-      "B": "LOCAL",
-      "C": "LOCAL",
-      "area": "MAHARSHTRA",
-      "exclusionReason": "HIGH SPOILAGE RATES"
-    },
-    {
       "name": "SAFEDA MANGO",
       "A": "32D",
       "B": "36D",
@@ -9096,75 +10627,19 @@
       "exclusionReason": "HIGH SPOILAGE RATES"
     },
     {
-      "name": "HAMAM MANGO",
-      "A": "5KG",
-      "B": "10KG",
-      "C": "10KG",
-      "area": "AP",
-      "exclusionReason": "HIGH SPOILAGE RATES"
-    },
-    {
-      "name": "PERRY MANGO",
-      "A": "5KG",
-      "B": "10KG",
-      "C": "10KG",
-      "area": "MAHARSHTRA",
-      "exclusionReason": "HIGH SPOILAGE RATES"
-    },
-    {
-      "name": "ALPHONSO MANGO",
-      "A": "5KG",
-      "B": "10KG",
-      "C": "10KG",
-      "area": "MAHARSHTRA",
-      "exclusionReason": "HIGH SPOILAGE RATES"
-    },
-    {
-      "name": "DUSSERI MANGO",
-      "A": "JUMBO",
-      "B": "LARGE",
-      "C": "MEDIUM",
-      "area": "UP",
-      "exclusionReason": "HIGH SPOILAGE RATES"
-    },
-    {
-      "name": "ENJOY APPLE",
-      "A": "100D",
-      "B": "125D",
-      "C": "150D",
-      "area": "KINNAUR",
+      "name": "SHARDA",
+      "A": "5PCS",
+      "B": "5PCS",
+      "C": "5PCS",
+      "area": "MAHARASHTRA",
       "exclusionReason": "DESIRED SIZES CURRENTLY N/A"
     },
     {
-      "name": "IMLY",
-      "A": "-",
-      "B": "-",
-      "C": "-",
-      "area": "IMPORTED",
-      "exclusionReason": "MARKET DEMAND LOW"
-    },
-    {
-      "name": "MANDARIN",
-      "A": "SWEETC",
-      "B": "CORE",
-      "C": "CORE",
-      "area": "IMPORTED",
-      "exclusionReason": "DESIRED SIZES CURRENTLY N/A"
-    },
-    {
-      "name": "KESAR MANGO",
-      "A": "JUMBO",
-      "B": "LARGE",
-      "C": "MEDIUM",
-      "area": "GUJARAT",
-      "exclusionReason": "HIGH SPOILAGE RATES"
-    },
-    {
-      "name": "LANGDA MANGO",
-      "A": "JUMBO",
-      "B": "LARGE",
-      "C": "MEDIUM",
-      "area": "UP",
+      "name": "SHAREEFA",
+      "A": "4KG",
+      "B": "10KG",
+      "C": "10KG",
+      "area": "MAHARASHTRA",
       "exclusionReason": "HIGH SPOILAGE RATES"
     },
     {
@@ -9176,52 +10651,36 @@
       "exclusionReason": "DESIRED SIZES CURRENTLY N/A"
     },
     {
-      "name": "BANANA",
-      "A": "12 DOZEN",
-      "B": "15 DOZEN",
-      "C": "18 DOZEN",
-      "area": "MAHARSHTRA",
-      "exclusionReason": "HIGH SPOILAGE RATES"
-    },
-    {
-      "name": "GOLDEN APPLE",
+      "name": "TURKEY APPLE",
       "A": "40D",
-      "B": "50D",
-      "C": "60D",
-      "area": "KINNAUR",
-      "exclusionReason": "DESIRED SIZES CURRENTLY N/A"
-    },
-    {
-      "name": "DESI GUAVA",
-      "A": "250GM+",
-      "B": "200GM+",
-      "C": "200GM+",
-      "area": "UP",
-      "exclusionReason": "DESIRED QUALTIY N/A"
-    },
-    {
-      "name": "RAMPHAL",
-      "A": "28D",
-      "B": "30D",
-      "C": "32D",
-      "area": "MAHARSHTRA",
-      "exclusionReason": "DESIRED QUALTIY N/A"
-    },
-    {
-      "name": "APPLE BER",
-      "A": "LARGE",
-      "B": "MEDIUM",
-      "C": "MEDIUM",
-      "area": "MAHARSHTRA",
-      "exclusionReason": "DESIRED QUALTIY N/A"
-    },
-    {
-      "name": "GALA APPLE",
-      "A": "40D",
-      "B": "50D",
-      "C": "60D",
+      "B": "45D",
+      "C": "50D",
       "area": "IMPORTED",
       "exclusionReason": "INDIAN APPLE DEMAND SUPERSEEDS"
+    },
+    {
+      "name": "VNR GUAVA",
+      "A": "300GM+",
+      "B": "250GM+",
+      "C": "200GM+",
+      "area": "MP",
+      "exclusionReason": null
+    },
+    {
+      "name": "WASHINGTON APPLE",
+      "A": "44D",
+      "B": "100D",
+      "C": "125D",
+      "area": "IMPORTED",
+      "exclusionReason": "INDIAN APPLE DEMAND SUPERSEEDS"
+    },
+    {
+      "name": "WATERMELON",
+      "A": "3D",
+      "B": "4D",
+      "C": "LOOSE",
+      "area": "ANDHRA PRADESH",
+      "exclusionReason": "ONLY WEST BENGAL WATERMELON AVAILABLE"
     }
   ],
   "customers": [
