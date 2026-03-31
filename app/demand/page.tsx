@@ -594,8 +594,6 @@ export default function DemandPage() {
               const isPred = t.isPredicted;
               const isRevealed = revealedWeeks.has(realIdx);
               const isRevealing = revealingWeek === realIdx;
-              // Count predicted week number (1-based)
-              const predWeekNum = isPred ? timeline.slice(0, i + 1).filter(tw => tw.isPredicted).length : 0;
               const showHidden = isPred && !isRevealed && !isRevealing;
               return (
                 <button
@@ -630,7 +628,7 @@ export default function DemandPage() {
                   )}
                 >
                   <span className={cn("text-[11px] font-bold transition-opacity duration-500", showHidden && "text-muted-foreground")}>
-                    {showHidden ? `Week ${predWeekNum}` : ordLabel}
+                    {ordLabel}
                   </span>
                   <span className={cn("text-[10px] font-semibold num mt-0.5 transition-opacity duration-500", inRange && !showHidden ? "text-primary-foreground/80" : "text-muted-foreground")}>
                     {showHidden ? "?" : `${(tTotal / 1000).toFixed(0)}K kg`}
