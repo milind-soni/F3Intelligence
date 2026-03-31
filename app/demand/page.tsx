@@ -142,6 +142,159 @@ function buildComparisonChart() {
   return points;
 }
 
+// ── SKU Yearly View Component ─────────────────────────────────────────
+function SkuYearlyView() {
+  const [expandedSku, setExpandedSku] = useState<string | null>(null);
+
+  const skuYearlyData = useMemo(() => {
+    // Combine historical + predicted data, group by month per SKU
+    const allWeeks = [...dispatched, ...predicted];
+    // Deduplicate by week key (predicted takes precedence for future)
+    const weekMap = new Map<string, WeekRow>();
+    for (const w of dispatched) weekMap.set(w.week as string, w);
+    for (const w of predicted) weekMap.set(w.week as string, w); // overwrite with predicted
+    const weeks = Array.from(weekMap.values()).sort((a, b) => (a.week as string).localeCompare(b.week as string));
+
+    // Only 2026 data
+    const weeks2026 = weeks.filter(w => (w.week as string).startsWith("2026"));
+
+    const skuMonthly = new Map<string, Map<number, number>>();
+    const skuYearTotal = new Map<string, number>();
+
+    for (const w of weeks2026) {
+      const monthIdx = parseInt((w.week as string).slice(5, 7)) - 1; // 0-11
+      for (const [k, v] of Object.entries(w)) {
+        if (k === "week" || k === "total" || typeof v !== "number" || v <= 0) continue;
+        if (!skuMonthly.has(k)) skuMonthly.set(k, new Map());
+        const monthly = skuMonthly.get(k)!;
+        monthly.set(monthIdx, (monthly.get(monthIdx) ?? 0) + v);
+        skuYearTotal.set(k, (skuYearTotal.get(k) ?? 0) + v);
+      }
+    }
+
+    return Array.from(skuYearTotal.entries())
+      .map(([sku, yearTotal]) => {
+        const monthly = skuMonthly.get(sku)!;
+        const chartData = SHORT_MONTHS.map((m, i) => ({
+          month: m,
+          qty: Math.round(monthly.get(i) ?? 0),
+        }));
+        return { sku, yearTotal: Math.round(yearTotal), chartData };
+      })
+      .sort((a, b) => b.yearTotal - a.yearTotal);
+  }, []);
+
+  return (
+    <div className="space-y-3">
+      <div>
+        <h2 className="text-lg font-extrabold tracking-tight">SKU Yearly Procurement</h2>
+        <p className="text-xs text-muted-foreground font-medium mt-1">
+          {skuYearlyData.length} SKUs · 2026 forecast · click to expand monthly breakdown
+        </p>
+      </div>
+      {skuYearlyData.map((s, idx) => {
+        const color = SKU_COLORS[s.sku] ?? "#6b7280";
+        const isExpanded = expandedSku === s.sku;
+        const farmers = allFarmerData.filter(f => f.item === s.sku);
+        return (
+          <Card key={s.sku} className={cn("transition-all duration-200 overflow-hidden", isExpanded ? "shadow-[0_8px_24px_-8px_rgba(0,0,0,0.12)] ring-1 ring-primary/20" : "hover:shadow-[0_4px_16px_-6px_rgba(0,0,0,0.08)]")}>
+            <CardContent className="p-0">
+              <div className="flex items-stretch">
+                <div className="w-1.5 shrink-0 rounded-l-2xl" style={{ backgroundColor: color }} />
+                <button
+                  className="flex-1 text-left px-4 py-3.5 flex items-center gap-4"
+                  onClick={() => setExpandedSku(isExpanded ? null : s.sku)}
+                >
+                  <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-lg text-[11px] font-black" style={{ backgroundColor: `${color}15`, color }}>
+                    {idx + 1}
+                  </span>
+                  <div className="flex-1 min-w-0">
+                    <p className="text-sm font-bold">{s.sku}</p>
+                    <p className="text-xs text-muted-foreground font-medium mt-0.5">
+                      {s.chartData.filter(d => d.qty > 0).length} active months
+                    </p>
+                  </div>
+                  <div className="text-right shrink-0">
+                    <p className="text-lg font-black num text-primary">{s.yearTotal.toLocaleString()}</p>
+                    <p className="text-[10px] font-bold text-muted-foreground uppercase tracking-wider">kg / year</p>
+                  </div>
+                  <div className={cn("h-6 w-6 rounded-lg flex items-center justify-center shrink-0 transition-colors", isExpanded ? "bg-primary/10" : "bg-muted")}>
+                    {isExpanded ? <ChevronUp className="h-3.5 w-3.5 text-primary" /> : <ChevronDown className="h-3.5 w-3.5 text-muted-foreground" />}
+                  </div>
+                </button>
+              </div>
+              {isExpanded && (
+                <>
+                  <Separator />
+                  <div className="px-5 py-5 bg-accent/20 space-y-6">
+                    {/* Area Chart */}
+                    <div>
+                      <p className="text-[10px] font-bold text-muted-foreground uppercase tracking-wider mb-3">Monthly Procurement · 2026</p>
+                      <div className="h-48">
+                        <ResponsiveContainer width="100%" height="100%">
+                          <AreaChart data={s.chartData} margin={{ top: 5, right: 10, left: 0, bottom: 0 }}>
+                            <CartesianGrid strokeDasharray="3 3" stroke="rgba(0,0,0,0.06)" />
+                            <XAxis dataKey="month" tick={{ fontSize: 10, fontWeight: 600 }} />
+                            <YAxis tick={{ fontSize: 10 }} tickFormatter={(v: number) => `${(v / 1000).toFixed(0)}K`} />
+                            <Tooltip formatter={(v: number) => [`${v.toLocaleString()} kg`, s.sku]} />
+                            <Area type="monotone" dataKey="qty" stroke={color} fill={`${color}20`} strokeWidth={2} />
+                          </AreaChart>
+                        </ResponsiveContainer>
+                      </div>
+                    </div>
+
+                    {/* Monthly Table */}
+                    <div>
+                      <p className="text-[10px] font-bold text-muted-foreground uppercase tracking-wider mb-3">Monthly Breakdown</p>
+                      <div className="grid grid-cols-4 sm:grid-cols-6 lg:grid-cols-12 gap-2">
+                        {s.chartData.map(d => (
+                          <div key={d.month} className={cn("rounded-xl border p-2.5 text-center", d.qty > 0 ? "bg-white border-black/[0.06]" : "bg-muted/30 border-dashed border-border/50")}>
+                            <p className="text-[10px] font-bold text-muted-foreground uppercase">{d.month}</p>
+                            <p className={cn("text-sm font-black num mt-1", d.qty > 0 ? "text-foreground" : "text-muted-foreground/40")}>
+                              {d.qty > 0 ? `${(d.qty / 1000).toFixed(1)}K` : "—"}
+                            </p>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+
+                    {/* Farmer Supply */}
+                    {farmers.length > 0 && (
+                      <div>
+                        <p className="text-[10px] font-bold text-muted-foreground uppercase tracking-wider mb-3">Farmer Supply · All Months</p>
+                        <div className="space-y-2">
+                          {farmers.slice(0, 10).map((f, fi) => (
+                            <div key={f.vendor + fi} className="flex items-center gap-3 rounded-xl border border-black/[0.04] bg-white px-4 py-2.5">
+                              <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-lg text-[10px] font-black" style={{ backgroundColor: `${color}15`, color }}>
+                                {fi + 1}
+                              </span>
+                              <div className="flex-1 min-w-0">
+                                <p className="text-xs font-bold truncate">{f.vendor}</p>
+                                <p className="text-[10px] text-muted-foreground">{SHORT_MONTHS[f.month - 1]}</p>
+                              </div>
+                              <div className="text-right shrink-0">
+                                <p className="text-sm font-black num">{f.weeklyQty.toLocaleString()}</p>
+                                <p className="text-[9px] font-bold text-muted-foreground uppercase">kg/wk</p>
+                              </div>
+                            </div>
+                          ))}
+                          {farmers.length > 10 && (
+                            <p className="text-[10px] text-muted-foreground text-center pt-1">+ {farmers.length - 10} more farmers</p>
+                          )}
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                </>
+              )}
+            </CardContent>
+          </Card>
+        );
+      })}
+    </div>
+  );
+}
+
 // ═══════════════════════════════════════════════════════════════════════
 export default function DemandPage() {
   const defaultIdx = (() => {
@@ -164,6 +317,10 @@ export default function DemandPage() {
   const [expandedProcSku, setExpandedProcSku] = useState<string | null>(null);
   const [showAllDistribution, setShowAllDistribution] = useState(false);
   const [additionalInventory, setAdditionalInventory] = useState<Record<string, number>>({});
+  const [revealedWeeks, setRevealedWeeks] = useState<Set<number>>(new Set());
+  const [revealingWeek, setRevealingWeek] = useState<number | null>(null);
+  const [justRevealed, setJustRevealed] = useState<number | null>(null);
+  const [procView, setProcView] = useState<"week" | "sku">("week");
   const [rawCalRange, setRawCalRange] = useState<{ from: Date | null; to: Date | null }>({ from: parseISO(TODAY), to: parseISO(TODAY) });
   const VENDORS_PER_PAGE = 30;
   const weekScrollRef = useRef<HTMLDivElement>(null);
@@ -364,6 +521,10 @@ export default function DemandPage() {
     to: rawCalRange.to ?? undefined,
   };
 
+  // Is the currently selected single week a predicted week that hasn't been revealed yet?
+  const selectedIsPredictedLocked = !isRange && tw.isPredicted && !revealedWeeks.has(fromIdx) && revealingWeek !== fromIdx;
+  // Is the shimmer currently playing on the selected week?
+  const selectedIsRevealing = revealingWeek === fromIdx;
   return (
     <div className="space-y-6">
 
@@ -380,12 +541,16 @@ export default function DemandPage() {
           </div>
           <div className="flex gap-6 sm:gap-8">
             <div className="text-right">
-              <p className="text-2xl font-black tracking-tight num text-primary">{rangeTotal.toLocaleString()}</p>
+              <p className={cn("text-2xl font-black tracking-tight num text-primary transition-all duration-500", (selectedIsPredictedLocked || selectedIsRevealing) && "blur-md select-none")}>
+                {rangeTotal.toLocaleString()}
+              </p>
               <p className="text-[11px] font-bold uppercase tracking-wider text-muted-foreground mt-0.5">{isRange ? `kg · ${rangeWeekCount} weeks` : "kg this week"}</p>
             </div>
             <Separator orientation="vertical" className="h-10" />
             <div className="text-right">
-              <p className="text-2xl font-black tracking-tight num">{activeSkus.length}</p>
+              <p className={cn("text-2xl font-black tracking-tight num transition-all duration-500", (selectedIsPredictedLocked || selectedIsRevealing) && "blur-md select-none")}>
+                {activeSkus.length}
+              </p>
               <p className="text-[11px] font-bold uppercase tracking-wider text-muted-foreground mt-0.5">active SKUs</p>
             </div>
           </div>
@@ -426,22 +591,49 @@ export default function DemandPage() {
               const isTo = realIdx === rangeEnd;
               const tTotal = t.total;
               const ordLabel = weekOrdinalLabel(t.week);
+              const isPred = t.isPredicted;
+              const isRevealed = revealedWeeks.has(realIdx);
+              const isRevealing = revealingWeek === realIdx;
+              // Count predicted week number (1-based)
+              const predWeekNum = isPred ? timeline.slice(0, i + 1).filter(tw => tw.isPredicted).length : 0;
+              const showHidden = isPred && !isRevealed && !isRevealing;
               return (
                 <button
                   key={t.week}
                   data-range-from={isFrom || undefined}
                   data-range-to={isTo || undefined}
-                  onClick={() => { setFromIdx(realIdx); setToIdx(realIdx); setRawCalRange({ from: null, to: null }); }}
+                  onClick={() => {
+                    if (showHidden) {
+                      setRevealingWeek(realIdx);
+                      setFromIdx(realIdx);
+                      setToIdx(realIdx);
+                      setRawCalRange({ from: null, to: null });
+                      setTimeout(() => {
+                        setRevealedWeeks(prev => new Set([...prev, realIdx]));
+                        setRevealingWeek(null);
+                        setJustRevealed(realIdx);
+                        setTimeout(() => setJustRevealed(null), 1500);
+                      }, 800);
+                    } else {
+                      setFromIdx(realIdx); setToIdx(realIdx); setRawCalRange({ from: null, to: null });
+                    }
+                  }}
                   className={cn(
                     "shrink-0 snap-center flex flex-col items-center px-3 py-2 rounded-xl border text-center transition-all min-w-[72px]",
-                    inRange
-                      ? "bg-primary text-primary-foreground border-primary shadow-md"
-                      : "bg-card border-black/[0.04] hover:bg-accent hover:border-primary/20"
+                    isRevealing
+                      ? "animate-shimmer border-primary/40 shadow-md"
+                      : showHidden
+                        ? "bg-card border-dashed border-primary/30 hover:border-primary/50 animate-pulse-soft cursor-pointer"
+                        : inRange
+                          ? "bg-primary text-primary-foreground border-primary shadow-md"
+                          : "bg-card border-black/[0.04] hover:bg-accent hover:border-primary/20"
                   )}
                 >
-                  <span className="text-[11px] font-bold">{ordLabel}</span>
-                  <span className={cn("text-[10px] font-semibold num mt-0.5", inRange ? "text-primary-foreground/80" : "text-muted-foreground")}>
-                    {(tTotal / 1000).toFixed(0)}K kg
+                  <span className={cn("text-[11px] font-bold transition-opacity duration-500", showHidden && "text-muted-foreground")}>
+                    {showHidden ? `Week ${predWeekNum}` : ordLabel}
+                  </span>
+                  <span className={cn("text-[10px] font-semibold num mt-0.5 transition-opacity duration-500", inRange && !showHidden ? "text-primary-foreground/80" : "text-muted-foreground")}>
+                    {showHidden ? "?" : `${(tTotal / 1000).toFixed(0)}K kg`}
                   </span>
                 </button>
               );
@@ -461,8 +653,30 @@ export default function DemandPage() {
         </Badge>
       </div>
 
+      {/* ── Locked / Analysing state ────────────────────────── */}
+      {(selectedIsPredictedLocked || selectedIsRevealing) && (
+        <div className="rounded-2xl border border-dashed border-border bg-accent/30 py-16 text-center">
+          {selectedIsRevealing ? (
+            <div className="space-y-3">
+              <p className="text-sm font-bold text-foreground">Analysing...</p>
+              <div className="flex justify-center gap-1.5">
+                {[0, 1, 2].map(i => (
+                  <div key={i} className="w-1.5 h-1.5 rounded-full bg-primary animate-bounce" style={{ animationDelay: `${i * 150}ms` }} />
+                ))}
+              </div>
+            </div>
+          ) : (
+            <p className="text-sm text-muted-foreground">Click a predicted week to reveal forecast</p>
+          )}
+        </div>
+      )}
+
       {/* ── Summary KPIs ──────────────────────────────────────── */}
-      <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+      <div className={cn(
+        "grid grid-cols-2 sm:grid-cols-4 gap-4 transition-all duration-700",
+        (selectedIsPredictedLocked || selectedIsRevealing) && "opacity-0 h-0 overflow-hidden",
+        justRevealed !== null && "animate-in fade-in-0 slide-in-from-bottom-4"
+      )}>
         {[
           { label: isRange ? "Date Range" : "Week of", value: isRange ? `${weekDate(timeline[rangeStart].week)} → ${weekDate(timeline[rangeEnd].week)}` : weekDate(tw.week), sub: `${rangeTotal.toLocaleString()} kg${isRange ? ` · ${rangeWeekCount} weeks` : ""}`, icon: CalendarIcon, color: "text-primary", bg: "bg-primary/10" },
           { label: "Active SKUs", value: activeSkus.length.toString(), sub: `of ${stats.uniqueSkus} total`, icon: Layers, color: "text-purple-600", bg: "bg-purple-50" },
@@ -485,7 +699,11 @@ export default function DemandPage() {
       </div>
 
       {/* ── Tabs: Sales Allocation / Procurement Forecast ────────── */}
-      <Tabs defaultValue="procurement" className="space-y-5">
+      <Tabs defaultValue="procurement" className={cn(
+        "space-y-5 transition-all duration-700",
+        (selectedIsPredictedLocked || selectedIsRevealing) && "opacity-0 h-0 overflow-hidden",
+        justRevealed !== null && "animate-in fade-in-0 slide-in-from-bottom-6 duration-700"
+      )}>
         <TabsList variant="line">
           <TabsTrigger value="procurement" className="gap-1.5"><Wheat className="h-3.5 w-3.5" /> Procurement Forecast</TabsTrigger>
           <TabsTrigger value="allocation" className="gap-1.5"><Users className="h-3.5 w-3.5" /> Sales Allocation</TabsTrigger>
@@ -493,6 +711,27 @@ export default function DemandPage() {
 
         {/* ════ TAB: Procurement Forecast ═══════════════════════ */}
         <TabsContent value="procurement" className="space-y-5">
+          {/* View Toggle */}
+          <div className="flex items-center gap-2">
+            <Button
+              variant={procView === "week" ? "default" : "outline"}
+              size="sm"
+              className="text-xs font-bold rounded-xl"
+              onClick={() => setProcView("week")}
+            >
+              By Week
+            </Button>
+            <Button
+              variant={procView === "sku" ? "default" : "outline"}
+              size="sm"
+              className="text-xs font-bold rounded-xl"
+              onClick={() => setProcView("sku")}
+            >
+              By SKU
+            </Button>
+          </div>
+
+          {procView === "week" && (<>
           {/* Header */}
           <div className="flex items-center justify-between flex-wrap gap-3">
             <div>
@@ -691,6 +930,10 @@ export default function DemandPage() {
               );
             })}
           </div>
+          </>)}
+
+          {/* ════ BY SKU VIEW ════════════════════════════════════ */}
+          {procView === "sku" && <SkuYearlyView />}
         </TabsContent>
 
 
