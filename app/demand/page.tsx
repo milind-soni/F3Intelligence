@@ -964,6 +964,45 @@ export default function DemandPage() {
               );
             })}
           </div>
+
+          {/* Inactive / Excluded SKUs */}
+          {excludedSkus.length > 0 && (
+            <div className="mt-6">
+              <h3 className="text-sm font-extrabold tracking-tight mb-1">Inactive SKUs</h3>
+              <p className="text-xs text-muted-foreground font-medium mb-3">
+                {excludedSkus.length} SKUs not forecasted this week
+              </p>
+              <div className="space-y-2">
+                {excludedSkus.map((s) => {
+                  const color = SKU_COLORS[s.name] ?? "#6b7280";
+                  return (
+                    <Card key={s.name} className="opacity-60 hover:opacity-80 transition-opacity">
+                      <CardContent className="p-0">
+                        <div className="flex items-stretch">
+                          <div className="w-1.5 shrink-0 rounded-l-2xl bg-muted" />
+                          <div className="flex-1 px-4 py-3 flex items-center gap-4">
+                            <div className="h-2.5 w-2.5 rounded shrink-0" style={{ backgroundColor: color }} />
+                            <div className="flex-1 min-w-0">
+                              <div className="flex items-center gap-2 flex-wrap">
+                                <p className="text-sm font-bold text-muted-foreground">{s.name}</p>
+                                {s.A && <span className="text-[9px] bg-muted px-1.5 py-0.5 rounded font-bold text-muted-foreground">{s.A}</span>}
+                              </div>
+                              <p className="text-xs text-muted-foreground/70 mt-0.5">
+                                {s.exclusionReason} {s.area ? `· ${s.area}` : ""}
+                              </p>
+                            </div>
+                            <Badge variant="outline" className="text-[9px] px-1.5 py-0 font-bold bg-muted text-muted-foreground border-border shrink-0">
+                              Inactive
+                            </Badge>
+                          </div>
+                        </div>
+                      </CardContent>
+                    </Card>
+                  );
+                })}
+              </div>
+            </div>
+          )}
           </>)}
 
           {/* ════ BY SKU VIEW ════════════════════════════════════ */}
