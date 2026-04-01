@@ -312,7 +312,7 @@ export default function DemandPage() {
   const [revealingWeek, setRevealingWeek] = useState<number | null>(null);
   const [justRevealed, setJustRevealed] = useState<number | null>(null);
   const [procView, setProcView] = useState<"week" | "sku">("week");
-  const [rawCalRange, setRawCalRange] = useState<{ from: Date | null; to: Date | null }>({ from: parseISO(TODAY), to: parseISO(TODAY) });
+  const [rawCalRange, setRawCalRange] = useState<{ from: Date | null; to: Date | null }>({ from: null, to: null });
   const VENDORS_PER_PAGE = 30;
   const weekScrollRef = useRef<HTMLDivElement>(null);
 
@@ -586,18 +586,21 @@ export default function DemandPage() {
               const isRevealed = revealedWeeks.has(realIdx);
               const isRevealing = revealingWeek === realIdx;
               const showHidden = isPred && !isRevealed && !isRevealing;
-              // Variation: manually flagged weeks from analysis
+              // Variation: auto-detect ≥5% change + manually flagged weeks
               const weekStart = t.week.split("/")[0];
-              const variationMap: Record<string, "+" | "-"> = {
+              const manualFlags: Record<string, "+" | "-"> = {
                 "2026-05-25": "-",
                 "2026-07-13": "-",
                 "2026-10-12": "+",
                 "2026-11-02": "+",
                 "2026-12-28": "-",
               };
-              const variationTrend = variationMap[weekStart];
-              const hasVariation = isPred && !!variationTrend;
-              const isPositive = variationTrend === "+";
+              const prevTotal = i > 0 ? timeline[i - 1].total : tTotal;
+              const delta = prevTotal > 0 ? ((tTotal - prevTotal) / prevTotal) * 100 : 0;
+              const autoVariation = isPred && Math.abs(delta) >= 5;
+              const manualTrend = manualFlags[weekStart];
+              const hasVariation = isPred && (autoVariation || !!manualTrend);
+              const isPositive = manualTrend ? manualTrend === "+" : delta > 0;
               return (
                 <div key={t.week} className="shrink-0 snap-center flex flex-col items-center relative">
                   {hasVariation && (
