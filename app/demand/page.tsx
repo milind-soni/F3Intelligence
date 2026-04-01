@@ -89,7 +89,7 @@ function buildTimeline(): TimelineWeek[] {
   return Array.from(map.values()).sort((a, b) => a.week.localeCompare(b.week));
 }
 const TODAY = "2026-03-14";
-const timeline = buildTimeline().filter(tw => tw.week.split("/")[1] >= TODAY);
+const timeline = buildTimeline().filter(tw => tw.week.split("/")[0] >= TODAY);
 
 function weekLabel(w: string) { return w.split("/")[0].slice(5); }
 function weekDate(w: string) { return w.split("/")[0]; }
@@ -308,7 +308,7 @@ export default function DemandPage() {
   const [expandedProcSku, setExpandedProcSku] = useState<string | null>(null);
   const [showAllDistribution, setShowAllDistribution] = useState(false);
   const [additionalInventory, setAdditionalInventory] = useState<Record<string, number>>({});
-  const [revealedWeeks, setRevealedWeeks] = useState<Set<number>>(new Set());
+  const [revealedWeeks, setRevealedWeeks] = useState<Set<number>>(new Set([0]));
   const [revealingWeek, setRevealingWeek] = useState<number | null>(null);
   const [justRevealed, setJustRevealed] = useState<number | null>(null);
   const [procView, setProcView] = useState<"week" | "sku">("week");
@@ -600,7 +600,7 @@ export default function DemandPage() {
               const isPositive = variationTrend === "+";
               return (
                 <div key={t.week} className="shrink-0 snap-center flex flex-col items-center relative">
-                  {hasVariation && !showHidden && (
+                  {hasVariation && (
                     <span className={cn(
                       "text-[8px] font-black uppercase tracking-wider mb-0.5 px-1.5 py-0.5 rounded-full",
                       isPositive ? "text-green-700 bg-green-100" : "text-red-700 bg-red-100"
@@ -612,7 +612,8 @@ export default function DemandPage() {
                     data-range-from={isFrom || undefined}
                     data-range-to={isTo || undefined}
                     onClick={() => {
-                      if (showHidden) {
+                      if (showHidden && !hasVariation) {
+                        // Non-variation predicted week: shimmer + reveal
                         setRevealingWeek(realIdx);
                         setFromIdx(realIdx);
                         setToIdx(realIdx);
@@ -623,6 +624,12 @@ export default function DemandPage() {
                           setJustRevealed(realIdx);
                           setTimeout(() => setJustRevealed(null), 1500);
                         }, 800);
+                      } else if (showHidden && hasVariation) {
+                        // Variation week: reveal instantly
+                        setRevealedWeeks(prev => new Set([...prev, realIdx]));
+                        setFromIdx(realIdx);
+                        setToIdx(realIdx);
+                        setRawCalRange({ from: null, to: null });
                       } else {
                         setFromIdx(realIdx); setToIdx(realIdx); setRawCalRange({ from: null, to: null });
                       }
@@ -632,7 +639,7 @@ export default function DemandPage() {
                       isRevealing
                         ? "animate-shimmer border-primary/40 shadow-md"
                         : showHidden
-                          ? "bg-card border-dashed border-primary/30 hover:border-primary/50 animate-pulse-soft cursor-pointer"
+                          ? "bg-card border-black/[0.04] hover:bg-accent hover:border-primary/20 cursor-pointer"
                           : inRange
                             ? "bg-primary text-primary-foreground border-primary shadow-md"
                             : hasVariation
@@ -645,10 +652,15 @@ export default function DemandPage() {
                     <span className={cn("text-[11px] font-bold transition-opacity duration-500", showHidden && "text-muted-foreground")}>
                       {ordLabel}
                     </span>
-                    <span className={cn("text-[10px] font-semibold num mt-0.5 transition-opacity duration-500", inRange && !showHidden ? "text-primary-foreground/80" : "text-muted-foreground")}>
-                      {showHidden ? "?" : `${(tTotal / 1000).toFixed(0)}K kg`}
+                    <span className={cn(
+                      "text-[10px] font-semibold num mt-0.5 transition-opacity duration-500",
+                      inRange && !showHidden ? "text-primary-foreground/80"
+                        : hasVariation ? (isPositive ? "text-green-600 font-black" : "text-red-600 font-black")
+                        : "text-muted-foreground"
+                    )}>
+                      {`${(tTotal / 1000).toFixed(0)}K kg`}
                     </span>
-                    {hasVariation && !showHidden && !inRange && (
+                    {hasVariation && !inRange && (
                       <span className={cn("text-[9px] font-black", isPositive ? "text-green-600" : "text-red-600")}>
                         {isPositive ? "▲" : "▼"}
                       </span>
