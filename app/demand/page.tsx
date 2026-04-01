@@ -297,17 +297,8 @@ function SkuYearlyView() {
 
 // ═══════════════════════════════════════════════════════════════════════
 export default function DemandPage() {
-  const defaultIdx = (() => {
-    // Find the week containing today
-    const todayIdx = timeline.findIndex(tw => {
-      const [start, end] = tw.week.split("/");
-      return TODAY >= start && TODAY <= end;
-    });
-    if (todayIdx !== -1) return todayIdx;
-    return 0;
-  })();
-  const [fromIdx, setFromIdx] = useState(Math.max(0, defaultIdx));
-  const [toIdx, setToIdx] = useState(Math.max(0, defaultIdx));
+  const [fromIdx, setFromIdx] = useState(0);
+  const [toIdx, setToIdx] = useState(0);
   const [searchItem, setSearchItem] = useState("");
   const [searchVendor, setSearchVendor] = useState("");
   const [expandedRetailer, setExpandedRetailer] = useState<string | null>(null);
@@ -595,11 +586,18 @@ export default function DemandPage() {
               const isRevealed = revealedWeeks.has(realIdx);
               const isRevealing = revealingWeek === realIdx;
               const showHidden = isPred && !isRevealed && !isRevealing;
-              // Variation: compare to previous week
-              const prevTotal = i > 0 ? timeline[i - 1].total : tTotal;
-              const delta = prevTotal > 0 ? ((tTotal - prevTotal) / prevTotal) * 100 : 0;
-              const hasVariation = isPred && Math.abs(delta) >= 5;
-              const isPositive = delta > 0;
+              // Variation: manually flagged weeks from analysis
+              const weekStart = t.week.split("/")[0];
+              const variationMap: Record<string, "+" | "-"> = {
+                "2026-05-25": "-",
+                "2026-07-13": "-",
+                "2026-10-12": "+",
+                "2026-11-02": "+",
+                "2026-12-28": "-",
+              };
+              const variationTrend = variationMap[weekStart];
+              const hasVariation = isPred && !!variationTrend;
+              const isPositive = variationTrend === "+";
               return (
                 <div key={t.week} className="shrink-0 snap-center flex flex-col items-center relative">
                   {hasVariation && !showHidden && (
@@ -651,8 +649,8 @@ export default function DemandPage() {
                       {showHidden ? "?" : `${(tTotal / 1000).toFixed(0)}K kg`}
                     </span>
                     {hasVariation && !showHidden && !inRange && (
-                      <span className={cn("text-[9px] font-black num", isPositive ? "text-green-600" : "text-red-600")}>
-                        {isPositive ? "+" : ""}{delta.toFixed(0)}%
+                      <span className={cn("text-[9px] font-black", isPositive ? "text-green-600" : "text-red-600")}>
+                        {isPositive ? "▲" : "▼"}
                       </span>
                     )}
                   </button>
