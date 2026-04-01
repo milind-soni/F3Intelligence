@@ -595,45 +595,68 @@ export default function DemandPage() {
               const isRevealed = revealedWeeks.has(realIdx);
               const isRevealing = revealingWeek === realIdx;
               const showHidden = isPred && !isRevealed && !isRevealing;
+              // Variation: compare to previous week
+              const prevTotal = i > 0 ? timeline[i - 1].total : tTotal;
+              const delta = prevTotal > 0 ? ((tTotal - prevTotal) / prevTotal) * 100 : 0;
+              const hasVariation = isPred && Math.abs(delta) >= 5;
+              const isPositive = delta > 0;
               return (
-                <button
-                  key={t.week}
-                  data-range-from={isFrom || undefined}
-                  data-range-to={isTo || undefined}
-                  onClick={() => {
-                    if (showHidden) {
-                      setRevealingWeek(realIdx);
-                      setFromIdx(realIdx);
-                      setToIdx(realIdx);
-                      setRawCalRange({ from: null, to: null });
-                      setTimeout(() => {
-                        setRevealedWeeks(prev => new Set([...prev, realIdx]));
-                        setRevealingWeek(null);
-                        setJustRevealed(realIdx);
-                        setTimeout(() => setJustRevealed(null), 1500);
-                      }, 800);
-                    } else {
-                      setFromIdx(realIdx); setToIdx(realIdx); setRawCalRange({ from: null, to: null });
-                    }
-                  }}
-                  className={cn(
-                    "shrink-0 snap-center flex flex-col items-center px-3 py-2 rounded-xl border text-center transition-all min-w-[72px]",
-                    isRevealing
-                      ? "animate-shimmer border-primary/40 shadow-md"
-                      : showHidden
-                        ? "bg-card border-dashed border-primary/30 hover:border-primary/50 animate-pulse-soft cursor-pointer"
-                        : inRange
-                          ? "bg-primary text-primary-foreground border-primary shadow-md"
-                          : "bg-card border-black/[0.04] hover:bg-accent hover:border-primary/20"
+                <div key={t.week} className="shrink-0 snap-center flex flex-col items-center relative">
+                  {hasVariation && !showHidden && (
+                    <span className={cn(
+                      "text-[8px] font-black uppercase tracking-wider mb-0.5 px-1.5 py-0.5 rounded-full",
+                      isPositive ? "text-green-700 bg-green-100" : "text-red-700 bg-red-100"
+                    )}>
+                      Variation
+                    </span>
                   )}
-                >
-                  <span className={cn("text-[11px] font-bold transition-opacity duration-500", showHidden && "text-muted-foreground")}>
-                    {ordLabel}
-                  </span>
-                  <span className={cn("text-[10px] font-semibold num mt-0.5 transition-opacity duration-500", inRange && !showHidden ? "text-primary-foreground/80" : "text-muted-foreground")}>
-                    {showHidden ? "?" : `${(tTotal / 1000).toFixed(0)}K kg`}
-                  </span>
-                </button>
+                  <button
+                    data-range-from={isFrom || undefined}
+                    data-range-to={isTo || undefined}
+                    onClick={() => {
+                      if (showHidden) {
+                        setRevealingWeek(realIdx);
+                        setFromIdx(realIdx);
+                        setToIdx(realIdx);
+                        setRawCalRange({ from: null, to: null });
+                        setTimeout(() => {
+                          setRevealedWeeks(prev => new Set([...prev, realIdx]));
+                          setRevealingWeek(null);
+                          setJustRevealed(realIdx);
+                          setTimeout(() => setJustRevealed(null), 1500);
+                        }, 800);
+                      } else {
+                        setFromIdx(realIdx); setToIdx(realIdx); setRawCalRange({ from: null, to: null });
+                      }
+                    }}
+                    className={cn(
+                      "flex flex-col items-center px-3 py-2 rounded-xl border text-center transition-all min-w-[72px]",
+                      isRevealing
+                        ? "animate-shimmer border-primary/40 shadow-md"
+                        : showHidden
+                          ? "bg-card border-dashed border-primary/30 hover:border-primary/50 animate-pulse-soft cursor-pointer"
+                          : inRange
+                            ? "bg-primary text-primary-foreground border-primary shadow-md"
+                            : hasVariation
+                              ? isPositive
+                                ? "bg-green-50 border-green-300 hover:bg-green-100"
+                                : "bg-red-50 border-red-300 hover:bg-red-100"
+                              : "bg-card border-black/[0.04] hover:bg-accent hover:border-primary/20"
+                    )}
+                  >
+                    <span className={cn("text-[11px] font-bold transition-opacity duration-500", showHidden && "text-muted-foreground")}>
+                      {ordLabel}
+                    </span>
+                    <span className={cn("text-[10px] font-semibold num mt-0.5 transition-opacity duration-500", inRange && !showHidden ? "text-primary-foreground/80" : "text-muted-foreground")}>
+                      {showHidden ? "?" : `${(tTotal / 1000).toFixed(0)}K kg`}
+                    </span>
+                    {hasVariation && !showHidden && !inRange && (
+                      <span className={cn("text-[9px] font-black num", isPositive ? "text-green-600" : "text-red-600")}>
+                        {isPositive ? "+" : ""}{delta.toFixed(0)}%
+                      </span>
+                    )}
+                  </button>
+                </div>
               );
             })}
           </div>
