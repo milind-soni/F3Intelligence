@@ -9,6 +9,7 @@ import {
   Users,
   AlertTriangle,
   Building2,
+  Sparkles,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 
@@ -18,6 +19,7 @@ const navItems = [
   { href: "/retailers", label: "Retailers & Routes", shortLabel: "Map", icon: Users, badge: null },
   { href: "/risks", label: "Risk Alerts", shortLabel: "Risks", icon: AlertTriangle, badge: "Phase 2" },
   { href: "/city-expansion", label: "City Expansion", shortLabel: "Expand", icon: Building2, badge: "Phase 3" },
+  { href: "/assistant", label: "AI Analyst", shortLabel: "Analyst", icon: Sparkles, badge: "New" },
 ];
 
 export function Sidebar() {
@@ -77,7 +79,7 @@ export function Sidebar() {
       </header>
 
       {/* Mobile bottom tab bar */}
-      <nav className="lg:hidden fixed bottom-0 left-0 right-0 z-40 bg-sidebar border-t border-sidebar-border grid grid-cols-5 h-16">
+      <nav className="lg:hidden fixed bottom-0 left-0 right-0 z-40 bg-sidebar border-t border-sidebar-border grid grid-cols-6 h-16">
         {navItems.map((item) => {
           const active = isActive(item.href);
           return (
