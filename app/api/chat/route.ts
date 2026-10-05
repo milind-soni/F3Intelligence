@@ -17,7 +17,7 @@ import {
 export const maxDuration = 60;
 
 const openrouter = createOpenRouter({ apiKey: process.env.OPENROUTER_API_KEY });
-const MODEL = process.env.OPENROUTER_MODEL ?? "anthropic/claude-sonnet-4.5";
+const MODEL = process.env.OPENROUTER_MODEL ?? "anthropic/claude-sonnet-5.5";
 
 const SYSTEM_PROMPT = `You are the F3 Intelligence Analyst — the AI assistant inside PhalNetra, F3's fresh-produce intelligence dashboard for Delhi NCR.
 

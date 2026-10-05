@@ -55,10 +55,16 @@ export function RoutePlanMap({ hub, stops, routeColor, routeId, polyline }: Rout
       const map = L.map(mapRef.current, { zoomControl: true }).fitBounds(bounds);
       leafletMapRef.current = map;
 
-      L.tileLayer("https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png", {
-        attribution: "© OpenStreetMap © CARTO",
-        maxZoom: 19,
-      }).addTo(map);
+      // CARTO raster tiles now need an API key; Mapbox light style instead
+      L.tileLayer(
+        `https://api.mapbox.com/styles/v1/mapbox/light-v11/tiles/512/{z}/{x}/{y}{r}?access_token=${process.env.NEXT_PUBLIC_MAPBOX_TOKEN}`,
+        {
+          attribution: "© Mapbox © OpenStreetMap",
+          tileSize: 512,
+          zoomOffset: -1,
+          maxZoom: 19,
+        },
+      ).addTo(map);
 
       // Hub marker
       const hubIcon = L.divIcon({
